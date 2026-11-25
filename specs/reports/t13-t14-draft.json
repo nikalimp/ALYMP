@@ -1,0 +1,903 @@
+{
+  "aqara-camera-hub-g5-pro": {
+    "slug": "aqara-camera-hub-g5-pro",
+    "name": "Aqara Camera Hub G5 Pro",
+    "status": "in_stock",
+    "priceEstimate": 21990,
+    "priceSource": "https://aqara.ru/",
+    "priceDate": "2026-11-25",
+    "priceNote": "Официальный магазин aqara.ru: 21 990 ₽ по акции (базовая РРЦ 34 990 ₽, версии Wi-Fi / PoE).",
+    "compatibility": {
+      "alice": {
+        "v": "unknown",
+        "sourceUrl": null,
+        "sourceTitle": null,
+        "note": "Поддержка видеопотока и хаб-функций G5 Pro в «Умном доме с Алисой» не подтверждена официальной страницей."
+      },
+      "matter": {
+        "v": "yes",
+        "sourceUrl": "https://www.aqara.com/en/product/camera-hub-g5-pro/",
+        "sourceTitle": "Aqara Camera Hub G5 Pro — официальная страница Aqara",
+        "note": "Встроенный Matter Controller и Matter Bridge."
+      },
+      "thread": {
+        "v": "yes",
+        "sourceUrl": "https://www.aqara.com/en/product/camera-hub-g5-pro-specs/",
+        "sourceTitle": "Aqara Camera Hub G5 Pro — спецификации Aqara",
+        "note": "Встроенный Thread Border Router (IEEE 802.15.4)."
+      },
+      "zigbee": {
+        "v": "yes",
+        "sourceUrl": "https://www.aqara.com/en/product/camera-hub-g5-pro-specs/",
+        "sourceTitle": "Aqara Camera Hub G5 Pro — спецификации Aqara",
+        "note": "Встроенный хаб Zigbee 3.0."
+      },
+      "homekit": {
+        "v": "yes",
+        "sourceUrl": "https://www.aqara.com/en/product/camera-hub-g5-pro/",
+        "sourceTitle": "Aqara Camera Hub G5 Pro — официальная страница Aqara",
+        "note": "Поддержка Apple Home и HomeKit Secure Video."
+      },
+      "homeAssistant": {
+        "v": "yes",
+        "sourceUrl": "https://www.home-assistant.io/integrations/homekit_controller/",
+        "sourceTitle": "Home Assistant — HomeKit Device & Matter / RTSP",
+        "note": "Интеграция через RTSP-поток, HomeKit Device и Matter Bridge."
+      },
+      "wifi": {
+        "v": "yes",
+        "sourceUrl": "https://www.aqara.com/en/product/camera-hub-g5-pro-specs/",
+        "sourceTitle": "Aqara Camera Hub G5 Pro — спецификации Aqara",
+        "note": "Wi-Fi 2,4 / 5 ГГц (в версии Wi-Fi; также выпускается PoE-версия)."
+      }
+    }
+  },
+  "aqara-fp400": {
+    "slug": "aqara-fp400",
+    "name": "Aqara Spatial Multi-Sensor FP400",
+    "status": "preorder",
+    "priceEstimate": null,
+    "priceSource": "https://www.aqara.com/en/product/spatial-multi-sensor-fp400/",
+    "priceDate": null,
+    "priceNote": "Глобальная новинка второй половины 2026: официальной РРЦ в РФ и массового наличия на aqara.ru / Яндекс Маркете пока нет (под заказ). Для ориентира предыдущая модель FP2 в РФ стоит 7 000–10 000 ₽.",
+    "compatibility": {
+      "alice": {
+        "v": "unknown",
+        "sourceUrl": null,
+        "sourceTitle": null,
+        "note": "Для новой модели FP400 официального подтверждения проброса зон присутствия в Алису пока нет."
+      },
+      "matter": {
+        "v": "yes",
+        "sourceUrl": "https://www.aqara.com/en/product/spatial-multi-sensor-fp400/",
+        "sourceTitle": "Aqara Spatial Multi-Sensor FP400 — официальная страница Aqara",
+        "note": "Нативная поддержка Matter over Thread."
+      },
+      "thread": {
+        "v": "yes",
+        "sourceUrl": "https://www.aqara.com/en/product/spatial-multi-sensor-fp400/",
+        "sourceTitle": "Aqara Spatial Multi-Sensor FP400 — официальная страница Aqara",
+        "note": "Встроенный радиомодуль Thread."
+      },
+      "zigbee": {
+        "v": "yes",
+        "sourceUrl": "https://www.aqara.com/en/product/spatial-multi-sensor-fp400/",
+        "sourceTitle": "Aqara Spatial Multi-Sensor FP400 — официальная страница Aqara",
+        "note": "Двухпротокольный режим Thread / Zigbee."
+      },
+      "homekit": {
+        "v": "via-hub",
+        "sourceUrl": "https://www.aqara.com/en/product/spatial-multi-sensor-fp400/",
+        "sourceTitle": "Aqara Spatial Multi-Sensor FP400 — официальная страница Aqara",
+        "note": "Через Matter over Thread (Apple TV / HomePod) или хаб Aqara."
+      },
+      "homeAssistant": {
+        "v": "yes",
+        "sourceUrl": "https://www.aqara.com/en/product/spatial-multi-sensor-fp400/",
+        "sourceTitle": "Aqara Spatial Multi-Sensor FP400 — официальная страница Aqara",
+        "note": "Нативное подключение по Matter over Thread или через Zigbee."
+      },
+      "wifi": {
+        "v": "no",
+        "sourceUrl": "https://www.aqara.com/en/product/spatial-multi-sensor-fp400/",
+        "sourceTitle": "Aqara Spatial Multi-Sensor FP400 — официальная страница Aqara",
+        "note": "Работает по Thread / Zigbee, без Wi-Fi."
+      }
+    }
+  },
+  "aqara-hub-m3": {
+    "slug": "aqara-hub-m3",
+    "name": "Aqara Hub M3",
+    "status": "in_stock",
+    "priceEstimate": 15990,
+    "priceSource": "https://aqara.ru/",
+    "priceDate": "2026-11-25",
+    "priceNote": "Официальный магазин aqara.ru и DNS: от 15 990 до 21 375 ₽ (в зависимости от акций).",
+    "compatibility": {
+      "alice": {
+        "v": "yes",
+        "sourceUrl": "https://alice.yandex.ru/support/ru/smart-home/third-party/about",
+        "sourceTitle": "Яндекс Справка — Умный дом с Алисой (интеграция сторонних производителей)",
+        "note": "Через привязку аккаунта Aqara Home в «Умном доме с Алисой» (регион RU/Global)."
+      },
+      "matter": {
+        "v": "yes",
+        "sourceUrl": "https://www.aqara.com/en/product/hub-m3/",
+        "sourceTitle": "Aqara Hub M3 — официальная страница Aqara",
+        "note": "Matter Controller и Matter Bridge для Zigbee-устройств Aqara."
+      },
+      "thread": {
+        "v": "yes",
+        "sourceUrl": "https://www.aqara.com/en/product/hub-m3-specs/",
+        "sourceTitle": "Aqara Hub M3 — спецификации Aqara",
+        "note": "Встроенный Thread Border Router (IEEE 802.15.4)."
+      },
+      "zigbee": {
+        "v": "yes",
+        "sourceUrl": "https://www.aqara.com/en/product/hub-m3-specs/",
+        "sourceTitle": "Aqara Hub M3 — спецификации Aqara",
+        "note": "Встроенный координатор Zigbee 3.0."
+      },
+      "homekit": {
+        "v": "yes",
+        "sourceUrl": "https://www.aqara.com/en/product/hub-m3/",
+        "sourceTitle": "Aqara Hub M3 — официальная страница Aqara",
+        "note": "Нативная поддержка Apple Home (HomeKit и Matter)."
+      },
+      "homeAssistant": {
+        "v": "yes",
+        "sourceUrl": "https://www.home-assistant.io/integrations/matter/",
+        "sourceTitle": "Home Assistant — официальная интеграция Matter",
+        "note": "Подключение локально через Matter Bridge или HomeKit Device."
+      },
+      "wifi": {
+        "v": "yes",
+        "sourceUrl": "https://www.aqara.com/en/product/hub-m3-specs/",
+        "sourceTitle": "Aqara Hub M3 — спецификации Aqara",
+        "note": "Двухдиапазонный Wi-Fi 2,4 / 5 ГГц + порт Ethernet с PoE."
+      }
+    }
+  },
+  "aqara-panel-hub-s1-plus": {
+    "slug": "aqara-panel-hub-s1-plus",
+    "name": "Aqara Panel Hub S1 Plus",
+    "status": "in_stock",
+    "priceEstimate": 49990,
+    "priceSource": "https://aqara.ru/",
+    "priceDate": "2026-11-25",
+    "priceNote": "Официальный магазин aqara.ru: 49 990 ₽ (на маркетплейсах импортные версии от 40 000 ₽).",
+    "compatibility": {
+      "alice": {
+        "v": "yes",
+        "sourceUrl": "https://alice.yandex.ru/support/ru/smart-home/third-party/about",
+        "sourceTitle": "Яндекс Справка — Умный дом с Алисой (интеграция сторонних производителей)",
+        "note": "Управление реле и сценариями через привязку аккаунта Aqara Home (для RU/EU-версии)."
+      },
+      "matter": {
+        "v": "yes",
+        "sourceUrl": "https://www.aqara.com/en/product/panel-hub-s1-plus/",
+        "sourceTitle": "Aqara Panel Hub S1 Plus — официальная страница Aqara",
+        "note": "Работает как Matter Bridge для подключённых Zigbee-устройств."
+      },
+      "thread": {
+        "v": "no",
+        "sourceUrl": "https://www.aqara.com/en/product/panel-hub-s1-plus-specs/",
+        "sourceTitle": "Aqara Panel Hub S1 Plus — спецификации Aqara",
+        "note": "В спецификации заявлены Wi-Fi 2,4/5 ГГц, Zigbee 3.0 и Bluetooth; Thread отсутствует."
+      },
+      "zigbee": {
+        "v": "yes",
+        "sourceUrl": "https://www.aqara.com/en/product/panel-hub-s1-plus-specs/",
+        "sourceTitle": "Aqara Panel Hub S1 Plus — спецификации Aqara",
+        "note": "Встроенный хаб Zigbee 3.0."
+      },
+      "homekit": {
+        "v": "yes",
+        "sourceUrl": "https://www.aqara.com/en/product/panel-hub-s1-plus/",
+        "sourceTitle": "Aqara Panel Hub S1 Plus — официальная страница Aqara",
+        "note": "Поддержка Apple Home (HomeKit и Matter Bridge)."
+      },
+      "homeAssistant": {
+        "v": "yes",
+        "sourceUrl": "https://www.home-assistant.io/integrations/matter/",
+        "sourceTitle": "Home Assistant — официальная интеграция Matter",
+        "note": "Через Matter Bridge или HomeKit Device."
+      },
+      "wifi": {
+        "v": "yes",
+        "sourceUrl": "https://www.aqara.com/en/product/panel-hub-s1-plus-specs/",
+        "sourceTitle": "Aqara Panel Hub S1 Plus — спецификации Aqara",
+        "note": "Wi-Fi 2,4 / 5 ГГц."
+      }
+    }
+  },
+  "aqara-smart-lock-u200": {
+    "slug": "aqara-smart-lock-u200",
+    "name": "Aqara Smart Lock U200",
+    "status": "in_stock",
+    "priceEstimate": 39990,
+    "priceSource": "https://aqara.ru/",
+    "priceDate": "2026-11-25",
+    "priceNote": "Официальный магазин aqara.ru: 39 990 ₽ за комплект Kit (на маркетплейсах от 30 000 ₽).",
+    "compatibility": {
+      "alice": {
+        "v": "no",
+        "sourceUrl": "https://alice.yandex.ru/support/ru/smart-home/third-party/locks",
+        "sourceTitle": "Яндекс Справка — Умные замки в Умном доме с Алисой",
+        "note": "Умные замки сторонних брендов не поддерживаются в Умном доме с Алисой по политике безопасности Яндекса."
+      },
+      "matter": {
+        "v": "yes",
+        "sourceUrl": "https://www.aqara.com/en/product/smart-lock-u200/",
+        "sourceTitle": "Aqara Smart Lock U200 — официальная страница Aqara",
+        "note": "Нативный Matter over Thread."
+      },
+      "thread": {
+        "v": "yes",
+        "sourceUrl": "https://www.aqara.com/us/product/smart-lock-u200-specs/",
+        "sourceTitle": "Aqara Smart Lock U200 — спецификации Aqara",
+        "note": "Встроенный протокол Thread."
+      },
+      "zigbee": {
+        "v": "no",
+        "sourceUrl": "https://www.aqara.com/us/product/smart-lock-u200-specs/",
+        "sourceTitle": "Aqara Smart Lock U200 — спецификации Aqara",
+        "note": "Zigbee не поддерживается (только Thread, Bluetooth, NFC)."
+      },
+      "homekit": {
+        "v": "yes",
+        "sourceUrl": "https://www.aqara.com/en/product/smart-lock-u200/",
+        "sourceTitle": "Aqara Smart Lock U200 — официальная страница Aqara",
+        "note": "Apple Home и Apple Home Key (открытие по iPhone / Apple Watch)."
+      },
+      "homeAssistant": {
+        "v": "via-hub",
+        "sourceUrl": "https://www.home-assistant.io/integrations/matter/",
+        "sourceTitle": "Home Assistant — официальная интеграция Matter",
+        "note": "Локально через Matter over Thread при наличии Thread Border Router."
+      },
+      "wifi": {
+        "v": "no",
+        "sourceUrl": "https://www.aqara.com/us/product/smart-lock-u200-specs/",
+        "sourceTitle": "Aqara Smart Lock U200 — спецификации Aqara",
+        "note": "Без встроенного Wi-Fi (удалённый доступ через Thread Border Router)."
+      }
+    }
+  },
+  "aqara-smart-lock-u300": {
+    "slug": "aqara-smart-lock-u300",
+    "name": "Aqara Smart Lock U300",
+    "status": "in_stock",
+    "priceEstimate": 29990,
+    "priceSource": "https://aqara.ru/",
+    "priceDate": "2026-11-25",
+    "priceNote": "Официальный магазин aqara.ru и DNS: 29 990 ₽.",
+    "compatibility": {
+      "alice": {
+        "v": "no",
+        "sourceUrl": "https://alice.yandex.ru/support/ru/smart-home/third-party/locks",
+        "sourceTitle": "Яндекс Справка — Умные замки в Умном доме с Алисой",
+        "note": "Сторонние дверные замки не поддерживаются в Алисе."
+      },
+      "matter": {
+        "v": "yes",
+        "sourceUrl": "https://www.aqara.com/en/product/smart-lock-u300/",
+        "sourceTitle": "Aqara Smart Lock U300 — официальная страница Aqara",
+        "note": "Нативный Matter over Thread."
+      },
+      "thread": {
+        "v": "yes",
+        "sourceUrl": "https://www.aqara.com/en/product/smart-lock-u300-specs/",
+        "sourceTitle": "Aqara Smart Lock U300 — спецификации Aqara",
+        "note": "Встроенный протокол Thread."
+      },
+      "zigbee": {
+        "v": "no",
+        "sourceUrl": "https://www.aqara.com/en/product/smart-lock-u300-specs/",
+        "sourceTitle": "Aqara Smart Lock U300 — спецификации Aqara",
+        "note": "Zigbee отсутствует."
+      },
+      "homekit": {
+        "v": "yes",
+        "sourceUrl": "https://www.aqara.com/en/product/smart-lock-u300/",
+        "sourceTitle": "Aqara Smart Lock U300 — официальная страница Aqara",
+        "note": "Apple Home и Apple Home Key."
+      },
+      "homeAssistant": {
+        "v": "via-hub",
+        "sourceUrl": "https://www.home-assistant.io/integrations/matter/",
+        "sourceTitle": "Home Assistant — официальная интеграция Matter",
+        "note": "Через Matter over Thread при наличии Thread Border Router."
+      },
+      "wifi": {
+        "v": "no",
+        "sourceUrl": "https://www.aqara.com/en/product/smart-lock-u300-specs/",
+        "sourceTitle": "Aqara Smart Lock U300 — спецификации Aqara",
+        "note": "Без встроенного Wi-Fi."
+      }
+    }
+  },
+  "dreame-l50-ultra": {
+    "slug": "dreame-l50-ultra",
+    "name": "Dreame L50 Ultra",
+    "status": "in_stock",
+    "priceEstimate": 65000,
+    "priceSource": "М.Видео / Dreame Russia (розница РФ 65 000–79 990 ₽)",
+    "priceDate": "2026-11-25",
+    "priceNote": "Официальная розница РФ (М.Видео, DNS, Dreame Store): 65 000–79 990 ₽; на Яндекс Маркете от 45 600 ₽.",
+    "compatibility": {
+      "alice": {
+        "v": "yes",
+        "sourceUrl": "https://alice.yandex.ru/support/ru/smart-home/third-party/about",
+        "sourceTitle": "Яндекс Справка — Умный дом с Алисой (интеграция сторонних производителей)",
+        "note": "Через привязку аккаунта Dreamehome (регион РФ/Global) в «Умном доме с Алисой»."
+      },
+      "matter": {
+        "v": "yes",
+        "sourceUrl": "https://global.dreametech.com/products/l50-ultra-ae-black",
+        "sourceTitle": "Dreame L50 Ultra — официальная страница Dreame",
+        "note": "Поддержка стандарта Matter over Wi-Fi."
+      },
+      "thread": {
+        "v": "no",
+        "sourceUrl": "https://global.dreametech.com/products/l50-ultra-ae-black",
+        "sourceTitle": "Dreame L50 Ultra — официальная страница Dreame",
+        "note": "Работает по Wi-Fi, без Thread."
+      },
+      "zigbee": {
+        "v": "no",
+        "sourceUrl": "https://global.dreametech.com/products/l50-ultra-ae-black",
+        "sourceTitle": "Dreame L50 Ultra — официальная страница Dreame",
+        "note": "Без Zigbee."
+      },
+      "homekit": {
+        "v": "yes",
+        "sourceUrl": "https://www.apple.com/home-app/accessories/",
+        "sourceTitle": "Apple Home — совместимые аксессуары Matter",
+        "note": "Добавляется в Apple Home через Matter (iOS 18.4+ и хаб Apple)."
+      },
+      "homeAssistant": {
+        "v": "yes",
+        "sourceUrl": "https://www.home-assistant.io/integrations/matter/",
+        "sourceTitle": "Home Assistant — официальная интеграция Matter",
+        "note": "Базовое управление через Matter; расширенное (карты/комнаты) через HACS dreame_vacuum."
+      },
+      "wifi": {
+        "v": "yes",
+        "sourceUrl": "https://global.dreametech.com/products/l50-ultra-ae-black",
+        "sourceTitle": "Dreame L50 Ultra — официальная страница Dreame",
+        "note": "Wi-Fi 2,4 ГГц, приложение Dreamehome."
+      }
+    }
+  },
+  "dreame-x50-ultra-complete": {
+    "slug": "dreame-x50-ultra-complete",
+    "name": "Dreame X50 Ultra Complete",
+    "status": "in_stock",
+    "priceEstimate": 81000,
+    "priceSource": "М.Видео / Технопарк (розница РФ 81 000–139 900 ₽)",
+    "priceDate": "2026-11-25",
+    "priceNote": "Крупные сети РФ (М.Видео, DNS, Технопарк): от 81 000 до 139 900 ₽; маркетплейсы 71 000–85 000 ₽.",
+    "compatibility": {
+      "alice": {
+        "v": "yes",
+        "sourceUrl": "https://alice.yandex.ru/support/ru/smart-home/third-party/about",
+        "sourceTitle": "Яндекс Справка — Умный дом с Алисой (интеграция сторонних производителей)",
+        "note": "Через привязку аккаунта Dreamehome (RU/Global) в «Умном доме с Алисой»."
+      },
+      "matter": {
+        "v": "yes",
+        "sourceUrl": "https://global.dreametech.com/products/dreame-x50-ultra-complete",
+        "sourceTitle": "Dreame X50 Ultra Complete — официальная страница Dreame",
+        "note": "Поддержка Matter over Wi-Fi."
+      },
+      "thread": {
+        "v": "no",
+        "sourceUrl": "https://global.dreametech.com/products/dreame-x50-ultra-complete",
+        "sourceTitle": "Dreame X50 Ultra Complete — официальная страница Dreame",
+        "note": "Работает по Wi-Fi, без Thread."
+      },
+      "zigbee": {
+        "v": "no",
+        "sourceUrl": "https://global.dreametech.com/products/dreame-x50-ultra-complete",
+        "sourceTitle": "Dreame X50 Ultra Complete — официальная страница Dreame",
+        "note": "Без Zigbee."
+      },
+      "homekit": {
+        "v": "yes",
+        "sourceUrl": "https://www.apple.com/home-app/accessories/",
+        "sourceTitle": "Apple Home — совместимые аксессуары Matter",
+        "note": "Нативное добавление в Apple Home через Matter (iOS 18.4+)."
+      },
+      "homeAssistant": {
+        "v": "yes",
+        "sourceUrl": "https://www.home-assistant.io/integrations/matter/",
+        "sourceTitle": "Home Assistant — официальная интеграция Matter",
+        "note": "Через Matter; расширенные карты и комнаты через HACS dreame_vacuum."
+      },
+      "wifi": {
+        "v": "yes",
+        "sourceUrl": "https://global.dreametech.com/products/dreame-x50-ultra-complete",
+        "sourceTitle": "Dreame X50 Ultra Complete — официальная страница Dreame",
+        "note": "Wi-Fi 2,4 ГГц, приложение Dreamehome."
+      }
+    }
+  },
+  "ecovacs-winbot-w3-omni": {
+    "slug": "ecovacs-winbot-w3-omni",
+    "name": "Ecovacs WINBOT W3 OMNI",
+    "status": "in_stock",
+    "priceEstimate": 63000,
+    "priceSource": "Яндекс Маркет (официальный магазин Ecovacs и партнёры, 63 000–83 000 ₽)",
+    "priceDate": "2026-11-25",
+    "priceNote": "Яндекс Маркет (Ecovacs Official / Технопарк): от 63 000 до 83 000 ₽ за EU-версию.",
+    "compatibility": {
+      "alice": {
+        "v": "unknown",
+        "sourceUrl": null,
+        "sourceTitle": null,
+        "note": "Навык Ecovacs в Алисе подтверждён для роботов-пылесосов Deebot; поддержка мойщика окон WINBOT W3 OMNI официально не указана."
+      },
+      "matter": {
+        "v": "no",
+        "sourceUrl": "https://www.ecovacs.com/us/winbot-window-cleaning-robot/winbot-w3-omni",
+        "sourceTitle": "Ecovacs WINBOT W3 OMNI — официальная страница Ecovacs",
+        "note": "Поддержка Matter не заявлена."
+      },
+      "thread": {
+        "v": "no",
+        "sourceUrl": "https://www.ecovacs.com/us/winbot-window-cleaning-robot/winbot-w3-omni",
+        "sourceTitle": "Ecovacs WINBOT W3 OMNI — официальная страница Ecovacs",
+        "note": "Без Thread."
+      },
+      "zigbee": {
+        "v": "no",
+        "sourceUrl": "https://www.ecovacs.com/us/winbot-window-cleaning-robot/winbot-w3-omni",
+        "sourceTitle": "Ecovacs WINBOT W3 OMNI — официальная страница Ecovacs",
+        "note": "Без Zigbee."
+      },
+      "homekit": {
+        "v": "no",
+        "sourceUrl": "https://www.ecovacs.com/us/winbot-window-cleaning-robot/winbot-w3-omni",
+        "sourceTitle": "Ecovacs WINBOT W3 OMNI — официальная страница Ecovacs",
+        "note": "Без Apple HomeKit."
+      },
+      "homeAssistant": {
+        "v": "unknown",
+        "sourceUrl": null,
+        "sourceTitle": null,
+        "note": "Официальная интеграция Ecovacs в Home Assistant ориентирована на Deebot; статус WINBOT W3 OMNI не подтверждён."
+      },
+      "wifi": {
+        "v": "yes",
+        "sourceUrl": "https://www.ecovacs.com/us/winbot-window-cleaning-robot/winbot-w3-omni",
+        "sourceTitle": "Ecovacs WINBOT W3 OMNI — официальная страница Ecovacs",
+        "note": "Wi-Fi и Bluetooth, управление через приложение Ecovacs Home."
+      }
+    }
+  },
+  "hobot-sp10": {
+    "slug": "hobot-sp10",
+    "name": "HOBOT SP10",
+    "status": "in_stock",
+    "priceEstimate": 34990,
+    "priceSource": "https://hobot-russia.ru/",
+    "priceDate": "2026-11-25",
+    "priceNote": "Официальная РРЦ на hobot-russia.ru и в крупных сетях РФ: 34 990 ₽ (на маркетплейсах со скидками от 23 000 ₽).",
+    "compatibility": {
+      "alice": {
+        "v": "no",
+        "sourceUrl": "https://www.hobot.com.tw/hobot-sp10/",
+        "sourceTitle": "HOBOT SP10 — официальная страница HOBOT",
+        "note": "Автономный мойщик без Wi-Fi и облачного API; управление по Bluetooth и с пульта ДУ."
+      },
+      "matter": {
+        "v": "no",
+        "sourceUrl": "https://www.hobot.com.tw/hobot-sp10/",
+        "sourceTitle": "HOBOT SP10 — официальная страница HOBOT",
+        "note": "Без Matter."
+      },
+      "thread": {
+        "v": "no",
+        "sourceUrl": "https://www.hobot.com.tw/hobot-sp10/",
+        "sourceTitle": "HOBOT SP10 — официальная страница HOBOT",
+        "note": "Без Thread."
+      },
+      "zigbee": {
+        "v": "no",
+        "sourceUrl": "https://www.hobot.com.tw/hobot-sp10/",
+        "sourceTitle": "HOBOT SP10 — официальная страница HOBOT",
+        "note": "Без Zigbee."
+      },
+      "homekit": {
+        "v": "no",
+        "sourceUrl": "https://www.hobot.com.tw/hobot-sp10/",
+        "sourceTitle": "HOBOT SP10 — официальная страница HOBOT",
+        "note": "Без Apple HomeKit."
+      },
+      "homeAssistant": {
+        "v": "no",
+        "sourceUrl": "https://www.hobot.com.tw/hobot-sp10/",
+        "sourceTitle": "HOBOT SP10 — официальная страница HOBOT",
+        "note": "Без интеграции Home Assistant."
+      },
+      "wifi": {
+        "v": "no",
+        "sourceUrl": "https://www.hobot.com.tw/hobot-sp10/",
+        "sourceTitle": "HOBOT SP10 — официальная страница HOBOT",
+        "note": "Подключение только по Bluetooth (приложение HOBOT LEGEE) и ИК-пульт ДУ."
+      }
+    }
+  },
+  "karingbee-hcr011": {
+    "slug": "karingbee-hcr011",
+    "name": "KaringBee HCR011",
+    "status": "in_stock",
+    "priceEstimate": 6990,
+    "priceSource": "Яндекс Маркет / Wildberries / М.Видео (диапазон 4 400–10 600 ₽)",
+    "priceDate": "2026-11-25",
+    "priceNote": "Бюджетный сегмент, медианный ориентир РФ ~6 990 ₽ (диапазон 4 400–10 600 ₽). Требуется сверка по B2B-прайсу 3Logic.",
+    "compatibility": {
+      "alice": {
+        "v": "unknown",
+        "sourceUrl": null,
+        "sourceTitle": null,
+        "note": "Нет официального сайта/паспорта производителя; по карточкам ритейлеров (М.Видео) управление только с пульта ДУ, без умного дома."
+      },
+      "matter": {
+        "v": "unknown",
+        "sourceUrl": null,
+        "sourceTitle": null,
+        "note": "Нет официального паспорта производителя; по карточкам ритейлеров протокол не поддерживается."
+      },
+      "thread": {
+        "v": "unknown",
+        "sourceUrl": null,
+        "sourceTitle": null,
+        "note": "Нет официального паспорта производителя."
+      },
+      "zigbee": {
+        "v": "unknown",
+        "sourceUrl": null,
+        "sourceTitle": null,
+        "note": "Нет официального паспорта производителя."
+      },
+      "homekit": {
+        "v": "unknown",
+        "sourceUrl": null,
+        "sourceTitle": null,
+        "note": "Нет официального паспорта производителя."
+      },
+      "homeAssistant": {
+        "v": "unknown",
+        "sourceUrl": null,
+        "sourceTitle": null,
+        "note": "Нет официального паспорта производителя."
+      },
+      "wifi": {
+        "v": "unknown",
+        "sourceUrl": null,
+        "sourceTitle": null,
+        "note": "Нет официального паспорта производителя; в карточках М.Видео указано только управление с пульта ДУ и кнопок."
+      }
+    }
+  },
+  "roborock-qrevo-curv-2-flow": {
+    "slug": "roborock-qrevo-curv-2-flow",
+    "name": "Roborock Qrevo Curv 2 Flow",
+    "status": "in_stock",
+    "priceEstimate": 65000,
+    "priceSource": "Яндекс Маркет (RU/EAC версии, 60 000–75 000 ₽)",
+    "priceDate": "2026-11-25",
+    "priceNote": "Яндекс Маркет (RU / Ростест): 60 000–75 000 ₽; в DNS и М.Видео появляется с задержкой.",
+    "compatibility": {
+      "alice": {
+        "v": "yes",
+        "sourceUrl": "https://alice.yandex.ru/support/ru/smart-home/third-party/about",
+        "sourceTitle": "Яндекс Справка — Умный дом с Алисой (интеграция сторонних производителей)",
+        "note": "Официальная привязка аккаунта Roborock в «Умном доме с Алисой» (для RU/Global версий)."
+      },
+      "matter": {
+        "v": "yes",
+        "sourceUrl": "https://global.roborock.com/pages/roborock-qrevo-curv-2-flow",
+        "sourceTitle": "Roborock Qrevo Curv 2 Flow — официальная страница Roborock",
+        "note": "Поддержка Matter over Wi-Fi."
+      },
+      "thread": {
+        "v": "no",
+        "sourceUrl": "https://global.roborock.com/pages/roborock-qrevo-curv-2-flow",
+        "sourceTitle": "Roborock Qrevo Curv 2 Flow — официальная страница Roborock",
+        "note": "Работает по Wi-Fi, без Thread."
+      },
+      "zigbee": {
+        "v": "no",
+        "sourceUrl": "https://global.roborock.com/pages/roborock-qrevo-curv-2-flow",
+        "sourceTitle": "Roborock Qrevo Curv 2 Flow — официальная страница Roborock",
+        "note": "Без Zigbee."
+      },
+      "homekit": {
+        "v": "yes",
+        "sourceUrl": "https://www.apple.com/home-app/accessories/",
+        "sourceTitle": "Apple Home — совместимые аксессуары Matter",
+        "note": "Добавление в Apple Home через Matter (iOS 18.4+)."
+      },
+      "homeAssistant": {
+        "v": "yes",
+        "sourceUrl": "https://www.home-assistant.io/integrations/roborock/",
+        "sourceTitle": "Home Assistant — официальная интеграция Roborock",
+        "note": "Официальная интеграция Roborock и Matter в Home Assistant."
+      },
+      "wifi": {
+        "v": "yes",
+        "sourceUrl": "https://global.roborock.com/pages/roborock-qrevo-curv-2-flow",
+        "sourceTitle": "Roborock Qrevo Curv 2 Flow — официальная страница Roborock",
+        "note": "Wi-Fi 2,4 ГГц, приложение Roborock."
+      }
+    }
+  },
+  "roborock-saros-10": {
+    "slug": "roborock-saros-10",
+    "name": "Roborock Saros 10 и Saros 10R",
+    "status": "in_stock",
+    "priceEstimate": 115000,
+    "priceSource": "М.Видео / DNS / Яндекс Маркет (100 000–130 000 ₽)",
+    "priceDate": "2026-11-25",
+    "priceNote": "М.Видео (официальная RU-версия Saros 10R): от 115 000–125 000 ₽; на Яндекс Маркете от 100 000 до 130 000+ ₽ (включая версии RDS).",
+    "compatibility": {
+      "alice": {
+        "v": "yes",
+        "sourceUrl": "https://alice.yandex.ru/support/ru/smart-home/third-party/about",
+        "sourceTitle": "Яндекс Справка — Умный дом с Алисой (интеграция сторонних производителей)",
+        "note": "Официальная интеграция аккаунта Roborock в «Умном доме с Алисой» для RU/Global версий."
+      },
+      "matter": {
+        "v": "yes",
+        "sourceUrl": "https://global.roborock.com/pages/roborock-saros-10",
+        "sourceTitle": "Roborock Saros 10 — официальная страница Roborock",
+        "note": "Нативная поддержка Matter over Wi-Fi."
+      },
+      "thread": {
+        "v": "no",
+        "sourceUrl": "https://global.roborock.com/pages/roborock-saros-10",
+        "sourceTitle": "Roborock Saros 10 — официальная страница Roborock",
+        "note": "Работает по Wi-Fi, без Thread."
+      },
+      "zigbee": {
+        "v": "no",
+        "sourceUrl": "https://global.roborock.com/pages/roborock-saros-10",
+        "sourceTitle": "Roborock Saros 10 — официальная страница Roborock",
+        "note": "Без Zigbee."
+      },
+      "homekit": {
+        "v": "yes",
+        "sourceUrl": "https://www.apple.com/home-app/accessories/",
+        "sourceTitle": "Apple Home — совместимые аксессуары Matter",
+        "note": "Нативное добавление в Apple Home через Matter (iOS 18.4+)."
+      },
+      "homeAssistant": {
+        "v": "yes",
+        "sourceUrl": "https://www.home-assistant.io/integrations/roborock/",
+        "sourceTitle": "Home Assistant — официальная интеграция Roborock",
+        "note": "Официальная интеграция Roborock и Matter."
+      },
+      "wifi": {
+        "v": "yes",
+        "sourceUrl": "https://global.roborock.com/pages/roborock-saros-10",
+        "sourceTitle": "Roborock Saros 10 — официальная страница Roborock",
+        "note": "Wi-Fi 2,4 ГГц, приложение Roborock."
+      }
+    }
+  },
+  "roborock-saros-z70": {
+    "slug": "roborock-saros-z70",
+    "name": "Roborock Saros Z70",
+    "status": "in_stock",
+    "priceEstimate": 140000,
+    "priceSource": "Яндекс Маркет (средний диапазон 140 000–155 000 ₽)",
+    "priceDate": "2026-11-25",
+    "priceNote": "Яндекс Маркет: 140 000–155 000 ₽ (акции из-за рубежа от 94 000 ₽, официальные RU-версии до 180 000–200 000 ₽).",
+    "compatibility": {
+      "alice": {
+        "v": "yes",
+        "sourceUrl": "https://alice.yandex.ru/support/ru/smart-home/third-party/about",
+        "sourceTitle": "Яндекс Справка — Умный дом с Алисой (интеграция сторонних производителей)",
+        "note": "Официальная привязка аккаунта Roborock в «Умном доме с Алисой» (для RU/Global версий)."
+      },
+      "matter": {
+        "v": "yes",
+        "sourceUrl": "https://global.roborock.com/pages/roborock-saros-z70",
+        "sourceTitle": "Roborock Saros Z70 — официальная страница Roborock",
+        "note": "Нативная поддержка Matter over Wi-Fi."
+      },
+      "thread": {
+        "v": "no",
+        "sourceUrl": "https://global.roborock.com/pages/roborock-saros-z70",
+        "sourceTitle": "Roborock Saros Z70 — официальная страница Roborock",
+        "note": "Работает по Wi-Fi, без Thread."
+      },
+      "zigbee": {
+        "v": "no",
+        "sourceUrl": "https://global.roborock.com/pages/roborock-saros-z70",
+        "sourceTitle": "Roborock Saros Z70 — официальная страница Roborock",
+        "note": "Без Zigbee."
+      },
+      "homekit": {
+        "v": "yes",
+        "sourceUrl": "https://www.apple.com/home-app/accessories/",
+        "sourceTitle": "Apple Home — совместимые аксессуары Matter",
+        "note": "Добавление в Apple Home через Matter (iOS 18.4+)."
+      },
+      "homeAssistant": {
+        "v": "yes",
+        "sourceUrl": "https://www.home-assistant.io/integrations/roborock/",
+        "sourceTitle": "Home Assistant — официальная интеграция Roborock",
+        "note": "Официальная интеграция Roborock и Matter."
+      },
+      "wifi": {
+        "v": "yes",
+        "sourceUrl": "https://global.roborock.com/pages/roborock-saros-z70",
+        "sourceTitle": "Roborock Saros Z70 — официальная страница Roborock",
+        "note": "Wi-Fi 2,4 ГГц, приложение Roborock."
+      }
+    }
+  },
+  "smart-sunrise-kit": {
+    "slug": "smart-sunrise-kit",
+    "name": "Комплект «Умный рассвет»",
+    "status": "preorder",
+    "priceEstimate": null,
+    "priceSource": "https://aqara.ru/",
+    "priceDate": null,
+    "priceNote": "Мотор штор Aqara Curtain Driver E1 стоит 8 490–12 490 ₽ на aqara.ru, но светодиодная лента LED Strip T2 (LS-L06D) — новинка конца 2026 без устоявшейся РРЦ в РФ (предыдущая T1 DIY 5 м стоит ~5 600–5 900 ₽). Итоговая цена комплекта — под заказ до появления T2 в прайсе.",
+    "compatibility": {
+      "alice": {
+        "v": "via-hub",
+        "sourceUrl": "https://alice.yandex.ru/support/ru/smart-home/third-party/about",
+        "sourceTitle": "Яндекс Справка — Умный дом с Алисой (интеграция сторонних производителей)",
+        "note": "Через хаб Aqara (например, Hub M3) и привязку аккаунта Aqara Home."
+      },
+      "matter": {
+        "v": "via-hub",
+        "sourceUrl": "https://www.aqara.com/en/product/led-strip-t2/",
+        "sourceTitle": "Aqara LED Strip T2 — официальная страница Aqara",
+        "note": "LED Strip T2 работает по Matter over Thread (нужен контроллер); мотор E1 — через Matter Bridge хаба Aqara."
+      },
+      "thread": {
+        "v": "yes",
+        "sourceUrl": "https://www.aqara.com/en/product/led-strip-t2/",
+        "sourceTitle": "Aqara LED Strip T2 — официальная страница Aqara",
+        "note": "Thread поддерживается лентой LED Strip T2; мотор Curtain Driver E1 работает только по Zigbee 3.0."
+      },
+      "zigbee": {
+        "v": "yes",
+        "sourceUrl": "https://www.aqara.com/us/product/curtain-driver-e1-track-version/specs/",
+        "sourceTitle": "Aqara Curtain Driver E1 — спецификации Aqara",
+        "note": "Оба устройства комплекта (E1 и LED Strip T2) поддерживают Zigbee 3.0."
+      },
+      "homekit": {
+        "v": "via-hub",
+        "sourceUrl": "https://www.aqara.com/en/product/curtain-driver-e1/",
+        "sourceTitle": "Aqara Curtain Driver E1 — официальная страница Aqara",
+        "note": "Через хаб Aqara (HomeKit / Matter Bridge) в Apple Home."
+      },
+      "homeAssistant": {
+        "v": "via-hub",
+        "sourceUrl": "https://www.home-assistant.io/integrations/zha/",
+        "sourceTitle": "Home Assistant — официальная интеграция Zigbee Home Automation (ZHA)",
+        "note": "Локально через Zigbee-координатор (ZHA / Zigbee2MQTT) или Matter Bridge."
+      },
+      "wifi": {
+        "v": "no",
+        "sourceUrl": "https://www.aqara.com/us/product/curtain-driver-e1-track-version/specs/",
+        "sourceTitle": "Aqara Curtain Driver E1 — спецификации Aqara",
+        "note": "Оба устройства работают по Zigbee / Thread, без прямого Wi-Fi."
+      }
+    }
+  },
+  "unitree-g1": {
+    "slug": "unitree-g1",
+    "name": "Unitree G1",
+    "status": "preorder",
+    "priceEstimate": 1900000,
+    "priceSource": "https://robort.ru/",
+    "priceDate": "2026-11-25",
+    "priceNote": "Robort.ru / QUBOT / Tinvest: базовая версия Basic от 1 800 000 до 2 000 000 ₽ под заказ; версия Edu рассчитывается индивидуально.",
+    "compatibility": {
+      "alice": {
+        "v": "no",
+        "sourceUrl": "https://www.unitree.com/g1",
+        "sourceTitle": "Unitree G1 — официальная страница Unitree Robotics",
+        "note": "Робототехническая платформа, не интегрируется в бытовые голосовые ассистенты."
+      },
+      "matter": {
+        "v": "no",
+        "sourceUrl": "https://www.unitree.com/g1",
+        "sourceTitle": "Unitree G1 — официальная страница Unitree Robotics",
+        "note": "Без Matter."
+      },
+      "thread": {
+        "v": "no",
+        "sourceUrl": "https://www.unitree.com/g1",
+        "sourceTitle": "Unitree G1 — официальная страница Unitree Robotics",
+        "note": "Без Thread."
+      },
+      "zigbee": {
+        "v": "no",
+        "sourceUrl": "https://www.unitree.com/g1",
+        "sourceTitle": "Unitree G1 — официальная страница Unitree Robotics",
+        "note": "Без Zigbee."
+      },
+      "homekit": {
+        "v": "no",
+        "sourceUrl": "https://www.unitree.com/g1",
+        "sourceTitle": "Unitree G1 — официальная страница Unitree Robotics",
+        "note": "Без Apple HomeKit."
+      },
+      "homeAssistant": {
+        "v": "no",
+        "sourceUrl": "https://www.unitree.com/g1",
+        "sourceTitle": "Unitree G1 — официальная страница Unitree Robotics",
+        "note": "Управление через пульт и Unitree SDK / ROS2 (в версии Edu)."
+      },
+      "wifi": {
+        "v": "yes",
+        "sourceUrl": "https://www.unitree.com/g1",
+        "sourceTitle": "Unitree G1 — официальная страница Unitree Robotics",
+        "note": "Wi-Fi 6 и Bluetooth 5.2."
+      }
+    }
+  },
+  "unitree-go2": {
+    "slug": "unitree-go2",
+    "name": "Unitree Go2",
+    "status": "in_stock",
+    "priceEstimate": 260000,
+    "priceSource": "https://robort.ru/",
+    "priceDate": "2026-11-25",
+    "priceNote": "Robort.ru / QUBOT / Яндекс Маркет: Air 250 000–320 000 ₽ (ориентир от 260 000 ₽), Pro 350 000–460 000 ₽; Edu под заказ.",
+    "compatibility": {
+      "alice": {
+        "v": "no",
+        "sourceUrl": "https://www.unitree.com/go2",
+        "sourceTitle": "Unitree Go2 — официальная страница Unitree Robotics",
+        "note": "Бионический робот, не является устройством Умного дома с Алисой."
+      },
+      "matter": {
+        "v": "no",
+        "sourceUrl": "https://www.unitree.com/go2",
+        "sourceTitle": "Unitree Go2 — официальная страница Unitree Robotics",
+        "note": "Без Matter."
+      },
+      "thread": {
+        "v": "no",
+        "sourceUrl": "https://www.unitree.com/go2",
+        "sourceTitle": "Unitree Go2 — официальная страница Unitree Robotics",
+        "note": "Без Thread."
+      },
+      "zigbee": {
+        "v": "no",
+        "sourceUrl": "https://www.unitree.com/go2",
+        "sourceTitle": "Unitree Go2 — официальная страница Unitree Robotics",
+        "note": "Без Zigbee."
+      },
+      "homekit": {
+        "v": "no",
+        "sourceUrl": "https://www.unitree.com/go2",
+        "sourceTitle": "Unitree Go2 — официальная страница Unitree Robotics",
+        "note": "Без Apple HomeKit."
+      },
+      "homeAssistant": {
+        "v": "no",
+        "sourceUrl": "https://www.unitree.com/go2",
+        "sourceTitle": "Unitree Go2 — официальная страница Unitree Robotics",
+        "note": "Управление через приложение Unitree Go и SDK/ROS2 (в Edu)."
+      },
+      "wifi": {
+        "v": "yes",
+        "sourceUrl": "https://www.unitree.com/go2",
+        "sourceTitle": "Unitree Go2 — официальная страница Unitree Robotics",
+        "note": "Wi-Fi 6, Bluetooth 5.2 (в версии Pro дополнительно 4G-модуль)."
+      }
+    }
+  }
+}

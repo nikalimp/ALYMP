@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/content/site";
 import { getPosts } from "@/lib/posts";
+import { getLandings } from "@/lib/landings";
 
 export const dynamic = "force-static";
 
@@ -12,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getPosts();
   return [
     { url: `${site.url}/`, priority: 1 },
+    ...getLandings().map((l) => ({ url: `${site.url}/products/${l.slug}/`, lastModified: Object.values(l.product.sources)[0]?.checkedAt, priority: 0.9 })),
     { url: `${site.url}/about/`, priority: 0.6 },
     { url: `${site.url}/contacts/`, priority: 0.6 },
     ...(site.features.blog && posts.length ? [{ url: `${site.url}/blog/`, lastModified: posts.map((p) => p.updated ?? p.date).sort().at(-1), priority: 0.7 }] : []),

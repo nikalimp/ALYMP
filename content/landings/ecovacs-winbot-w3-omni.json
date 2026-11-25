@@ -7,10 +7,10 @@
   "answer": "Ecovacs WINBOT W3 OMNI — флагманский робот-мойщик окон с мобильной станцией самообслуживания Vortex Wash. Станция массой 10 кг автоматически очищает салфетку 16 форсунками под давлением 20 кПа за 1 минуту и позволяет работать от встроенного аккумулятора до 130 минут без розетки рядом. Навигация WIN-SLAM 5.0 обходит препятствия с точностью 1 мм, выдвижной скребок TruEdge очищает край до 1,1 мм, а защита включает 12 ступеней. Ориентир цены в РФ — от 63 000 ₽ на 25.11.2026.",
   "hero": {
     "alt": "Ecovacs WINBOT W3 OMNI — робот-мойщик окон со станцией Vortex Wash",
-    "dark": true,
+    "dark": false,
     "image": "/media/products/ecovacs-winbot-w3-omni/hero.webp",
-    "width": 920,
-    "height": 920,
+    "width": 1200,
+    "height": 900,
     "fit": "contain",
     "credit": "Фото: Ecovacs",
     "source": "https://www.ecovacs.com/us/winbot-window-cleaning-robot/winbot-w3-omni"

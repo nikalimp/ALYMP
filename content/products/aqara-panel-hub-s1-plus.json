@@ -223,14 +223,14 @@
   "media": {
     "hero": "/media/products/aqara-panel-hub-s1-plus/hero.webp",
     "card": "/media/products/aqara-panel-hub-s1-plus/card.webp",
-    "width": 1280,
-    "height": 525,
+    "width": 1200,
+    "height": 900,
     "cardWidth": 640,
-    "cardHeight": 262,
-    "fit": "cover",
+    "cardHeight": 640,
+    "fit": "contain",
     "hasAlpha": false,
     "alt": "Настенная сенсорная панель Aqara Panel Hub S1 Plus",
     "credit": "Фото: Aqara",
-    "source": "https://www.aqara.com/en/product/panel-hub-s1-plus/"
+    "source": "https://aqara.ru/product/hub-s1-plus-eu/"
   }
 }

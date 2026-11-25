@@ -6,12 +6,14 @@ import { categories } from "@/content/catalog";
 import { comparisons } from "@/content/comparisons";
 import { brandSlugs } from "@/content/brands";
 import { getGlossaryTerms } from "@/lib/glossary";
+import { getNews } from "@/lib/news";
 
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getPosts();
   const terms = getGlossaryTerms();
+  const news = getNews();
   return [
     { url: `${site.url}/`, priority: 1 },
     { url: `${site.url}/catalog/`, priority: 0.9 },
@@ -33,5 +35,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${site.url}/contacts/`, priority: 0.6 },
     ...(site.features.blog && posts.length ? [{ url: `${site.url}/blog/`, lastModified: posts.map((p) => p.updated ?? p.date).sort().at(-1), priority: 0.7 }] : []),
     ...(site.features.blog ? posts : []).map((p) => ({ url: `${site.url}/blog/${p.slug}/`, lastModified: p.updated ?? p.date, priority: 0.7 })),
+    ...(site.features.news && news.length ? [{ url: `${site.url}/news/`, lastModified: news.map((n) => n.updated ?? n.date).sort().at(-1), priority: 0.75 }] : []),
+    ...(site.features.news ? news : []).map((n) => ({ url: `${site.url}/news/${n.slug}/`, lastModified: n.updated ?? n.date, priority: 0.7 })),
   ];
 }

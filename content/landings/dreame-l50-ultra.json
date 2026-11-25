@@ -7,10 +7,10 @@
   "answer": "Dreame L50 Ultra — флагманский робот-пылесос со станцией полного цикла, доступный в конфигурациях L50 Ultra AE, L50 Ultra CE и L50s Pro Ultra. Версия L50 Ultra AE развивает 28 000 Па (Vormax), поднимает швабры на ковре на 10,5 мм и моет салфетки водой 100 °C. Старшая конфигурация L50s Pro Ultra увеличивает тягу до 30 000 Па, распознаёт свыше 220 типов препятствий и преодолевает две ступени до 4 см. Ориентир цены в РФ — от 65 000 ₽ на 25.11.2026.",
   "hero": {
     "alt": "Dreame L50 Ultra — робот-пылесос со станцией ThermoHub 100 °C",
-    "dark": true,
+    "dark": false,
     "image": "/media/products/dreame-l50-ultra/hero.webp",
-    "width": 523,
-    "height": 960,
+    "width": 1200,
+    "height": 900,
     "fit": "contain",
     "credit": "Фото: Dreame",
     "source": "https://global.dreametech.com/products/l50-ultra-ae-black"

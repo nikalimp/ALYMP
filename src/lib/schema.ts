@@ -81,9 +81,32 @@ export function articleSchema(p: { slug: string; title: string; description: str
     datePublished: p.date,
     dateModified: p.updated ?? p.date,
     inLanguage: "ru-RU",
-    author: site.person ? { "@id": personId } : { "@id": orgId },
+    author: { "@type": "Organization", name: "Редакция ALYMP", url: site.url },
     publisher: { "@id": orgId },
     mainEntityOfPage: `${site.url}/blog/${p.slug}/`,
+  };
+}
+
+export function newsArticleSchema(n: {
+  slug: string;
+  title: string;
+  description: string;
+  date: string;
+  updated?: string;
+  sourceUrl: string;
+}) {
+  return {
+    "@type": "NewsArticle",
+    headline: n.title,
+    description: n.description,
+    url: `${site.url}/news/${n.slug}/`,
+    datePublished: n.date,
+    dateModified: n.updated ?? n.date,
+    inLanguage: "ru-RU",
+    isBasedOn: n.sourceUrl,
+    author: { "@type": "Organization", name: "Редакция ALYMP", url: site.url },
+    publisher: { "@id": orgId },
+    mainEntityOfPage: `${site.url}/news/${n.slug}/`,
   };
 }
 

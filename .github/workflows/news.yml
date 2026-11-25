@@ -1,0 +1,64 @@
+name: News Collector
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Максимум новых заметок за запуск"
+        required: false
+        default: "2"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Collect and draft news via Gemini
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node scripts/news/collect.mjs --limit "${{ inputs.limit || 2 }}"
+
+      - name: Check for new files
+        id: changes
+        run: |
+          if [ -n "$(git status --porcelain content/news/)" ]; then
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Verify build and checks
+        if: steps.changes.outputs.has_changes == 'true'
+        run: npm run check
+
+      - name: Open PR for Nik review
+        if: steps.changes.outputs.has_changes == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          BRANCH="news/auto-$(date +%Y%m%d-%H%M)"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add content/news/
+          git commit -m "content(news): auto-collected industry news"
+          git push -u origin "$BRANCH"
+          gh label create "needs-nik" --description "Требует проверки фактов Ником" --color "0E8A16" || true
+          gh pr create \
+            --title "Новости: автосбор $(date +%d.%m.%Y)" \
+            --body "Автоматически собранные новости через \`scripts/news/collect.mjs\`. Проверьте цифры и источники перед слиянием." \
+            --label "needs-nik"

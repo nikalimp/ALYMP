@@ -303,12 +303,12 @@
   "media": {
     "hero": "/media/products/ecovacs-winbot-w3-omni/hero.webp",
     "card": "/media/products/ecovacs-winbot-w3-omni/card.webp",
-    "width": 920,
-    "height": 920,
-    "cardWidth": 480,
-    "cardHeight": 480,
+    "width": 1200,
+    "height": 900,
+    "cardWidth": 640,
+    "cardHeight": 640,
     "fit": "contain",
-    "hasAlpha": true,
+    "hasAlpha": false,
     "alt": "Робот-мойщик окон Ecovacs WINBOT W3 OMNI со станцией",
     "credit": "Фото: Ecovacs",
     "source": "https://www.ecovacs.com/us/winbot-window-cleaning-robot/winbot-w3-omni"

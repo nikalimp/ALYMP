@@ -7,10 +7,10 @@
   "answer": "Roborock Saros 10 и Saros 10R — ультратонкие роботы-пылесосы высотой 79,8 мм для квартир с низкой мебелью. Saros 10 развивает 22 000 Па (HyperForce), использует выдвижной лидар LDS (93,5 мм в открытом виде), преодолевает препятствия до 4 см и работает на уровне 52 дБ. Saros 10R переходит на твердотельную навигацию StarSight 2.0 без движущейся башни, развивает 20 000 Па и комплектуется станцией на 70 дней. Ориентир цены в РФ — от 115 000 ₽ на 25.11.2026.",
   "hero": {
     "alt": "Roborock Saros 10 и Saros 10R — ультратонкие роботы-пылесосы 79,8 мм",
-    "dark": true,
+    "dark": false,
     "image": "/media/products/roborock-saros-10/hero.webp",
-    "width": 960,
-    "height": 960,
+    "width": 1200,
+    "height": 900,
     "fit": "contain",
     "credit": "Фото: Roborock",
     "source": "https://global.roborock.com/pages/roborock-saros-10"

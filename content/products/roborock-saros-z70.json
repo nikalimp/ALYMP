@@ -205,12 +205,12 @@
   "media": {
     "hero": "/media/products/roborock-saros-z70/hero.webp",
     "card": "/media/products/roborock-saros-z70/card.webp",
-    "width": 960,
-    "height": 960,
-    "cardWidth": 480,
-    "cardHeight": 480,
+    "width": 1200,
+    "height": 900,
+    "cardWidth": 640,
+    "cardHeight": 640,
     "fit": "contain",
-    "hasAlpha": true,
+    "hasAlpha": false,
     "alt": "Робот-пылесос Roborock Saros Z70 с док-станцией",
     "credit": "Фото: Roborock",
     "source": "https://global.roborock.com/pages/roborock-saros-z70"

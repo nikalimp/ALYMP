@@ -7,10 +7,10 @@
   "answer": "Roborock Saros Z70 — флагманский робот-пылесос со складным пятиосевым манипулятором OmniGrip, который поднимает предметы массой до 300 г и убирает их с маршрута. Высота корпуса составляет 79,8 мм, сила всасывания HyperForce достигает 22 000 Па, а станция самоочистки работает до 60 дней без замены мешка и вмещает 590 мл моющего средства. Ориентир цены в России — от 140 000 ₽ по данным Яндекс Маркета на 25.11.2026.",
   "hero": {
     "alt": "Roborock Saros Z70 — флагманский робот-пылесос с рукой OmniGrip",
-    "dark": true,
+    "dark": false,
     "image": "/media/products/roborock-saros-z70/hero.webp",
-    "width": 960,
-    "height": 960,
+    "width": 1200,
+    "height": 900,
     "fit": "contain",
     "credit": "Фото: Roborock",
     "source": "https://global.roborock.com/pages/roborock-saros-z70"

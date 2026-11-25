@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unitree Go2 — робособака со встроенным ИИ — ALYMP</title>
+<meta name="description" content="Прототип лендинга ALYMP, подача «Ночь». Первый экран и сцена технологии — для замера скорости на телефоне.">
+<link rel="preload" href="assets/onest-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/go2.jpg" as="image" fetchpriority="high">
+<style>
+@font-face{font-family:"Onest";font-style:normal;font-weight:100 900;font-display:swap;src:url(assets/onest-cyrillic-wght-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Onest";font-style:normal;font-weight:100 900;font-display:swap;src:url(assets/onest-latin-wght-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2212}
+@font-face{font-family:"JB";font-style:normal;font-weight:500;font-display:swap;src:url(assets/jetbrains-mono-latin-500-normal.woff2) format("woff2")}
+:root{--bg:oklch(0.13 0.005 260);--card:oklch(0.17 0.006 260);--fg:oklch(0.97 0.003 260);--fg2:oklch(0.78 0.006 260);--muted:oklch(0.62 0.008 260);--line:oklch(0.26 0.006 260);--line2:oklch(0.42 0.008 260);--accent:oklch(0.78 0.14 210);--warn:oklch(0.8 0.14 75)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Onest",system-ui,sans-serif;background:var(--bg);color:var(--fg);line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1280px;margin:0 auto;padding:0 24px}
+.mono{font-family:"JB",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.eyebrow{font:500 12px/1 "JB",ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 22px;border-radius:999px;font-weight:600;font-size:15px;border:1px solid transparent;transition:background-color .2s ease-out,border-color .2s ease-out}
+.btn-p{background:var(--fg);color:var(--bg)}.btn-p:hover{background:oklch(0.86 0.003 260)}
+.btn-g{border-color:var(--line2)}.btn-g:hover{border-color:var(--fg)}
+header{position:fixed;inset:0 0 auto;z-index:20;background:oklch(0.13 0.005 260 / .7);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;gap:28px;height:56px}
+.logo{font-weight:800;letter-spacing:.18em;font-size:17px}
+header nav{display:flex;gap:24px;font-size:14px;color:var(--fg2)}
+header .btn{margin-left:auto;min-height:36px;padding:0 16px;font-size:14px}
+.crumbs-wrap{position:absolute!important;top:72px;left:0;right:0;padding-bottom:0!important}
+.crumbs{font-size:13px;color:var(--fg2)}
+.crumbs a:hover{color:var(--fg)}
+.hero{position:relative;min-height:min(100svh,940px);display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.hero picture,.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 40%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,var(--bg) 4%,oklch(0.13 0.005 260 / .35) 45%,oklch(0.13 0.005 260 / .55) 100%)}
+.hero .wrap{position:relative;z-index:2;width:100%;padding-bottom:48px}
+.hero-grid{display:grid;grid-template-columns:1fr auto;gap:32px;align-items:end}
+h1{font-size:clamp(56px,10vw,144px);letter-spacing:-.045em;line-height:.88;font-weight:700;margin-top:14px}
+.sub{font-size:clamp(18px,2vw,22px);color:var(--fg2);margin-top:18px;max-width:520px}
+.buy{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px;align-items:center}
+.price{margin-top:22px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.price b{font-size:28px;letter-spacing:-.02em;font-weight:600}
+.price small{font-size:13px;color:var(--muted)}
+.status{display:inline-flex;align-items:center;gap:6px;font:500 12px/1 "JB",monospace;color:var(--fg2)}
+.status i{width:6px;height:6px;border-radius:50%;background:var(--warn)}
+.nums{display:flex;gap:36px}
+.nums b{display:block;font-size:44px;letter-spacing:-.03em;font-weight:600;line-height:1}
+.nums span{display:block;font-size:13px;color:var(--muted);margin-top:8px;max-width:140px}
+.answer{padding:112px 0 96px}
+.answer p{font-size:clamp(24px,3.2vw,40px);line-height:1.22;letter-spacing:-.02em;font-weight:500;color:var(--fg2);max-width:1040px}
+.answer p b{color:var(--fg);font-weight:600}
+.tech{position:relative}
+.tech-in{display:grid;grid-template-columns:5fr 7fr;gap:48px}
+.tech-text{padding:20vh 0}
+.step{min-height:70vh;display:flex;flex-direction:column;justify-content:center;opacity:.25;transition:opacity .5s cubic-bezier(.2,.7,.2,1)}
+.step.on{opacity:1}
+.step h2{font-size:clamp(36px,4.6vw,64px);letter-spacing:-.035em;line-height:.98;margin:14px 0 16px}
+.step h2 span{color:var(--muted)}
+.step p{color:var(--fg2);font-size:18px;max-width:440px}
+.step a{color:var(--accent);border-bottom:1px solid currentColor}
+.tech-visual{position:sticky;top:56px;height:calc(100svh - 56px);display:flex;align-items:center}
+.frame{position:relative;width:100%;aspect-ratio:4/3;background:var(--card);overflow:hidden}
+.frame img{width:100%;height:100%;object-fit:cover;transform:scale(var(--z,1.05));transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.frame .cap{position:absolute;left:16px;bottom:14px;font:500 11px "JB",monospace;color:var(--muted)}
+.frame .hud{position:absolute;right:16px;top:16px;font:500 12px "JB",monospace;color:var(--accent);text-align:right;line-height:1.7}
+.note{border-top:1px solid var(--line);padding:24px 0 64px;color:var(--muted);font-size:13px}
+@media (max-width:860px){
+ header nav{display:none}
+ .hero-grid{grid-template-columns:1fr}
+ .nums{gap:24px}.nums b{font-size:32px}
+ .tech-in{grid-template-columns:1fr}
+ .tech-visual{position:relative;top:0;height:auto;order:-1;padding-top:24px}
+ .tech-text{padding:0}
+ .step{min-height:auto;padding:48px 0;opacity:1}
+ .answer{padding:72px 0 56px}
+}
+@media (max-width:480px){.wrap{padding:0 16px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.step{opacity:1}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="logo" href="home.html?__variant=night" aria-label="ALYMP — на главную">ALYMP</a>
+  <nav aria-label="Основная навигация"><a href="#">Уборка</a><a href="#">Умный дом</a><a href="#">Роботы</a><a href="#">Сравнения</a><a href="#">Журнал</a></nav>
+  <a class="btn btn-p" href="#order">Заказать</a>
+</div></header>
+
+<main>
+<section class="hero" aria-labelledby="h1">
+  <img src="assets/go2.jpg" width="780" height="439" alt="Робособака Unitree Go2 на тёмном фоне" fetchpriority="high">
+  <div class="wrap crumbs-wrap"><nav class="crumbs" aria-label="Хлебные крошки"><a href="#">Каталог</a> / <a href="#">Роботы</a> / Unitree Go2</nav></div>
+  <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <span class="status"><i></i>под заказ</span>
+        <h1 id="h1">Unitree Go2</h1>
+        <p class="sub">Робособака со встроенным ИИ. Ходит по лестницам, следует за вами и отвечает голосом.</p>
+        <div class="price"><b>от 261 300 ₽</b><small>Ориентир по данным TODO(источник) на 25.11.2026 · точную цену подтвердит менеджер</small></div>
+        <div class="buy"><a class="btn btn-p" href="#order">Заказать</a><a class="btn btn-g" href="#versions">Go2 Air или Pro</a></div>
+      </div>
+      <div class="nums" aria-label="Ключевые цифры">
+        <div><b class="mono">4D</b><span>лидар — видит пространство вокруг ⚠</span></div>
+        <div><b class="mono">12</b><span>моторов в суставах ⚠</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="answer"><div class="wrap">
+  <p><b>Unitree Go2 — четвероногий робот для дома, учёбы и исследований.</b> Он ориентируется по лидару, обходит препятствия и выполняет голосовые команды. В России доступен под заказ с официальной гарантией; версии Air и Pro отличаются датчиками и возможностями ИИ.</p>
+</div></section>
+
+<section class="tech" aria-label="Технологии"><div class="wrap tech-in">
+  <div class="tech-text">
+    <div class="step on"><span class="eyebrow">01 · Навигация</span><h2>Видит комнату <span>целиком</span></h2><p>Лидар строит трёхмерную карту пространства, поэтому робот обходит мебель и людей. Что такое <a href="#">лидар</a> — в глоссарии.</p></div>
+    <div class="step"><span class="eyebrow">02 · Движение</span><h2>Лестницы <span>и пороги</span></h2><p>Двенадцать моторов в суставах держат равновесие на неровном полу. Цифры — после сверки с unitree.com ⚠.</p></div>
+    <div class="step"><span class="eyebrow">03 · ИИ</span><h2>Слушает <span>и отвечает</span></h2><p>Голосовые команды и следование за хозяином — в версии Pro. Различия версий — в таблице ниже.</p></div>
+  </div>
+  <div class="tech-visual"><div class="frame">
+    <img src="assets/go2.jpg" width="780" height="439" alt="" loading="lazy">
+    <div class="hud" aria-hidden="true">LIDAR · ON<br>MAP · 3D</div>
+    <span class="cap">unitree.com — пресс-материалы</span>
+  </div></div>
+</div></section>
+
+<div class="wrap note">Прототип этапа 4: первый экран и одна сцена технологии. Цифры с ⚠ не проверены. Фото — официальное изображение Unitree для внутреннего показа.</div>
+</main>
+
+<script>
+(function(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver' in window)||innerWidth<=860)return;
+  var steps=document.querySelectorAll('.step'),img=document.querySelector('.frame img');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){steps.forEach(function(s){s.classList.remove('on')});e.target.classList.add('on');var i=[].indexOf.call(steps,e.target);img.style.setProperty('--z',[1.05,1.25,1.12][i])}})},{rootMargin:'-45% 0px -45% 0px'});
+  steps.forEach(function(s){io.observe(s)});
+})();
+</script>
+</body>
+</html>

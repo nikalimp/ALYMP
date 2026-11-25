@@ -8,11 +8,11 @@
   "hero": {
     "image": "/media/products/unitree-go2/hero.webp",
     "alt": "Робособака Unitree Go2 на тёмном фоне",
-    "width": 780,
-    "height": 439,
-    "dark": true,
+    "width": 1200,
+    "height": 900,
+    "dark": false,
     "credit": "Фото: Unitree Robotics",
-    "fit": "cover",
+    "fit": "contain",
     "source": "https://www.unitree.com/go2"
   },
   "keyNumbers": [

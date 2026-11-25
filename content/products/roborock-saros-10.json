@@ -255,12 +255,12 @@
   "media": {
     "hero": "/media/products/roborock-saros-10/hero.webp",
     "card": "/media/products/roborock-saros-10/card.webp",
-    "width": 960,
-    "height": 960,
-    "cardWidth": 480,
-    "cardHeight": 480,
+    "width": 1200,
+    "height": 900,
+    "cardWidth": 640,
+    "cardHeight": 640,
     "fit": "contain",
-    "hasAlpha": true,
+    "hasAlpha": false,
     "alt": "Робот-пылесос Roborock Saros 10 в чёрном корпусе",
     "credit": "Фото: Roborock",
     "source": "https://global.roborock.com/pages/roborock-saros-10"

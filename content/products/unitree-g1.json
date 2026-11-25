@@ -266,12 +266,12 @@
   "media": {
     "hero": "/media/products/unitree-g1/hero.webp",
     "card": "/media/products/unitree-g1/card.webp",
-    "width": 800,
-    "height": 800,
-    "cardWidth": 480,
-    "cardHeight": 480,
+    "width": 1200,
+    "height": 900,
+    "cardWidth": 640,
+    "cardHeight": 640,
     "fit": "contain",
-    "hasAlpha": true,
+    "hasAlpha": false,
     "alt": "Робот-гуманоид Unitree G1",
     "credit": "Фото: Unitree Robotics",
     "source": "https://www.unitree.com/g1"

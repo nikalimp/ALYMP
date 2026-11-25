@@ -222,12 +222,12 @@
   "media": {
     "hero": "/media/products/smart-sunrise-kit/hero.webp",
     "card": "/media/products/smart-sunrise-kit/card.webp",
-    "width": 629,
-    "height": 960,
-    "cardWidth": 314,
-    "cardHeight": 480,
+    "width": 1200,
+    "height": 900,
+    "cardWidth": 640,
+    "cardHeight": 640,
     "fit": "contain",
-    "hasAlpha": true,
+    "hasAlpha": false,
     "alt": "Привод штор Aqara Curtain Driver E1 из комплекта Умный рассвет",
     "credit": "Фото: Aqara",
     "source": "https://www.aqara.com/en/product/curtain-driver-e1/"

@@ -182,14 +182,14 @@
   "media": {
     "hero": "/media/products/aqara-smart-lock-u200/hero.webp",
     "card": "/media/products/aqara-smart-lock-u200/card.webp",
-    "width": 737,
-    "height": 960,
-    "cardWidth": 368,
-    "cardHeight": 480,
+    "width": 1200,
+    "height": 900,
+    "cardWidth": 640,
+    "cardHeight": 640,
     "fit": "contain",
     "hasAlpha": false,
     "alt": "Умный замок Aqara Smart Lock U200 с клавиатурой",
     "credit": "Фото: Aqara",
-    "source": "https://www.aqara.com/en/product/smart-lock-u200/"
+    "source": "https://aqara.ru/product/aqara-smart-lock-u200/"
   }
 }

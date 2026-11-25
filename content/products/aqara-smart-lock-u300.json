@@ -259,14 +259,14 @@
   "media": {
     "hero": "/media/products/aqara-smart-lock-u300/hero.webp",
     "card": "/media/products/aqara-smart-lock-u300/card.webp",
-    "width": 1280,
-    "height": 525,
+    "width": 1200,
+    "height": 900,
     "cardWidth": 640,
-    "cardHeight": 262,
+    "cardHeight": 640,
     "fit": "contain",
-    "hasAlpha": true,
+    "hasAlpha": false,
     "alt": "Умный замок-ручка Aqara Smart Lock U300",
     "credit": "Фото: Aqara",
-    "source": "https://www.aqara.com/en/product/smart-lock-u300/"
+    "source": "https://aqara.ru/product/%d1%83%d0%bc%d0%bd%d1%8b%d0%b9-%d0%b7%d0%b0%d0%bc%d0%be%d0%ba-u300-aqara-smart-lock-u300/"
   }
 }

@@ -7,13 +7,13 @@
   "answer": "Aqara Camera Hub G5 Pro — уличная и домашняя камера видеонаблюдения со встроенным хабом Zigbee 3.0, Thread Border Router и Matter Controller. Камера снимает в разрешении 2688 × 1520 (Quad HD) с диафрагмой f/1.0 и углом 133°, оснащена PIR-датчиком движения и прожектором 3 Вт (3000 К), работает при температуре от −30 до +50 °C и выпускается в версиях PoE (CH-C03) и Wi-Fi 2,4/5 ГГц (CH-C07). Поддерживает Apple HomeKit Secure Video. Ориентир цены в РФ — от 21 990 ₽ на 25.11.2026.",
   "hero": {
     "alt": "Aqara Camera Hub G5 Pro — камера Quad HD со встроенным хабом Zigbee и Thread",
-    "dark": true,
+    "dark": false,
     "image": "/media/products/aqara-camera-hub-g5-pro/hero.webp",
-    "width": 1280,
-    "height": 525,
-    "fit": "cover",
+    "width": 1200,
+    "height": 900,
+    "fit": "contain",
     "credit": "Фото: Aqara",
-    "source": "https://www.aqara.com/en/product/camera-hub-g5-pro/"
+    "source": "https://aqara.ru/product/%d0%ba%d0%b0%d0%bc%d0%b5%d1%80%d0%b0-%d1%85%d0%b0%d0%b1-aqara-g5-pro-aqara-camera-hub-g5-pro-poe-wi-fi/"
   },
   "keyNumbers": [
     {

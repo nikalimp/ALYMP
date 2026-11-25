@@ -7,10 +7,10 @@
   "answer": "Dreame X50 Ultra Complete — флагманский робот-пылесос для квартир со сложной планировкой и высокими порогами. Система выдвижных опор ProLeap преодолевает одиночный порог до 42 мм и двойную ступень высотой до 60 мм (с промежутком больше 4 см). Утапливаемый лидар VersaLift снижает высоту корпуса со 111 до 89 мм, сила всасывания достигает 20 000 Па, а станция моет швабры водой до 80 °C и обеззараживает их ультрафиолетом. Ориентир цены в РФ — от 81 000 ₽ на 25.11.2026.",
   "hero": {
     "alt": "Dreame X50 Ultra Complete — робот-пылесос с выдвижными опорами ProLeap",
-    "dark": true,
+    "dark": false,
     "image": "/media/products/dreame-x50-ultra-complete/hero.webp",
-    "width": 646,
-    "height": 960,
+    "width": 1200,
+    "height": 900,
     "fit": "contain",
     "credit": "Фото: Dreame",
     "source": "https://global.dreametech.com/products/dreame-x50-ultra-complete"

@@ -9,11 +9,11 @@
     "alt": "Aqara Panel Hub S1 Plus — настенная сенсорная панель управления умным домом",
     "dark": false,
     "image": "/media/products/aqara-panel-hub-s1-plus/hero.webp",
-    "width": 1280,
-    "height": 525,
-    "fit": "cover",
+    "width": 1200,
+    "height": 900,
+    "fit": "contain",
     "credit": "Фото: Aqara",
-    "source": "https://www.aqara.com/en/product/panel-hub-s1-plus/"
+    "source": "https://aqara.ru/product/hub-s1-plus-eu/"
   },
   "keyNumbers": [
     {

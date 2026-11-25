@@ -23,9 +23,10 @@
 - [x] 04-plan.md, 05-tasks.md — черновик 25.11.2026, 68 задач; ждём pre-flight (мастер setup-site.sh)
 
 ## Следующий шаг
-Блок 7 (журнал: новости `/news/` + автосбор + 7 статей блога, T44–T49) и форма заявок `/api/lead.php` (T54).
+Форма заявок `/api/lead.php` (T54), аудит Lighthouse и финальный запуск (Блоки 10–11).
 
 ## Журнал
+- 25.11.2026 — Ветка `gemini/cutouts-and-block-7`: влиты 16 вырезанных студийных фото на белом фоне `#FFFFFF` без теней (403,3 КБ суммарно, 7 инфографик/баннеров заменены на чистые студийные фото) и закрыт весь Блок 7 (T44–T49): блог `/blog/` с фильтром по 4 рубрикам и 7 гайдами (1240–1350 слов, `BlogPosting` + `FAQPage`, автоссылки на `/glossary/`), новости `/news/` с 10 стартовыми заметками (`NewsArticle` с `isBasedOn`, блок «Что это значит для России») и автопарсер `scripts/news/collect.mjs` + `.github/workflows/news.yml`.
 - 25.11.2026 — Спринт 4А (`gemini/block-6-glossary`, Блок 6: T39–T43): собран глоссарий на 50 терминов (`/glossary/` + 50 `/glossary/[slug]/`, `DefinedTermSet`/`DefinedTerm`/`FAQPage`, автоперелинковка `linkTerms` на продуктовых лендингах). Подключено в шапку, футер, sitemap и `llms.txt`. `npm run check` зелёный (119/119 страниц, 0 предупреждений), `slop-check` 0/0/0.
 - 25.11.2026 — Спринт 3 (`gemini/sprint-3-media-and-order`, T15 + T51): добавлены официальные пресс-фото для 16/17 товаров (`media/press/` + `public/media/products/<slug>/{hero,card}.webp`, 897,7 КБ суммарно) и страница `/how-to-order/` (`HowTo` + `FAQPage`). `npm run check` зелёный (68/68 страниц, `geo-check` 8.7/10), `slop-check` 0/0/0.
 - 25.11.2026 — Спринт 2Б (`gemini/block-4-all-landings`, Блок 4: T23–T26, T28, T30–T34 + `hobot-sp10`, `ecovacs-winbot-w3-omni`): созданы оставшиеся 12 продуктовых лендингов, все 17/17 товаров каталога теперь имеют полноценные страницы `/products/[slug]/` и `/products/[slug]/specs/`. `npm run check` зелёный (67/67 страниц, `geo-check` 8.7/10, Главред 7.5+), `slop-check` 0/0/0.

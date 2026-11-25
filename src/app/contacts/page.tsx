@@ -38,7 +38,7 @@ export default function Contacts() {
             ))}
           </dl>
           <Button asChild size="lg" className="mt-8"><a href={site.cta.href}>{site.cta.label}</a></Button>
-          <p className="mt-10 text-sm text-muted-foreground">{site.legalName} · ИНН {site.legal.inn} · ОГРН {site.legal.ogrn}</p>
+          <p className="mt-10 text-sm text-muted-foreground">{site.legalName} · {site.legal.status} · ИНН {site.legal.inn}</p>
         </Container>
       </Section>
     </>

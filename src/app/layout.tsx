@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
-import "@fontsource-variable/inter/wght.css"; // шрифт локально: заменить на шрифт бренда из specs/03-design.md
+import "@fontsource-variable/onest/wght.css"; // шрифт текста — specs/03-design.md §3
+import "@fontsource/jetbrains-mono/400.css"; // цифры и метки
+import "@fontsource/jetbrains-mono/500.css";
 import "./globals.css";
 import { site } from "@/content/site";
 import { Header } from "@/components/header";
@@ -13,7 +15,7 @@ export const metadata: Metadata = {
   title: { default: site.title, template: `%s — ${site.name}` },
   description: site.description,
   alternates: { canonical: "/" },
-  openGraph: { type: "website", locale: site.locale, siteName: site.name, title: site.title, description: site.description, url: site.url, images: ["/og.png"] },
+  openGraph: { type: "website", locale: site.locale, siteName: site.name, title: site.title, description: site.description, url: site.url, images: [{ url: "/og.png", width: 1200, height: 630 }] },
   robots: { index: true, follow: true },
 };
 

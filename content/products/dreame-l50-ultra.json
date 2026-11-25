@@ -1,0 +1,391 @@
+{
+  "slug": "dreame-l50-ultra",
+  "brand": "dreame",
+  "category": "cleaning-robots",
+  "name": "Dreame L50 Ultra",
+  "variants": [
+    "L50 Ultra CE",
+    "L50 Ultra AE",
+    "L50s Pro Ultra"
+  ],
+  "announced": null,
+  "sources": {
+    "s1": {
+      "url": "https://global.dreametech.com/products/l50-ultra-ae-black",
+      "title": "Dreame L50 Ultra AE — официальная страница (global), таблица характеристик",
+      "checkedAt": "2026-11-25"
+    },
+    "s2": {
+      "url": "https://global.dreametech.com/pages/l50-ultra-ce",
+      "title": "Dreame L50 Ultra CE - официальная страница руководств Dreame (global)",
+      "checkedAt": "2026-11-25"
+    },
+    "s3": {
+      "url": "https://global.dreametech.com/products/l50s-pro-ultra",
+      "title": "Dreame L50s Pro Ultra — официальная страница (global)",
+      "checkedAt": "2026-11-25"
+    },
+    "s4": {
+      "url": "https://cdn.shopify.com/s/files/1/0302/5276/1220/files/R5024D-L50_Ultra_CE-_-_3.pdf?v=1758874852",
+      "title": "Dreame L50 Ultra CE — инструкция пользователя, раздел «Характеристики» (официальная, с global.dreametech.com/pages/l50-ultra-ce)",
+      "checkedAt": "2026-11-25"
+    }
+  },
+  "facts": [
+    {
+      "text": "L50 Ultra AE: сила всасывания 28 000 Па (Vormax).",
+      "src": "s1"
+    },
+    {
+      "text": "L50 Ultra AE: аккумулятор 5200 мАч.",
+      "src": "s1"
+    },
+    {
+      "text": "L50 Ultra AE: швабра поднимается на ковре до 10,5 мм.",
+      "src": "s1"
+    },
+    {
+      "text": "L50 Ultra AE: для ковров заявлены режимы интенсивной уборки, игнорирования ковров и объезда ковров.",
+      "src": "s1"
+    },
+    {
+      "text": "L50 Ultra AE: станция моет швабры горячей водой 100 °C (ThermoHub) и сушит их горячим воздухом.",
+      "src": "s1"
+    },
+    {
+      "text": "L50 Ultra AE: станция сама наполняет бак водой и раствором; автоматический залив и слив воды возможны с отдельным набором для подключения к водопроводу, который продаётся отдельно.",
+      "src": "s1"
+    },
+    {
+      "text": "L50 Ultra AE: пылесборный мешок в станции рассчитан на опорожнение до 100 дней (значение дано со сноской, условия расчёта на странице не раскрыты).",
+      "src": "s1"
+    },
+    {
+      "text": "L50 Ultra AE: поддерживает стандарт Matter и голосовое управление командой «OK, Dreame»; на странице указана совместимость с Alexa, Google Home и Siri.",
+      "src": "s1"
+    },
+    {
+      "text": "L50 Ultra CE: на официальной странице global.dreametech.com для этой версии опубликовано только руководство пользователя (EN, AR, ZH-HK); технические характеристики на странице не указаны.",
+      "src": "s2"
+    },
+    {
+      "text": "L50s Pro Ultra — самая мощная конфигурация: до 30 000 Па и препятствия до 4 см, если это две ступени; одиночный порог — до 2,2 см.",
+      "src": "s3"
+    },
+    {
+      "text": "L50s Pro Ultra распознаёт больше 220 типов препятствий и моет швабры водой до 100 °C.",
+      "src": "s3"
+    },
+    {
+      "text": "L50 Ultra AE преодолевает препятствия до 2 см и всасывает до 28 000 Па.",
+      "src": "s1"
+    }
+  ],
+  "specs": [
+    {
+      "group": "Уборка",
+      "label": "L50 Ultra AE · Сила всасывания",
+      "value": "28 000",
+      "unit": "Па",
+      "src": "s1"
+    },
+    {
+      "group": "Уборка",
+      "label": "L50 Ultra AE · Подъём швабры на ковре",
+      "value": "10,5",
+      "unit": "мм",
+      "src": "s1"
+    },
+    {
+      "group": "Уборка",
+      "label": "L50 Ultra AE · Температура воды для мойки швабр",
+      "value": "100",
+      "unit": "°C",
+      "src": "s1"
+    },
+    {
+      "group": "Питание",
+      "label": "L50 Ultra AE · Аккумулятор",
+      "value": "5200",
+      "unit": "мАч",
+      "src": "s1"
+    },
+    {
+      "group": "Станция",
+      "label": "L50 Ultra AE · Автоопорожнение пылесборника (со сноской)",
+      "value": "до 100",
+      "unit": "дней",
+      "src": "s1"
+    },
+    {
+      "group": "Габариты",
+      "label": "L50 Ultra AE · Робот",
+      "value": "350 × 350 × 97",
+      "unit": "мм",
+      "src": "s1"
+    },
+    {
+      "group": "Габариты",
+      "label": "L50 Ultra AE · Станция",
+      "value": "457 × 340 × 590",
+      "unit": "мм",
+      "src": "s1"
+    },
+    {
+      "group": "Габариты",
+      "label": "L50 Ultra AE · Масса робота",
+      "value": "4,03",
+      "unit": "кг",
+      "src": "s1"
+    },
+    {
+      "group": "Габариты",
+      "label": "L50 Ultra AE · Масса станции",
+      "value": "9,12",
+      "unit": "кг",
+      "src": "s1"
+    },
+    {
+      "group": "Проходимость",
+      "label": "L50 Ultra AE · Высота препятствия",
+      "value": "2",
+      "unit": "см",
+      "src": "s1"
+    },
+    {
+      "group": "Уборка",
+      "label": "L50 Ultra AE · Основная щётка",
+      "value": "TriCut Brush 3.0",
+      "unit": "",
+      "src": "s1"
+    },
+    {
+      "group": "Габариты",
+      "label": "L50s Pro Ultra · Робот",
+      "value": "350 × 350 × 103,8",
+      "unit": "мм",
+      "src": "s3"
+    },
+    {
+      "group": "Габариты",
+      "label": "L50s Pro Ultra · Станция",
+      "value": "457 × 340 × 590",
+      "unit": "мм",
+      "src": "s3"
+    },
+    {
+      "group": "Габариты",
+      "label": "L50s Pro Ultra · Масса робота",
+      "value": "4,04",
+      "unit": "кг",
+      "src": "s3"
+    },
+    {
+      "group": "Габариты",
+      "label": "L50s Pro Ultra · Масса станции",
+      "value": "9,21",
+      "unit": "кг",
+      "src": "s3"
+    },
+    {
+      "group": "Проходимость",
+      "label": "L50s Pro Ultra · Препятствие, две ступени",
+      "value": "4",
+      "unit": "см",
+      "src": "s3"
+    },
+    {
+      "group": "Проходимость",
+      "label": "L50s Pro Ultra · Одиночный порог",
+      "value": "2,2",
+      "unit": "см",
+      "src": "s3"
+    },
+    {
+      "group": "Уборка",
+      "label": "L50s Pro Ultra · Максимальная сила всасывания",
+      "value": "30 000",
+      "unit": "Па",
+      "src": "s3"
+    },
+    {
+      "group": "Уборка",
+      "label": "L50s Pro Ultra · Основная щётка",
+      "value": "HyperStream DuoBrush",
+      "unit": "",
+      "src": "s3"
+    },
+    {
+      "group": "Уборка",
+      "label": "L50s Pro Ultra · Подъём швабр",
+      "value": "10,5",
+      "unit": "мм",
+      "src": "s3"
+    },
+    {
+      "group": "Батарея",
+      "label": "L50s Pro Ultra · Ёмкость",
+      "value": "5200",
+      "unit": "мАч",
+      "src": "s3"
+    },
+    {
+      "group": "Станция",
+      "label": "L50s Pro Ultra · Мойка швабр горячей водой",
+      "value": "до 100",
+      "unit": "°C",
+      "src": "s3"
+    },
+    {
+      "group": "Модель",
+      "label": "L50 Ultra CE · Модель робота / станции",
+      "value": "RLL53SE / RCLE0511",
+      "unit": "",
+      "src": "s4"
+    },
+    {
+      "group": "Батарея",
+      "label": "L50 Ultra CE · Аккумулятор",
+      "value": "литий-ионный, 4,8 А·ч, 14,4 В",
+      "unit": "",
+      "src": "s4"
+    },
+    {
+      "group": "Батарея",
+      "label": "L50 Ultra CE · Время зарядки",
+      "value": "около 3,5",
+      "unit": "ч",
+      "src": "s4"
+    },
+    {
+      "group": "Питание",
+      "label": "L50 Ultra CE · Мощность станции при мойке горячей водой",
+      "value": "1160",
+      "unit": "Вт",
+      "src": "s4"
+    },
+    {
+      "group": "Питание",
+      "label": "L50 Ultra CE · Мощность станции при опорожнении",
+      "value": "700",
+      "unit": "Вт",
+      "src": "s4"
+    }
+  ],
+  "compatibility": {
+    "alice": {
+      "v": "unknown",
+      "src": null,
+      "note": "Алиса на проверенной странице L50 Ultra AE не упомянута; Alexa, Google Home и Siri — другие ассистенты"
+    },
+    "matter": {
+      "v": "yes",
+      "src": "s1",
+      "note": "подтверждено для L50 Ultra AE и L50s Pro Ultra"
+    },
+    "thread": {
+      "v": "unknown",
+      "src": null,
+      "note": ""
+    },
+    "zigbee": {
+      "v": "unknown",
+      "src": null,
+      "note": ""
+    },
+    "homekit": {
+      "v": "unknown",
+      "src": null,
+      "note": ""
+    },
+    "homeAssistant": {
+      "v": "unknown",
+      "src": null,
+      "note": ""
+    },
+    "wifi": {
+      "v": "unknown",
+      "src": null,
+      "note": "диапазон Wi-Fi на проверенных страницах не указан"
+    }
+  },
+  "inBox": [
+    {
+      "text": "L50 Ultra AE: Робот-пылесос — 1 шт.",
+      "src": "s1"
+    },
+    {
+      "text": "L50 Ultra AE: Док-станция (базовая станция) — 1 шт.",
+      "src": "s1"
+    },
+    {
+      "text": "L50 Ultra AE: Основная щётка (установлена) — 1 шт.",
+      "src": "s1"
+    },
+    {
+      "text": "L50 Ultra AE: Защитная решётка щётки (установлена) — 1 шт.",
+      "src": "s1"
+    },
+    {
+      "text": "L50 Ultra AE: Боковая щётка (установлена) — 1 шт.",
+      "src": "s1"
+    },
+    {
+      "text": "L50 Ultra AE: Пылесборник с фильтром (установлен) — 1 шт.",
+      "src": "s1"
+    },
+    {
+      "text": "L50 Ultra AE: Держатель швабры — 2 шт.",
+      "src": "s1"
+    },
+    {
+      "text": "L50 Ultra AE: Швабра (установлена) — 2 шт.",
+      "src": "s1"
+    },
+    {
+      "text": "L50 Ultra AE: Пылесборный мешок (установлен) — 2 шт.",
+      "src": "s1"
+    },
+    {
+      "text": "L50 Ultra AE: Фильтр блока мойки (установлен) — 1 шт.",
+      "src": "s1"
+    },
+    {
+      "text": "L50 Ultra AE: Пандус-удлинитель для базовой станции — 1 шт.",
+      "src": "s1"
+    },
+    {
+      "text": "L50 Ultra AE: Краткое руководство по запуску — 1 шт.",
+      "src": "s1"
+    },
+    {
+      "text": "L50 Ultra AE: Руководство пользователя — 1 шт.",
+      "src": "s1"
+    },
+    {
+      "text": "L50 Ultra AE: Моющее средство для пола AWH7, 200 мл — 1 шт.",
+      "src": "s1"
+    },
+    {
+      "text": "L50 Ultra AE: Модуль автодозатора моющего средства, одно отделение (установлен) — 1 шт.",
+      "src": "s1"
+    }
+  ],
+  "price": null,
+  "priceEstimate": null,
+  "priceSource": null,
+  "priceDate": null,
+  "status": "unknown",
+  "disputes": [
+    {
+      "label": "Сила всасывания по регионам",
+      "values": [
+        "28 000 Па (L50 Ultra AE, проверено)",
+        "19 500 Па (US, поисковый фрагмент)",
+        "25 000 Па (CE, Индия, поисковый фрагмент)"
+      ],
+      "comment": "Региональные SKU различаются. Фрагменты поиска не проверены по официальным страницам; для CE и L50s Pro Ultra значение нужно взять с официальной страницы или из руководства."
+    }
+  ],
+  "notes": "Страница объединяет три конфигурации: L50 Ultra CE, L50 Ultra AE, L50s Pro Ultra. Прочитана полностью только часть страницы L50 Ultra AE (Black) (s1): раздел спецификаций обрезан, поэтому высота препятствия, ёмкости, габариты, вес, шум, Wi-Fi не получены. Страницы l50-ultra-ae и l50s-pro-ultra (и -black), а также региональные dreametech.com вернули HTTP 429/403 при нескольких повторах; curl получил 403. Данных по L50s Pro Ultra нет - в specs, facts и inBox её строк нет, нужна повторная проверка. Для L50 Ultra CE на global есть только руководство (s2): PDF R5024D-L50_Ultra_CE скачан, но текст не извлёкся (кодированные шрифты, без poppler), значения не внесены; официальной региональной страницы CE (EU/DE/UK) найти не удалось. Строки specs, facts и inBox с префиксом L50 Ultra AE нельзя переносить на CE и L50s Pro Ultra. Не найдено: дата анонса (announced: null), совместимость с Алисой, HomeKit, Thread, Zigbee, Home Assistant. Цена и наличие не вносились (null, unknown). Строк specs меньше целевых 10 - нужна повторная проверка. | 25.11.2026: AE и L50s Pro Ultra прочитаны через браузер; CE — по официальной инструкции (на global у CE нет страницы товара, только инструкция). «6 см» у L50 нет ни в одной конфигурации."
+}

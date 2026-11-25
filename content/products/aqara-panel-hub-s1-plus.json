@@ -1,0 +1,208 @@
+{
+  "slug": "aqara-panel-hub-s1-plus",
+  "brand": "aqara",
+  "category": "smart-home",
+  "name": "Aqara Panel Hub S1 Plus",
+  "variants": [],
+  "announced": null,
+  "sources": {
+    "s1": {
+      "url": "https://www.aqara.com/en/product/panel-hub-s1-plus-specs/",
+      "title": "Aqara Panel Hub S1 Plus — страница спецификаций (официальная страница Aqara)",
+      "checkedAt": "2026-11-25"
+    },
+    "s2": {
+      "url": "https://www.aqara.com/eu/product/panel-hub-s1-plus-specs/",
+      "title": "Aqara Panel Hub S1 Plus — версия страницы для ЕС (официальная страница Aqara)",
+      "checkedAt": "2026-11-25"
+    },
+    "s3": {
+      "url": "https://www.aqara.com/wp-content/uploads/2025/01/1-9.png",
+      "title": "Aqara Panel Hub S1 Plus — таблица характеристик (изображение на официальной странице спецификаций)",
+      "checkedAt": "2026-11-25"
+    }
+  },
+  "facts": [
+    {
+      "text": "По тексту Aqara, S1 Plus уже является Zigbee-хабом: устройства Aqara Zigbee подключаются к Aqara Home через него.",
+      "src": "s1"
+    },
+    {
+      "text": "Для Matter-аксессуаров (включая Matter over Thread) нужен отдельный Matter-контроллер, например Hub M3, настроенный в Aqara Home.",
+      "src": "s1"
+    },
+    {
+      "text": "На странице есть таблица соответствия типов Aqara Zigbee и Matter, например Light — Dimmable Plug-In Unit, Door Lock — Door Lock, Thermostat — Thermostat.",
+      "src": "s1"
+    },
+    {
+      "text": "Панель с экраном 1440 × 720 встраивается в стену и работает от сети 200–240 В.",
+      "src": "s3"
+    },
+    {
+      "text": "Панель подключается по Wi-Fi 2,4 и 5 ГГц, Zigbee и Bluetooth.",
+      "src": "s3"
+    },
+    {
+      "text": "Встроенное реле выдерживает нагрузку до 8 А.",
+      "src": "s3"
+    }
+  ],
+  "specs": [
+    {
+      "group": "Модель",
+      "label": "Модель (EU)",
+      "value": "MP-K03D",
+      "unit": "",
+      "src": "s3"
+    },
+    {
+      "group": "Габариты",
+      "label": "Размеры",
+      "value": "172 × 86 × 42,2",
+      "unit": "мм",
+      "src": "s3"
+    },
+    {
+      "group": "Питание",
+      "label": "Вход USB-C",
+      "value": "5 В, 2 А",
+      "unit": "",
+      "src": "s3"
+    },
+    {
+      "group": "Питание",
+      "label": "Электропитание",
+      "value": "200–240 В переменного тока, 50/60 Гц",
+      "unit": "",
+      "src": "s3"
+    },
+    {
+      "group": "Питание",
+      "label": "Максимальный ток нагрузки (резистивная)",
+      "value": "8",
+      "unit": "А",
+      "src": "s3"
+    },
+    {
+      "group": "Связь",
+      "label": "Wi-Fi",
+      "value": "IEEE 802.11 a/b/g/n/ac, 2,4 и 5 ГГц",
+      "unit": "",
+      "src": "s3"
+    },
+    {
+      "group": "Связь",
+      "label": "Zigbee",
+      "value": "IEEE 802.15.4",
+      "unit": "",
+      "src": "s3"
+    },
+    {
+      "group": "Связь",
+      "label": "Bluetooth",
+      "value": "есть",
+      "unit": "",
+      "src": "s3"
+    },
+    {
+      "group": "Экран",
+      "label": "Разрешение",
+      "value": "1440 × 720",
+      "unit": "",
+      "src": "s3"
+    },
+    {
+      "group": "Условия",
+      "label": "Рабочая температура",
+      "value": "от −10 до +40",
+      "unit": "°C",
+      "src": "s3"
+    },
+    {
+      "group": "Условия",
+      "label": "Влажность",
+      "value": "0–95 % без конденсата",
+      "unit": "",
+      "src": "s3"
+    }
+  ],
+  "compatibility": {
+    "alice": {
+      "v": "unknown",
+      "src": null,
+      "note": ""
+    },
+    "matter": {
+      "v": "unknown",
+      "src": null,
+      "note": "Официальная страница не говорит, является ли S1 Plus сам Matter-контроллером; Matter-аксессуары требуют отдельного контроллера (Hub M3)"
+    },
+    "thread": {
+      "v": "unknown",
+      "src": null,
+      "note": ""
+    },
+    "zigbee": {
+      "v": "yes",
+      "src": "s1",
+      "note": "Zigbee-хаб по тексту Aqara"
+    },
+    "homekit": {
+      "v": "unknown",
+      "src": null,
+      "note": ""
+    },
+    "homeAssistant": {
+      "v": "unknown",
+      "src": null,
+      "note": ""
+    },
+    "wifi": {
+      "v": "yes",
+      "src": "s3",
+      "note": "2,4 и 5 ГГц"
+    }
+  },
+  "inBox": [
+    {
+      "text": "Panel Hub S1 Plus — 1 шт.",
+      "src": "s3"
+    },
+    {
+      "text": "Инструкция",
+      "src": "s3"
+    },
+    {
+      "text": "Декларация соответствия",
+      "src": "s3"
+    },
+    {
+      "text": "Комплект винтов — 2 шт.",
+      "src": "s3"
+    }
+  ],
+  "price": null,
+  "priceEstimate": null,
+  "priceSource": null,
+  "priceDate": null,
+  "status": "unknown",
+  "disputes": [
+    {
+      "label": "Динамик",
+      "values": [
+        "есть в US-версии (сторонние источники)",
+        "нет в EU-версии (сторонние источники)"
+      ],
+      "comment": "Официальные страницы не подтверждают текстом; нужна проверка по спецификации конкретной версии"
+    },
+    {
+      "label": "Размер дисплея и разрешение",
+      "values": [
+        "6,9 дюйма, 1440 × 720 (сторонние источники)"
+      ],
+      "comment": "Не подтверждено официальным текстом, спецификация — изображение"
+    }
+  ],
+  "notes": "Таблица характеристик прочитана с изображения на официальной странице спецификаций Aqara (s3), 25.11.2026."
+}

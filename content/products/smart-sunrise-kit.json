@@ -1,0 +1,207 @@
+{
+  "slug": "smart-sunrise-kit",
+  "brand": "aqara",
+  "category": "smart-home",
+  "name": "Комплект «Умный рассвет»",
+  "variants": [],
+  "announced": null,
+  "sources": {
+    "s1": {
+      "url": "https://www.aqara.com/us/product/curtain-driver-e1-track-version/specs/",
+      "title": "Curtain Driver E1 (Track Version) — спецификации (официальная страница Aqara)",
+      "checkedAt": "2026-11-25"
+    },
+    "s2": {
+      "url": "https://www.aqara.com/en/product/led-strip-t2/",
+      "title": "LED Strip T2 — страница продукта (официальная страница Aqara)",
+      "checkedAt": "2026-11-25"
+    }
+  },
+  "facts": [
+    {
+      "text": "Мотор штор Curtain Driver E1 (Track Version, модель CM-M01) работает по Zigbee 3.0 и имеет номинальный крутящий момент 0,2 Н·м.",
+      "src": "s1"
+    },
+    {
+      "text": "Скорость движения мотора Curtain Driver E1 Track Version — 12 см/с, номинальный ток 1,5 А.",
+      "src": "s1"
+    },
+    {
+      "text": "Размеры Curtain Driver E1 Track Version — 145,7 × 96 × 46 мм, номинальная мощность 7,5 Вт при входе 5 В.",
+      "src": "s1"
+    },
+    {
+      "text": "Светодиодная лента LED Strip T2 длиной 5 м (модель LS-L06D) питается от 24 В постоянного тока, номинальная мощность 24 Вт.",
+      "src": "s2"
+    },
+    {
+      "text": "LED Strip T2 работает по Thread, Zigbee и Bluetooth; для Matter over Thread нужен Matter-совместимый хаб.",
+      "src": "s2"
+    },
+    {
+      "text": "Лента LED Strip T2 даёт до 1750 лм, цветовая температура 2000–9000 К плюс RGB.",
+      "src": "s2"
+    }
+  ],
+  "specs": [
+    {
+      "group": "Штора",
+      "label": "Модель мотора",
+      "value": "CM-M01 (Track Version)",
+      "unit": "",
+      "src": "s1"
+    },
+    {
+      "group": "Штора",
+      "label": "Протокол",
+      "value": "Zigbee 3.0, IEEE 802.15.4",
+      "unit": "",
+      "src": "s1"
+    },
+    {
+      "group": "Штора",
+      "label": "Номинальный крутящий момент",
+      "value": "0,2",
+      "unit": "Н·м",
+      "src": "s1"
+    },
+    {
+      "group": "Штора",
+      "label": "Номинальный ток",
+      "value": "1,5",
+      "unit": "А",
+      "src": "s1"
+    },
+    {
+      "group": "Штора",
+      "label": "Номинальная мощность",
+      "value": "7,5 (вход 5 В)",
+      "unit": "Вт",
+      "src": "s1"
+    },
+    {
+      "group": "Штора",
+      "label": "Скорость движения",
+      "value": "12",
+      "unit": "см/с",
+      "src": "s1"
+    },
+    {
+      "group": "Штора",
+      "label": "Размеры",
+      "value": "145,7 × 96 × 46",
+      "unit": "мм",
+      "src": "s1"
+    },
+    {
+      "group": "Штора",
+      "label": "Батарея",
+      "value": "литиевая, не сменная",
+      "unit": "",
+      "src": "s1"
+    },
+    {
+      "group": "Свет",
+      "label": "Модель ленты",
+      "value": "LS-L06D (5 м)",
+      "unit": "",
+      "src": "s2"
+    },
+    {
+      "group": "Свет",
+      "label": "Протоколы",
+      "value": "Thread, Zigbee, Bluetooth",
+      "unit": "",
+      "src": "s2"
+    },
+    {
+      "group": "Свет",
+      "label": "Входное питание",
+      "value": "24 / 1",
+      "unit": "В DC / А",
+      "src": "s2"
+    },
+    {
+      "group": "Свет",
+      "label": "Номинальная мощность",
+      "value": "24",
+      "unit": "Вт",
+      "src": "s2"
+    },
+    {
+      "group": "Свет",
+      "label": "Световой поток",
+      "value": "до 1750",
+      "unit": "лм",
+      "src": "s2"
+    },
+    {
+      "group": "Свет",
+      "label": "Цветовая температура",
+      "value": "2000–9000 + RGB",
+      "unit": "К",
+      "src": "s2"
+    },
+    {
+      "group": "Условия",
+      "label": "Рабочая температура ленты",
+      "value": "от −10 до 40",
+      "unit": "°C",
+      "src": "s2"
+    }
+  ],
+  "compatibility": {
+    "alice": {
+      "v": "unknown",
+      "src": null,
+      "note": ""
+    },
+    "matter": {
+      "v": "via-hub",
+      "src": "s2",
+      "note": "LED Strip T2: Matter over Thread через Matter-совместимый хаб (по тексту Aqara)"
+    },
+    "thread": {
+      "v": "yes",
+      "src": "s2",
+      "note": "LED Strip T2 работает по Thread"
+    },
+    "zigbee": {
+      "v": "yes",
+      "src": "s1",
+      "note": "Мотор — Zigbee 3.0; лента — Zigbee в списке протоколов"
+    },
+    "homekit": {
+      "v": "unknown",
+      "src": null,
+      "note": ""
+    },
+    "homeAssistant": {
+      "v": "unknown",
+      "src": null,
+      "note": ""
+    },
+    "wifi": {
+      "v": "no",
+      "src": "s1",
+      "note": "Мотор — только Zigbee; в протоколах ленты Wi-Fi не указан"
+    }
+  },
+  "inBox": [],
+  "price": null,
+  "priceEstimate": null,
+  "priceSource": null,
+  "priceDate": null,
+  "status": "unknown",
+  "disputes": [
+    {
+      "label": "Ёмкость батареи мотора Track Version",
+      "values": [
+        "6000 мАч (большинство страниц Aqara)",
+        "6400 мАч (страница ЕС)"
+      ],
+      "comment": "Поиск по официальным страницам; в спецификацию не внесено, нужно проверить по странице конкретного региона"
+    }
+  ],
+  "notes": "Состав комплекта не утверждён и требует подтверждения владельцем: выбраны мотор Curtain Driver E1 Track Version (CM-M01) и лента LED Strip T2 5 м (LS-L06D). Официального сайта комплекта «Умный рассвет» у Aqara нет, поэтому комплект собран из отдельных официальных страниц. Вариант с лампочкой LED Bulb T2 не использован: официальная страница спецификаций открывалась без таблицы, данные из поиска не внесены. Альтернатива для мотора — Rod Version (140,5 × 96 × 44 мм, IP20). Цена комплекта не найдена в официальных источниках. Совместимость с Алисой, HomeKit и Home Assistant на официальных страницах не указана. fact-check: removed Состав комплекта (fact) — not found on s2 (https://www.aqara.com/en/product/led-strip-t2/)"
+}

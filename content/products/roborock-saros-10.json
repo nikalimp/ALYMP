@@ -251,5 +251,18 @@
       "comment": "Российский сайт дает 20 000 Па, глобальный сайт значения не публикует, обзоры и магазины расходятся. Сверить на us.roborock.com и eu-страницах 10R (us-страница в этой сессии не открылась, HTTP 429)."
     }
   ],
-  "notes": "Анонс: официальные страницы даты анонса не содержат (announced = null); на global-странице 10R упомянут «As of January 2025», но это сноска о толщине, а не дата запуска. Не найдены в официальных источниках: состав комплекта (inBox), масса, объем пылесборника и бака для чистой воды, емкость батареи Saros 10R, уровень шума Saros 10R в дБ (указано только ≤55 дБ), диапазон Wi-Fi, HomeKit, Яндекс Алиса, Thread, Zigbee. Страница us.roborock.com/products/roborock-saros-10r вернула HTTP 429, поэтому США и ЕС не сверены. Данные Saros 10 сверены по global-странице, на ru-странице Saros 10 не проверены."
+  "notes": "Анонс: официальные страницы даты анонса не содержат (announced = null); на global-странице 10R упомянут «As of January 2025», но это сноска о толщине, а не дата запуска. Не найдены в официальных источниках: состав комплекта (inBox), масса, объем пылесборника и бака для чистой воды, емкость батареи Saros 10R, уровень шума Saros 10R в дБ (указано только ≤55 дБ), диапазон Wi-Fi, HomeKit, Яндекс Алиса, Thread, Zigbee. Страница us.roborock.com/products/roborock-saros-10r вернула HTTP 429, поэтому США и ЕС не сверены. Данные Saros 10 сверены по global-странице, на ru-странице Saros 10 не проверены.",
+  "media": {
+    "hero": "/media/products/roborock-saros-10/hero.webp",
+    "card": "/media/products/roborock-saros-10/card.webp",
+    "width": 960,
+    "height": 960,
+    "cardWidth": 480,
+    "cardHeight": 480,
+    "fit": "contain",
+    "hasAlpha": true,
+    "alt": "Робот-пылесос Roborock Saros 10 в чёрном корпусе",
+    "credit": "Фото: Roborock",
+    "source": "https://global.roborock.com/pages/roborock-saros-10"
+  }
 }

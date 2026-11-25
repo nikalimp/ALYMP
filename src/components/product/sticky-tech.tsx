@@ -5,7 +5,23 @@ import { useEffect, useRef, useState } from "react";
 
 type Step = { eyebrow: string; title: string; titleMuted?: string; text: string; zoom?: number; hud?: string[] };
 
-export function StickyTech({ steps, image, alt, credit }: { steps: Step[]; image?: string; alt: string; credit?: string }) {
+export function StickyTech({
+  steps,
+  image,
+  alt,
+  credit,
+  width,
+  height,
+  fit = "cover",
+}: {
+  steps: Step[];
+  image?: string;
+  alt: string;
+  credit?: string;
+  width?: number;
+  height?: number;
+  fit?: "cover" | "contain";
+}) {
   const root = useRef<HTMLDivElement>(null);
   const img = useRef<HTMLImageElement>(null);
   const hud = useRef<HTMLDivElement>(null);
@@ -64,9 +80,17 @@ export function StickyTech({ steps, image, alt, credit }: { steps: Step[]; image
       </div>
       <div className="order-first lg:order-none">
         <div className="lg:sticky lg:top-14 lg:flex lg:h-[calc(100svh-3.5rem)] lg:items-center">
-          <figure className="relative aspect-[4/3] w-full overflow-hidden border bg-card">
+          <figure className="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden border bg-card">
             {image ? (
-              <img ref={img} src={image} alt={alt} width={780} height={439} loading="lazy" className="size-full scale-105 object-cover" />
+              <img
+                ref={img}
+                src={image}
+                alt={alt}
+                width={width ?? 780}
+                height={height ?? 439}
+                loading="lazy"
+                className={fit === "contain" ? "size-full object-contain p-8" : "size-full scale-105 object-cover"}
+              />
             ) : (
               <div className="flex size-full flex-col justify-between p-8 sm:p-10">
                 <span className="font-mono text-xs uppercase tracking-[0.08em] text-muted-foreground">{activeStep?.eyebrow}</span>

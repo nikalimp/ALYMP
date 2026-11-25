@@ -76,6 +76,21 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
               return (
                 <article key={p.slug} className="flex flex-col justify-between bg-card p-6 sm:p-7">
                   <div>
+                    {p.media?.card && (
+                      <Link
+                        href={`/products/${p.slug}/`}
+                        className="mb-5 flex aspect-[16/10] items-center justify-center overflow-hidden bg-muted/60"
+                      >
+                        <img
+                          src={p.media.card}
+                          alt={p.media.alt}
+                          width={p.media.cardWidth}
+                          height={p.media.cardHeight}
+                          loading="lazy"
+                          className={cn("size-full", p.media.fit === "contain" ? "object-contain p-4" : "object-cover")}
+                        />
+                      </Link>
+                    )}
                     <div className="flex items-center justify-between gap-2">
                       <span className="font-mono text-xs uppercase tracking-[0.06em] text-muted-foreground">{bLabel}</span>
                       <span className="inline-flex items-center gap-1.5 font-mono text-[11px] text-muted-foreground">

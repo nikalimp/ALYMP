@@ -201,5 +201,18 @@
   "priceDate": "2026-11-25",
   "status": "in_stock",
   "disputes": [],
-  "notes": "Источники: global.roborock.com и ru.roborock.com, оба совпадают по силе всасывания (22 000 Па), размерам робота и станции, сроку автоопорожнения (60 дней). Не найдены в официальных источниках: дата анонса (announced), состав комплекта (inBox), масса робота, объем пылесборника и чистой воды, емкость батареи, уровень шума, Wi-Fi диапазон, HomeKit, Яндекс Алиса, Thread, Zigbee. Страница us.roborock.com не открылась (HTTP 429), поэтому региональные страницы США и ЕС не сверены. Значения из розничных магазинов и обзоров не использовались."
+  "notes": "Источники: global.roborock.com и ru.roborock.com, оба совпадают по силе всасывания (22 000 Па), размерам робота и станции, сроку автоопорожнения (60 дней). Не найдены в официальных источниках: дата анонса (announced), состав комплекта (inBox), масса робота, объем пылесборника и чистой воды, емкость батареи, уровень шума, Wi-Fi диапазон, HomeKit, Яндекс Алиса, Thread, Zigbee. Страница us.roborock.com не открылась (HTTP 429), поэтому региональные страницы США и ЕС не сверены. Значения из розничных магазинов и обзоров не использовались.",
+  "media": {
+    "hero": "/media/products/roborock-saros-z70/hero.webp",
+    "card": "/media/products/roborock-saros-z70/card.webp",
+    "width": 960,
+    "height": 960,
+    "cardWidth": 480,
+    "cardHeight": 480,
+    "fit": "contain",
+    "hasAlpha": true,
+    "alt": "Робот-пылесос Roborock Saros Z70 с док-станцией",
+    "credit": "Фото: Roborock",
+    "source": "https://global.roborock.com/pages/roborock-saros-z70"
+  }
 }

@@ -219,5 +219,18 @@
       "comment": "Не подтверждено официальным текстом, спецификация — изображение"
     }
   ],
-  "notes": "Таблица характеристик прочитана с изображения на официальной странице спецификаций Aqara (s3), 25.11.2026."
+  "notes": "Таблица характеристик прочитана с изображения на официальной странице спецификаций Aqara (s3), 25.11.2026.",
+  "media": {
+    "hero": "/media/products/aqara-panel-hub-s1-plus/hero.webp",
+    "card": "/media/products/aqara-panel-hub-s1-plus/card.webp",
+    "width": 1280,
+    "height": 525,
+    "cardWidth": 640,
+    "cardHeight": 262,
+    "fit": "cover",
+    "hasAlpha": false,
+    "alt": "Настенная сенсорная панель Aqara Panel Hub S1 Plus",
+    "credit": "Фото: Aqara",
+    "source": "https://www.aqara.com/en/product/panel-hub-s1-plus/"
+  }
 }

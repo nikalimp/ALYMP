@@ -7,13 +7,35 @@
   "answer": "Aqara Hub M3 (модели HM-G01D и HM-G01E) — флагманский контроллер умного дома, объединяющий Zigbee 3.0, Thread (IEEE 802.15.4), Wi-Fi 2,4/5 ГГц и Bluetooth 5.1. Хаб выступает Matter-контроллером для устройств Matter over Thread и Matter Bridge для датчиков Aqara, питается от USB-C (5 В, 2 А) или по кабелю PoE (48 В, 0,27 А) и работает с Apple Home, Home Assistant и Яндекс Алисой. Ориентир цены в РФ — от 15 990 ₽ по данным aqara.ru на 25.11.2026.",
   "hero": {
     "alt": "Aqara Hub M3 — контроллер умного дома с Matter, Thread, Zigbee и PoE",
-    "dark": false
+    "dark": false,
+    "image": "/media/products/aqara-hub-m3/hero.webp",
+    "width": 764,
+    "height": 960,
+    "fit": "contain",
+    "credit": "Фото: Aqara",
+    "source": "https://www.aqara.com/en/product/hub-m3/"
   },
   "keyNumbers": [
-    { "value": "Matter", "label": "контроллер и мост для Thread и Zigbee", "src": "s2" },
-    { "value": "PoE 48 В", "label": "проводное питание и сеть по одному кабелю", "src": "s1" },
-    { "value": "2,4 / 5 ГГц", "label": "двухдиапазонный Wi-Fi + Bluetooth 5.1", "src": "s1" },
-    { "value": "105 мм", "label": "компактный корпус с кронштейном в комплекте", "src": "s1" }
+    {
+      "value": "Matter",
+      "label": "контроллер и мост для Thread и Zigbee",
+      "src": "s2"
+    },
+    {
+      "value": "PoE 48 В",
+      "label": "проводное питание и сеть по одному кабелю",
+      "src": "s1"
+    },
+    {
+      "value": "2,4 / 5 ГГц",
+      "label": "двухдиапазонный Wi-Fi + Bluetooth 5.1",
+      "src": "s1"
+    },
+    {
+      "value": "105 мм",
+      "label": "компактный корпус с кронштейном в комплекте",
+      "src": "s1"
+    }
   ],
   "tech": [
     {
@@ -21,7 +43,10 @@
       "title": "Matter Controller и Thread.",
       "titleMuted": "Один шлюз вместо трёх коробок.",
       "text": "Hub M3 совмещает Zigbee 3.0, Thread (IEEE 802.15.4) и функции Matter-контроллера. Аксессуары Matter over Thread — например, умные замки U200 и U300 — подключаются через контроллер класса Hub M3, а Zigbee-датчики пробрасываются по Matter в сторонние экосистемы.",
-      "hud": ["MATTER CONTROLLER", "THREAD + ZIGBEE 3.0"],
+      "hud": [
+        "MATTER CONTROLLER",
+        "THREAD + ZIGBEE 3.0"
+      ],
       "src": "s2"
     },
     {
@@ -29,7 +54,10 @@
       "title": "Wi-Fi 5 ГГц и PoE.",
       "titleMuted": "Стабильная связь без привязки к розетке.",
       "text": "Помимо двухдиапазонного Wi-Fi 802.11 a/b/g/n/ac (2,4 и 5 ГГц) и питания USB-C (5 В, 2 А), хаб принимает питание по Ethernet PoE (48 В, 0,27 А). Вы можете подать и сеть, и электричество по одному кабелю — удобно для монтажа в слаботочном шкафу или на потолке.",
-      "hud": ["POE 48V / 0.27A", "WI-FI 2.4 / 5 GHZ"],
+      "hud": [
+        "POE 48V / 0.27A",
+        "WI-FI 2.4 / 5 GHZ"
+      ],
       "src": "s1"
     },
     {
@@ -37,7 +65,10 @@
       "title": "105 × 105 × 36,5 мм.",
       "titleMuted": "Кронштейн и крепёж сразу в коробке.",
       "text": "В комплект входят кабель USB-A — USB-C, кронштейн, винты и дюбели. Рабочая температура от −10 до +50 °C при влажности 0–95 % без конденсата позволяет ставить Hub M3 даже в неотапливаемом тамбуре или техническом шкафу загородного дома.",
-      "hud": ["105 × 105 × 36,5 MM", "−10…+50 °C"],
+      "hud": [
+        "105 × 105 × 36,5 MM",
+        "−10…+50 °C"
+      ],
       "src": "s1"
     },
     {
@@ -45,20 +76,56 @@
       "title": "Четыре платформы сразу.",
       "titleMuted": "Apple Home, Алиса, Home Assistant и Aqara.",
       "text": "Хаб поддерживает нативную работу с Apple Home (HomeKit и Matter), подключается локально к Home Assistant через Matter Bridge или HomeKit Device и интегрируется в «Умный дом с Алисой» через привязку аккаунта Aqara Home (версии RU/Global).",
-      "hud": ["APPLE HOME", "ALICE · HOME ASSISTANT"],
+      "hud": [
+        "APPLE HOME",
+        "ALICE · HOME ASSISTANT"
+      ],
       "src": "s3"
     }
   ],
   "versions": {
     "title": "Hub M3 или Panel Hub S1 Plus",
     "lead": "Оба устройства работают хабами Aqara, но решают разные задачи в интерьере.",
-    "heads": ["Aqara Hub M3", "Aqara Panel Hub S1 Plus"],
+    "heads": [
+      "Aqara Hub M3",
+      "Aqara Panel Hub S1 Plus"
+    ],
     "rows": [
-      { "label": "Формат", "values": ["Скрытый контроллер (полка / стена / шкаф)", "Настенная сенсорная панель"] },
-      { "label": "Протокол Thread", "values": ["есть (Thread Border Router)", "нет"] },
-      { "label": "Zigbee 3.0 и Matter", "values": ["есть (Controller + Bridge)", "есть (Zigbee + Matter Bridge)"] },
-      { "label": "Питание", "values": ["USB-C 5 В / PoE 48 В", "от сети 220 В в подрозетник"] },
-      { "label": "Ориентир цены в РФ", "values": ["от 15 990 ₽", "от 49 990 ₽"] }
+      {
+        "label": "Формат",
+        "values": [
+          "Скрытый контроллер (полка / стена / шкаф)",
+          "Настенная сенсорная панель"
+        ]
+      },
+      {
+        "label": "Протокол Thread",
+        "values": [
+          "есть (Thread Border Router)",
+          "нет"
+        ]
+      },
+      {
+        "label": "Zigbee 3.0 и Matter",
+        "values": [
+          "есть (Controller + Bridge)",
+          "есть (Zigbee + Matter Bridge)"
+        ]
+      },
+      {
+        "label": "Питание",
+        "values": [
+          "USB-C 5 В / PoE 48 В",
+          "от сети 220 В в подрозетник"
+        ]
+      },
+      {
+        "label": "Ориентир цены в РФ",
+        "values": [
+          "от 15 990 ₽",
+          "от 49 990 ₽"
+        ]
+      }
     ],
     "verdict": [
       "Выбирайте Aqara Hub M3 как базовый центр умного дома с поддержкой Thread (для замков U200/U300 и датчика FP400) и питанием по PoE.",
@@ -69,26 +136,56 @@
   "pairs": [
     {
       "title": "Удалённый доступ к замку без Wi-Fi",
-      "with": ["aqara-smart-lock-u200", "aqara-smart-lock-u300"],
+      "with": [
+        "aqara-smart-lock-u200",
+        "aqara-smart-lock-u300"
+      ],
       "text": "Замки U200 и U300 работают по Thread без встроенного Wi-Fi. Hub M3 выступает для них Thread Border Router и открывает удалённое управление и сценарии."
     },
     {
       "title": "Умный свет без ложных срабатываний",
-      "with": ["aqara-fp400", "smart-sunrise-kit"],
+      "with": [
+        "aqara-fp400",
+        "smart-sunrise-kit"
+      ],
       "text": "Датчик присутствия FP400 передаёт зоны нахождения человека в Hub M3, а хаб включает свет и открывает шторы по расписанию."
     },
     {
       "title": "Скрытый центр + настенная панель",
-      "with": ["aqara-panel-hub-s1-plus"],
+      "with": [
+        "aqara-panel-hub-s1-plus"
+      ],
       "text": "Hub M3 прячется в слаботочном шкафу на PoE и держит всю беспроводную сеть, а панель S1 Plus в гостиной даёт удобный экран управления."
     }
   ],
   "faq": [
-    { "q": "Зачем нужен Aqara Hub M3, если дома есть Wi-Fi роутер?", "a": "Датчики, замки и шторы Aqara работают по Zigbee 3.0 и Thread, которых нет в обычных роутерах. Hub M3 объединяет их в локальную сеть и пробрасывает по Matter в Apple Home, Home Assistant и Алису." },
-    { "q": "Подходит ли Hub M3 для замков Aqara U200 и U300?", "a": "Да. Замкам U200 и U300 нужен Thread Border Router для удалённого доступа и автоматизаций, и Hub M3 полностью закрывает эту роль." },
-    { "q": "Как питается Aqara Hub M3?", "a": "Двумя способами: от USB-C (5 В, 2 А, кабель USB-A — USB-C в комплекте) либо по витой паре Ethernet с PoE (48 В, 0,27 А)." },
-    { "q": "Работает ли Aqara Hub M3 с Яндекс Алисой?", "a": "Да, через привязку аккаунта Aqara Home (версии RU/Global) к «Умному дому с Алисой». Исключение — замки U-серии, которые Алиса не поддерживает." },
-    { "q": "Сколько стоит Aqara Hub M3 в России?", "a": "Ориентир цены по данным aqara.ru на 25.11.2026 — от 15 990 ₽. Оставьте заявку или добавьте хаб в корзину: менеджер подтвердит цену и наличие до оплаты." }
+    {
+      "q": "Зачем нужен Aqara Hub M3, если дома есть Wi-Fi роутер?",
+      "a": "Датчики, замки и шторы Aqara работают по Zigbee 3.0 и Thread, которых нет в обычных роутерах. Hub M3 объединяет их в локальную сеть и пробрасывает по Matter в Apple Home, Home Assistant и Алису."
+    },
+    {
+      "q": "Подходит ли Hub M3 для замков Aqara U200 и U300?",
+      "a": "Да. Замкам U200 и U300 нужен Thread Border Router для удалённого доступа и автоматизаций, и Hub M3 полностью закрывает эту роль."
+    },
+    {
+      "q": "Как питается Aqara Hub M3?",
+      "a": "Двумя способами: от USB-C (5 В, 2 А, кабель USB-A — USB-C в комплекте) либо по витой паре Ethernet с PoE (48 В, 0,27 А)."
+    },
+    {
+      "q": "Работает ли Aqara Hub M3 с Яндекс Алисой?",
+      "a": "Да, через привязку аккаунта Aqara Home (версии RU/Global) к «Умному дому с Алисой». Исключение — замки U-серии, которые Алиса не поддерживает."
+    },
+    {
+      "q": "Сколько стоит Aqara Hub M3 в России?",
+      "a": "Ориентир цены по данным aqara.ru на 25.11.2026 — от 15 990 ₽. Оставьте заявку или добавьте хаб в корзину: менеджер подтвердит цену и наличие до оплаты."
+    }
   ],
-  "related": { "terms": ["matter", "thread", "zigbee"], "compare": [] }
+  "related": {
+    "terms": [
+      "matter",
+      "thread",
+      "zigbee"
+    ],
+    "compare": []
+  }
 }

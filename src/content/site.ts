@@ -96,6 +96,7 @@ export const nav = [
   ] : []),
   ...(site.features.compare ? [{ href: "/compare/", label: "Сравнения" }] : []),
   ...(site.features.blog || site.features.news ? [{ href: site.features.news ? "/news/" : "/blog/", label: "Журнал" }] : []),
+  { href: "/how-to-order/", label: "Как заказать" },
   { href: "/about/", label: "О ALYMP" },
   { href: "/contacts/", label: "Контакты" },
 ];

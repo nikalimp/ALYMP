@@ -82,7 +82,12 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
               width={l.hero.width ?? 780}
               height={l.hero.height ?? 439}
               fetchPriority="high"
-              className="absolute inset-0 -z-10 size-full object-cover object-[60%_40%]"
+              className={cn(
+                "absolute inset-0 -z-10 size-full",
+                l.hero.fit === "contain"
+                  ? "object-contain object-center p-8 opacity-90 lg:object-right lg:p-16"
+                  : "object-cover object-[60%_40%]",
+              )}
             />
             <div
               aria-hidden="true"
@@ -186,7 +191,15 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       {l.tech.length > 0 && (
         <section aria-label="Технологии" className={cn("py-8 lg:py-0", l.hero.dark && "is-dark")}>
           <Container>
-            <StickyTech steps={l.tech} image={l.hero.image} alt="" credit={l.hero.credit} />
+            <StickyTech
+              steps={l.tech}
+              image={l.hero.image}
+              alt=""
+              credit={l.hero.credit}
+              width={l.hero.width}
+              height={l.hero.height}
+              fit={l.hero.fit}
+            />
           </Container>
         </section>
       )}

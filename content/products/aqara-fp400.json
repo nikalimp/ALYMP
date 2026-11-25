@@ -305,5 +305,18 @@
       "comment": "Сторонний источник, цена null"
     }
   ],
-  "notes": "Файл описывает FP400 как основной товар; FP2 включён как вариант с метками «FP2 ·» в specs (источники s2 и s3, оба официальные Aqara). Масса FP400 и версия Matter на официальной странице не указаны, поля не заполнены. Совместимость FP2 с Алисой на странице Aqara описана как «Light» — статус unknown, нужна проверка. Обзоры (Gizmodo) использованы только как контекст и не внесены в факты."
+  "notes": "Файл описывает FP400 как основной товар; FP2 включён как вариант с метками «FP2 ·» в specs (источники s2 и s3, оба официальные Aqara). Масса FP400 и версия Matter на официальной странице не указаны, поля не заполнены. Совместимость FP2 с Алисой на странице Aqara описана как «Light» — статус unknown, нужна проверка. Обзоры (Gizmodo) использованы только как контекст и не внесены в факты.",
+  "media": {
+    "hero": "/media/products/aqara-fp400/hero.webp",
+    "card": "/media/products/aqara-fp400/card.webp",
+    "width": 1200,
+    "height": 600,
+    "cardWidth": 640,
+    "cardHeight": 320,
+    "fit": "contain",
+    "hasAlpha": true,
+    "alt": "Радар присутствия Aqara Spatial Multi-Sensor FP400",
+    "credit": "Фото: Aqara",
+    "source": "https://www.aqara.com/en/product/spatial-multi-sensor-fp400/"
+  }
 }

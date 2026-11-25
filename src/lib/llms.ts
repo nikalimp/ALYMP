@@ -3,6 +3,7 @@ import { site } from "@/content/site";
 import { about, home } from "@/content/home";
 import { getPosts } from "./posts";
 import { getLandings } from "./landings";
+import { getGlossaryTerms } from "./glossary";
 
 // Простой текст для нейросетей: неразрывные пробелы типографа заменяем обычными
 const plain = (s: string) => s.replace(/ /g, " ").replace(/⁠/g, "");
@@ -32,9 +33,10 @@ export function llmsTxt() {
 - [Матрица совместимости](${site.url}/compatibility/): Алиса, Matter, Thread, Zigbee, Apple HomeKit, Home Assistant, Wi-Fi
 - [Сравнения моделей](${site.url}/compare/): 6 прямых пар флагманов по официальным данным
 - [Бренды ALYMP](${site.url}/brands/): Roborock, Dreame, Aqara, Unitree Robotics, KaringBee
+- [Глоссарий технологий (${getGlossaryTerms().length} терминов)](${site.url}/glossary/): Matter, Thread, Zigbee, LiDAR, mmWave, SLAM, DoF, станции самоочистки
 ${home.categories.map((x) => `- ${x.title}: ${x.items.join(", ")}. ${x.text}`).join("\n")}
 
-${getLandings().length ? `## Товары\n${getLandings().map((l) => `- [${l.product.name}](${site.url}/products/${l.slug}/): ${l.tagline} Характеристики: ${site.url}/products/${l.slug}/specs/`).join("\n")}\n\n` : ""}## Как заказать (${site.url}/how-to-order/)
+${getLandings().length ? `## Товары\n${getLandings().map((l) => `- [${l.product.name}](${site.url}/products/${l.slug}/): ${l.tagline} Характеристики: ${site.url}/products/${l.slug}/specs/`).join("\n")}\n\n` : ""}${getGlossaryTerms().length ? `## Глоссарий\n${getGlossaryTerms().map((t) => `- [${t.name}](${site.url}/glossary/${t.slug}/): ${t.shortDecryption}`).join("\n")}\n\n` : ""}## Как заказать (${site.url}/how-to-order/)
 ${home.steps.map((s, i) => `${i + 1}. ${s.title}: ${s.text}`).join("\n")}
 ${p.length ? `\n## Статьи\n${p.map((x) => `- [${x.title}](${site.url}/blog/${x.slug}/): ${x.description}`).join("\n")}\n` : ""}
 ## О компании

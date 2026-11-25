@@ -18,6 +18,8 @@ const EXTRA_LINKS = [
   { href: "/compatibility/", label: "Совместимость" },
   { href: "/compare/", label: "Сравнения" },
   { href: "/brands/", label: "Бренды" },
+  { href: "/glossary/", label: "Глоссарий" },
+  { href: "/how-to-order/", label: "Как заказать" },
   { href: "/about/", label: "О ALYMP" },
   { href: "/contacts/", label: "Контакты" },
 ] as const;

@@ -116,6 +116,39 @@ export function brandSchema(b: { slug: string; name: string; description: string
   };
 }
 
+export const glossarySetId = `${site.url}/glossary/#set`;
+
+export function definedTermSetSchema(name: string, description: string, terms: { slug: string; name: string; definition: string }[]) {
+  return {
+    "@type": "DefinedTermSet",
+    "@id": glossarySetId,
+    name,
+    description,
+    url: `${site.url}/glossary/`,
+    inLanguage: "ru-RU",
+    hasDefinedTerm: terms.map((t) => ({
+      "@type": "DefinedTerm",
+      "@id": `${site.url}/glossary/${t.slug}/#term`,
+      name: t.name,
+      description: t.definition,
+      url: `${site.url}/glossary/${t.slug}/`,
+    })),
+  };
+}
+
+export function definedTermSchema(t: { slug: string; name: string; englishName: string; definition: string }) {
+  return {
+    "@type": "DefinedTerm",
+    "@id": `${site.url}/glossary/${t.slug}/#term`,
+    name: t.name,
+    alternateName: t.englishName,
+    description: t.definition,
+    url: `${site.url}/glossary/${t.slug}/`,
+    inLanguage: "ru-RU",
+    inDefinedTermSet: { "@id": glossarySetId },
+  };
+}
+
 // Товар (spec §4.2): Offer — только с ценой из прайса дистрибьютора. Ориентир «от» в Offer не идёт (spec §9).
 export function productSchema(p: { slug: string; name: string; brand: string; description: string; image: string; price: number | null; specs?: { label: string; value: string; unit?: string }[] }) {
   const url = `${site.url}/products/${p.slug}/`;

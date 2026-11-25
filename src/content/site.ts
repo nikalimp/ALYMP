@@ -77,7 +77,7 @@ export const site = {
     blog: false, // включается с первой статьёй (T47–T49)
     catalog: true, // каталог и категории — T35
     compare: true, // сравнения — T36
-    glossary: false, // глоссарий — блок 6
+    glossary: true, // глоссарий — блок 6 (T39–T43)
     news: false, // новости — блок 7
     cart: true, // корзина-заявка без онлайн-оплаты (Спринт 1)
     leadApi: false, // /api/lead.php — T54; пока заявка уходит в Telegram с готовым текстом
@@ -95,6 +95,7 @@ export const nav = [
     { href: "/brands/", label: "Бренды" },
   ] : []),
   ...(site.features.compare ? [{ href: "/compare/", label: "Сравнения" }] : []),
+  ...(site.features.glossary ? [{ href: "/glossary/", label: "Глоссарий" }] : []),
   ...(site.features.blog || site.features.news ? [{ href: site.features.news ? "/news/" : "/blog/", label: "Журнал" }] : []),
   { href: "/how-to-order/", label: "Как заказать" },
   { href: "/about/", label: "О ALYMP" },

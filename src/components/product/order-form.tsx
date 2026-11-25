@@ -1,13 +1,23 @@
 "use client";
 // Форма «Заказать» (spec §7, T18). Чекбокс согласия — отдельный и не отмечен (152-ФЗ, стандарт §8.1).
 // Обработчик /api/lead.php — задача T54. Пока его нет (site.features.leadApi = false), заявка уходит в Telegram с готовым текстом.
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { site } from "@/content/site";
 
 export function OrderForm({ product, variants, b2b }: { product: string; variants: string[]; b2b: boolean }) {
   const [org, setOrg] = useState(false);
   const [state, setState] = useState<"idle" | "sending" | "sent" | "fallback" | "error">("idle");
   const [text, setText] = useState("");
+  const [variant, setVariant] = useState(variants[0] ?? "");
+  // Выбор версии в переключателе на странице подставляется сюда (событие alymp:variant с индексом версии)
+  useEffect(() => {
+    const on = (e: Event) => {
+      const i = (e as CustomEvent<number>).detail;
+      if (variants[i]) setVariant(variants[i]);
+    };
+    window.addEventListener("alymp:variant", on);
+    return () => window.removeEventListener("alymp:variant", on);
+  }, [variants]);
 
   async function submit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -49,7 +59,7 @@ export function OrderForm({ product, variants, b2b }: { product: string; variant
       {variants.length > 0 && (
         <label className="sm:col-span-2">
           <span className="text-sm font-medium">Версия</span>
-          <select name="variant" className={field} defaultValue={variants[0]}>
+          <select name="variant" className={field} value={variant} onChange={(e) => setVariant(e.target.value)}>
             {variants.map((v) => <option key={v}>{v}</option>)}
           </select>
         </label>

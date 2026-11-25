@@ -10,6 +10,12 @@ import { Container, Eyebrow, Section } from "@/components/container";
 import { FaqList } from "@/components/faq";
 import { JsonLd } from "@/components/json-ld";
 import { StickyTech } from "@/components/product/sticky-tech";
+import { ProductSubNav } from "@/components/product/sub-nav";
+import { KeyBento } from "@/components/product/key-bento";
+import { VersionSwitch } from "@/components/product/version-switch";
+import { Scenarios } from "@/components/product/scenarios";
+import { CompatBadges } from "@/components/product/compat-badges";
+import { ShieldCheck, Clock, Wallet } from "lucide-react";
 import { OrderForm } from "@/components/product/order-form";
 import { AddToCartButton } from "@/components/cart/add-to-cart-button";
 import { cn } from "@/lib/utils";
@@ -51,6 +57,15 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const usedSources = Object.entries(p.sources);
   const readySlugs = new Set(getLandings().map((x) => x.slug));
   const usedTerms = new Set<string>();
+  // Переключатель версий подставляет выбор в форму и корзину, когда колонки таблицы — это версии товара
+  const isVariants = !!l.versions && p.variants.length === l.versions.heads.length && p.variants.length > 1;
+  const subLinks = [
+    { id: "overview", label: "Обзор" },
+    ...(l.tech.length ? [{ id: "tech", label: "Технологии" }] : []),
+    ...(l.versions ? [{ id: "versions", label: isVariants ? "Версии" : "Сравнение" }] : []),
+    ...(l.pairs.length ? [{ id: "pairs", label: "Связки" }] : []),
+    { id: "specs", label: "Характеристики" },
+  ];
 
   return (
     <>
@@ -71,6 +86,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
       {/* 1. Первый экран — сцена товара */}
       <section
+        id="product-hero"
         className={cn(
           "relative isolate flex min-h-[min(85svh,820px)] flex-col justify-end overflow-hidden border-b",
           l.hero.dark && "is-dark",
@@ -164,35 +180,30 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         </Container>
       </section>
 
-      {/* 2. Прямой ответ */}
-      <Section>
+      <ProductSubNav name={p.name} links={subLinks} />
+
+      {/* 2. Обзор: прямой ответ, совместимость, bento ключевых цифр */}
+      <Section id="overview" className="scroll-mt-28">
         <Container>
           <p className="max-w-5xl text-[clamp(22px,3vw,38px)] font-medium leading-[1.25] tracking-[-0.02em] text-foreground-2">
             <span className="text-foreground">{linkTerms(`${l.answer.split(". ")[0]}.`, { used: usedTerms, maxLinks: 3 })}</span>{" "}
             {linkTerms(l.answer.split(". ").slice(1).join(". "), { used: usedTerms, maxLinks: 5 })}
           </p>
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+            <CompatBadges c={p.compatibility} />
+            <a href="/compatibility/" className="shrink-0 text-sm text-foreground-2 underline underline-offset-4 hover:text-foreground">Таблица совместимости</a>
+          </div>
+          {l.keyNumbers.length > 0 && (
+            <div className="mt-12">
+              <KeyBento items={l.keyNumbers} />
+            </div>
+          )}
         </Container>
       </Section>
 
-      {/* 4. Ключевые цифры */}
-      {l.keyNumbers.length > 0 && (
-        <Section className="pt-0">
-          <Container>
-            <dl className="grid grid-cols-2 gap-px bg-border lg:grid-cols-4">
-              {l.keyNumbers.map((k) => (
-                <div key={k.label} className="flex flex-col bg-background p-6 sm:p-8">
-                  <dt className="order-last mt-3 text-sm text-muted-foreground">{k.label}</dt>
-                  <dd className="text-[clamp(32px,4vw,52px)] font-semibold leading-none tracking-[-0.03em] tabular">{k.value}</dd>
-                </div>
-              ))}
-            </dl>
-          </Container>
-        </Section>
-      )}
-
       {/* 3 и 5. Технологии — закреплённая сцена */}
       {l.tech.length > 0 && (
-        <section aria-label="Технологии" className={cn("py-8 lg:py-0", l.hero.dark && "is-dark")}>
+        <section id="tech" aria-label="Технологии" className={cn("scroll-mt-28 py-12 lg:py-0", l.hero.dark && "is-dark")}>
           <Container>
             <StickyTech
               steps={l.tech}
@@ -207,88 +218,34 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         </section>
       )}
 
-      {/* 8. Версии */}
+      {/* 8. Версии — переключатель */}
       {l.versions && (
-        <Section id="versions">
+        <Section id="versions" className="scroll-mt-28">
           <Container>
             <h2 className="text-[clamp(36px,5vw,64px)] font-bold leading-[0.98] tracking-[-0.035em]">{l.versions.title}</h2>
             <p className="mt-4 max-w-2xl text-lg text-foreground-2">{l.versions.lead}</p>
-            <div className="mt-10 overflow-x-auto">
-              <table className="w-full min-w-[520px] border-collapse text-left">
-                <thead>
-                  <tr className="border-b-2 border-foreground">
-                    <th scope="col" className="py-3 pr-4 font-mono text-xs font-medium uppercase tracking-[0.08em] text-muted-foreground">
-                      Характеристика
-                    </th>
-                    {l.versions.heads.map((h) => (
-                      <th key={h} scope="col" className="py-3 pr-4 text-lg font-semibold">
-                        {h}
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-                <tbody>
-                  {l.versions.rows.map((r) => (
-                    <tr key={r.label} className="border-b">
-                      <th scope="row" className="py-4 pr-4 font-normal text-foreground-2">
-                        {r.label}
-                      </th>
-                      {r.values.map((v, i) => (
-                        <td key={i} className="py-4 pr-4 font-medium tabular">
-                          {v}
-                        </td>
-                      ))}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+            <div className="mt-10">
+              <VersionSwitch v={l.versions} isVariants={isVariants} product={{ slug: p.slug, name: p.name, brand, priceEstimate: p.priceEstimate }} />
             </div>
-            <ul className="mt-8 grid gap-4 sm:grid-cols-2">
-              {l.versions.verdict.map((v) => (
-                <li key={v} className="bg-muted p-6">
-                  {v}
-                </li>
-              ))}
-            </ul>
           </Container>
         </Section>
       )}
 
-      {/* 6. Как работает в паре */}
+      {/* 6. Как работает в паре — сценарии «событие → реакция» */}
       {l.pairs.length > 0 && (
-        <Section className="pt-0">
+        <Section id="pairs" className="scroll-mt-28 pt-0">
           <Container>
             <h2 className="text-[clamp(32px,4vw,52px)] font-bold leading-none tracking-[-0.03em]">Как работает в паре</h2>
-            <div className="mt-10 grid gap-3 lg:grid-cols-3">
-              {l.pairs.map((pair) => (
-                <article key={pair.title} className="bg-muted p-7">
-                  <p className="font-mono text-xs uppercase tracking-[0.08em] text-muted-foreground">
-                    {[p.name, ...pair.with.map((w) => getProduct(w)?.name ?? w)].join(" + ")}
-                  </p>
-                  <h3 className="mt-4 text-xl font-semibold">{pair.title}</h3>
-                  <p className="mt-2 text-foreground-2">{linkTerms(pair.text, { used: usedTerms, maxLinks: 3 })}</p>
-                  <p className="mt-4 flex flex-wrap gap-3 text-sm">
-                    {pair.with.map((w) =>
-                      readySlugs.has(w) ? (
-                        <a key={w} href={`/products/${w}/`} className="underline underline-offset-4">
-                          {getProduct(w)?.name ?? w}
-                        </a>
-                      ) : (
-                        <span key={w} className="text-muted-foreground">
-                          {getProduct(w)?.name ?? w}
-                        </span>
-                      ),
-                    )}
-                  </p>
-                </article>
-              ))}
+            <p className="mt-4 max-w-2xl text-lg text-foreground-2">Сценарии с другими устройствами каталога: что происходит в доме и кто на это отвечает.</p>
+            <div className="mt-10">
+              <Scenarios product={p} pairs={l.pairs} ready={readySlugs} used={usedTerms} />
             </div>
           </Container>
         </Section>
       )}
 
       {/* 10. Характеристики — коротко */}
-      <Section className="border-t">
+      <Section id="specs" className="scroll-mt-28 border-t">
         <Container className="grid gap-10 lg:grid-cols-[1fr_2fr]">
           <div>
             <h2 className="text-[clamp(32px,4vw,52px)] font-bold leading-none tracking-[-0.03em]">Характеристики</h2>
@@ -317,21 +274,33 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       <Section className="pt-0">
         <Container className="grid gap-10 lg:grid-cols-[1fr_2fr]">
           <h2 className="text-[clamp(32px,4vw,52px)] font-bold leading-none tracking-[-0.03em]">Вопросы о {p.name}</h2>
-          <FaqList items={l.faq} />
+          <FaqList items={l.faq} size="lg" />
         </Container>
       </Section>
 
-      {/* 12. Заказ */}
-      <Section id="order" className="border-t bg-muted/60">
-        <Container className="grid gap-10 lg:grid-cols-[1fr_2fr]">
-          <div>
+      {/* 12. Заказ — бутиковая подача */}
+      <Section id="order" className="scroll-mt-28 border-t bg-muted/60">
+        <Container className="grid gap-10 lg:grid-cols-[5fr_7fr] lg:gap-16">
+          <aside className="lg:sticky lg:top-28 lg:self-start">
             <Eyebrow>Заказ</Eyebrow>
-            <h2 className="text-[clamp(32px,4vw,52px)] font-bold leading-none tracking-[-0.03em]">Заказать {p.name}</h2>
-            <p className="mt-4 text-foreground-2">
-              Оставьте заявку. Менеджер подтвердит цену, наличие и срок поставки. Оплата — только после подтверждения. Официальная гарантия в России.
+            <h2 className="text-[clamp(32px,4vw,52px)] font-bold leading-none tracking-[-0.03em]">{p.name}</h2>
+            {p.media?.card && (
+              <div className="mt-8 flex aspect-[4/3] items-center justify-center bg-surface p-8">
+                <img src={p.media.card} alt={p.media.alt ?? p.name} width={p.media.cardWidth} height={p.media.cardHeight} loading="lazy" className="size-full object-contain" />
+              </div>
+            )}
+            <p className="mt-6 font-mono text-xl font-medium tabular">
+              {p.priceEstimate ? `от ${fmt(p.priceEstimate)} ₽` : "Цена по запросу"}
             </p>
+            <ul className="mt-6 space-y-3 text-[15px] text-foreground-2">
+              <li className="flex gap-3"><ShieldCheck className="mt-0.5 size-5 shrink-0" strokeWidth={1.5} aria-hidden="true" />Официальная гарантия в России</li>
+              <li className="flex gap-3"><Clock className="mt-0.5 size-5 shrink-0" strokeWidth={1.5} aria-hidden="true" />Менеджер подтвердит цену, наличие и срок поставки</li>
+              <li className="flex gap-3"><Wallet className="mt-0.5 size-5 shrink-0" strokeWidth={1.5} aria-hidden="true" />Оплата — только после подтверждения заказа</li>
+            </ul>
+          </aside>
+          <div className="bg-background p-6 sm:p-10">
+            <OrderForm product={p.name} variants={p.variants} b2b={b2b} />
           </div>
-          <OrderForm product={p.name} variants={p.variants} b2b={b2b} />
         </Container>
       </Section>
 

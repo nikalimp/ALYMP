@@ -54,7 +54,7 @@ details p{padding:0 0 22px;color:var(--fg-2);max-width:720px}
 /* ---------- Шапка (общая разметка) ---------- */
 header{position:sticky;top:0;z-index:50;background:var(--header-bg);backdrop-filter:saturate(180%) blur(16px);-webkit-backdrop-filter:saturate(180%) blur(16px);border-bottom:1px solid var(--line)}
 header .wrap{display:flex;align-items:center;gap:32px;height:56px}
-.logo{font-weight:800;letter-spacing:.18em;font-size:17px}
+.logo{display:block;color:var(--fg)}.logo svg{height:14px;width:auto;display:block}
 header nav{display:flex;gap:24px;font-size:14px;color:var(--fg-2);flex:1}
 header nav a:hover{color:var(--fg)}
 header .btn{min-height:36px;padding:0 16px;font-size:14px;margin-left:auto}
@@ -63,6 +63,7 @@ header .btn{min-height:36px;padding:0 16px;font-size:14px;margin-left:auto}
 /* ============ ВАРИАНТ 1: СТУДИЯ (светлый, Apple) ============ */
 [data-v="studio"]{--bg:oklch(0.975 0.003 260);--bg-2:#fff;--fg:oklch(0.18 0.01 260);--fg-2:oklch(0.42 0.01 260);--muted:oklch(0.55 0.01 260);--line:oklch(0.9 0.004 260);--line-strong:oklch(0.78 0.006 260);--brand:oklch(0.52 0.19 255);--brand-hover:oklch(0.46 0.19 255);--on-brand:#fff;--ph:oklch(0.93 0.004 260);--ok:oklch(0.62 0.15 150);--warn:oklch(0.72 0.15 70);--header-bg:oklch(0.975 0.003 260 / .8)}
 [data-v="studio"] .v-night,[data-v="studio"] .v-lab{display:none}
+[data-v="day"] .v-night{display:block}
 .s-hero{padding:56px 0 0;position:relative}
 .s-hero .grid-lines{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(to right,var(--line) 1px,transparent 1px);background-size:calc((min(1280px,100vw) - 48px)/12) 100%;background-position:center;opacity:.6;mask-image:linear-gradient(#000 40%,transparent)}
 .s-hero-top{display:grid;grid-template-columns:7fr 5fr;gap:24px;align-items:end;position:relative}
@@ -148,7 +149,7 @@ footer .legal{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);
 [data-v="night"] .v-studio,[data-v="night"] .v-lab{display:none}
 .n-scene{position:relative;height:min(100svh,920px);min-height:620px;overflow:hidden;display:flex;align-items:flex-end}
 .n-scene .ph{position:absolute;inset:0}
-.n-scene .ph::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,oklch(0.13 0.005 260) 0%,oklch(0.13 0.005 260 / .2) 45%,transparent 70%);z-index:1}
+.n-scene .ph::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,var(--bg) 0%,color-mix(in oklch,var(--bg) 20%,transparent) 45%,transparent 70%);z-index:1}
 .n-scene .ph::after{z-index:2;top:80px;bottom:auto}
 .n-scene-in{position:relative;z-index:3;width:100%;padding-bottom:56px;display:grid;grid-template-columns:1fr auto;align-items:end;gap:32px}
 .n-scene h1,.n-scene h2{font-size:clamp(48px,8vw,120px);letter-spacing:-.04em;line-height:.9;font-weight:700}
@@ -191,6 +192,25 @@ footer .legal{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);
 .n-journal .list{display:grid;gap:2px}
 .n-journal .list a{background:var(--bg-2);padding:22px 24px;font-weight:600}
 .n-journal .list a small{display:block;font-weight:400;margin-bottom:4px}
+
+
+/* ============ ВАРИАНТ 4: ДЕНЬ — вёрстка «Ночи», светлая база (Apple) ============ */
+[data-v="day"]{--bg:oklch(0.985 0.002 260);--bg-2:oklch(0.955 0.003 260);--fg:oklch(0.16 0.006 260);--fg-2:oklch(0.42 0.008 260);--muted:oklch(0.52 0.008 260);--line:oklch(0.9 0.004 260);--line-strong:oklch(0.78 0.006 260);--brand:oklch(0.16 0.006 260);--brand-hover:oklch(0.3 0.006 260);--on-brand:oklch(0.985 0.002 260);--accent:oklch(0.5 0.12 220);--ph:oklch(0.93 0.004 260);--ok:oklch(0.52 0.14 150);--warn:oklch(0.55 0.14 60);--header-bg:oklch(0.985 0.002 260 / .78)}
+[data-v="day"] .v-studio,[data-v="day"] .v-lab{display:none}
+[data-v="day"] .s-two h2{text-transform:none}
+/* Тёмные сцены — только для флагманов, как чёрные секции Apple */
+[data-v="day"] .is-dark{--bg:oklch(0.13 0.005 260);--bg-2:oklch(0.17 0.006 260);--fg:oklch(0.97 0.003 260);--fg-2:oklch(0.78 0.006 260);--muted:oklch(0.62 0.008 260);--line:oklch(0.26 0.006 260);--line-strong:oklch(0.42 0.008 260);--brand:oklch(0.97 0.003 260);--brand-hover:oklch(0.86 0.003 260);--on-brand:oklch(0.13 0.005 260);--accent:oklch(0.78 0.14 210);--ph:oklch(0.2 0.006 260);--ok:oklch(0.75 0.15 150);--warn:oklch(0.8 0.14 75);background:var(--bg);color:var(--fg)}
+/* Плитки категорий на светлом: светлая подложка, текст сверху, фото снизу */
+[data-v="day"] .n-cats{gap:12px;padding:0 24px;max-width:1280px;margin:0 auto}
+[data-v="day"] .n-cat{background:var(--bg-2);align-items:flex-start;aspect-ratio:4/5}
+[data-v="day"] .n-cat .ph{top:40%}
+[data-v="day"] .n-cat .ph::before{display:none}
+[data-v="day"] .n-cat .t{order:-1}
+[data-v="day"] .n-eco{background:var(--bg-2)}
+[data-v="day"] .n-eco .ring div{background:var(--bg)}
+[data-v="day"] .n-eco .ring div:nth-child(1){background:var(--fg);color:var(--bg)}
+[data-v="day"] .n-cmp a,[data-v="day"] .n-journal .lead,[data-v="day"] .n-journal .list a{background:var(--bg-2)}
+[data-v="day"] .n-cmp a:hover{background:oklch(0.93 0.004 260)}
 
 /* ============ ВАРИАНТ 3: ЛАБОРАТОРИЯ (DJI, данные) ============ */
 [data-v="lab"]{--bg:oklch(0.955 0.004 240);--bg-2:#fff;--fg:oklch(0.2 0.012 250);--fg-2:oklch(0.42 0.012 250);--muted:oklch(0.56 0.01 250);--line:oklch(0.89 0.006 250);--line-strong:oklch(0.8 0.008 250);--brand:oklch(0.2 0.012 250);--brand-hover:oklch(0.32 0.012 250);--on-brand:#fff;--accent:oklch(0.64 0.2 35);--ph:oklch(0.925 0.005 250);--ok:oklch(0.6 0.15 150);--warn:oklch(0.7 0.16 60);--header-bg:oklch(1 0 0 / .85)}
@@ -273,11 +293,12 @@ footer .legal{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);
   <a href="?__variant=studio" data-k="studio">1 · Студия — светлая</a>
   <a href="?__variant=night" data-k="night">2 · Ночь — тёмная</a>
   <a href="?__variant=lab" data-k="lab">3 · Лаборатория — данные</a>
+  <a href="?__variant=day" data-k="day">4 · День — выбрано</a>
 </nav>
 
 <header>
   <div class="wrap">
-    <a href="#" class="logo" aria-label="ALYMP — на главную">ALYMP</a>
+    <a href="#" class="logo" aria-label="ALYMP — на главную"><svg viewBox="0 0 734.6 100" role="img" aria-label="ALYMP"><path fill="currentColor" transform="scale(0.06510)" d="M64 1536 960 0H1216L2112 1536H1888L1696 1184H480L288 1536ZM576 1024H1600L1088 128ZM2572.8 1536V0H2764.8V1376H3980.8V1536ZM4890.16 1536V896L4026.16 0H4282.16L4986.16 752L5690.16 0H5946.16L5082.16 896V1536ZM6474.96 1536V0H6760.96L7689.96 1253L8604.96 0H8890.96V1536H8698.96V174L7781.96 1435H7607.96L6666.96 174V1536ZM9487.76 1536V0H10515.76Q10740.76 0 10878.26 22.0Q11015.76 44 11086.76 95.5Q11157.76 147 11182.76 234.5Q11207.76 322 11207.76 452V492Q11207.76 616 11182.26 702.5Q11156.76 789 11083.76 842.0Q11010.76 895 10872.76 919.5Q10734.76 944 10509.76 944H9679.76V1536ZM11015.76 452Q11015.76 357 10997.76 300.0Q10979.76 243 10925.76 214.0Q10871.76 185 10764.76 175.5Q10657.76 166 10478.76 166H9679.76V778H10478.76Q10657.76 778 10764.76 766.5Q10871.76 755 10925.76 724.5Q10979.76 694 10997.76 637.5Q11015.76 581 11015.76 492Z"/></svg></a>
     <nav aria-label="Основная навигация">
       <a href="#">Уборка</a><a href="#">Умный дом</a><a href="#">Роботы</a><a href="#">Сравнения</a><a href="#">Журнал</a>
     </nav>
@@ -301,7 +322,7 @@ footer .legal{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);
       <div class="s-hero-media">
         <div class="ph big" data-label="Roborock Saros Z70 — фото из пресс-кита"><span class="s-tag"><span class="status"><i></i>в продаже</span> Saros Z70 · механическая рука</span></div>
         <div class="stack">
-          <div class="ph has-img" data-label="Unitree Go2 — unitree.com"><img src="../../../media/press/go2.jpg" alt="Робособака Unitree Go2"></div>
+          <div class="ph has-img" data-label="Unitree Go2 — unitree.com"><img src="assets/go2.jpg" alt="Робособака Unitree Go2"></div>
           <div class="ph" data-label="Aqara Hub M3 — фото из пресс-кита"></div>
         </div>
       </div>
@@ -317,7 +338,7 @@ footer .legal{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);
     <div class="s-cats reveal">
       <a class="s-cat" href="#"><div><span class="num">01 · 6 моделей</span><h3>Уборка</h3><p>Роботы-пылесосы Roborock и Dreame, мойщик окон KaringBee.</p></div><div class="ph" data-label="Dreame X50 Ultra — пресс-кит"></div></a>
       <a class="s-cat" href="#"><div><span class="num">02 · 7 устройств</span><h3>Умный дом</h3><p>Хаб, панель, замки, радар присутствия, камера, шторы Aqara.</p></div><div class="ph" data-label="Aqara Panel Hub S1 Plus — пресс-кит"></div></a>
-      <a class="s-cat" href="#"><div class="ph has-img" data-label="Unitree Go2 — unitree.com"><img src="../../../media/press/go2.jpg" alt=""></div><div class="txt"><div><span class="num">03 · 2 робота</span><h3>Роботы Unitree</h3><p>Робособака Go2 и гуманоид G1 — под заказ с поставкой в Россию.</p></div><span class="btn btn-ghost" style="align-self:flex-start">Смотреть роботов</span></div></a>
+      <a class="s-cat" href="#"><div class="ph has-img" data-label="Unitree Go2 — unitree.com"><img src="assets/go2.jpg" alt=""></div><div class="txt"><div><span class="num">03 · 2 робота</span><h3>Роботы Unitree</h3><p>Робособака Go2 и гуманоид G1 — под заказ с поставкой в Россию.</p></div><span class="btn btn-ghost" style="align-self:flex-start">Смотреть роботов</span></div></a>
     </div>
   </div></section>
 
@@ -327,7 +348,7 @@ footer .legal{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);
       <a class="s-flag" href="#"><span class="status"><i></i>в продаже</span><div class="ph" data-label="пресс-кит"></div><h3>Roborock Saros Z70</h3><p>Механическая рука убирает носки с пола</p><div class="k">22 000<small>Па ⚠</small></div></a>
       <a class="s-flag" href="#"><span class="status"><i></i>в продаже</span><div class="ph" data-label="пресс-кит"></div><h3>Dreame X50 Ultra</h3><p>Перешагивает пороги, лидар прячется в корпус</p><div class="k">6<small>см порог ⚠</small></div></a>
       <a class="s-flag" href="#"><span class="status"><i></i>в продаже</span><div class="ph" data-label="пресс-кит"></div><h3>Aqara FP400</h3><p>Видит человека без камер, различает позы</p><div class="k">60<small>ГГц радар</small></div></a>
-      <a class="s-flag" href="#"><span class="status pre"><i></i>под заказ</span><div class="ph has-img" data-label="unitree.com"><img src="../../../media/press/go2.jpg" alt=""></div><h3>Unitree Go2</h3><p>Робособака со встроенным ИИ</p><div class="k">от 261<small>тыс. ₽ ⚠ ориентир</small></div></a>
+      <a class="s-flag" href="#"><span class="status pre"><i></i>под заказ</span><div class="ph has-img" data-label="unitree.com"><img src="assets/go2.jpg" alt=""></div><h3>Unitree Go2</h3><p>Робособака со встроенным ИИ</p><div class="k">от 261<small>тыс. ₽ ⚠ ориентир</small></div></a>
     </div>
   </div></section>
 
@@ -393,11 +414,11 @@ footer .legal{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);
   <section style="padding:0"><div class="n-cats reveal">
     <a class="n-cat" href="#"><div class="ph" data-label="Dreame X50 Ultra — пресс-кит"></div><div class="t"><h3>Уборка</h3><p>6 роботов для пола и окон</p><span class="lnk">Смотреть</span></div></a>
     <a class="n-cat" href="#"><div class="ph" data-label="Aqara — интерьер из пресс-кита"></div><div class="t"><h3>Умный дом</h3><p>7 устройств экосистемы Aqara</p><span class="lnk">Смотреть</span></div></a>
-    <a class="n-cat" href="#"><div class="ph has-img" data-label="unitree.com"><img src="../../../media/press/go2.jpg" alt="Робособака Unitree Go2"></div><div class="t"><h3>Роботы</h3><p>Unitree Go2 и G1 под заказ</p><span class="lnk">Смотреть</span></div></a>
+    <a class="n-cat" href="#"><div class="ph has-img" data-label="unitree.com"><img src="assets/go2.jpg" alt="Робособака Unitree Go2"></div><div class="t"><h3>Роботы</h3><p>Unitree Go2 и G1 под заказ</p><span class="lnk">Смотреть</span></div></a>
   </div></section>
 
-  <section class="n-scene" style="padding:0">
-    <div class="ph has-img" data-label="Unitree Go2 — unitree.com"><img src="../../../media/press/go2.jpg" alt="Unitree Go2 в движении"></div>
+  <section class="n-scene is-dark" style="padding:0">
+    <div class="ph has-img" data-label="Unitree Go2 — unitree.com"><img src="assets/go2.jpg" alt="Unitree Go2 в движении"></div>
     <div class="wrap n-scene-in">
       <div><p class="eyebrow">Под заказ</p><br><h2>Unitree Go2</h2><p class="sub">Робособака со встроенным ИИ. Ходит по лестницам, следует за вами, отвечает голосом.</p>
       <div class="row"><a class="btn btn-primary" href="#">Узнать цену</a><a class="btn btn-ghost" href="#">Go2 Air или Pro</a></div></div>
@@ -449,7 +470,7 @@ footer .legal{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);
         <div class="bar"><span><b>Roborock Saros Z70</b> <span class="status"><i></i>в продаже</span></span><a class="btn btn-primary" href="#">Подробнее</a></div>
       </div>
       <a class="l-card l-side" href="#"><div><span class="l-chip">Порог</span><h3 style="margin-top:12px">Dreame X50 Ultra</h3></div><div class="big">6<small>см ⚠</small></div></a>
-      <a class="l-card l-side" href="#"><div><span class="l-chip">Под заказ</span><h3 style="margin-top:12px">Unitree Go2</h3></div><div class="ph has-img" data-label=""><img src="../../../media/press/go2.jpg" alt="Unitree Go2"></div></a>
+      <a class="l-card l-side" href="#"><div><span class="l-chip">Под заказ</span><h3 style="margin-top:12px">Unitree Go2</h3></div><div class="ph has-img" data-label=""><img src="assets/go2.jpg" alt="Unitree Go2"></div></a>
     </div>
   </div></section>
 
@@ -543,11 +564,11 @@ footer .legal{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);
 <script>
 (function(){
   var p=new URLSearchParams(location.search).get('__variant');
-  var ok=['studio','night','lab'];
-  var v=ok.indexOf(p)>-1?p:'studio';
+  var ok=['studio','night','lab','day'];
+  var v=ok.indexOf(p)>-1?p:'day';
   document.body.setAttribute('data-v',v);
   document.querySelectorAll('#picker a').forEach(function(a){if(a.dataset.k===v)a.setAttribute('aria-current','true')});
-  document.addEventListener('keydown',function(e){var i=['1','2','3'].indexOf(e.key);if(i>-1&&!e.target.closest('input,textarea')){location.search='?__variant='+ok[i]}});
+  document.addEventListener('keydown',function(e){var i=['1','2','3','4'].indexOf(e.key);if(i>-1&&!e.target.closest('input,textarea')){location.search='?__variant='+ok[i]}});
   var els=document.querySelectorAll('.reveal');
   if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in')});return}
   var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -10% 0px'});

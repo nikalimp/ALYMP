@@ -27,12 +27,14 @@
 
 Прототип: `specs/prototypes/home.html?__variant=studio|night|lab` (клавиши 1–3).
 
-**Выбрано: 2 · Ночь** (Ник, 25.11.2026) — VARIANCE 8 · MOTION 8 · DENSITY 2. Тёмная поверхность — главная, лендинги, категории; SEO-слой — светлый на тех же токенах.
+**Выбрано: 4 · День** (Ник, 25.11.2026) — вёрстка и шрифты «Ночи» на светлой базе, как apple.com. VARIANCE 8 · MOTION 7 · DENSITY 2. Тёмные сцены (`.is-dark`) — акцент для флагманов, не больше одной на главной.
+
+**Логотип:** текстовый, Michroma капсом, в контурах — `public/logos/alymp.svg` (Ник, 25.11.2026; сравнение — `specs/logo/wordmarks.html`).
 Референс-система: Apple (awesome-design-md) — иерархия через размер, один акцент, товар как герой. DJI — подача характеристик. Tesla — полноэкранные сцены.
 Выжимка для агентов — `DESIGN.md` в корне репозитория (после выбора прототипа).
 
 ## 1. Исходные материалы
-- Логотип (SVG): нет — вордмарк ALYMP набран шрифтом (Onest 800, разрядка 0.18em); финальный — после выбора прототипа
+- Логотип (SVG): `public/logos/alymp.svg` — Michroma в контурах, разрядка 0.10em, правка пары L–Y
 - Брендбук: нет
 - Фирменные цвета (как дал клиент):
 - Шрифты: Onest (OFL), PT Serif (OFL), JetBrains Mono (OFL) — на проде через @fontsource
@@ -86,7 +88,7 @@
 Проверка контраста (WCAG): тёмная — `--foreground`/`--background` 18.4:1, `--muted-foreground` 5.5:1, `--accent` 10.6:1, `--primary-foreground`/`--primary` 18.4:1; светлая — 18.6:1, 5.3:1, 5.3:1, 18.6:1. Все ≥ 4.5:1 (AA).
 
 ### Замер первого экрана лендинга (тяжёлая подача)
-Прототип `specs/prototypes/product-go2.html`: полноэкранный товар, локальные шрифты Onest и JetBrains Mono, закреплённая сцена технологии (CSS sticky + IntersectionObserver, без GSAP).
+Прототип `specs/prototypes/product-go2.html` (светлая база, тёмные hero и сцена технологии): полноэкранный товар, локальные шрифты Onest и JetBrains Mono, закреплённая сцена технологии (CSS sticky + IntersectionObserver, без GSAP).
 Lighthouse mobile, 25.11.2026: **Performance 100 · Accessibility 100 · Best Practices 96 · SEO 100**; LCP 1,5 с, CLS 0, TBT 0 мс. Порог ≥ 85 выполнен с запасом.
 Чем будем платить: фото пресс-кита крупнее (780 px в прототипе → 1920 px AVIF) и GSAP на лендингах. Бюджет: LCP < 2,5 с; при просадке — AVIF, `srcset`, GSAP только после первого экрана.
 Фото Go2 — официальное изображение unitree.com, в репозиторий не коммитится (`.gitignore`), лежит в `media/press/`.

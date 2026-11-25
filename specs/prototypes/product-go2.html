@@ -11,7 +11,8 @@
 @font-face{font-family:"Onest";font-style:normal;font-weight:100 900;font-display:swap;src:url(assets/onest-cyrillic-wght-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
 @font-face{font-family:"Onest";font-style:normal;font-weight:100 900;font-display:swap;src:url(assets/onest-latin-wght-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2212}
 @font-face{font-family:"JB";font-style:normal;font-weight:500;font-display:swap;src:url(assets/jetbrains-mono-latin-500-normal.woff2) format("woff2")}
-:root{--bg:oklch(0.13 0.005 260);--card:oklch(0.17 0.006 260);--fg:oklch(0.97 0.003 260);--fg2:oklch(0.78 0.006 260);--muted:oklch(0.62 0.008 260);--line:oklch(0.26 0.006 260);--line2:oklch(0.42 0.008 260);--accent:oklch(0.78 0.14 210);--warn:oklch(0.8 0.14 75)}
+:root{--bg:oklch(0.985 0.002 260);--card:oklch(0.955 0.003 260);--fg:oklch(0.16 0.006 260);--fg2:oklch(0.42 0.008 260);--muted:oklch(0.52 0.008 260);--line:oklch(0.9 0.004 260);--line2:oklch(0.78 0.006 260);--accent:oklch(0.5 0.12 220);--warn:oklch(0.55 0.14 60)}
+.is-dark{--bg:oklch(0.13 0.005 260);--card:oklch(0.17 0.006 260);--fg:oklch(0.97 0.003 260);--fg2:oklch(0.78 0.006 260);--muted:oklch(0.62 0.008 260);--line:oklch(0.26 0.006 260);--line2:oklch(0.42 0.008 260);--accent:oklch(0.78 0.14 210);--warn:oklch(0.8 0.14 75);background:var(--bg);color:var(--fg)}
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:"Onest",system-ui,sans-serif;background:var(--bg);color:var(--fg);line-height:1.5;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
@@ -21,11 +22,11 @@ img{display:block;max-width:100%}
 .eyebrow{font:500 12px/1 "JB",ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
 .btn{display:inline-flex;align-items:center;min-height:44px;padding:0 22px;border-radius:999px;font-weight:600;font-size:15px;border:1px solid transparent;transition:background-color .2s ease-out,border-color .2s ease-out}
-.btn-p{background:var(--fg);color:var(--bg)}.btn-p:hover{background:oklch(0.86 0.003 260)}
+.btn-p{background:var(--fg);color:var(--bg)}.btn-p:hover{opacity:.88}
 .btn-g{border-color:var(--line2)}.btn-g:hover{border-color:var(--fg)}
-header{position:fixed;inset:0 0 auto;z-index:20;background:oklch(0.13 0.005 260 / .7);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+header{position:fixed;inset:0 0 auto;z-index:20;background:oklch(0.985 0.002 260 / .78);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
 header .wrap{display:flex;align-items:center;gap:28px;height:56px}
-.logo{font-weight:800;letter-spacing:.18em;font-size:17px}
+.logo{display:block}.logo svg{height:14px;width:auto;display:block}
 header nav{display:flex;gap:24px;font-size:14px;color:var(--fg2)}
 header .btn{margin-left:auto;min-height:36px;padding:0 16px;font-size:14px}
 .crumbs-wrap{position:absolute!important;top:72px;left:0;right:0;padding-bottom:0!important}
@@ -81,13 +82,13 @@ h1{font-size:clamp(56px,10vw,144px);letter-spacing:-.045em;line-height:.88;font-
 </head>
 <body>
 <header><div class="wrap">
-  <a class="logo" href="home.html?__variant=night" aria-label="ALYMP — на главную">ALYMP</a>
+  <a class="logo" href="home.html" aria-label="ALYMP — на главную"><svg viewBox="0 0 734.6 100" role="img" aria-label="ALYMP"><path fill="currentColor" transform="scale(0.06510)" d="M64 1536 960 0H1216L2112 1536H1888L1696 1184H480L288 1536ZM576 1024H1600L1088 128ZM2572.8 1536V0H2764.8V1376H3980.8V1536ZM4890.16 1536V896L4026.16 0H4282.16L4986.16 752L5690.16 0H5946.16L5082.16 896V1536ZM6474.96 1536V0H6760.96L7689.96 1253L8604.96 0H8890.96V1536H8698.96V174L7781.96 1435H7607.96L6666.96 174V1536ZM9487.76 1536V0H10515.76Q10740.76 0 10878.26 22.0Q11015.76 44 11086.76 95.5Q11157.76 147 11182.76 234.5Q11207.76 322 11207.76 452V492Q11207.76 616 11182.26 702.5Q11156.76 789 11083.76 842.0Q11010.76 895 10872.76 919.5Q10734.76 944 10509.76 944H9679.76V1536ZM11015.76 452Q11015.76 357 10997.76 300.0Q10979.76 243 10925.76 214.0Q10871.76 185 10764.76 175.5Q10657.76 166 10478.76 166H9679.76V778H10478.76Q10657.76 778 10764.76 766.5Q10871.76 755 10925.76 724.5Q10979.76 694 10997.76 637.5Q11015.76 581 11015.76 492Z"/></svg></a>
   <nav aria-label="Основная навигация"><a href="#">Уборка</a><a href="#">Умный дом</a><a href="#">Роботы</a><a href="#">Сравнения</a><a href="#">Журнал</a></nav>
   <a class="btn btn-p" href="#order">Заказать</a>
 </div></header>
 
 <main>
-<section class="hero" aria-labelledby="h1">
+<section class="hero is-dark" aria-labelledby="h1">
   <img src="assets/go2.jpg" width="780" height="439" alt="Робособака Unitree Go2 на тёмном фоне" fetchpriority="high">
   <div class="wrap crumbs-wrap"><nav class="crumbs" aria-label="Хлебные крошки"><a href="#">Каталог</a> / <a href="#">Роботы</a> / Unitree Go2</nav></div>
   <div class="wrap">
@@ -111,7 +112,7 @@ h1{font-size:clamp(56px,10vw,144px);letter-spacing:-.045em;line-height:.88;font-
   <p><b>Unitree Go2 — четвероногий робот для дома, учёбы и исследований.</b> Он ориентируется по лидару, обходит препятствия и выполняет голосовые команды. В России доступен под заказ с официальной гарантией; версии Air и Pro отличаются датчиками и возможностями ИИ.</p>
 </div></section>
 
-<section class="tech" aria-label="Технологии"><div class="wrap tech-in">
+<section class="tech is-dark" aria-label="Технологии"><div class="wrap tech-in">
   <div class="tech-text">
     <div class="step on"><span class="eyebrow">01 · Навигация</span><h2>Видит комнату <span>целиком</span></h2><p>Лидар строит трёхмерную карту пространства, поэтому робот обходит мебель и людей. Что такое <a href="#">лидар</a> — в глоссарии.</p></div>
     <div class="step"><span class="eyebrow">02 · Движение</span><h2>Лестницы <span>и пороги</span></h2><p>Двенадцать моторов в суставах держат равновесие на неровном полу. Цифры — после сверки с unitree.com ⚠.</p></div>

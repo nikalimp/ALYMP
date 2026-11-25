@@ -13,9 +13,9 @@ export type OrgType =
   | "Store";
 
 export const site = {
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://alymp.nikalimp.ru", // прод: https://alymp.ru (этап 8)
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://alymp.ru",
   name: "ALYMP",
-  legalName: "TODO(клиент): ООО «Название»",
+  legalName: "Алимпиев Никита", // TODO(клиент): отчество для политики ПДн; после ИП — «ИП Алимпиев …»
   // Тип организации в Schema.org — самый точный из подходящих: https://schema.org/LocalBusiness#subtypes
   orgType: "LocalBusiness" as OrgType,
   title: "TODO(клиент): Бренд — услуга в городе", // title главной, до 60 символов
@@ -53,8 +53,9 @@ export const site = {
 
   // Реквизиты для футера и политики ПДн (152-ФЗ)
   legal: {
-    inn: "TODO(клиент)",
-    ogrn: "TODO(клиент)",
+    status: "самозанятый (НПД)", // после открытия ИП — заменить, добавить ogrnip
+    inn: "667109362983",
+    ogrn: "",
     privacyEmail: "", // почта для запросов по персональным данным; пусто — берётся contacts.email
   },
 
@@ -66,7 +67,7 @@ export const site = {
   // Лицо компании — основатель или эксперт. null, если не нужен
   person: null as null | { name: string; jobTitle: string; description: string; sameAs: string[] },
 
-  metrikaId: 0, // номер счётчика Яндекс Метрики; 0 — счётчик не подключается (на боевом домене npm run check этого не пропустит)
+  metrikaId: 114661158, // номер счётчика Яндекс Метрики; 0 — счётчик не подключается (на боевом домене npm run check этого не пропустит)
   darkTheme: true, // переключатель темы в шапке
 
   // Функции включаются и выключаются флагами, а не удалением кода (стандарт §1.9):

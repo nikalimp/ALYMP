@@ -76,3 +76,19 @@ export function articleSchema(p: { slug: string; title: string; description: str
 export function graph(...nodes: (Record<string, unknown> | null | false | undefined)[]) {
   return { "@context": "https://schema.org", "@graph": nodes.filter(Boolean) };
 }
+
+// Товар (spec §4.2): Offer — только с ценой из прайса дистрибьютора. Ориентир «от» в Offer не идёт (spec §9).
+export function productSchema(p: { slug: string; name: string; brand: string; description: string; image: string; price: number | null; specs?: { label: string; value: string; unit?: string }[] }) {
+  const url = `${site.url}/products/${p.slug}/`;
+  return {
+    "@type": "Product",
+    "@id": `${url}#product`,
+    name: p.name,
+    url,
+    description: p.description,
+    image: `${site.url}${p.image}`,
+    brand: { "@type": "Brand", name: p.brand },
+    ...(p.specs && { additionalProperty: p.specs.map((s) => ({ "@type": "PropertyValue", name: s.label, value: [s.value, s.unit].filter(Boolean).join(" ") })) }),
+    ...(p.price && { offers: { "@type": "Offer", price: String(p.price), priceCurrency: "RUB", availability: "https://schema.org/PreOrder", url, seller: { "@id": orgId } } }),
+  };
+}

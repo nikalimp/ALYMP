@@ -2,6 +2,7 @@
 import { site } from "@/content/site";
 import { about, home } from "@/content/home";
 import { getPosts } from "./posts";
+import { getLandings } from "./landings";
 
 // Простой текст для нейросетей: неразрывные пробелы типографа заменяем обычными
 const plain = (s: string) => s.replace(/ /g, " ").replace(/⁠/g, "");
@@ -29,7 +30,7 @@ export function llmsTxt() {
 ## Каталог
 ${home.categories.map((x) => `- ${x.title}: ${x.items.join(", ")}. ${x.text}`).join("\n")}
 
-## Как заказать
+${getLandings().length ? `## Товары\n${getLandings().map((l) => `- [${l.product.name}](${site.url}/products/${l.slug}/): ${l.tagline} Характеристики: ${site.url}/products/${l.slug}/specs/`).join("\n")}\n\n` : ""}## Как заказать
 ${home.steps.map((s, i) => `${i + 1}. ${s.title}: ${s.text}`).join("\n")}
 ${p.length ? `\n## Статьи\n${p.map((x) => `- [${x.title}](${site.url}/blog/${x.slug}/): ${x.description}`).join("\n")}\n` : ""}
 ## О компании
@@ -45,6 +46,6 @@ ${contacts()}
 export function llmsFullTxt() {
   const p = posts().map((x) => `## ${x.title}\nURL: ${site.url}/blog/${x.slug}/\nДата: ${x.updated ?? x.date}\n\n${x.body}`);
   return plain(
-    `${llmsTxt()}\n---\n\n# Частые вопросы\n\n${home.faq.map((f) => `- ${f.q} ${f.a}`).join("\n")}\n\n---\n\n# О компании\n\n${about.body}\n${p.length ? `\n---\n\n# Статьи\n\n${p.join("\n\n")}\n` : ""}`,
+    `${llmsTxt()}\n---\n\n${getLandings().map((l) => `# ${l.product.name}\nURL: ${site.url}/products/${l.slug}/\n\n${l.answer}\n\nФакты (источник — официальный сайт производителя):\n${l.product.facts.map((f) => `- ${f.text}`).join("\n")}\n\nВопросы:\n${l.faq.map((f) => `- ${f.q} ${f.a}`).join("\n")}`).join("\n\n---\n\n")}\n\n---\n\n# Частые вопросы\n\n${home.faq.map((f) => `- ${f.q} ${f.a}`).join("\n")}\n\n---\n\n# О компании\n\n${about.body}\n${p.length ? `\n---\n\n# Статьи\n\n${p.join("\n\n")}\n` : ""}`,
   );
 }

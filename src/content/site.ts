@@ -80,6 +80,7 @@ export const site = {
     glossary: false, // глоссарий — блок 6
     news: false, // новости — блок 7
     cart: false, // корзина и онлайн-оплата — после ИП (P2)
+    leadApi: false, // /api/lead.php — T54; пока заявка уходит в Telegram с готовым текстом
   },
 };
 

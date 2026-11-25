@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import "@fontsource-variable/onest/wght.css"; // шрифт текста — specs/03-design.md §3
 import "@fontsource/jetbrains-mono/400.css"; // цифры и метки
 import "@fontsource/jetbrains-mono/500.css";
 import "./globals.css";
@@ -19,8 +18,9 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+// Метрика грузится после события load (+1,5 с): не мешает первой отрисовке (LCP). Счётчик и цели работают как прежде.
 const metrikaScript = (id: number) =>
-  `(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=${id}','ym');ym(${id},'init',{ssr:true,webvisor:true,clickmap:true,referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});`;
+  `window.addEventListener('load',function(){setTimeout(function(){(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=${id}','ym');ym(${id},'init',{ssr:true,webvisor:true,clickmap:true,referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});},1500)});`;
 
 const themeScript = `(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark')}catch(e){}})()`;
 
@@ -28,6 +28,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang={site.lang} suppressHydrationWarning>
       <head>
+        {/* Шрифт текста — локально из public/fonts, кириллица предзагружается: быстрее первый экран (LCP) */}
+        <link rel="preload" href="/fonts/onest-cyrillic-wght-normal.woff2" as="font" type="font/woff2" crossOrigin="" />
         {site.darkTheme && <script dangerouslySetInnerHTML={{ __html: themeScript }} />}
         {site.metrikaId > 0 && <script dangerouslySetInnerHTML={{ __html: metrikaScript(site.metrikaId) }} />}
         <JsonLd data={graph(websiteSchema, orgSchema, personSchema)} />

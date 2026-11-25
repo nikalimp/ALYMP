@@ -27,7 +27,11 @@ export function llmsTxt() {
 
 > ${home.answer}
 
-## Каталог
+## Каталог и разделы
+- [Каталог (17 устройств)](${site.url}/catalog/): [Автономная уборка](${site.url}/catalog/cleaning-robots/), [Умный дом Aqara](${site.url}/catalog/smart-home/), [Роботы Unitree](${site.url}/catalog/robots/)
+- [Матрица совместимости](${site.url}/compatibility/): Алиса, Matter, Thread, Zigbee, Apple HomeKit, Home Assistant, Wi-Fi
+- [Сравнения моделей](${site.url}/compare/): 6 прямых пар флагманов по официальным данным
+- [Бренды ALYMP](${site.url}/brands/): Roborock, Dreame, Aqara, Unitree Robotics, KaringBee
 ${home.categories.map((x) => `- ${x.title}: ${x.items.join(", ")}. ${x.text}`).join("\n")}
 
 ${getLandings().length ? `## Товары\n${getLandings().map((l) => `- [${l.product.name}](${site.url}/products/${l.slug}/): ${l.tagline} Характеристики: ${site.url}/products/${l.slug}/specs/`).join("\n")}\n\n` : ""}## Как заказать

@@ -75,11 +75,11 @@ export const site = {
   // снятый с сайта блок остаётся в репозитории и возвращается одной строкой.
   features: {
     blog: false, // включается с первой статьёй (T47–T49)
-    catalog: false, // каталог и лендинги — блок 3–5
-    compare: false, // сравнения — T36
+    catalog: true, // каталог и категории — T35
+    compare: true, // сравнения — T36
     glossary: false, // глоссарий — блок 6
     news: false, // новости — блок 7
-    cart: false, // корзина и онлайн-оплата — после ИП (P2)
+    cart: true, // корзина-заявка без онлайн-оплаты (Спринт 1)
     leadApi: false, // /api/lead.php — T54; пока заявка уходит в Telegram с готовым текстом
   },
 };
@@ -87,9 +87,12 @@ export const site = {
 // Пункт меню показывается, когда раздел собран (флаги site.features) — на проде нет ссылок в пустоту
 export const nav = [
   ...(site.features.catalog ? [
+    { href: "/catalog/", label: "Каталог" },
     { href: "/catalog/cleaning-robots/", label: "Уборка" },
     { href: "/catalog/smart-home/", label: "Умный дом" },
     { href: "/catalog/robots/", label: "Роботы" },
+    { href: "/compatibility/", label: "Совместимость" },
+    { href: "/brands/", label: "Бренды" },
   ] : []),
   ...(site.features.compare ? [{ href: "/compare/", label: "Сравнения" }] : []),
   ...(site.features.blog || site.features.news ? [{ href: site.features.news ? "/news/" : "/blog/", label: "Журнал" }] : []),

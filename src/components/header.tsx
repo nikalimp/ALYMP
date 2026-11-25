@@ -8,9 +8,18 @@ import { useCart } from "./cart/cart-context";
 import { SearchModal, type CatalogItemSummary } from "./search-modal";
 
 const CATEGORY_META = [
-  { id: "cleaning-robots", label: "Автономная уборка", href: "/#catalog-cleaning-robots", desc: "Роботы-пылесосы и мойщики окон" },
-  { id: "smart-home", label: "Умный дом", href: "/#catalog-smart-home", desc: "Хабы, панели, замки и датчики Aqara" },
-  { id: "robots", label: "Роботы Unitree", href: "/#catalog-robots", desc: "Бионические и гуманоидные роботы" },
+  { id: "cleaning-robots", label: "Автономная уборка", href: "/catalog/cleaning-robots/", desc: "Роботы-пылесосы и мойщики окон" },
+  { id: "smart-home", label: "Умный дом", href: "/catalog/smart-home/", desc: "Хабы, панели, замки и датчики Aqara" },
+  { id: "robots", label: "Роботы Unitree", href: "/catalog/robots/", desc: "Бионические и гуманоидные роботы" },
+] as const;
+
+const EXTRA_LINKS = [
+  { href: "/catalog/", label: "Весь каталог" },
+  { href: "/compatibility/", label: "Совместимость" },
+  { href: "/compare/", label: "Сравнения" },
+  { href: "/brands/", label: "Бренды" },
+  { href: "/about/", label: "О ALYMP" },
+  { href: "/contacts/", label: "Контакты" },
 ] as const;
 
 export function Header({ products }: { products: CatalogItemSummary[] }) {
@@ -93,13 +102,12 @@ export function Header({ products }: { products: CatalogItemSummary[] }) {
                           </li>
                         ))}
                       </ul>
-                      <div className="mt-4 flex gap-4 border-t px-3 pt-4 text-xs text-foreground-2">
-                        <Link href="/about/" onClick={() => setDropdownOpen(false)} className="hover:text-foreground">
-                          О ALYMP
-                        </Link>
-                        <Link href="/contacts/" onClick={() => setDropdownOpen(false)} className="hover:text-foreground">
-                          Контакты
-                        </Link>
+                      <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 border-t px-3 pt-4 text-xs text-foreground-2">
+                        {EXTRA_LINKS.map((l) => (
+                          <Link key={l.href} href={l.href} onClick={() => setDropdownOpen(false)} className="hover:text-foreground">
+                            {l.label}
+                          </Link>
+                        ))}
                       </div>
                     </div>
 
@@ -180,9 +188,10 @@ export function Header({ products }: { products: CatalogItemSummary[] }) {
                 </li>
               ))}
             </ul>
-            <div className="mt-6 flex gap-6 border-t pt-4 text-sm text-foreground-2">
-              <Link href="/about/" onClick={() => setMobileOpen(false)}>О ALYMP</Link>
-              <Link href="/contacts/" onClick={() => setMobileOpen(false)}>Контакты</Link>
+            <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 border-t pt-4 text-sm text-foreground-2">
+              {EXTRA_LINKS.map((l) => (
+                <Link key={l.href} href={l.href} onClick={() => setMobileOpen(false)}>{l.label}</Link>
+              ))}
             </div>
           </div>
         )}

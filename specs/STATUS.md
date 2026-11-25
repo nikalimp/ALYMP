@@ -20,9 +20,12 @@
 - [x] 01-research.md — 5 конкурентов со скриншотами, 23 кластера, 30 GEO-запросов, 50 терминов + Вордстат; утверждено 25.11.2026
 - [x] 02-spec.md — v0.4, утверждено 25.11.2026
 - [x] 03-design.md, DESIGN.md, brand.json — «День» + логотип Michroma, утверждено 25.11.2026
-- [ ] 04-plan.md, 05-tasks.md
+- [x] 04-plan.md, 05-tasks.md — черновик 25.11.2026, 68 задач; ждём pre-flight (мастер setup-site.sh)
 
 ## Следующий шаг
+Ник запускает `bash ~/Desktop/NikitOS/.claude/toolkit/deploy-kit/setup-site.sh nikalimp/ALYMP alymp.nikalimp.ru ALYMP alymp.ru` → pre-flight зелёный → утверждение этапа 5 → сборка (этап 6).
+
+Ранее:
 Ник подключает доступы (NikitOS, GitHub) → карточка, репозиторий, kickoff → закрываем этап 1. Затем:
 Утвердить бриф → этап 2: агент `site-researcher` (Haiku) собирает конкурентов (robort.ru, unitree.ru, gumanoids.ru + магазины уборки и умного дома), кластеры запросов и пул GEO-запросов.
 

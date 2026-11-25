@@ -4,8 +4,10 @@
 
 ## Трек A — доступы и факты (критический путь)
 - [x] NikitOS читается (`~/Desktop/NikitOS`). Карточка `ALYMP.md` описывает версию Gemini — эту версию в неё не пишем до выбора Ника
-- [ ] Токен GitHub обновлён (Ник проходит `gh auth login`), репозиторий `nikalimp/ALYMP` создан из стартера — разрешено Ником 25.11.2026
-- [ ] `kickoff` → `specs/references.md`
+- [x] Репозиторий `nikalimp/ALYMP` создан (приватный). Стартер — из NikitOS `.starter/`: шаблона на GitHub нет
+- [ ] Push в `main`: токену `gh` нужно право `workflow` (`gh auth refresh -s workflow`)
+- [ ] SSH-ключ не привязан к GitHub — работаем по HTTPS
+- [x] `kickoff` → `specs/references.md` (shadcn/ui; подборка Library по нише не подошла — берём референсы Ника)
 - [x] 15-я позиция каталога — U200 и U300 отдельно
 - [ ] ИП открыт (блокирует продажи, не сборку)
 - [ ] Прайс и наличие от 3Logic / diHouse

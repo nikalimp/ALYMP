@@ -1,0 +1,56 @@
+[
+ {
+  "key": "onest",
+  "name": "Onest 800",
+  "w": 550.0,
+  "bytes": 721
+ },
+ {
+  "key": "unbounded",
+  "name": "Unbounded 700",
+  "w": 621.3,
+  "bytes": 776
+ },
+ {
+  "key": "michroma",
+  "name": "Michroma",
+  "w": 734.6,
+  "bytes": 985
+ },
+ {
+  "key": "archivo",
+  "name": "Archivo Expanded 800",
+  "w": 687.9,
+  "bytes": 1338
+ },
+ {
+  "key": "inter",
+  "name": "Inter 800",
+  "w": 542.1,
+  "bytes": 1653
+ },
+ {
+  "key": "montserrat",
+  "name": "Montserrat 800",
+  "w": 581.6,
+  "bytes": 825
+ },
+ {
+  "key": "jost",
+  "name": "Jost 600 (как Futura)",
+  "w": 527.0,
+  "bytes": 756
+ },
+ {
+  "key": "plex",
+  "name": "IBM Plex Sans 700",
+  "w": 518.6,
+  "bytes": 821
+ },
+ {
+  "key": "golos",
+  "name": "Golos Text 800",
+  "w": 551.6,
+  "bytes": 720
+ }
+]

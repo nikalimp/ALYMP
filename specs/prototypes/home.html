@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALYMP — прототипы главной</title>
+<!-- Прототип этапа 4. На проде шрифты — локально через @fontsource (стандарт §1.4). -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800&family=PT+Serif:ital@1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ---------- Общая база ---------- */
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{font-family:"Onest",system-ui,sans-serif;background:var(--bg);color:var(--fg);line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.wrap{max-width:1280px;margin:0 auto;padding:0 24px}
+.serif{font-family:"PT Serif",Georgia,serif;font-style:italic;font-weight:400;letter-spacing:0}
+.mono{font-family:"JetBrains Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+:focus-visible{outline:2px solid var(--brand);outline-offset:3px;border-radius:4px}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 22px;border-radius:999px;font-weight:600;font-size:15px;transition:background-color .2s ease-out,color .2s ease-out,border-color .2s ease-out;cursor:pointer;border:1px solid transparent}
+.btn-primary{background:var(--brand);color:var(--on-brand)}
+.btn-primary:hover{background:var(--brand-hover)}
+.btn-ghost{border-color:var(--line-strong);color:var(--fg)}
+.btn-ghost:hover{border-color:var(--fg)}
+.ph{position:relative;background:var(--ph);display:flex;align-items:flex-end;justify-content:flex-start;overflow:hidden}
+.ph::after{content:attr(data-label);position:absolute;left:12px;bottom:10px;font:500 11px/1.3 "JetBrains Mono",monospace;color:var(--muted);letter-spacing:.02em}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph.has-img::after{color:rgba(255,255,255,.7)}
+.eyebrow{font:500 12px/1 "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1,h2,h3{font-weight:700;letter-spacing:-.02em;line-height:1.05}
+section{padding:96px 0}
+.answer{max-width:760px;font-size:20px;color:var(--fg-2)}
+.status{display:inline-flex;align-items:center;gap:6px;font:500 12px/1 "JetBrains Mono",monospace;color:var(--muted)}
+.status i{width:6px;height:6px;border-radius:50%;background:var(--ok)}
+.status.pre i{background:var(--warn)}
+details{border-top:1px solid var(--line)}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:22px 0;font-weight:600;font-size:18px;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-weight:400;color:var(--muted)}
+details[open] summary::after{content:"–"}
+details p{padding:0 0 22px;color:var(--fg-2);max-width:720px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* Пикер вариантов — вне дизайн-системы */
+#picker{position:fixed;right:12px;bottom:12px;z-index:100;background:#111;color:#eee;font:12px/1.4 ui-monospace,monospace;padding:10px 12px;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+#picker b{display:block;margin-bottom:6px;color:#aaa;font-weight:500}
+#picker a{display:block;padding:4px 6px;border-radius:4px;color:#ddd}
+#picker a[aria-current]{background:#fff;color:#111}
+
+/* ---------- Шапка (общая разметка) ---------- */
+header{position:sticky;top:0;z-index:50;background:var(--header-bg);backdrop-filter:saturate(180%) blur(16px);-webkit-backdrop-filter:saturate(180%) blur(16px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;gap:32px;height:56px}
+.logo{display:block;color:var(--fg)}.logo svg{height:14px;width:auto;display:block}
+header nav{display:flex;gap:24px;font-size:14px;color:var(--fg-2);flex:1}
+header nav a:hover{color:var(--fg)}
+header .btn{min-height:36px;padding:0 16px;font-size:14px;margin-left:auto}
+@media (max-width:860px){header nav{display:none}}
+
+/* ============ ВАРИАНТ 1: СТУДИЯ (светлый, Apple) ============ */
+[data-v="studio"]{--bg:oklch(0.975 0.003 260);--bg-2:#fff;--fg:oklch(0.18 0.01 260);--fg-2:oklch(0.42 0.01 260);--muted:oklch(0.55 0.01 260);--line:oklch(0.9 0.004 260);--line-strong:oklch(0.78 0.006 260);--brand:oklch(0.52 0.19 255);--brand-hover:oklch(0.46 0.19 255);--on-brand:#fff;--ph:oklch(0.93 0.004 260);--ok:oklch(0.62 0.15 150);--warn:oklch(0.72 0.15 70);--header-bg:oklch(0.975 0.003 260 / .8)}
+[data-v="studio"] .v-night,[data-v="studio"] .v-lab{display:none}
+[data-v="day"] .v-night{display:block}
+.s-hero{padding:56px 0 0;position:relative}
+.s-hero .grid-lines{position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(to right,var(--line) 1px,transparent 1px);background-size:calc((min(1280px,100vw) - 48px)/12) 100%;background-position:center;opacity:.6;mask-image:linear-gradient(#000 40%,transparent)}
+.s-hero-top{display:grid;grid-template-columns:7fr 5fr;gap:24px;align-items:end;position:relative}
+.s-hero h1{font-size:clamp(44px,7.4vw,104px);text-transform:uppercase;letter-spacing:-.035em;line-height:.92}
+.s-hero h1 .serif{text-transform:none;font-size:.86em;letter-spacing:-.01em;color:var(--brand)}
+.s-hero-side{padding-bottom:10px}
+.s-hero-side p{color:var(--fg-2);font-size:17px;margin-bottom:20px;max-width:420px}
+.s-hero-side .row{display:flex;gap:10px;flex-wrap:wrap}
+.s-hero-media{margin-top:40px;display:grid;grid-template-columns:2fr 1fr;gap:12px}
+.s-hero-media .ph{border-radius:8px}
+.s-hero-media .big{aspect-ratio:16/10}
+.s-hero-media .stack{display:grid;gap:12px}
+.s-hero-media .stack .ph{aspect-ratio:auto;height:100%}
+.s-tag{position:absolute;left:20px;top:20px;background:var(--bg-2);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:600;display:flex;gap:10px;align-items:center;z-index:2}
+.s-answer{padding:72px 0 24px}
+.s-answer .answer{font-size:clamp(20px,2.2vw,28px);color:var(--fg);line-height:1.35;max-width:900px}
+.s-answer .answer em{font-family:"PT Serif",serif;font-weight:400}
+.s-cats{display:grid;grid-template-columns:repeat(12,1fr);gap:12px}
+.s-cat{background:var(--bg-2);padding:28px;display:flex;flex-direction:column;justify-content:space-between;min-height:420px;border:1px solid var(--line);transition:border-color .2s ease-out}
+.s-cat:hover{border-color:var(--fg)}
+.s-cat:nth-child(1){grid-column:span 7}
+.s-cat:nth-child(2){grid-column:span 5}
+.s-cat:nth-child(3){grid-column:span 12;min-height:300px;flex-direction:row;align-items:stretch;gap:24px}
+.s-cat:nth-child(3) .ph{flex:1.4;border-radius:6px}
+.s-cat:nth-child(3) .txt{flex:1;display:flex;flex-direction:column;justify-content:space-between}
+.s-cat h3{font-size:32px;margin:10px 0 8px}
+.s-cat p{color:var(--fg-2);max-width:380px}
+.s-cat .ph{border-radius:6px;margin-top:24px;flex:1;min-height:160px}
+.s-cat .num{font:500 13px "JetBrains Mono",monospace;color:var(--muted)}
+.s-flag-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:32px;gap:24px}
+.s-flag-head h2{font-size:clamp(36px,5vw,64px);text-transform:uppercase;letter-spacing:-.03em}
+.s-flags{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.s-flag{padding:24px 20px 28px 0;border-right:1px solid var(--line);padding-left:20px}
+.s-flag:first-child{padding-left:0}
+.s-flag:last-child{border-right:0}
+.s-flag .ph{aspect-ratio:1;border-radius:6px;margin:16px 0 20px}
+.s-flag h3{font-size:20px;letter-spacing:-.01em}
+.s-flag p{color:var(--fg-2);font-size:15px;margin:6px 0 14px}
+.s-flag .k{font-size:40px;font-weight:700;letter-spacing:-.03em}
+.s-flag .k small{font-size:14px;font-weight:500;color:var(--muted);margin-left:4px;letter-spacing:0}
+.s-eco{background:oklch(0.18 0.01 260);color:#f2f2f4;--fg-2:oklch(0.78 0.01 260);--muted:oklch(0.65 0.01 260);--line:oklch(0.3 0.01 260)}
+.s-eco h2{font-size:clamp(36px,5vw,64px);text-transform:uppercase;letter-spacing:-.03em;max-width:900px}
+.s-eco h2 .serif{text-transform:none;color:oklch(0.78 0.12 255)}
+.s-eco-flow{display:grid;grid-template-columns:repeat(5,1fr);margin-top:56px;border-top:1px solid var(--line)}
+.s-eco-flow div{padding:24px 20px 0 0;border-right:1px solid var(--line);padding-left:20px}
+.s-eco-flow div:first-child{padding-left:0}
+.s-eco-flow div:last-child{border:0}
+.s-eco-flow b{display:block;font-size:18px;margin:12px 0 6px}
+.s-eco-flow span{color:var(--fg-2);font-size:14px}
+.s-eco .proto{display:flex;gap:8px;flex-wrap:wrap;margin-top:40px}
+.s-eco .proto span{border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:14px}
+.s-cmp{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
+.s-cmp a{padding:28px 24px 28px 0;border-right:1px solid var(--line);padding-left:24px}
+.s-cmp a:first-child{padding-left:0}
+.s-cmp a:last-child{border:0}
+.s-cmp a:hover h3{color:var(--brand)}
+.s-cmp h3{font-size:24px;letter-spacing:-.01em;transition:color .2s ease-out}
+.s-cmp h3 .serif{color:var(--muted);font-size:.9em}
+.s-cmp p{color:var(--fg-2);margin-top:10px;font-size:15px}
+.s-journal{display:grid;grid-template-columns:5fr 4fr 3fr;gap:40px}
+.s-journal h3.col{font:500 12px "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-bottom:14px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.s-journal li{list-style:none;padding:14px 0;border-bottom:1px solid var(--line)}
+.s-journal li a{font-weight:600;font-size:17px;line-height:1.3;display:block}
+.s-journal li small{color:var(--muted);font-size:13px}
+.s-journal .terms{display:flex;flex-wrap:wrap;gap:8px;padding-top:14px}
+.s-journal .terms a{border:1px solid var(--line-strong);border-radius:999px;padding:6px 12px;font-size:14px}
+.s-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.s-steps div{border-top:2px solid var(--fg);padding-top:16px}
+.s-steps .mono{font-size:14px;color:var(--muted)}
+.s-steps b{display:block;font-size:20px;margin:8px 0 6px}
+.s-steps p{color:var(--fg-2);font-size:15px}
+.s-two{display:grid;grid-template-columns:4fr 8fr;gap:48px}
+.s-two h2{font-size:clamp(32px,4vw,52px);text-transform:uppercase;letter-spacing:-.03em}
+.sec-h{font-size:clamp(32px,4vw,52px);text-transform:uppercase;letter-spacing:-.03em;margin-bottom:32px}
+footer{border-top:1px solid var(--line);padding:56px 0 40px;font-size:14px;color:var(--fg-2)}
+footer .cols{display:grid;grid-template-columns:2fr repeat(4,1fr);gap:24px}
+footer b{display:block;color:var(--fg);margin-bottom:10px;font-weight:600}
+footer li{list-style:none;padding:3px 0}
+footer .legal{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+
+/* ============ ВАРИАНТ 2: НОЧЬ (тёмный, Tesla) ============ */
+[data-v="night"]{--bg:oklch(0.13 0.005 260);--bg-2:oklch(0.17 0.006 260);--fg:oklch(0.97 0.003 260);--fg-2:oklch(0.78 0.006 260);--muted:oklch(0.62 0.008 260);--line:oklch(0.26 0.006 260);--line-strong:oklch(0.42 0.008 260);--brand:oklch(0.97 0.003 260);--brand-hover:oklch(0.86 0.003 260);--on-brand:oklch(0.13 0.005 260);--accent:oklch(0.78 0.14 210);--ph:oklch(0.2 0.006 260);--ok:oklch(0.75 0.15 150);--warn:oklch(0.8 0.14 75);--header-bg:oklch(0.13 0.005 260 / .7)}
+[data-v="night"] .v-studio,[data-v="night"] .v-lab{display:none}
+.n-scene{position:relative;height:min(100svh,920px);min-height:620px;overflow:hidden;display:flex;align-items:flex-end}
+.n-scene .ph{position:absolute;inset:0}
+.n-scene .ph::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,var(--bg) 0%,color-mix(in oklch,var(--bg) 20%,transparent) 45%,transparent 70%);z-index:1}
+.n-scene .ph::after{z-index:2;top:80px;bottom:auto}
+.n-scene-in{position:relative;z-index:3;width:100%;padding-bottom:56px;display:grid;grid-template-columns:1fr auto;align-items:end;gap:32px}
+.n-scene h1,.n-scene h2{font-size:clamp(48px,8vw,120px);letter-spacing:-.04em;line-height:.9;font-weight:700}
+.n-scene .sub{font-size:20px;color:var(--fg-2);margin-top:16px;max-width:520px}
+.n-scene .row{display:flex;gap:10px;margin-top:28px;flex-wrap:wrap}
+.n-specs{display:flex;gap:40px;text-align:left}
+.n-specs b{display:block;font-size:40px;letter-spacing:-.03em;font-weight:600}
+.n-specs span{font-size:13px;color:var(--muted)}
+.n-answer{padding:120px 0}
+.n-answer p{font-size:clamp(26px,3.4vw,44px);line-height:1.2;letter-spacing:-.02em;font-weight:500;max-width:1040px;color:var(--fg-2)}
+.n-answer p b{color:var(--fg);font-weight:600}
+.n-cats{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.n-cat{position:relative;aspect-ratio:3/4;display:flex;align-items:flex-end;padding:28px;overflow:hidden}
+.n-cat .ph{position:absolute;inset:0}
+.n-cat .ph::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,oklch(0.1 0.005 260 / .9),transparent 60%);z-index:1}
+.n-cat .ph::after{z-index:2;top:16px;bottom:auto}
+.n-cat .t{position:relative;z-index:3}
+.n-cat h3{font-size:34px;letter-spacing:-.03em}
+.n-cat p{color:var(--fg-2);margin:6px 0 16px}
+.n-cat .lnk{font-weight:600;font-size:15px;border-bottom:1px solid var(--line-strong);padding-bottom:2px}
+.n-eco{background:var(--bg-2)}
+.n-eco .ring{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;margin-top:48px}
+.n-eco .ring div{background:var(--bg);padding:28px 22px;min-height:200px;display:flex;flex-direction:column;justify-content:space-between}
+.n-eco .ring div:nth-child(1){background:var(--fg);color:var(--bg)}
+.n-eco .ring div:nth-child(1) span{color:oklch(0.4 0.01 260)}
+.n-eco .ring b{font-size:20px}
+.n-eco .ring span{font-size:14px;color:var(--muted)}
+.n-h2{font-size:clamp(40px,6vw,80px);letter-spacing:-.04em;line-height:.95}
+.n-h2 .dim{color:var(--muted)}
+.n-cmp{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:40px}
+.n-cmp a{background:var(--bg-2);padding:32px 28px;min-height:220px;display:flex;flex-direction:column;justify-content:space-between;transition:background-color .2s ease-out}
+.n-cmp a:hover{background:oklch(0.21 0.006 260)}
+.n-cmp .vs{font-size:28px;letter-spacing:-.02em;font-weight:600;line-height:1.1}
+.n-cmp .vs i{font-style:normal;color:var(--muted);font-weight:400}
+.n-cmp p{color:var(--fg-2);font-size:15px}
+.n-journal{display:grid;grid-template-columns:2fr 1fr;gap:2px;margin-top:40px}
+.n-journal .lead{background:var(--bg-2);padding:36px;display:flex;flex-direction:column;justify-content:flex-end;min-height:380px;position:relative;overflow:hidden}
+.n-journal .lead h3{font-size:32px;letter-spacing:-.02em;max-width:620px}
+.n-journal .lead small,.n-journal .list small{color:var(--muted)}
+.n-journal .list{display:grid;gap:2px}
+.n-journal .list a{background:var(--bg-2);padding:22px 24px;font-weight:600}
+.n-journal .list a small{display:block;font-weight:400;margin-bottom:4px}
+
+
+/* ============ ВАРИАНТ 4: ДЕНЬ — вёрстка «Ночи», светлая база (Apple) ============ */
+[data-v="day"]{--bg:oklch(0.985 0.002 260);--bg-2:oklch(0.955 0.003 260);--fg:oklch(0.16 0.006 260);--fg-2:oklch(0.42 0.008 260);--muted:oklch(0.52 0.008 260);--line:oklch(0.9 0.004 260);--line-strong:oklch(0.78 0.006 260);--brand:oklch(0.16 0.006 260);--brand-hover:oklch(0.3 0.006 260);--on-brand:oklch(0.985 0.002 260);--accent:oklch(0.5 0.12 220);--ph:oklch(0.93 0.004 260);--ok:oklch(0.52 0.14 150);--warn:oklch(0.55 0.14 60);--header-bg:oklch(0.985 0.002 260 / .78)}
+[data-v="day"] .v-studio,[data-v="day"] .v-lab{display:none}
+[data-v="day"] .s-two h2{text-transform:none}
+/* Тёмные сцены — только для флагманов, как чёрные секции Apple */
+[data-v="day"] .is-dark{--bg:oklch(0.13 0.005 260);--bg-2:oklch(0.17 0.006 260);--fg:oklch(0.97 0.003 260);--fg-2:oklch(0.78 0.006 260);--muted:oklch(0.62 0.008 260);--line:oklch(0.26 0.006 260);--line-strong:oklch(0.42 0.008 260);--brand:oklch(0.97 0.003 260);--brand-hover:oklch(0.86 0.003 260);--on-brand:oklch(0.13 0.005 260);--accent:oklch(0.78 0.14 210);--ph:oklch(0.2 0.006 260);--ok:oklch(0.75 0.15 150);--warn:oklch(0.8 0.14 75);background:var(--bg);color:var(--fg)}
+/* Плитки категорий на светлом: светлая подложка, текст сверху, фото снизу */
+[data-v="day"] .n-cats{gap:12px;padding:0 24px;max-width:1280px;margin:0 auto}
+[data-v="day"] .n-cat{background:var(--bg-2);align-items:flex-start;aspect-ratio:4/5}
+[data-v="day"] .n-cat .ph{top:40%}
+[data-v="day"] .n-cat .ph::before{display:none}
+[data-v="day"] .n-cat .t{order:-1}
+[data-v="day"] .n-eco{background:var(--bg-2)}
+[data-v="day"] .n-eco .ring div{background:var(--bg)}
+[data-v="day"] .n-eco .ring div:nth-child(1){background:var(--fg);color:var(--bg)}
+[data-v="day"] .n-cmp a,[data-v="day"] .n-journal .lead,[data-v="day"] .n-journal .list a{background:var(--bg-2)}
+[data-v="day"] .n-cmp a:hover{background:oklch(0.93 0.004 260)}
+
+/* ============ ВАРИАНТ 3: ЛАБОРАТОРИЯ (DJI, данные) ============ */
+[data-v="lab"]{--bg:oklch(0.955 0.004 240);--bg-2:#fff;--fg:oklch(0.2 0.012 250);--fg-2:oklch(0.42 0.012 250);--muted:oklch(0.56 0.01 250);--line:oklch(0.89 0.006 250);--line-strong:oklch(0.8 0.008 250);--brand:oklch(0.2 0.012 250);--brand-hover:oklch(0.32 0.012 250);--on-brand:#fff;--accent:oklch(0.64 0.2 35);--ph:oklch(0.925 0.005 250);--ok:oklch(0.6 0.15 150);--warn:oklch(0.7 0.16 60);--header-bg:oklch(1 0 0 / .85)}
+[data-v="lab"] .v-studio,[data-v="lab"] .v-night{display:none}
+[data-v="lab"] header .logo{letter-spacing:.12em}
+.l-hero{padding:32px 0 0}
+.l-bento{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:minmax(120px,auto);gap:8px}
+.l-card{background:var(--bg-2);border-radius:12px;padding:24px;position:relative;overflow:hidden;border:1px solid var(--line)}
+.l-main{grid-column:span 8;grid-row:span 4;display:flex;flex-direction:column;justify-content:space-between;padding:0}
+.l-main .top{padding:32px 32px 0;position:relative;z-index:2}
+.l-main h1{font-size:clamp(40px,5.2vw,72px);letter-spacing:-.035em;line-height:.98;max-width:640px}
+.l-main h1 em{font-style:normal;color:var(--accent)}
+.l-main .ph{flex:1;margin-top:24px;min-height:300px}
+.l-main .bar{position:absolute;left:32px;right:32px;bottom:24px;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:16px;background:oklch(1 0 0 / .85);backdrop-filter:blur(10px);border-radius:999px;padding:8px 8px 8px 20px}
+.l-main .bar b{font-size:15px}
+.l-side{grid-column:span 4;grid-row:span 2;display:flex;flex-direction:column;justify-content:space-between}
+.l-side h3{font-size:22px;letter-spacing:-.01em}
+.l-side .big{font:500 56px/1 "JetBrains Mono",monospace;letter-spacing:-.04em}
+.l-side .big small{font-size:16px;color:var(--muted);margin-left:4px}
+.l-side .ph{height:90px;border-radius:8px;margin-top:12px}
+.l-answer{padding:56px 0 8px;display:grid;grid-template-columns:3fr 9fr;gap:24px}
+.l-answer .answer{font-size:22px;color:var(--fg);max-width:none;line-height:1.4}
+.l-tabs{display:flex;gap:4px;background:var(--bg-2);padding:4px;border-radius:999px;border:1px solid var(--line);width:max-content;margin-bottom:20px}
+.l-tabs a{padding:8px 16px;border-radius:999px;font-size:14px;font-weight:500;color:var(--fg-2)}
+.l-tabs a[aria-current]{background:var(--fg);color:var(--bg-2)}
+.l-table{width:100%;border-collapse:collapse;background:var(--bg-2);border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.l-table th,.l-table td{text-align:left;padding:16px 20px;border-bottom:1px solid var(--line);font-size:15px;vertical-align:middle}
+.l-table th{font:500 11px "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--bg)}
+.l-table td.mono{font-size:14px}
+.l-table .pn{display:flex;gap:14px;align-items:center;font-weight:600}
+.l-table .pn .ph{width:56px;height:56px;border-radius:8px;flex:none}
+.l-table .pn .ph::after{display:none}
+.l-table tr:last-child td{border-bottom:0}
+.l-table a.go{font-weight:600;color:var(--accent)}
+.l-tablewrap{overflow-x:auto;border-radius:12px}
+.l-eco{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:24px}
+.l-eco .l-card h3{font-size:18px;margin:14px 0 6px}
+.l-eco .l-card p{font-size:14px;color:var(--fg-2)}
+.l-matrix{display:grid;grid-template-columns:repeat(4,auto);gap:6px 14px;margin-top:16px;font:500 12px "JetBrains Mono",monospace;color:var(--fg-2)}
+.l-matrix .y{color:var(--ok)}.l-matrix .n{color:var(--muted)}
+.l-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.l-grid3 .l-card h3{font-size:20px;letter-spacing:-.01em;margin-bottom:8px}
+.l-grid3 .l-card p{color:var(--fg-2);font-size:15px}
+.l-h2{font-size:clamp(30px,3.6vw,44px);letter-spacing:-.03em;margin-bottom:8px}
+.l-sub{color:var(--fg-2);margin-bottom:28px}
+.l-chip{display:inline-block;font:500 11px "JetBrains Mono",monospace;letter-spacing:.06em;text-transform:uppercase;padding:5px 9px;border-radius:6px;background:var(--bg);color:var(--fg-2)}
+
+[data-v="night"] .s-two h2,[data-v="lab"] .s-two h2{text-transform:none}
+[data-v="night"] .s-steps div{border-top-color:var(--line-strong)}
+/* ---------- Адаптив ---------- */
+@media (max-width:860px){
+  section{padding:64px 0}
+  .s-hero-top,.s-two,.l-answer{grid-template-columns:1fr}
+  .s-hero-media{grid-template-columns:1fr}
+  .s-hero-media .stack{grid-template-columns:1fr 1fr}
+  .s-hero-media .stack .ph{aspect-ratio:1}
+  .s-cat:nth-child(n){grid-column:span 12;min-height:320px}
+  .s-cat:nth-child(3){flex-direction:column}
+  .s-flags,.s-steps{grid-template-columns:1fr 1fr}
+  .s-flag{border-right:0;padding-left:0}
+  .s-eco-flow{grid-template-columns:1fr}
+  .s-eco-flow div{border-right:0;padding-left:0;border-bottom:1px solid var(--line);padding-bottom:20px}
+  .s-cmp,.s-journal,.n-cats,.n-cmp,.n-journal,.l-grid3,.l-eco{grid-template-columns:1fr}
+  .s-cmp a{border-right:0;padding-left:0;border-bottom:1px solid var(--line)}
+  .n-scene-in{grid-template-columns:1fr}
+  .n-specs{gap:24px}.n-specs b{font-size:30px}
+  .n-cat{aspect-ratio:4/5}
+  .n-eco .ring{grid-template-columns:1fr 1fr}
+  .l-main,.l-side{grid-column:span 12}
+  .l-main .bar{flex-direction:column;align-items:flex-start;border-radius:16px;padding:14px}
+  footer .cols{grid-template-columns:1fr 1fr}
+}
+@media (max-width:480px){.s-flags,.s-steps{grid-template-columns:1fr}.wrap{padding:0 16px}}
+</style>
+</head>
+<body data-v="studio">
+
+<nav id="picker" aria-label="Варианты прототипа">
+  <b>Подача · ?__variant=</b>
+  <a href="?__variant=studio" data-k="studio">1 · Студия — светлая</a>
+  <a href="?__variant=night" data-k="night">2 · Ночь — тёмная</a>
+  <a href="?__variant=lab" data-k="lab">3 · Лаборатория — данные</a>
+  <a href="?__variant=day" data-k="day">4 · День — выбрано</a>
+</nav>
+
+<header>
+  <div class="wrap">
+    <a href="#" class="logo" aria-label="ALYMP — на главную"><svg viewBox="0 0 734.6 100" role="img" aria-label="ALYMP"><path fill="currentColor" transform="scale(0.06510)" d="M64 1536 960 0H1216L2112 1536H1888L1696 1184H480L288 1536ZM576 1024H1600L1088 128ZM2572.8 1536V0H2764.8V1376H3980.8V1536ZM4890.16 1536V896L4026.16 0H4282.16L4986.16 752L5690.16 0H5946.16L5082.16 896V1536ZM6474.96 1536V0H6760.96L7689.96 1253L8604.96 0H8890.96V1536H8698.96V174L7781.96 1435H7607.96L6666.96 174V1536ZM9487.76 1536V0H10515.76Q10740.76 0 10878.26 22.0Q11015.76 44 11086.76 95.5Q11157.76 147 11182.76 234.5Q11207.76 322 11207.76 452V492Q11207.76 616 11182.26 702.5Q11156.76 789 11083.76 842.0Q11010.76 895 10872.76 919.5Q10734.76 944 10509.76 944H9679.76V1536ZM11015.76 452Q11015.76 357 10997.76 300.0Q10979.76 243 10925.76 214.0Q10871.76 185 10764.76 175.5Q10657.76 166 10478.76 166H9679.76V778H10478.76Q10657.76 778 10764.76 766.5Q10871.76 755 10925.76 724.5Q10979.76 694 10997.76 637.5Q11015.76 581 11015.76 492Z"/></svg></a>
+    <nav aria-label="Основная навигация">
+      <a href="#">Уборка</a><a href="#">Умный дом</a><a href="#">Роботы</a><a href="#">Сравнения</a><a href="#">Журнал</a>
+    </nav>
+    <a href="#" class="btn btn-primary">Заказать</a>
+  </div>
+</header>
+
+<main>
+<!-- ================= СТУДИЯ ================= -->
+<div class="v-studio">
+  <section class="s-hero" style="padding-bottom:0">
+    <div class="grid-lines" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="s-hero-top">
+        <h1>Роботы <span class="serif">и&nbsp;умный дом</span><br>нового поколения</h1>
+        <div class="s-hero-side">
+          <p>15 флагманов 2025–2026: Roborock, Dreame, Aqara, Unitree. Официальная гарантия в России и честные сравнения моделей.</p>
+          <div class="row"><a class="btn btn-primary" href="#">Смотреть каталог</a><a class="btn btn-ghost" href="#">Как заказать</a></div>
+        </div>
+      </div>
+      <div class="s-hero-media">
+        <div class="ph big" data-label="Roborock Saros Z70 — фото из пресс-кита"><span class="s-tag"><span class="status"><i></i>в продаже</span> Saros Z70 · механическая рука</span></div>
+        <div class="stack">
+          <div class="ph has-img" data-label="Unitree Go2 — unitree.com"><img src="assets/go2.jpg" alt="Робособака Unitree Go2"></div>
+          <div class="ph" data-label="Aqara Hub M3 — фото из пресс-кита"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="s-answer reveal"><div class="wrap">
+    <p class="eyebrow">Что такое ALYMP</p><br>
+    <p class="answer">ALYMP — магазин 15 флагманских роботов и устройств умного дома. Мы не продаём тысячу карточек — <em>отбираем лучшие модели года</em>, разбираем технологии и показываем, как устройства работают вместе с&nbsp;Алисой, Matter и Zigbee.</p>
+  </div></section>
+
+  <section style="padding-top:48px"><div class="wrap">
+    <div class="s-cats reveal">
+      <a class="s-cat" href="#"><div><span class="num">01 · 6 моделей</span><h3>Уборка</h3><p>Роботы-пылесосы Roborock и Dreame, мойщик окон KaringBee.</p></div><div class="ph" data-label="Dreame X50 Ultra — пресс-кит"></div></a>
+      <a class="s-cat" href="#"><div><span class="num">02 · 7 устройств</span><h3>Умный дом</h3><p>Хаб, панель, замки, радар присутствия, камера, шторы Aqara.</p></div><div class="ph" data-label="Aqara Panel Hub S1 Plus — пресс-кит"></div></a>
+      <a class="s-cat" href="#"><div class="ph has-img" data-label="Unitree Go2 — unitree.com"><img src="assets/go2.jpg" alt=""></div><div class="txt"><div><span class="num">03 · 2 робота</span><h3>Роботы Unitree</h3><p>Робособака Go2 и гуманоид G1 — под заказ с поставкой в Россию.</p></div><span class="btn btn-ghost" style="align-self:flex-start">Смотреть роботов</span></div></a>
+    </div>
+  </div></section>
+
+  <section><div class="wrap reveal">
+    <div class="s-flag-head"><h2>Флагманы</h2><a class="btn btn-ghost" href="#">Все 15 устройств</a></div>
+    <div class="s-flags">
+      <a class="s-flag" href="#"><span class="status"><i></i>в продаже</span><div class="ph" data-label="пресс-кит"></div><h3>Roborock Saros Z70</h3><p>Механическая рука убирает носки с пола</p><div class="k">22 000<small>Па ⚠</small></div></a>
+      <a class="s-flag" href="#"><span class="status"><i></i>в продаже</span><div class="ph" data-label="пресс-кит"></div><h3>Dreame X50 Ultra</h3><p>Перешагивает пороги, лидар прячется в корпус</p><div class="k">6<small>см порог ⚠</small></div></a>
+      <a class="s-flag" href="#"><span class="status"><i></i>в продаже</span><div class="ph" data-label="пресс-кит"></div><h3>Aqara FP400</h3><p>Видит человека без камер, различает позы</p><div class="k">60<small>ГГц радар</small></div></a>
+      <a class="s-flag" href="#"><span class="status pre"><i></i>под заказ</span><div class="ph has-img" data-label="unitree.com"><img src="assets/go2.jpg" alt=""></div><h3>Unitree Go2</h3><p>Робособака со встроенным ИИ</p><div class="k">от 261<small>тыс. ₽ ⚠ ориентир</small></div></a>
+    </div>
+  </div></section>
+
+  <section class="s-eco"><div class="wrap reveal">
+    <p class="eyebrow">Экосистема</p><br>
+    <h2>Устройства <span class="serif">договариваются</span> между собой</h2>
+    <div class="s-eco-flow">
+      <div><span class="mono">01</span><b>Hub M3</b><span>Мозг дома: Matter, Thread, Zigbee</span></div>
+      <div><span class="mono">02</span><b>FP400</b><span>Видит, что вы дома</span></div>
+      <div><span class="mono">03</span><b>Lock U300</b><span>Открывает дверь по отпечатку</span></div>
+      <div><span class="mono">04</span><b>Шторы и свет</b><span>Умный рассвет по будильнику</span></div>
+      <div><span class="mono">05</span><b>Saros Z70</b><span>Уходит убирать, когда вы ушли</span></div>
+    </div>
+    <div class="proto"><span>Алиса</span><span>Matter</span><span>Thread</span><span>Zigbee</span><span>Apple Home</span><span>Home Assistant</span></div>
+    <br><a class="btn btn-ghost" style="color:#f2f2f4;border-color:oklch(0.45 0.01 260)" href="#">Таблица совместимости</a>
+  </div></section>
+
+  <section><div class="wrap reveal">
+    <h2 class="sec-h">Сравнения</h2>
+    <div class="s-cmp">
+      <a href="#"><h3>Dreame L50 Ultra <span class="serif">или</span> X50 Ultra</h3><p>Пороги, лидар и цена — когда переплата оправдана.</p></a>
+      <a href="#"><h3>Saros Z70 <span class="serif">или</span> X50 Ultra</h3><p>Механическая рука против проходимости.</p></a>
+      <a href="#"><h3>Aqara U200 <span class="serif">или</span> U300</h3><p>Какой замок подойдёт вашей двери.</p></a>
+    </div>
+  </div></section>
+
+  <section style="padding-top:0"><div class="wrap reveal">
+    <h2 class="sec-h">Журнал</h2>
+    <div class="s-journal">
+      <div><h3 class="col">Новости брендов</h3><ul>
+        <li><a href="#">Unitree показала новую версию G1</a><small>Unitree · сегодня</small></li>
+        <li><a href="#">Aqara выпустила обновление Matter для Hub M3</a><small>Aqara · вчера</small></li>
+        <li><a href="#">Roborock открыла продажи Saros Z70 в Европе</a><small>Roborock · 2 дня назад</small></li></ul></div>
+      <div><h3 class="col">Блог</h3><ul>
+        <li><a href="#">Как выбрать робот-мойщик окон в 2026</a><small>Гайд · 9 мин</small></li>
+        <li><a href="#">Умный дом с Алисой и Zigbee: нужен ли хаб</a><small>Гайд · 12 мин</small></li>
+        <li><a href="#">Пороги: что значат «4 см» и «6 см»</a><small>Разбор · 6 мин</small></li></ul></div>
+      <div><h3 class="col">Глоссарий</h3><div class="terms">
+        <a href="#">LiDAR</a><a href="#">SLAM</a><a href="#">Zigbee</a><a href="#">Matter</a><a href="#">Thread</a><a href="#">mmWave</a><a href="#">Степени свободы</a><a href="#">Па</a></div></div>
+    </div>
+  </div></section>
+</div>
+
+<!-- ================= НОЧЬ ================= -->
+<div class="v-night">
+  <section class="n-scene" style="padding:0">
+    <div class="ph" data-label="Roborock Saros Z70 — видео или фото из пресс-кита, во весь экран"></div>
+    <div class="wrap n-scene-in">
+      <div>
+        <p class="eyebrow">Новинка 2026 · в продаже</p><br>
+        <h1>Saros Z70</h1>
+        <p class="sub">Робот-пылесос, который сам убирает носки с пола.</p>
+        <div class="row"><a class="btn btn-primary" href="#">Заказать</a><a class="btn btn-ghost" href="#">Узнать больше</a></div>
+      </div>
+      <div class="n-specs"><div><b>22 000</b><span>Па всасывания ⚠</span></div><div><b>5</b><span>осей руки ⚠</span></div><div><b>Matter</b><span>умный дом</span></div></div>
+    </div>
+  </section>
+
+  <section class="n-answer"><div class="wrap reveal">
+    <p><b>ALYMP — 15 флагманских роботов и устройств умного дома.</b> Roborock, Dreame, Aqara и Unitree с официальной гарантией в России. Мы разбираем технологии, честно сравниваем модели и показываем, как всё работает вместе.</p>
+  </div></section>
+
+  <section style="padding:0"><div class="n-cats reveal">
+    <a class="n-cat" href="#"><div class="ph" data-label="Dreame X50 Ultra — пресс-кит"></div><div class="t"><h3>Уборка</h3><p>6 роботов для пола и окон</p><span class="lnk">Смотреть</span></div></a>
+    <a class="n-cat" href="#"><div class="ph" data-label="Aqara — интерьер из пресс-кита"></div><div class="t"><h3>Умный дом</h3><p>7 устройств экосистемы Aqara</p><span class="lnk">Смотреть</span></div></a>
+    <a class="n-cat" href="#"><div class="ph has-img" data-label="unitree.com"><img src="assets/go2.jpg" alt="Робособака Unitree Go2"></div><div class="t"><h3>Роботы</h3><p>Unitree Go2 и G1 под заказ</p><span class="lnk">Смотреть</span></div></a>
+  </div></section>
+
+  <section class="n-scene is-dark" style="padding:0">
+    <div class="ph has-img" data-label="Unitree Go2 — unitree.com"><img src="assets/go2.jpg" alt="Unitree Go2 в движении"></div>
+    <div class="wrap n-scene-in">
+      <div><p class="eyebrow">Под заказ</p><br><h2>Unitree Go2</h2><p class="sub">Робособака со встроенным ИИ. Ходит по лестницам, следует за вами, отвечает голосом.</p>
+      <div class="row"><a class="btn btn-primary" href="#">Узнать цену</a><a class="btn btn-ghost" href="#">Go2 Air или Pro</a></div></div>
+      <div class="n-specs"><div><b>от 261</b><span>тыс. ₽ · ориентир ⚠</span></div><div><b>4D</b><span>лидар ⚠</span></div></div>
+    </div>
+  </section>
+
+  <section class="n-eco"><div class="wrap reveal">
+    <h2 class="n-h2">Один дом. <span class="dim">Пять устройств,<br>которые договариваются.</span></h2>
+    <div class="ring">
+      <div><b>Hub M3</b><span>Мозг дома: Matter, Thread, Zigbee, работает без интернета</span></div>
+      <div><b>FP400</b><span>Знает, что вы дома</span></div>
+      <div><b>Lock U300</b><span>Дверь по отпечатку</span></div>
+      <div><b>Шторы и свет</b><span>Умный рассвет</span></div>
+      <div><b>Saros Z70</b><span>Убирает, когда вы ушли</span></div>
+    </div>
+    <br><br><a class="btn btn-ghost" href="#">Совместимость с Алисой и Matter</a>
+  </div></section>
+
+  <section><div class="wrap reveal">
+    <h2 class="n-h2">Сравнения <span class="dim">без рекламы</span></h2>
+    <div class="n-cmp">
+      <a href="#"><span class="vs">L50 Ultra <i>vs</i><br>X50 Ultra</span><p>Когда переплата за проходимость оправдана</p></a>
+      <a href="#"><span class="vs">Saros Z70 <i>vs</i><br>X50 Ultra</span><p>Рука против порогов</p></a>
+      <a href="#"><span class="vs">U200 <i>vs</i><br>U300</span><p>Какой замок подойдёт двери</p></a>
+    </div>
+  </div></section>
+
+  <section style="padding-top:0"><div class="wrap reveal">
+    <h2 class="n-h2">Журнал</h2>
+    <div class="n-journal">
+      <a class="lead" href="#"><small>Новости · Unitree · сегодня</small><h3>Unitree показала новую версию гуманоида G1</h3></a>
+      <div class="list">
+        <a href="#"><small>Гайд · 9 мин</small>Как выбрать робот-мойщик окон в 2026</a>
+        <a href="#"><small>Гайд · 12 мин</small>Умный дом с Алисой и Zigbee: нужен ли хаб</a>
+        <a href="#"><small>Глоссарий</small>LiDAR, SLAM, Matter, mmWave — 50 терминов</a>
+      </div>
+    </div>
+  </div></section>
+</div>
+
+<!-- ================= ЛАБОРАТОРИЯ ================= -->
+<div class="v-lab">
+  <section class="l-hero"><div class="wrap">
+    <div class="l-bento">
+      <div class="l-card l-main">
+        <div class="top"><span class="l-chip">Новинка 2026</span><br><br><h1>Робот, который <em>убирает носки</em> с пола</h1></div>
+        <div class="ph" data-label="Roborock Saros Z70 — пресс-кит"></div>
+        <div class="bar"><span><b>Roborock Saros Z70</b> <span class="status"><i></i>в продаже</span></span><a class="btn btn-primary" href="#">Подробнее</a></div>
+      </div>
+      <a class="l-card l-side" href="#"><div><span class="l-chip">Порог</span><h3 style="margin-top:12px">Dreame X50 Ultra</h3></div><div class="big">6<small>см ⚠</small></div></a>
+      <a class="l-card l-side" href="#"><div><span class="l-chip">Под заказ</span><h3 style="margin-top:12px">Unitree Go2</h3></div><div class="ph has-img" data-label=""><img src="assets/go2.jpg" alt="Unitree Go2"></div></a>
+    </div>
+  </div></section>
+
+  <div class="wrap"><div class="l-answer" style="padding-top:56px">
+    <p class="eyebrow">ALYMP</p>
+    <p class="answer">Магазин 15 флагманских роботов и устройств умного дома 2025–2026. Каждую модель разбираем по характеристикам из официальных источников и сравниваем с соседями.</p>
+  </div></div>
+
+  <section style="padding-top:48px"><div class="wrap reveal">
+    <h2 class="l-h2">Каталог</h2><p class="l-sub">15 устройств, у каждого — источник характеристик и статус.</p>
+    <div class="l-tabs" role="tablist"><a href="#" aria-current="true">Уборка · 6</a><a href="#">Умный дом · 7</a><a href="#">Роботы · 2</a></div>
+    <div class="l-tablewrap"><table class="l-table">
+      <thead><tr><th>Модель</th><th>Главное</th><th>Всасывание</th><th>Порог</th><th>Статус</th><th></th></tr></thead>
+      <tbody>
+        <tr><td><div class="pn"><div class="ph"></div>Roborock Saros Z70</div></td><td>Механическая рука</td><td class="mono">22 000 Па ⚠</td><td class="mono">—</td><td><span class="status"><i></i>в продаже</span></td><td><a class="go" href="#">Открыть →</a></td></tr>
+        <tr><td><div class="pn"><div class="ph"></div>Dreame X50 Ultra</div></td><td>Выдвижной лидар</td><td class="mono">20 000 Па ⚠</td><td class="mono">6 см ⚠</td><td><span class="status"><i></i>в продаже</span></td><td><a class="go" href="#">Открыть →</a></td></tr>
+        <tr><td><div class="pn"><div class="ph"></div>Dreame L50 Ultra</div></td><td>Станция полного цикла</td><td class="mono">— ⚠</td><td class="mono">— ⚠</td><td><span class="status"><i></i>в продаже</span></td><td><a class="go" href="#">Открыть →</a></td></tr>
+        <tr><td><div class="pn"><div class="ph"></div>Roborock Qrevo Curv 2 Flow</div></td><td>Скруглённая станция</td><td class="mono">— ⚠</td><td class="mono">— ⚠</td><td><span class="status pre"><i></i>под заказ</span></td><td><a class="go" href="#">Открыть →</a></td></tr>
+      </tbody>
+    </table></div>
+  </div></section>
+
+  <section style="padding-top:0"><div class="wrap reveal">
+    <h2 class="l-h2">Экосистема</h2><p class="l-sub">Что с чем работает — по данным брендов, с датой проверки.</p>
+    <div class="l-eco">
+      <div class="l-card"><span class="l-chip">Хаб</span><h3>Aqara Hub M3</h3><p>Связывает Zigbee, Thread и Matter</p><div class="l-matrix"><span>Алиса</span><span class="y">да</span><span>Matter</span><span class="y">да</span><span>Zigbee</span><span class="y">да</span><span>HomeKit</span><span class="y">да</span></div></div>
+      <div class="l-card"><span class="l-chip">Датчик</span><h3>Aqara FP400</h3><p>Радар присутствия mmWave</p><div class="l-matrix"><span>Алиса</span><span class="n">хаб</span><span>Matter</span><span class="y">да</span><span>Thread</span><span class="y">да</span><span>Zigbee</span><span class="y">да</span></div></div>
+      <div class="l-card"><span class="l-chip">Замок</span><h3>Aqara U300</h3><p>Отпечаток, код, телефон</p><div class="l-matrix"><span>Алиса</span><span class="n">хаб</span><span>Matter</span><span class="y">да</span><span>Thread</span><span class="y">да</span><span>Home Key</span><span class="y">да</span></div></div>
+      <div class="l-card"><span class="l-chip">Уборка</span><h3>Saros Z70</h3><p>Запускается сценарием «ушёл из дома»</p><div class="l-matrix"><span>Алиса</span><span class="y">да</span><span>Matter</span><span class="y">да</span><span>Wi-Fi</span><span class="y">да</span><span>HA</span><span class="n">—</span></div></div>
+    </div>
+    <p class="l-sub" style="margin-top:12px;font-size:13px">⚠ Ячейки — пример вёрстки, не проверенные данные.</p>
+  </div></section>
+
+  <section style="padding-top:0"><div class="wrap reveal">
+    <h2 class="l-h2">Сравнения</h2><p class="l-sub">Таблица характеристик и вывод «кому что».</p>
+    <div class="l-grid3">
+      <a class="l-card" href="#"><span class="l-chip">Уборка</span><br><br><h3>Dreame L50 Ultra vs X50 Ultra</h3><p>9 643 и 6 458 запросов в месяц — самая частая пара</p></a>
+      <a class="l-card" href="#"><span class="l-chip">Уборка</span><br><br><h3>Saros Z70 vs X50 Ultra</h3><p>Механическая рука против проходимости</p></a>
+      <a class="l-card" href="#"><span class="l-chip">Замки</span><br><br><h3>Aqara U200 vs U300</h3><p>Выбор по двери и способу открытия</p></a>
+    </div>
+  </div></section>
+
+  <section style="padding-top:0"><div class="wrap reveal">
+    <h2 class="l-h2">Журнал</h2><p class="l-sub">Новости брендов в день выхода, гайды и 50 терминов.</p>
+    <div class="l-grid3">
+      <a class="l-card" href="#"><span class="l-chip">Новость · Unitree</span><br><br><h3>Unitree показала новую версию G1</h3><p>Сегодня</p></a>
+      <a class="l-card" href="#"><span class="l-chip">Гайд</span><br><br><h3>Как выбрать робот-мойщик окон в 2026</h3><p>9 минут</p></a>
+      <a class="l-card" href="#"><span class="l-chip">Глоссарий</span><br><br><h3>LiDAR · SLAM · Matter · mmWave</h3><p>50 терминов простым языком</p></a>
+    </div>
+  </div></section>
+</div>
+
+<!-- ================= Общие блоки ================= -->
+<section class="reveal"><div class="wrap s-two">
+  <h2 class="v-studio">Как <span class="serif" style="text-transform:none">заказать</span></h2>
+  <h2 class="v-night n-h2" style="font-size:clamp(36px,5vw,64px)">Как заказать</h2>
+  <h2 class="v-lab l-h2">Как заказать</h2>
+  <div class="s-steps">
+    <div><span class="mono">01</span><b>Заявка</b><p>Выберите модель и оставьте контакт.</p></div>
+    <div><span class="mono">02</span><b>Подтверждение</b><p>Менеджер подтвердит цену, наличие и срок.</p></div>
+    <div><span class="mono">03</span><b>Оплата</b><p>После подтверждения заказа.</p></div>
+    <div><span class="mono">04</span><b>Доставка</b><p>С официальной гарантией в России.</p></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0" class="reveal"><div class="wrap s-two">
+  <h2 class="v-studio">Вопросы</h2>
+  <h2 class="v-night n-h2" style="font-size:clamp(36px,5vw,64px)">Вопросы</h2>
+  <h2 class="v-lab l-h2">Вопросы</h2>
+  <div>
+    <details><summary>Какая гарантия на технику?</summary><p>Официальная гарантия и авторизованные сервисные центры в России. TODO(клиент): срок по моделям.</p></details>
+    <details><summary>Что значит «под заказ»?</summary><p>Модель поставляется по вашей заявке. Менеджер подтвердит цену и срок поставки до оплаты.</p></details>
+    <details><summary>Работает ли техника с Алисой?</summary><p>Большинство устройств — да, напрямую или через Aqara Hub M3. Подробно — в таблице совместимости.</p></details>
+    <details><summary>Как оплатить заказ?</summary><p>После подтверждения цены и наличия менеджером. TODO(клиент): способы оплаты.</p></details>
+    <details><summary>Доставляете ли в регионы?</summary><p>TODO(клиент): регионы, сроки и стоимость доставки.</p></details>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div><span class="logo">ALYMP</span><p style="margin-top:12px;max-width:280px">Роботы и умный дом нового поколения.</p></div>
+    <div><b>Каталог</b><ul><li>Уборка</li><li>Умный дом</li><li>Роботы</li></ul></div>
+    <div><b>Выбор</b><ul><li>Сравнения</li><li>Совместимость</li><li>Глоссарий</li></ul></div>
+    <div><b>Журнал</b><ul><li>Новости</li><li>Блог</li></ul></div>
+    <div><b>ALYMP</b><ul><li>Как заказать</li><li>О компании</li><li>Контакты</li></ul></div>
+  </div>
+  <div class="legal">Алимпиев Никита, самозанятый, ИНН TODO(клиент) · Политика обработки данных · Согласие на обработку ПДн</div>
+</div></footer>
+
+<script>
+(function(){
+  var p=new URLSearchParams(location.search).get('__variant');
+  var ok=['studio','night','lab','day'];
+  var v=ok.indexOf(p)>-1?p:'day';
+  document.body.setAttribute('data-v',v);
+  document.querySelectorAll('#picker a').forEach(function(a){if(a.dataset.k===v)a.setAttribute('aria-current','true')});
+  document.addEventListener('keydown',function(e){var i=['1','2','3','4'].indexOf(e.key);if(i>-1&&!e.target.closest('input,textarea')){location.search='?__variant='+ok[i]}});
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in')});return}
+  var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -10% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>

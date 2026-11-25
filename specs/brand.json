@@ -1,0 +1,53 @@
+{
+  "name": "ALYMP",
+  "site": "https://alymp.ru",
+  "siteLabel": "alymp.ru",
+  "author": "Редакция ALYMP",
+  "logosDir": "../../public/logos",
+  "font": {
+    "family": "Onest",
+    "source": "fontsource:onest"
+  },
+  "fontAccent": {
+    "family": "JetBrains Mono",
+    "source": "fontsource:jetbrains-mono",
+    "use": "цифры, метки, статусы"
+  },
+  "colors": {
+    "bg": "oklch(0.985 0.002 260)",
+    "fg": "oklch(0.16 0.006 260)",
+    "card": "oklch(1 0 0)",
+    "muted": "oklch(0.955 0.003 260)",
+    "mfg": "oklch(0.52 0.008 260)",
+    "border": "oklch(0.9 0.004 260)",
+    "brand": "oklch(0.16 0.006 260)",
+    "brandBg": "oklch(0.955 0.003 260)",
+    "onBrand": "oklch(0.985 0.002 260)",
+    "accent": "oklch(0.5 0.12 220)",
+    "shade": "rgb(12 13 16)"
+  },
+  "radius": 0,
+  "pattern": "none",
+  "cta": {
+    "title": "Выбрали модель?",
+    "text": "Оставьте заявку — менеджер подтвердит цену, наличие и срок. Оплата — после подтверждения.",
+    "label": "Заказать →",
+    "url": "https://alymp.ru/how-to-order/"
+  },
+  "blogPath": "/blog/",
+  "colorsDark": {
+    "bg": "oklch(0.13 0.005 260)",
+    "fg": "oklch(0.97 0.003 260)",
+    "card": "oklch(0.17 0.006 260)",
+    "muted": "oklch(0.17 0.006 260)",
+    "mfg": "oklch(0.62 0.008 260)",
+    "border": "oklch(0.26 0.006 260)",
+    "brand": "oklch(0.97 0.003 260)",
+    "brandBg": "oklch(0.17 0.006 260)",
+    "onBrand": "oklch(0.13 0.005 260)",
+    "accent": "oklch(0.78 0.14 210)",
+    "shade": "rgb(6 7 9)"
+  },
+  "logo": "../../public/logos/alymp.svg",
+  "logoFont": "Michroma (OFL), переведён в контуры"
+}

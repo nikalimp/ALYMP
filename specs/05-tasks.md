@@ -9,15 +9,15 @@
 
 ## Блок 0. Pre-flight и публикация
 - [x] **T00** Ник запустил мастер `setup-site.sh nikalimp/ALYMP alymp.nikalimp.ru ALYMP alymp.ru` — *plan:* §1 · *проверка:* сайты в ISPmanager, A-запись поддомена, секреты FTP в GitHub, пробная выкладка прошла по FTP
-- [ ] **T01** `publish.json` (test + prod), `deploy.yml`, `pr.yml`, `deploy-prod.yml` из deploy-kit 2.0.0 — *plan:* §1, §5 · *проверка:* actionlint чистый, `workflow_dispatch` выкладывает тест
+- [x] **T01** `publish.json` (test + prod), `deploy.yml`, `pr.yml`, `deploy-prod.yml` из deploy-kit 2.0.0 — *plan:* §1, §5 · *проверка:* actionlint чистый, `workflow_dispatch` выкладывает тест
 - [ ] **T02** Pre-flight в `04-plan.md` §1 — все строки ✅ — *проверка:* таблица зелёная, путь выкладки записан
 
 ## Блок 1. Каркас
-- [ ] **T03** `site.ts`: ALYMP, `OnlineStore`, title и description главной, tagline, реквизиты самозанятого (`TODO(клиент)`: ИНН), `features` — *spec:* §1, decisions · *проверка:* `npm run check` без ошибок `site`, кроме ИНН
-- [ ] **T04** Токены «День» и `.is-dark` в `globals.css`, шрифты Onest и JetBrains Mono через @fontsource, Inter удалён — *design:* §3, DESIGN.md · *проверка:* контраст из §3, превью 360 px
-- [ ] **T05** Логотип в шапке и футере, фавикон и `apple-touch-icon` из буквы A Michroma, OG-картинка 1200×630 — *design:* §1 · *проверка:* фавикон читается в 16 px
-- [ ] **T06** Шапка (Уборка · Умный дом · Роботы · Сравнения · Журнал · «Заказать»), мобильное меню, футер — *spec:* §4.7 · *проверка:* меню работает с клавиатуры, без горизонтального скролла на 360
-- [ ] **T07** Удалить `/services/*` и `services.ts`; 301 `/products/` → `/catalog/` в `.htaccess` — *spec:* §4.2 · *проверка:* сборка без ссылок на services
+- [x] **T03** `site.ts`: ALYMP, `OnlineStore`, title и description главной, tagline, реквизиты самозанятого (`TODO(клиент)`: ИНН), `features` — *spec:* §1, decisions · *проверка:* `npm run check` без ошибок `site`, кроме ИНН
+- [x] **T04** Токены «День» и `.is-dark` в `globals.css`, шрифты Onest и JetBrains Mono через @fontsource, Inter удалён — *design:* §3, DESIGN.md · *проверка:* контраст из §3, превью 360 px
+- [x] **T05** Логотип в шапке и футере, фавикон и `apple-touch-icon` из буквы A Michroma, OG-картинка 1200×630 — *design:* §1 · *проверка:* фавикон читается в 16 px
+- [x] **T06** Шапка (Уборка · Умный дом · Роботы · Сравнения · Журнал · «Заказать»), мобильное меню, футер — *spec:* §4.7 · *проверка:* меню работает с клавиатуры, без горизонтального скролла на 360
+- [x] **T07** Удалить `/services/*` и `services.ts`; 301 `/products/` → `/catalog/` в `.htaccess` — *spec:* §4.2 · *проверка:* сборка без ссылок на services
 
 ## Блок 2. Данные товаров
 - [ ] **T08** Тип `Product` и загрузчик `src/lib/products.ts`, схема валидации (каждая строка `specs` с `source`) — *spec:* §5 «Контент-модель» · *проверка:* сборка падает на строке без источника
@@ -113,5 +113,7 @@
 | T54 | Чат и токен Telegram-бота для заявок, почта для заявок | Ник | |
 | T67 | Номер счётчика Метрики (или создать новый) | Ник | 114661158, 25.11.2026 |
 | T53 | Отчество для политики ПДн | Ник | |
+| T03 | Публичные контакты: почта (нужна для политики ПДн и /contacts/), Telegram, телефон — что показываем | Ник | |
 
 ## Журнал
+- 25.11.2026 — блок 1 (T01, T03–T07): токены «День», Onest + JetBrains Mono, логотип Michroma, фавикон из A, OG, шапка и футер с флагами разделов, главная и «О ALYMP» без фото, услуги стартера удалены. `npm run check`: красный только из-за контактов (почта в политике ПДн и /contacts/). 301 /products/ → /catalog/ перенесён в T35 — каталога ещё нет.

@@ -13,7 +13,7 @@ export default function Home() {
       <JsonLd data={graph(faqSchema(home.faq))} />
 
       <section className="relative overflow-hidden border-b">
-        <Container className="grid min-h-[min(88svh,820px)] content-end gap-10 pb-14 pt-24 lg:grid-cols-[1fr_auto] lg:items-end">
+        <Container className="grid min-h-[min(70svh,680px)] content-end gap-10 pb-14 pt-24 lg:grid-cols-[1fr_auto] lg:items-end">
           <div>
             <Eyebrow>{home.eyebrow}</Eyebrow>
             <h1 className="max-w-[14ch] text-[clamp(48px,8vw,120px)] font-bold leading-[0.9] tracking-[-0.04em] text-balance">{home.h1}</h1>

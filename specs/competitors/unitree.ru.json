@@ -1,0 +1,106 @@
+{
+ "host": "unitree.ru",
+ "date": "2026-11-25",
+ "url": "https://unitree.ru/",
+ "title": "Роботы Unitree Robotics - официальный сайт Юнитри в РФ",
+ "description": "✅ Официальный представитель Unitree Robotics в России — четвероногие и гуманоидные роботы для исследований, автоматизации и промышленных задач. Роботы-собаки Go2 и B2, гуманоиды G1, H2 и R1, роботизированные руки и аксессуары. Позвоните нам — поможем подобрать подходящую платформу.",
+ "h1": "Официальный представитель Unitree robotics",
+ "channels": [],
+ "counters": [
+  "Яндекс Метрика",
+  "Roistat"
+ ],
+ "widgets": [
+  "Bitrix24",
+  "Блог/статьи"
+ ],
+ "schema": [
+  "Organization",
+  "PostalAddress",
+  "Country",
+  "GeoCoordinates",
+  "OpeningHoursSpecification",
+  "ContactPoint"
+ ],
+ "llms": false,
+ "generator": "1С-Битрикс",
+ "sitemap": true,
+ "pagesCount": 48,
+ "fresh90": 0,
+ "sections": [
+  [
+   "/products",
+   31
+  ],
+  [
+   "/catalog",
+   8
+  ],
+  [
+   "/news",
+   5
+  ],
+  [
+   "/industry",
+   2
+  ],
+  [
+   "/",
+   1
+  ],
+  [
+   "/garantii",
+   1
+  ]
+ ],
+ "pages": [
+  "https://unitree.ru/",
+  "https://unitree.ru/garantii/",
+  "https://unitree.ru/news/",
+  "https://unitree.ru/news/unitree-h2-novoe-pokolenie-gumanoidov-predstavleno-na-iros-2025/",
+  "https://unitree.ru/news/world-robot-conference-2025-unitree-zadaet-ton-budushchemu/",
+  "https://unitree.ru/news/unitree-r1-gumanoid-kotoryy-navsegda-pomenyaet-rynok-robototekhniki/",
+  "https://unitree.ru/news/predstavlyaem-promyshlennuyu-robosobaku-unitree-b2-na-kolesnykh-oporakh/",
+  "https://unitree.ru/catalog/roboty-dlya-obrazovaniya/",
+  "https://unitree.ru/catalog/promyshlennye-roboty/",
+  "https://unitree.ru/catalog/robotizirovannye-ruki/",
+  "https://unitree.ru/catalog/komponenty/",
+  "https://unitree.ru/catalog/lidar/",
+  "https://unitree.ru/catalog/roboty-gumanoidy/",
+  "https://unitree.ru/catalog/g1-modifikatsii/",
+  "https://unitree.ru/catalog/lovkaya-ruka/",
+  "https://unitree.ru/products/go2/",
+  "https://unitree.ru/products/go2-w/",
+  "https://unitree.ru/products/go2-battery/",
+  "https://unitree.ru/products/go2-charger/",
+  "https://unitree.ru/products/r3/",
+  "https://unitree.ru/products/go2-foot/",
+  "https://unitree.ru/products/b2/",
+  "https://unitree.ru/products/b2-w/",
+  "https://unitree.ru/products/z1/",
+  "https://unitree.ru/products/d1-t/",
+  "https://unitree.ru/products/h2/",
+  "https://unitree.ru/products/r1/",
+  "https://unitree.ru/products/g1/",
+  "https://unitree.ru/products/go1/",
+  "https://unitree.ru/products/go1-battery/",
+  "https://unitree.ru/products/go1-motor/",
+  "https://unitree.ru/products/a2/",
+  "https://unitree.ru/products/b1/",
+  "https://unitree.ru/products/lidar/",
+  "https://unitree.ru/products/l2/",
+  "https://unitree.ru/products/boxing/",
+  "https://unitree.ru/products/robocup/",
+  "https://unitree.ru/products/g1-d/",
+  "https://unitree.ru/products/dex1-1/",
+  "https://unitree.ru/products/dex3-1/",
+  "https://unitree.ru/products/dex5-1/",
+  "https://unitree.ru/products/h1/",
+  "https://unitree.ru/products/aliengo/",
+  "https://unitree.ru/products/aliengo-battery/",
+  "https://unitree.ru/products/as2/",
+  "https://unitree.ru/products/as2-w/",
+  "https://unitree.ru/industry/promyshlennost/",
+  "https://unitree.ru/industry/obrazovanie/"
+ ]
+}

@@ -1,0 +1,203 @@
+{
+ "host": "gumanoids.ru",
+ "date": "2026-11-25",
+ "url": "https://gumanoids.ru/",
+ "title": "Купить гуманоидного робота в России — цены на роботов-гуманоидов 2026 | ГУМАНОИД",
+ "description": "Купить гуманоидного робота в России: 17 моделей от 349 000 ₽ — Unitree G1 и H2, UBTECH, AgiBot, Tesla Optimus, Noetix Bumi. Цены 2026, доставка, гарантия 1 год, сервис в Москве, рассрочка и лизинг.",
+ "h1": "ГУМАНОИД — купить гуманоидного робота в России",
+ "channels": [
+  "WhatsApp"
+ ],
+ "counters": [
+  "Яндекс Метрика"
+ ],
+ "widgets": [
+  "Квиз/калькулятор",
+  "Отзывы",
+  "Цены на сайте",
+  "Блог/статьи"
+ ],
+ "schema": [
+  "Store",
+  "PostalAddress",
+  "ContactPoint",
+  "ItemList",
+  "ListItem",
+  "Product",
+  "Brand",
+  "Offer",
+  "FAQPage",
+  "Question",
+  "Answer"
+ ],
+ "llms": true,
+ "generator": "",
+ "sitemap": true,
+ "pagesCount": 113,
+ "fresh90": 113,
+ "sections": [
+  [
+   "/blog",
+   63
+  ],
+  [
+   "/robot",
+   17
+  ],
+  [
+   "/arenda",
+   8
+  ],
+  [
+   "/",
+   1
+  ],
+  [
+   "/kalkulyator-okupaemosti",
+   1
+  ],
+  [
+   "/tesla-optimus-v-rossii",
+   1
+  ],
+  [
+   "/podbor-robota",
+   1
+  ],
+  [
+   "/nedorogie-gumanoidnye-roboty",
+   1
+  ],
+  [
+   "/gumanoidnyy-robot-dlya-doma",
+   1
+  ],
+  [
+   "/dostavka",
+   1
+  ],
+  [
+   "/servis-i-garantiya",
+   1
+  ],
+  [
+   "/dlya-yurlic",
+   1
+  ]
+ ],
+ "pages": [
+  "https://gumanoids.ru/",
+  "https://gumanoids.ru/kalkulyator-okupaemosti/",
+  "https://gumanoids.ru/tesla-optimus-v-rossii/",
+  "https://gumanoids.ru/podbor-robota/",
+  "https://gumanoids.ru/robot/noetix-bumi/",
+  "https://gumanoids.ru/robot/unitree-r1/",
+  "https://gumanoids.ru/robot/booster-k1/",
+  "https://gumanoids.ru/robot/unitree-go2-edu/",
+  "https://gumanoids.ru/robot/unitree-g1/",
+  "https://gumanoids.ru/robot/engineai-pm01/",
+  "https://gumanoids.ru/robot/agibot-lingxi-x2/",
+  "https://gumanoids.ru/robot/ubtech-uworld-u1/",
+  "https://gumanoids.ru/robot/tesla-optimus/",
+  "https://gumanoids.ru/robot/agilex-cobot-magic/",
+  "https://gumanoids.ru/robot/unitree-h2/",
+  "https://gumanoids.ru/robot/ubtech-walker-s2/",
+  "https://gumanoids.ru/robot/noetix-bumi-pro/",
+  "https://gumanoids.ru/robot/agibot-a3/",
+  "https://gumanoids.ru/robot/unitree-g1-d/",
+  "https://gumanoids.ru/robot/agibot-g2/",
+  "https://gumanoids.ru/robot/unitree-h1/",
+  "https://gumanoids.ru/nedorogie-gumanoidnye-roboty/",
+  "https://gumanoids.ru/gumanoidnyy-robot-dlya-doma/",
+  "https://gumanoids.ru/dostavka/",
+  "https://gumanoids.ru/servis-i-garantiya/",
+  "https://gumanoids.ru/dlya-yurlic/",
+  "https://gumanoids.ru/arenda/",
+  "https://gumanoids.ru/dlya-obrazovaniya/",
+  "https://gumanoids.ru/dlya-biznesa/",
+  "https://gumanoids.ru/blog/",
+  "https://gumanoids.ru/blog/skolko-stoit-gumanoidnyy-robot/",
+  "https://gumanoids.ru/blog/unitree-g1-vs-h2/",
+  "https://gumanoids.ru/blog/top-10-gumanoidnyh-robotov-2026/",
+  "https://gumanoids.ru/blog/arenda-ili-pokupka-robota/",
+  "https://gumanoids.ru/blog/obzor-unitree-g1/",
+  "https://gumanoids.ru/blog/obzor-noetix-bumi/",
+  "https://gumanoids.ru/blog/obzor-unitree-h2/",
+  "https://gumanoids.ru/blog/obzor-booster-k1/",
+  "https://gumanoids.ru/blog/obzor-engineai-pm01/",
+  "https://gumanoids.ru/blog/robot-dlya-shkoly/",
+  "https://gumanoids.ru/blog/robot-na-meropriyatie/",
+  "https://gumanoids.ru/blog/roboty-v-riteyle/",
+  "https://gumanoids.ru/blog/kak-kupit-robota-iz-kitaya/",
+  "https://gumanoids.ru/blog/tesla-optimus-kogda-v-rossii/",
+  "https://gumanoids.ru/blog/promyshlennye-gumanoidy/",
+  "https://gumanoids.ru/blog/rynok-gumanoidnyh-robotov-2026/",
+  "https://gumanoids.ru/blog/chto-umeyut-gumanoidy-2026/",
+  "https://gumanoids.ru/blog/robot-s-iskusstvennym-intellektom/",
+  "https://gumanoids.ru/blog/robot-sobaka-unitree-go2/",
+  "https://gumanoids.ru/blog/robot-dlya-otelya-i-restorana/",
+  "https://gumanoids.ru/blog/noetix-bumi-vs-unitree-r1/",
+  "https://gumanoids.ru/blog/kak-programmirovat-gumanoida/",
+  "https://gumanoids.ru/blog/robot-v-podarok/",
+  "https://gumanoids.ru/blog/robot-dlya-vuza-laboratoriya/",
+  "https://gumanoids.ru/blog/obzor-agibot-a3/",
+  "https://gumanoids.ru/blog/unitree-h1-vs-h2/",
+  "https://gumanoids.ru/blog/kolesnyy-ili-shagayushchiy-gumanoid/",
+  "https://gumanoids.ru/blog/obzor-ubtech-uworld-u1/",
+  "https://gumanoids.ru/blog/obzor-agibot-lingxi-x2/",
+  "https://gumanoids.ru/blog/obzor-agilex-cobot-magic/",
+  "https://gumanoids.ru/blog/obzor-ubtech-walker-s2/",
+  "https://gumanoids.ru/blog/kak-vybrat-gumanoidnogo-robota/",
+  "https://gumanoids.ru/blog/tehnicheskoe-obsluzhivanie-gumanoidov/",
+  "https://gumanoids.ru/blog/robot-promouter-skolko-prinosit/",
+  "https://gumanoids.ru/blog/gumanoid-dlya-sklada-i-logistiki/",
+  "https://gumanoids.ru/blog/unitree-vs-agibot/",
+  "https://gumanoids.ru/blog/buduschee-gumanoidnyh-robotov/",
+  "https://gumanoids.ru/blog/obzor-noetix-bumi-pro/",
+  "https://gumanoids.ru/blog/obzor-unitree-g1-d/",
+  "https://gumanoids.ru/blog/obzor-agibot-g2/",
+  "https://gumanoids.ru/blog/obzor-unitree-h1-2/",
+  "https://gumanoids.ru/blog/robot-android-chto-eto/",
+  "https://gumanoids.ru/blog/robot-administrator-resepshn/",
+  "https://gumanoids.ru/blog/arenda-robota-na-korporativ/",
+  "https://gumanoids.ru/blog/sroki-postavki-gumanoidov/",
+  "https://gumanoids.ru/blog/mini-gumanoidy-malenkie-roboty/",
+  "https://gumanoids.ru/blog/okupaemost-gumanoidnogo-robota/",
+  "https://gumanoids.ru/blog/gumanoidnyj-robot-bu/",
+  "https://gumanoids.ru/blog/gumanoid-v-lizing/",
+  "https://gumanoids.ru/blog/seryj-import-ili-oficialnyj-diler/",
+  "https://gumanoids.ru/blog/akkumulyatory-gumanoidov/",
+  "https://gumanoids.ru/blog/tesla-optimus-ili-unitree/",
+  "https://gumanoids.ru/blog/proizvoditeli-gumanoidnyh-robotov/",
+  "https://gumanoids.ru/blog/robot-na-svadbu/",
+  "https://gumanoids.ru/blog/zakupka-robotov-po-44-fz/",
+  "https://gumanoids.ru/blog/kitajskie-gumanoidnye-roboty/",
+  "https://gumanoids.ru/blog/obzor-xpeng-iron/",
+  "https://gumanoids.ru/blog/obzor-1x-neo/",
+  "https://gumanoids.ru/privacy/",
+  "https://gumanoids.ru/oferta/",
+  "https://gumanoids.ru/gumanoidnyy-robot-spb/",
+  "https://gumanoids.ru/gumanoidnyy-robot-ekaterinburg/",
+  "https://gumanoids.ru/blog/robot-na-novyj-god-2027/",
+  "https://gumanoids.ru/blog/unitree-g1-basic-ili-edu/",
+  "https://gumanoids.ru/blog/robot-sofiya/",
+  "https://gumanoids.ru/gumanoidnyy-robot-novosibirsk/",
+  "https://gumanoids.ru/blog/novye-gumanoidnye-roboty-2026/",
+  "https://gumanoids.ru/arenda/unitree-g1/",
+  "https://gumanoids.ru/arenda/unitree-r1/",
+  "https://gumanoids.ru/arenda/noetix-bumi/",
+  "https://gumanoids.ru/arenda/unitree-h2/",
+  "https://gumanoids.ru/arenda/na-korporativ/",
+  "https://gumanoids.ru/arenda/na-vystavku/",
+  "https://gumanoids.ru/arenda/na-svadbu/",
+  "https://gumanoids.ru/o-kompanii/",
+  "https://gumanoids.ru/soglasie/",
+  "https://gumanoids.ru/unitree/",
+  "https://gumanoids.ru/agibot/",
+  "https://gumanoids.ru/ubtech/",
+  "https://gumanoids.ru/chelovekopodobnye-roboty/",
+  "https://gumanoids.ru/robot-administrator/",
+  "https://gumanoids.ru/robot-promouter/",
+  "https://gumanoids.ru/gumanoidnyy-robot-v-rassrochku/"
+ ]
+}

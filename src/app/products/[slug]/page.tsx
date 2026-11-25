@@ -42,8 +42,8 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const p = l.product;
   const brand = brandName[p.brand] ?? p.brand;
   const crumbs = [
-    { name: "Каталог", path: "/#catalog" },
-    { name: categoryLabel[p.category], path: `/#catalog-${p.category}` },
+    { name: "Каталог", path: "/catalog/" },
+    { name: categoryLabel[p.category], path: `/catalog/${p.category}/` },
     { name: p.name, path: `/products/${p.slug}/` },
   ];
   const b2b = p.brand === "unitree";

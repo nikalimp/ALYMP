@@ -77,6 +77,31 @@ export function graph(...nodes: (Record<string, unknown> | null | false | undefi
   return { "@context": "https://schema.org", "@graph": nodes.filter(Boolean) };
 }
 
+export function itemListSchema(name: string, items: { name: string; url: string }[]) {
+  return {
+    "@type": "ItemList",
+    name,
+    numberOfItems: items.length,
+    itemListElement: items.map((it, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: it.name,
+      url: it.url.startsWith("http") ? it.url : `${site.url}${it.url}`,
+    })),
+  };
+}
+
+export function brandSchema(b: { slug: string; name: string; description: string; url: string }) {
+  return {
+    "@type": "Brand",
+    "@id": `${site.url}/brands/${b.slug}/#brand`,
+    name: b.name,
+    description: b.description,
+    url: `${site.url}/brands/${b.slug}/`,
+    sameAs: [b.url],
+  };
+}
+
 // Товар (spec §4.2): Offer — только с ценой из прайса дистрибьютора. Ориентир «от» в Offer не идёт (spec §9).
 export function productSchema(p: { slug: string; name: string; brand: string; description: string; image: string; price: number | null; specs?: { label: string; value: string; unit?: string }[] }) {
   const url = `${site.url}/products/${p.slug}/`;

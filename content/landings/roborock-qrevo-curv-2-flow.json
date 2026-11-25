@@ -142,13 +142,6 @@
       "text": "Свяжите Qrevo Curv 2 Flow с хабом Aqara Hub M3 в Home Assistant или через Matter, чтобы запускать уборку по общему сценарию дома."
     },
     {
-      "title": "Чистые полы и окна без усилий",
-      "with": [
-        "hobot-sp10"
-      ],
-      "text": "Qrevo Curv 2 Flow отвечает за ежедневную влажную уборку, а HOBOT SP10 — за стёкла и зеркала."
-    },
-    {
       "title": "Контроль дома и уборка",
       "with": [
         "aqara-panel-hub-s1-plus"

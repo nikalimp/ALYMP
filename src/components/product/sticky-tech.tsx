@@ -1,14 +1,15 @@
 "use client";
 // Сцена технологии (DESIGN.md «Движение», spec §9): весь текст — в HTML; GSAP ScrollTrigger грузится
 // динамически только здесь (только /products/*) и не включается при prefers-reduced-motion и на узких экранах.
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 type Step = { eyebrow: string; title: string; titleMuted?: string; text: string; zoom?: number; hud?: string[] };
 
-export function StickyTech({ steps, image, alt, credit }: { steps: Step[]; image: string; alt: string; credit?: string }) {
+export function StickyTech({ steps, image, alt, credit }: { steps: Step[]; image?: string; alt: string; credit?: string }) {
   const root = useRef<HTMLDivElement>(null);
   const img = useRef<HTMLImageElement>(null);
   const hud = useRef<HTMLDivElement>(null);
+  const [activeIdx, setActiveIdx] = useState(0);
 
   useEffect(() => {
     const el = root.current;
@@ -31,7 +32,8 @@ export function StickyTech({ steps, image, alt, credit }: { steps: Step[]; image
             onToggle: (self) => {
               gsap.to(item, { opacity: self.isActive ? 1 : 0.25, duration: 0.4, ease: "power2.out" });
               if (self.isActive) {
-                gsap.to(img.current, { scale: steps[i]?.zoom ?? 1.05, duration: 0.8, ease: "power2.out" });
+                setActiveIdx(i);
+                if (img.current) gsap.to(img.current, { scale: steps[i]?.zoom ?? 1.05, duration: 0.8, ease: "power2.out" });
                 if (hud.current) hud.current.textContent = (steps[i]?.hud ?? []).join(" · ");
               }
             },
@@ -44,6 +46,8 @@ export function StickyTech({ steps, image, alt, credit }: { steps: Step[]; image
       ctx?.revert();
     };
   }, [steps]);
+
+  const activeStep = steps[activeIdx] ?? steps[0];
 
   return (
     <div ref={root} className="grid gap-10 lg:grid-cols-[5fr_7fr] lg:gap-12">
@@ -60,9 +64,24 @@ export function StickyTech({ steps, image, alt, credit }: { steps: Step[]; image
       </div>
       <div className="order-first lg:order-none">
         <div className="lg:sticky lg:top-14 lg:flex lg:h-[calc(100svh-3.5rem)] lg:items-center">
-          <figure className="relative aspect-[4/3] w-full overflow-hidden bg-card">
-            <img ref={img} src={image} alt={alt} width={780} height={439} loading="lazy" className="size-full scale-105 object-cover" />
-            <div ref={hud} aria-hidden="true" className="absolute right-4 top-4 font-mono text-xs text-brand">{(steps[0]?.hud ?? []).join(" · ")}</div>
+          <figure className="relative aspect-[4/3] w-full overflow-hidden border bg-card">
+            {image ? (
+              <img ref={img} src={image} alt={alt} width={780} height={439} loading="lazy" className="size-full scale-105 object-cover" />
+            ) : (
+              <div className="flex size-full flex-col justify-between p-8 sm:p-10">
+                <span className="font-mono text-xs uppercase tracking-[0.08em] text-muted-foreground">{activeStep?.eyebrow}</span>
+                <div>
+                  <p className="font-mono text-[clamp(28px,4vw,48px)] font-semibold leading-tight tracking-[-0.03em] text-foreground tabular">
+                    {(activeStep?.hud ?? []).join(" · ")}
+                  </p>
+                  <p className="mt-3 max-w-md text-base text-foreground-2">{activeStep?.title} {activeStep?.titleMuted}</p>
+                </div>
+                <span className="font-mono text-xs text-muted-foreground">Официальные спецификации бренда</span>
+              </div>
+            )}
+            <div ref={hud} aria-hidden="true" className="absolute right-4 top-4 font-mono text-xs text-brand">
+              {(steps[0]?.hud ?? []).join(" · ")}
+            </div>
             {credit && <figcaption className="absolute bottom-3 left-4 font-mono text-[11px] text-muted-foreground">{credit}</figcaption>}
           </figure>
         </div>

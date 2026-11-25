@@ -15,6 +15,21 @@
       "url": "https://www.aqara.com/en/product/led-strip-t2/",
       "title": "LED Strip T2 — страница продукта (официальная страница Aqara)",
       "checkedAt": "2026-11-25"
+    },
+    "s3": {
+      "url": "https://alice.yandex.ru/support/ru/smart-home/third-party/about",
+      "title": "Яндекс Справка — Умный дом с Алисой (интеграция сторонних производителей)",
+      "checkedAt": "2026-11-25"
+    },
+    "s4": {
+      "url": "https://www.aqara.com/en/product/curtain-driver-e1/",
+      "title": "Aqara Curtain Driver E1 — официальная страница Aqara",
+      "checkedAt": "2026-11-25"
+    },
+    "s5": {
+      "url": "https://www.home-assistant.io/integrations/zha/",
+      "title": "Home Assistant — официальная интеграция Zigbee Home Automation (ZHA)",
+      "checkedAt": "2026-11-25"
     }
   },
   "facts": [
@@ -152,39 +167,39 @@
   ],
   "compatibility": {
     "alice": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "via-hub",
+      "src": "s3",
+      "note": "Через хаб Aqara (например, Hub M3) и привязку аккаунта Aqara Home."
     },
     "matter": {
       "v": "via-hub",
       "src": "s2",
-      "note": "LED Strip T2: Matter over Thread через Matter-совместимый хаб (по тексту Aqara)"
+      "note": "LED Strip T2 работает по Matter over Thread (нужен контроллер); мотор E1 — через Matter Bridge хаба Aqara."
     },
     "thread": {
       "v": "yes",
       "src": "s2",
-      "note": "LED Strip T2 работает по Thread"
+      "note": "Thread поддерживается лентой LED Strip T2; мотор Curtain Driver E1 работает только по Zigbee 3.0."
     },
     "zigbee": {
       "v": "yes",
       "src": "s1",
-      "note": "Мотор — Zigbee 3.0; лента — Zigbee в списке протоколов"
+      "note": "Оба устройства комплекта (E1 и LED Strip T2) поддерживают Zigbee 3.0."
     },
     "homekit": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "via-hub",
+      "src": "s4",
+      "note": "Через хаб Aqara (HomeKit / Matter Bridge) в Apple Home."
     },
     "homeAssistant": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "via-hub",
+      "src": "s5",
+      "note": "Локально через Zigbee-координатор (ZHA / Zigbee2MQTT) или Matter Bridge."
     },
     "wifi": {
       "v": "no",
       "src": "s1",
-      "note": "Мотор — только Zigbee; в протоколах ленты Wi-Fi не указан"
+      "note": "Оба устройства работают по Zigbee / Thread, без прямого Wi-Fi."
     }
   },
   "inBox": [],
@@ -192,7 +207,7 @@
   "priceEstimate": null,
   "priceSource": null,
   "priceDate": null,
-  "status": "unknown",
+  "status": "preorder",
   "disputes": [
     {
       "label": "Ёмкость батареи мотора Track Version",

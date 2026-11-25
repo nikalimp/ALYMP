@@ -25,8 +25,8 @@
 - [x] **T10** Сбор фактов: Dreame X50 Ultra Complete, L50 Ultra; снять спор «6 см / 4,2 см» и Па — *проверка:* то же; спорное — в «Вопросы»
 - [x] **T11** Сбор фактов: Aqara Hub M3, Panel Hub S1 Plus, Lock U200, Lock U300, FP400 + FP2, Camera Hub G5 Pro, комплект «Умный рассвет» (состав) — *проверка:* то же
 - [x] **T12** Сбор фактов: Unitree Go2 (Air / Pro), G1 (Basic / Edu), KaringBee HCR011 — *проверка:* то же
-- [ ] **T13** Ориентиры цен: официальный магазин бренда в РФ или Яндекс Маркет, иначе крупный ритейлер; `priceSource`, `priceDate`, `// estimate` — *spec:* §4.2, decisions /grill Q11 · *проверка:* у каждой цены источник и дата
-- [ ] **T14** Совместимость каждого товара (Алиса, Matter, Thread, Zigbee, HomeKit, Home Assistant, Wi-Fi) с источником ячейки — *spec:* §5 «/compatibility/» · *проверка:* нет ячейки «да» без источника
+- [x] **T13** Ориентиры цен: официальный магазин бренда в РФ или Яндекс Маркет, иначе крупный ритейлер; `priceSource`, `priceDate`, `// estimate` — *spec:* §4.2, decisions /grill Q11 · *проверка:* у каждой цены источник и дата
+- [x] **T14** Совместимость каждого товара (Алиса, Matter, Thread, Zigbee, HomeKit, Home Assistant, Wi-Fi) с источником ячейки — *spec:* §5 «/compatibility/» · *проверка:* нет ячейки «да» без источника
 - [ ] **T15** Фото: пресс-киты и официальные фото брендов → `media/press/`, AVIF/WebP 1920 + `srcset` — *spec:* §8 · *проверка:* у каждого товара ≥ 1 фото с указанием источника
 
 ## Блок 3. Лендинг товара (эталон — Unitree Go2)
@@ -34,18 +34,18 @@
 - [x] **T17** `StickyTech` + GSAP ScrollTrigger (динамический импорт, только `/products/*`, `prefers-reduced-motion`) — *spec:* §9 · *проверка:* Lighthouse mobile ≥ 85, LCP < 2,5 с
 - [x] **T18** `OrderForm` на лендинге: товар подставлен, флажок «Для организации» на Go2 и G1, чекбокс согласия, подпись про оплату — *spec:* §7 · *проверка:* форма работает без JS-ошибок, отправка на тесте
 - [x] **T19** `productSchema`: `Offer` только при цене из прайса; `/specs/` — `noindex`, canonical на лендинг — *spec:* §4.2, §9 · *проверка:* validator.schema.org без ошибок
-- [ ] **T20** Тексты лендинга Unitree Go2 + Главред — *проверка:* ≥ 7,5, цифры с источниками
+- [x] **T20** Тексты лендинга Unitree Go2 + Главред — *проверка:* ≥ 7,5, цифры с источниками
 
 ## Блок 4. Остальные лендинги
-- [ ] **T21** Roborock Saros Z70 — текст, сцены, FAQ, Главред
-- [ ] **T22** Dreame X50 Ultra Complete
+- [x] **T21** Roborock Saros Z70 — текст, сцены, FAQ, Главред
+- [x] **T22** Dreame X50 Ultra Complete
 - [ ] **T23** Dreame L50 Ultra
 - [ ] **T24** Roborock Saros 10 и 10R (выбор версии внутри)
 - [ ] **T25** Roborock Qrevo Curv 2 Flow
 - [ ] **T26** KaringBee HCR011
-- [ ] **T27** Aqara Hub M3
+- [x] **T27** Aqara Hub M3
 - [ ] **T28** Aqara Panel Hub S1 Plus
-- [ ] **T29** Aqara Smart Lock U200
+- [x] **T29** Aqara Smart Lock U200
 - [ ] **T30** Aqara Smart Lock U300
 - [ ] **T31** Aqara FP400 и FP2 (FP2 — в title и H2)
 - [ ] **T32** Aqara Camera Hub G5 Pro

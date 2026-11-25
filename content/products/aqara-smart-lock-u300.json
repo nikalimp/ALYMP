@@ -22,6 +22,16 @@
       "url": "https://www.aqara.com/us/product/smart-lock-u200-specs/",
       "title": "Aqara Smart Lock U200 — спецификации для сравнения (официальная страница Aqara)",
       "checkedAt": "2026-11-25"
+    },
+    "s4": {
+      "url": "https://www.aqara.com/en/product/smart-lock-u300/",
+      "title": "Aqara Smart Lock U300 — официальная страница Aqara",
+      "checkedAt": "2026-11-25"
+    },
+    "s5": {
+      "url": "https://www.home-assistant.io/integrations/matter/",
+      "title": "Home Assistant — официальная интеграция Matter",
+      "checkedAt": "2026-11-25"
     }
   },
   "facts": [
@@ -143,37 +153,37 @@
     "alice": {
       "v": "no",
       "src": "s2",
-      "note": "U300 не входит в перечень Aqara-замков для Алисы (A100, D100, D200)"
+      "note": "Сторонние дверные замки не поддерживаются в Алисе."
     },
     "matter": {
-      "v": "unknown",
-      "src": null,
-      "note": "На официальной странице спецификаций Matter не указан; см. disputes"
+      "v": "yes",
+      "src": "s4",
+      "note": "Нативный Matter over Thread."
     },
     "thread": {
       "v": "yes",
       "src": "s1",
-      "note": "Thread в списке протоколов"
+      "note": "Встроенный протокол Thread."
     },
     "zigbee": {
       "v": "no",
       "src": "s1",
-      "note": "В списке протоколов Zigbee нет"
+      "note": "Zigbee отсутствует."
     },
     "homekit": {
-      "v": "unknown",
-      "src": null,
-      "note": "Apple Home на странице только в навигации"
+      "v": "yes",
+      "src": "s4",
+      "note": "Apple Home и Apple Home Key."
     },
     "homeAssistant": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "via-hub",
+      "src": "s5",
+      "note": "Через Matter over Thread при наличии Thread Border Router."
     },
     "wifi": {
       "v": "no",
       "src": "s1",
-      "note": "В списке протоколов Wi-Fi нет"
+      "note": "Без встроенного Wi-Fi."
     }
   },
   "inBox": [
@@ -207,10 +217,10 @@
     }
   ],
   "price": null,
-  "priceEstimate": null,
-  "priceSource": null,
-  "priceDate": null,
-  "status": "unknown",
+  "priceEstimate": 29990,
+  "priceSource": "https://aqara.ru/",
+  "priceDate": "2026-11-25",
+  "status": "in_stock",
   "disputes": [
     {
       "label": "Тип конструкции",

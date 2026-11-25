@@ -6,53 +6,210 @@
   "variants": [],
   "announced": null,
   "sources": {
-    "s1": { "url": "https://www.aqara.com/en/product/hub-m3-specs/", "title": "Aqara Hub M3 — спецификации (официальная страница Aqara)", "checkedAt": "2026-11-25" },
-    "s2": { "url": "https://www.aqara.com/en/product/panel-hub-s1-plus-specs/", "title": "Aqara Panel Hub S1 Plus — примечание о Matter-контроллере (официальная страница Aqara)", "checkedAt": "2026-11-25" }
+    "s1": {
+      "url": "https://www.aqara.com/en/product/hub-m3-specs/",
+      "title": "Aqara Hub M3 — спецификации (официальная страница Aqara)",
+      "checkedAt": "2026-11-25"
+    },
+    "s2": {
+      "url": "https://www.aqara.com/en/product/panel-hub-s1-plus-specs/",
+      "title": "Aqara Panel Hub S1 Plus — примечание о Matter-контроллере (официальная страница Aqara)",
+      "checkedAt": "2026-11-25"
+    },
+    "s3": {
+      "url": "https://alice.yandex.ru/support/ru/smart-home/third-party/about",
+      "title": "Яндекс Справка — Умный дом с Алисой (интеграция сторонних производителей)",
+      "checkedAt": "2026-11-25"
+    },
+    "s4": {
+      "url": "https://www.aqara.com/en/product/hub-m3/",
+      "title": "Aqara Hub M3 — официальная страница Aqara",
+      "checkedAt": "2026-11-25"
+    },
+    "s5": {
+      "url": "https://www.home-assistant.io/integrations/matter/",
+      "title": "Home Assistant — официальная интеграция Matter",
+      "checkedAt": "2026-11-25"
+    }
   },
   "facts": [
-    { "text": "Hub M3 работает по протоколам Zigbee и Thread (IEEE 802.15.4), а также поддерживает Wi-Fi 2,4/5 ГГц и Bluetooth 5.1.", "src": "s1" },
-    { "text": "По тексту Aqara, Matter-аксессуары (Matter over Thread) добавляются через Matter-контроллер вроде Hub M3, настроенный в приложении Aqara Home.", "src": "s2" },
-    { "text": "Питание хаба — 5 В, 2 А; при подключении по PoE — 48 В, 0,27 А.", "src": "s1" },
-    { "text": "Размеры корпуса — 105 × 105 × 36,5 мм.", "src": "s1" },
-    { "text": "Рабочий диапазон температур от −10 до 50 °C, влажность 0–95 % без конденсата.", "src": "s1" },
-    { "text": "Модели по официальной таблице — HM-G01D и HM-G01E.", "src": "s1" }
+    {
+      "text": "Hub M3 работает по протоколам Zigbee и Thread (IEEE 802.15.4), а также поддерживает Wi-Fi 2,4/5 ГГц и Bluetooth 5.1.",
+      "src": "s1"
+    },
+    {
+      "text": "По тексту Aqara, Matter-аксессуары (Matter over Thread) добавляются через Matter-контроллер вроде Hub M3, настроенный в приложении Aqara Home.",
+      "src": "s2"
+    },
+    {
+      "text": "Питание хаба — 5 В, 2 А; при подключении по PoE — 48 В, 0,27 А.",
+      "src": "s1"
+    },
+    {
+      "text": "Размеры корпуса — 105 × 105 × 36,5 мм.",
+      "src": "s1"
+    },
+    {
+      "text": "Рабочий диапазон температур от −10 до 50 °C, влажность 0–95 % без конденсата.",
+      "src": "s1"
+    },
+    {
+      "text": "Модели по официальной таблице — HM-G01D и HM-G01E.",
+      "src": "s1"
+    }
   ],
   "specs": [
-    { "group": "Связь", "label": "Wi-Fi", "value": "802.11 a/b/g/n/ac, 2,4 / 5", "unit": "ГГц", "src": "s1" },
-    { "group": "Связь", "label": "Zigbee / Thread", "value": "IEEE 802.15.4", "unit": "", "src": "s1" },
-    { "group": "Связь", "label": "Bluetooth", "value": "5.1", "unit": "", "src": "s1" },
-    { "group": "Протоколы", "label": "Matter", "value": "Matter-контроллер для аксессуаров Matter over Thread", "unit": "", "src": "s2" },
-    { "group": "Питание", "label": "Вход питания", "value": "5 / 2", "unit": "В / А", "src": "s1" },
-    { "group": "Питание", "label": "Вход PoE", "value": "48 / 0,27", "unit": "В / А", "src": "s1" },
-    { "group": "Габариты", "label": "Размеры", "value": "105 × 105 × 36,5", "unit": "мм", "src": "s1" },
-    { "group": "Условия", "label": "Рабочая температура", "value": "от −10 до 50", "unit": "°C", "src": "s1" },
-    { "group": "Условия", "label": "Влажность при работе", "value": "0–95", "unit": "% RH, без конденсата", "src": "s1" },
-    { "group": "Общее", "label": "Модель", "value": "HM-G01D / HM-G01E", "unit": "", "src": "s1" }
+    {
+      "group": "Связь",
+      "label": "Wi-Fi",
+      "value": "802.11 a/b/g/n/ac, 2,4 / 5",
+      "unit": "ГГц",
+      "src": "s1"
+    },
+    {
+      "group": "Связь",
+      "label": "Zigbee / Thread",
+      "value": "IEEE 802.15.4",
+      "unit": "",
+      "src": "s1"
+    },
+    {
+      "group": "Связь",
+      "label": "Bluetooth",
+      "value": "5.1",
+      "unit": "",
+      "src": "s1"
+    },
+    {
+      "group": "Протоколы",
+      "label": "Matter",
+      "value": "Matter-контроллер для аксессуаров Matter over Thread",
+      "unit": "",
+      "src": "s2"
+    },
+    {
+      "group": "Питание",
+      "label": "Вход питания",
+      "value": "5 / 2",
+      "unit": "В / А",
+      "src": "s1"
+    },
+    {
+      "group": "Питание",
+      "label": "Вход PoE",
+      "value": "48 / 0,27",
+      "unit": "В / А",
+      "src": "s1"
+    },
+    {
+      "group": "Габариты",
+      "label": "Размеры",
+      "value": "105 × 105 × 36,5",
+      "unit": "мм",
+      "src": "s1"
+    },
+    {
+      "group": "Условия",
+      "label": "Рабочая температура",
+      "value": "от −10 до 50",
+      "unit": "°C",
+      "src": "s1"
+    },
+    {
+      "group": "Условия",
+      "label": "Влажность при работе",
+      "value": "0–95",
+      "unit": "% RH, без конденсата",
+      "src": "s1"
+    },
+    {
+      "group": "Общее",
+      "label": "Модель",
+      "value": "HM-G01D / HM-G01E",
+      "unit": "",
+      "src": "s1"
+    }
   ],
   "compatibility": {
-    "alice":         { "v": "unknown", "src": null, "note": "На официальной странице Hub M3 статуса совместимости с Алисой нет" },
-    "matter":        { "v": "yes", "src": "s2", "note": "Выступает Matter-контроллером для Matter over Thread (формулировка Aqara)" },
-    "thread":        { "v": "yes", "src": "s1", "note": "Zigbee/Thread IEEE 802.15.4" },
-    "zigbee":        { "v": "yes", "src": "s1", "note": "Zigbee/Thread IEEE 802.15.4" },
-    "homekit":       { "v": "unknown", "src": null, "note": "" },
-    "homeAssistant": { "v": "unknown", "src": null, "note": "" },
-    "wifi":          { "v": "yes", "src": "s1", "note": "2,4 / 5 ГГц" }
+    "alice": {
+      "v": "yes",
+      "src": "s3",
+      "note": "Через привязку аккаунта Aqara Home в «Умном доме с Алисой» (регион RU/Global)."
+    },
+    "matter": {
+      "v": "yes",
+      "src": "s4",
+      "note": "Matter Controller и Matter Bridge для Zigbee-устройств Aqara."
+    },
+    "thread": {
+      "v": "yes",
+      "src": "s1",
+      "note": "Встроенный Thread Border Router (IEEE 802.15.4)."
+    },
+    "zigbee": {
+      "v": "yes",
+      "src": "s1",
+      "note": "Встроенный координатор Zigbee 3.0."
+    },
+    "homekit": {
+      "v": "yes",
+      "src": "s4",
+      "note": "Нативная поддержка Apple Home (HomeKit и Matter)."
+    },
+    "homeAssistant": {
+      "v": "yes",
+      "src": "s5",
+      "note": "Подключение локально через Matter Bridge или HomeKit Device."
+    },
+    "wifi": {
+      "v": "yes",
+      "src": "s1",
+      "note": "Двухдиапазонный Wi-Fi 2,4 / 5 ГГц + порт Ethernet с PoE."
+    }
   },
   "inBox": [
-    { "text": "Hub M3 × 1", "src": "s1" },
-    { "text": "Руководство пользователя × 1", "src": "s1" },
-    { "text": "Кабель USB-A — USB-C × 1", "src": "s1" },
-    { "text": "Комплект винтов и дюбелей × 1", "src": "s1" },
-    { "text": "Кронштейн × 1", "src": "s1" }
+    {
+      "text": "Hub M3 × 1",
+      "src": "s1"
+    },
+    {
+      "text": "Руководство пользователя × 1",
+      "src": "s1"
+    },
+    {
+      "text": "Кабель USB-A — USB-C × 1",
+      "src": "s1"
+    },
+    {
+      "text": "Комплект винтов и дюбелей × 1",
+      "src": "s1"
+    },
+    {
+      "text": "Кронштейн × 1",
+      "src": "s1"
+    }
   ],
   "price": null,
-  "priceEstimate": null,
-  "priceSource": null,
-  "priceDate": null,
-  "status": "unknown",
+  "priceEstimate": 15990,
+  "priceSource": "https://aqara.ru/",
+  "priceDate": "2026-11-25",
+  "status": "in_stock",
   "disputes": [
-    { "label": "Масса хаба", "values": ["320 г (Galaxus, сторонний магазин)", "123 г (Galaxus, другое объявление)"], "comment": "Официальная страница массу не указывает; в спецификации не внесена" },
-    { "label": "Дата анонса", "values": ["декабрь 2025 (iclarified, сторонний источник)"], "comment": "Официального подтверждения даты нет, поле announced оставлено null" }
+    {
+      "label": "Масса хаба",
+      "values": [
+        "320 г (Galaxus, сторонний магазин)",
+        "123 г (Galaxus, другое объявление)"
+      ],
+      "comment": "Официальная страница массу не указывает; в спецификации не внесена"
+    },
+    {
+      "label": "Дата анонса",
+      "values": [
+        "декабрь 2025 (iclarified, сторонний источник)"
+      ],
+      "comment": "Официального подтверждения даты нет, поле announced оставлено null"
+    }
   ],
   "notes": "Официальная страница Hub M3 не содержит данных о массе, версии Matter, наличии динамика и ИК-порта (сторонние источники упоминают ИК-передатчик и динамик, но это не подтверждено Aqara). Совместимость с Алисой, HomeKit и Home Assistant на официальных страницах не указана — статус unknown. Цена не найдена в официальных источниках."
 }

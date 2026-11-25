@@ -30,7 +30,7 @@ export default async function SpecsPage({ params }: { params: Promise<{ slug: st
   const groups = [...new Set(p.specs.map((s) => s.group))];
   return (
     <>
-      <JsonLd data={graph(productSchema({ slug: p.slug, name: p.name, brand: brandName[p.brand] ?? p.brand, description: l.answer, image: l.hero.image, price: p.price, specs: p.specs }))} />
+      <JsonLd data={graph(productSchema({ slug: p.slug, name: p.name, brand: brandName[p.brand] ?? p.brand, description: l.answer, image: l.hero.image ?? "/og.png", price: p.price, specs: p.specs }))} />
       <Section className="pt-12">
         <Container className="max-w-4xl">
           <p className="text-sm text-muted-foreground"><a href={`/products/${p.slug}/`} className="underline underline-offset-4">← {p.name}</a></p>

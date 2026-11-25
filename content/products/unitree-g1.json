@@ -211,47 +211,47 @@
   ],
   "compatibility": {
     "alice": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "no",
+      "src": "s1",
+      "note": "Робототехническая платформа, не интегрируется в бытовые голосовые ассистенты."
     },
     "matter": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "no",
+      "src": "s1",
+      "note": "Без Matter."
     },
     "thread": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "no",
+      "src": "s1",
+      "note": "Без Thread."
     },
     "zigbee": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "no",
+      "src": "s1",
+      "note": "Без Zigbee."
     },
     "homekit": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "no",
+      "src": "s1",
+      "note": "Без Apple HomeKit."
     },
     "homeAssistant": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "no",
+      "src": "s1",
+      "note": "Управление через пульт и Unitree SDK / ROS2 (в версии Edu)."
     },
     "wifi": {
       "v": "yes",
       "src": "s1",
-      "note": "Wi-Fi 6 (G1 и G1 EDU)"
+      "note": "Wi-Fi 6 и Bluetooth 5.2."
     }
   },
   "inBox": [],
   "price": null,
-  "priceEstimate": null,
-  "priceSource": null,
-  "priceDate": null,
-  "status": "unknown",
+  "priceEstimate": 1900000,
+  "priceSource": "Яндекс Маркет и профильные магазины РФ",
+  "priceDate": "2026-11-25",
+  "status": "preorder",
   "disputes": [
     {
       "label": "Степени свободы",

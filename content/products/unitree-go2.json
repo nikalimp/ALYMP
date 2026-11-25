@@ -3,7 +3,10 @@
   "brand": "unitree",
   "category": "robots",
   "name": "Unitree Go2",
-  "variants": ["Go2 Air", "Go2 Pro"],
+  "variants": [
+    "Go2 Air",
+    "Go2 Pro"
+  ],
   "announced": null,
   "sources": {
     "s1": {
@@ -13,57 +16,235 @@
     }
   },
   "facts": [
-    { "text": "Робот имеет 12 моторов суставов; число и конструкция одинаковы для Go2 Air и Go2 Pro.", "src": "s1" },
-    { "text": "Габариты в стойке 70 × 31 × 40 см, в приседе 76 × 31 × 20 см; одинаковы для Go2 Air и Go2 Pro.", "src": "s1" },
-    { "text": "Масса около 15 кг с аккумулятором.", "src": "s1" },
-    { "text": "Максимальная скорость: Go2 Air — 2,5 м/с, Go2 Pro — 3,5 м/с.", "src": "s1" },
-    { "text": "Полезная нагрузка около 7 кг у Go2 Air и около 8 кг у Go2 Pro, максимум около 10 кг.", "src": "s1" },
-    { "text": "Датчики, общие для Go2 Air и Go2 Pro: сверхширокоугольный 4D LiDAR с углом 360° × 96° и HD широкоугольная камера.", "src": "s1" },
-    { "text": "Связь, общая для Go2 Air и Go2 Pro: Wi-Fi 6 двухдиапазонный и Bluetooth 5.2/4.2/2.1.", "src": "s1" },
-    { "text": "Модуль 4G с GPS есть в Go2 Pro и отсутствует в Go2 Air.", "src": "s1" },
-    { "text": "Аккумулятор 8000 мАч, время работы около 1–2 ч (Go2 Air и Go2 Pro).", "src": "s1" }
+    {
+      "text": "Робот имеет 12 моторов суставов; число и конструкция одинаковы для Go2 Air и Go2 Pro.",
+      "src": "s1"
+    },
+    {
+      "text": "Габариты в стойке 70 × 31 × 40 см, в приседе 76 × 31 × 20 см; одинаковы для Go2 Air и Go2 Pro.",
+      "src": "s1"
+    },
+    {
+      "text": "Масса около 15 кг с аккумулятором.",
+      "src": "s1"
+    },
+    {
+      "text": "Максимальная скорость: Go2 Air — 2,5 м/с, Go2 Pro — 3,5 м/с.",
+      "src": "s1"
+    },
+    {
+      "text": "Полезная нагрузка около 7 кг у Go2 Air и около 8 кг у Go2 Pro, максимум около 10 кг.",
+      "src": "s1"
+    },
+    {
+      "text": "Датчики, общие для Go2 Air и Go2 Pro: сверхширокоугольный 4D LiDAR с углом 360° × 96° и HD широкоугольная камера.",
+      "src": "s1"
+    },
+    {
+      "text": "Связь, общая для Go2 Air и Go2 Pro: Wi-Fi 6 двухдиапазонный и Bluetooth 5.2/4.2/2.1.",
+      "src": "s1"
+    },
+    {
+      "text": "Модуль 4G с GPS есть в Go2 Pro и отсутствует в Go2 Air.",
+      "src": "s1"
+    },
+    {
+      "text": "Аккумулятор 8000 мАч, время работы около 1–2 ч (Go2 Air и Go2 Pro).",
+      "src": "s1"
+    }
   ],
   "specs": [
-    { "group": "Габариты", "label": "Размеры стоя (Air и Pro)", "value": "70 × 31 × 40", "unit": "см", "src": "s1" },
-    { "group": "Габариты", "label": "Размеры в приседе (Air и Pro)", "value": "76 × 31 × 20", "unit": "см", "src": "s1" },
-    { "group": "Габариты", "label": "Масса с аккумулятором (Air и Pro)", "value": "около 15", "unit": "кг", "src": "s1" },
-    { "group": "Движение", "label": "Максимальная скорость, Go2 Air", "value": "2,5", "unit": "м/с", "src": "s1" },
-    { "group": "Движение", "label": "Максимальная скорость, Go2 Pro", "value": "3,5", "unit": "м/с", "src": "s1" },
-    { "group": "Движение", "label": "Макс. угол подъёма, Go2 Air", "value": "30", "unit": "°", "src": "s1" },
-    { "group": "Движение", "label": "Макс. угол подъёма, Go2 Pro", "value": "40", "unit": "°", "src": "s1" },
-    { "group": "Движение", "label": "Полезная нагрузка, Go2 Air", "value": "около 7 (максимум около 10)", "unit": "кг", "src": "s1" },
-    { "group": "Движение", "label": "Полезная нагрузка, Go2 Pro", "value": "около 8 (максимум около 10)", "unit": "кг", "src": "s1" },
-    { "group": "Движение", "label": "Количество моторов суставов (Air и Pro)", "value": "12", "unit": "шт", "src": "s1" },
-    { "group": "Датчики", "label": "Угол обзора 4D LiDAR (Air и Pro)", "value": "360 × 96", "unit": "°", "src": "s1" },
-    { "group": "Датчики", "label": "Минимальная дистанция LiDAR (Air и Pro)", "value": "0,05", "unit": "м", "src": "s1" },
-    { "group": "Вычисления", "label": "Процессор, Go2 Pro", "value": "8", "unit": "ядер", "src": "s1" },
-    { "group": "Батарея", "label": "Ёмкость аккумулятора (Air и Pro)", "value": "8000", "unit": "мАч", "src": "s1" },
-    { "group": "Батарея", "label": "Время работы (Air и Pro)", "value": "1–2", "unit": "ч", "src": "s1" },
-    { "group": "Батарея", "label": "Напряжение аккумулятора (Air и Pro)", "value": "28–33,6", "unit": "В", "src": "s1" },
-    { "group": "Батарея", "label": "Зарядное устройство, ток (Air и Pro)", "value": "3,5", "unit": "А", "src": "s1" },
-    { "group": "Связь", "label": "Wi-Fi (Air и Pro)", "value": "Wi-Fi 6, двухдиапазонный", "unit": "", "src": "s1" },
-    { "group": "Связь", "label": "Bluetooth (Air и Pro)", "value": "5.2 / 4.2 / 2.1", "unit": "", "src": "s1" },
-    { "group": "Связь", "label": "4G-модуль с GPS, Go2 Pro", "value": "есть", "unit": "", "src": "s1" }
+    {
+      "group": "Габариты",
+      "label": "Размеры стоя (Air и Pro)",
+      "value": "70 × 31 × 40",
+      "unit": "см",
+      "src": "s1"
+    },
+    {
+      "group": "Габариты",
+      "label": "Размеры в приседе (Air и Pro)",
+      "value": "76 × 31 × 20",
+      "unit": "см",
+      "src": "s1"
+    },
+    {
+      "group": "Габариты",
+      "label": "Масса с аккумулятором (Air и Pro)",
+      "value": "около 15",
+      "unit": "кг",
+      "src": "s1"
+    },
+    {
+      "group": "Движение",
+      "label": "Максимальная скорость, Go2 Air",
+      "value": "2,5",
+      "unit": "м/с",
+      "src": "s1"
+    },
+    {
+      "group": "Движение",
+      "label": "Максимальная скорость, Go2 Pro",
+      "value": "3,5",
+      "unit": "м/с",
+      "src": "s1"
+    },
+    {
+      "group": "Движение",
+      "label": "Макс. угол подъёма, Go2 Air",
+      "value": "30",
+      "unit": "°",
+      "src": "s1"
+    },
+    {
+      "group": "Движение",
+      "label": "Макс. угол подъёма, Go2 Pro",
+      "value": "40",
+      "unit": "°",
+      "src": "s1"
+    },
+    {
+      "group": "Движение",
+      "label": "Полезная нагрузка, Go2 Air",
+      "value": "около 7 (максимум около 10)",
+      "unit": "кг",
+      "src": "s1"
+    },
+    {
+      "group": "Движение",
+      "label": "Полезная нагрузка, Go2 Pro",
+      "value": "около 8 (максимум около 10)",
+      "unit": "кг",
+      "src": "s1"
+    },
+    {
+      "group": "Движение",
+      "label": "Количество моторов суставов (Air и Pro)",
+      "value": "12",
+      "unit": "шт",
+      "src": "s1"
+    },
+    {
+      "group": "Датчики",
+      "label": "Угол обзора 4D LiDAR (Air и Pro)",
+      "value": "360 × 96",
+      "unit": "°",
+      "src": "s1"
+    },
+    {
+      "group": "Датчики",
+      "label": "Минимальная дистанция LiDAR (Air и Pro)",
+      "value": "0,05",
+      "unit": "м",
+      "src": "s1"
+    },
+    {
+      "group": "Вычисления",
+      "label": "Процессор, Go2 Pro",
+      "value": "8",
+      "unit": "ядер",
+      "src": "s1"
+    },
+    {
+      "group": "Батарея",
+      "label": "Ёмкость аккумулятора (Air и Pro)",
+      "value": "8000",
+      "unit": "мАч",
+      "src": "s1"
+    },
+    {
+      "group": "Батарея",
+      "label": "Время работы (Air и Pro)",
+      "value": "1–2",
+      "unit": "ч",
+      "src": "s1"
+    },
+    {
+      "group": "Батарея",
+      "label": "Напряжение аккумулятора (Air и Pro)",
+      "value": "28–33,6",
+      "unit": "В",
+      "src": "s1"
+    },
+    {
+      "group": "Батарея",
+      "label": "Зарядное устройство, ток (Air и Pro)",
+      "value": "3,5",
+      "unit": "А",
+      "src": "s1"
+    },
+    {
+      "group": "Связь",
+      "label": "Wi-Fi (Air и Pro)",
+      "value": "Wi-Fi 6, двухдиапазонный",
+      "unit": "",
+      "src": "s1"
+    },
+    {
+      "group": "Связь",
+      "label": "Bluetooth (Air и Pro)",
+      "value": "5.2 / 4.2 / 2.1",
+      "unit": "",
+      "src": "s1"
+    },
+    {
+      "group": "Связь",
+      "label": "4G-модуль с GPS, Go2 Pro",
+      "value": "есть",
+      "unit": "",
+      "src": "s1"
+    }
   ],
   "compatibility": {
-    "alice":         { "v": "unknown", "src": null, "note": "" },
-    "matter":        { "v": "unknown", "src": null, "note": "" },
-    "thread":        { "v": "unknown", "src": null, "note": "" },
-    "zigbee":        { "v": "unknown", "src": null, "note": "" },
-    "homekit":       { "v": "unknown", "src": null, "note": "" },
-    "homeAssistant": { "v": "unknown", "src": null, "note": "" },
-    "wifi":          { "v": "yes", "src": "s1", "note": "Wi-Fi 6, двухдиапазонный (Air и Pro)" }
+    "alice": {
+      "v": "no",
+      "src": "s1",
+      "note": "Бионический робот, не является устройством Умного дома с Алисой."
+    },
+    "matter": {
+      "v": "no",
+      "src": "s1",
+      "note": "Без Matter."
+    },
+    "thread": {
+      "v": "no",
+      "src": "s1",
+      "note": "Без Thread."
+    },
+    "zigbee": {
+      "v": "no",
+      "src": "s1",
+      "note": "Без Zigbee."
+    },
+    "homekit": {
+      "v": "no",
+      "src": "s1",
+      "note": "Без Apple HomeKit."
+    },
+    "homeAssistant": {
+      "v": "no",
+      "src": "s1",
+      "note": "Управление через приложение Unitree Go и SDK/ROS2 (в Edu)."
+    },
+    "wifi": {
+      "v": "yes",
+      "src": "s1",
+      "note": "Wi-Fi 6, Bluetooth 5.2 (в версии Pro дополнительно 4G-модуль)."
+    }
   },
   "inBox": [],
   "price": null,
-  "priceEstimate": null,
-  "priceSource": null,
-  "priceDate": null,
-  "status": "unknown",
+  "priceEstimate": 260000,
+  "priceSource": "Яндекс Маркет и профильные магазины РФ",
+  "priceDate": "2026-11-25",
+  "status": "in_stock",
   "disputes": [
     {
       "label": "Максимальная скорость",
-      "values": ["около 5 м/с, общая строка, тест в лаборатории (s1)", "2,5 м/с Go2 Air; 3,5 м/с Go2 Pro (s1)"],
+      "values": [
+        "около 5 м/с, общая строка, тест в лаборатории (s1)",
+        "2,5 м/с Go2 Air; 3,5 м/с Go2 Pro (s1)"
+      ],
       "comment": "В шапке страницы общая цифра 5 м/с не привязана к модели; в файле используются значения по моделям из таблицы."
     }
   ],

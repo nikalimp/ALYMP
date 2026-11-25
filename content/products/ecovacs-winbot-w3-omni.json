@@ -237,37 +237,37 @@
     "alice": {
       "v": "unknown",
       "src": null,
-      "note": ""
+      "note": "Навык Ecovacs в Алисе подтверждён для роботов-пылесосов Deebot; поддержка мойщика окон WINBOT W3 OMNI официально не указана."
     },
     "matter": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "no",
+      "src": "s1",
+      "note": "Поддержка Matter не заявлена."
     },
     "thread": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "no",
+      "src": "s1",
+      "note": "Без Thread."
     },
     "zigbee": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "no",
+      "src": "s1",
+      "note": "Без Zigbee."
     },
     "homekit": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "no",
+      "src": "s1",
+      "note": "Без Apple HomeKit."
     },
     "homeAssistant": {
       "v": "unknown",
       "src": null,
-      "note": ""
+      "note": "Официальная интеграция Ecovacs в Home Assistant ориентирована на Deebot; статус WINBOT W3 OMNI не подтверждён."
     },
     "wifi": {
       "v": "yes",
       "src": "s1",
-      "note": "страница указывает прямое подключение Bluetooth/Wi-Fi; диапазон не указан"
+      "note": "Wi-Fi и Bluetooth, управление через приложение Ecovacs Home."
     }
   },
   "inBox": [
@@ -285,10 +285,10 @@
     }
   ],
   "price": null,
-  "priceEstimate": null,
-  "priceSource": null,
-  "priceDate": null,
-  "status": "unknown",
+  "priceEstimate": 63000,
+  "priceSource": "Яндекс Маркет (официальный магазин Ecovacs и партнёры, 63 000–83 000 ₽)",
+  "priceDate": "2026-11-25",
+  "status": "in_stock",
   "disputes": [
     {
       "label": "Сила присасывания",

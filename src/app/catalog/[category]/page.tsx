@@ -79,7 +79,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                     {p.media?.card && (
                       <Link
                         href={`/products/${p.slug}/`}
-                        className="mb-5 flex aspect-[16/10] items-center justify-center overflow-hidden bg-muted/60"
+                        className="mb-5 flex aspect-[4/3] items-center justify-center overflow-hidden bg-surface p-6"
                       >
                         <img
                           src={p.media.card}
@@ -87,7 +87,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                           width={p.media.cardWidth}
                           height={p.media.cardHeight}
                           loading="lazy"
-                          className={cn("size-full", p.media.fit === "contain" ? "object-contain p-4" : "object-cover")}
+                          className="size-full object-contain"
                         />
                       </Link>
                     )}

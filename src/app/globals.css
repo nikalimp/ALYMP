@@ -30,6 +30,7 @@
   --brand-bg: oklch(0.955 0.02 220);
   --ok: oklch(0.52 0.14 150);
   --warn: oklch(0.55 0.14 60);
+  --surface: oklch(1 0 0); /* белая витрина и контейнер фото товара (решение Ника 25.11.2026) */
 }
 
 /* Тёмная сцена флагмана (DESIGN.md): тот же набор токенов, другая поверхность */
@@ -63,6 +64,7 @@
   --color-border-strong: var(--border-strong);
   --color-ok: var(--ok);
   --color-warn: var(--warn);
+  --color-surface: var(--surface);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);

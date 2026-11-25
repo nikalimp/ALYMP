@@ -95,7 +95,7 @@ export function ProductGrid({ products }: { products: GridProduct[] }) {
               {p.image && (
                 <Link
                   href={`/products/${p.slug}/`}
-                  className="mb-5 flex aspect-[16/10] items-center justify-center overflow-hidden bg-muted/60"
+                  className="mb-5 flex aspect-[4/3] items-center justify-center overflow-hidden bg-surface p-6"
                 >
                   <img
                     src={p.image}
@@ -103,7 +103,7 @@ export function ProductGrid({ products }: { products: GridProduct[] }) {
                     width={p.imageWidth ?? 640}
                     height={p.imageHeight ?? 400}
                     loading="lazy"
-                    className={cn("size-full", p.imageFit === "contain" ? "object-contain p-4" : "object-cover")}
+                    className="size-full object-contain"
                   />
                 </Link>
               )}

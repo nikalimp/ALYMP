@@ -16,13 +16,14 @@
 
 | Проверка | Результат | Дата |
 |---|---|---|
-| Выкладка из Actions: SSH / FTP | ⏳ FTP — рабочий путь на этом сервере (nikalimp.ru, facebase). Для ALYMP подтвердит пробная выкладка мастера `setup-site.sh` | — |
+| Выкладка из Actions: SSH / FTP | ⏳ Пробный Deploy (run 45546555759) остановился на `npm run check` — стартер с `TODO`, до выкладки не дошёл. Путь подтвердит первый PR сборки (блок 1) | 25.11.2026 |
 | HTTPS-редирект | ⏳ Только галочкой «Перенаправлять HTTP в HTTPS» в ISPmanager; в `.htaccess` правила по `%{HTTPS}` нет (стартер) | — |
 | `.htaccess` для 301 и 404 | ✅ Apache на REG.RU; `public/.htaccess` из стартера. Нужен 301 `/products/` → `/catalog/` (spec §4.2) | 25.11.2026 |
 | PHP для формы | ⏳ Нужен `lead.php`: запись заявки в файл на хостинге, затем Telegram и почта. Проверить версию PHP и исходящие запросы к api.telegram.org | — |
-| Поддомен `alymp.nikalimp.ru`: A-запись | ❌ Записи нет (dig, 25.11.2026). Создаёт мастер / Ник у регистратора | 25.11.2026 |
+| Поддомен `alymp.nikalimp.ru`: A-запись | ❌ После мастера записи всё ещё нет (dig, в том числе у ns1.reg.ru). Добавить A → 31.31.197.26 в DNS nikalimp.ru | 25.11.2026 |
 | Домен `alymp.ru`: A-запись | ✅ 31.31.197.26, NS — reg.ru | 25.11.2026 |
-| Доступ без пароля | ⏳ Секреты FTP в GitHub заводит мастер (`FTP_HOST`, `FTP_USER`, `FTP_PASS`, `FTP_DIR`, `FTP_DIR_PROD`) | — |
+| SSL `alymp.ru` | ❌ Самоподписанный сертификат; HTTP → HTTPS уже работает. Выпустить Let's Encrypt в ISPmanager | 25.11.2026 |
+| Доступ без пароля | ✅ Секреты в GitHub: FTP_HOST/USER/PASS, FTP_DIR, FTP_DIR_PROD, SSH_*, NOTIFY_*, TELEGRAM_* | 25.11.2026 |
 
 **Что делает Ник (один раз):** `bash ~/Desktop/NikitOS/.claude/toolkit/deploy-kit/setup-site.sh nikalimp/ALYMP alymp.nikalimp.ru ALYMP alymp.ru` — создаёт оба сайта в ISPmanager (индекс `index.html index.php`, Let's Encrypt, редирект HTTPS галочкой, www → без www), A-запись поддомена, заводит секреты и делает пробную выкладку.
 

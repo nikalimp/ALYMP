@@ -1,0 +1,79 @@
+{
+  "slug": "roborock-saros-10",
+  "brand": "roborock",
+  "category": "cleaning-robots",
+  "name": "Roborock Saros 10 и Saros 10R",
+  "variants": ["Saros 10", "Saros 10R"],
+  "announced": null,
+  "sources": {
+    "s3": {
+      "url": "https://global.roborock.com/pages/roborock-saros-10",
+      "title": "Roborock Saros 10 — официальная страница (global.roborock.com)",
+      "checkedAt": "2026-11-25"
+    },
+    "s4": {
+      "url": "https://global.roborock.com/pages/roborock-saros-10r",
+      "title": "Roborock Saros 10R — официальная страница (global.roborock.com)",
+      "checkedAt": "2026-11-25"
+    },
+    "s5": {
+      "url": "https://ru.roborock.com/pages/roborock-saros-10r",
+      "title": "Roborock Saros 10R — официальная страница (ru.roborock.com)",
+      "checkedAt": "2026-11-25"
+    }
+  },
+  "facts": [
+    { "text": "Saros 10: сила всасывания 22 000 Па (HyperForce).", "src": "s3" },
+    { "text": "Saros 10R: сила всасывания 20 000 Па по данным российского сайта Roborock; глобальная страница значение не указывает.", "src": "s5" },
+    { "text": "Высота робота 79,8 мм при убранном лидаре; у Saros 10 с поднятым лидаром высота 93,5 мм.", "src": "s3" },
+    { "text": "Saros 10 использует выдвижной лидар LDS, систему распознавания препятствий Reactive AI 3.0 и RGB-камеру.", "src": "s3" },
+    { "text": "Saros 10 преодолевает препятствия высотой до 4 см.", "src": "s3" },
+    { "text": "Saros 10 создает до 30 комнатных разделов на карте.", "src": "s3" },
+    { "text": "Saros 10R использует навигацию StarSight Autonomous System 2.0 с твердотельным лидаром, 3D-датчиком времени пролета и RGB-камерой.", "src": "s4" },
+    { "text": "Батарея Saros 10 имеет емкость 6400 мАч; быстрая зарядка занимает 150 минут.", "src": "s3" },
+    { "text": "Saros 10R заряжается за 2,5 часа.", "src": "s5" },
+    { "text": "Станция Saros 10R опорожняет пылесборник автоматически на срок до 70 дней.", "src": "s4" },
+    { "text": "Поддержка Matter заявлена для обоих вариантов; для Saros 10 она появится через будущее OTA-обновление.", "src": "s3" },
+    { "text": "Голосовое управление сторонними сервисами: Amazon Alexa и Google Home (оба варианта), Apple Siri Shortcuts (Saros 10R).", "src": "s4" }
+  ],
+  "specs": [
+    { "group": "Уборка", "label": "Сила всасывания (Saros 10)", "value": "22 000", "unit": "Па", "src": "s3" },
+    { "group": "Уборка", "label": "Сила всасывания (Saros 10R)", "value": "20 000", "unit": "Па", "src": "s5" },
+    { "group": "Уборка", "label": "Шум в тихом режиме влажной уборки (Saros 10)", "value": "52", "unit": "дБ(А)", "src": "s3" },
+    { "group": "Уборка", "label": "Шум в тихом режиме влажной уборки (Saros 10R)", "value": "≤55", "unit": "дБ", "src": "s5" },
+    { "group": "Навигация", "label": "Высота преодолеваемых препятствий (Saros 10)", "value": "4", "unit": "см", "src": "s3" },
+    { "group": "Навигация", "label": "Комнатных разделов на карте (Saros 10)", "value": "30", "unit": "шт.", "src": "s3" },
+    { "group": "Габариты", "label": "Высота робота (лидар убран)", "value": "79,8", "unit": "мм", "src": "s3" },
+    { "group": "Габариты", "label": "Высота робота (лидар поднят, Saros 10)", "value": "93,5", "unit": "мм", "src": "s3" },
+    { "group": "Станция", "label": "Станция (Д × Ш × В, Saros 10)", "value": "409 × 440 × 470", "unit": "мм", "src": "s3" },
+    { "group": "Станция", "label": "Станция (Д × Ш × В, Saros 10R)", "value": "381 × 475 × 488", "unit": "мм", "src": "s4" },
+    { "group": "Станция", "label": "Автоопорожнение пылесборника (Saros 10R)", "value": "70", "unit": "дней", "src": "s4" },
+    { "group": "Батарея", "label": "Ёмкость батареи (Saros 10)", "value": "6400", "unit": "мАч", "src": "s3" },
+    { "group": "Батарея", "label": "Быстрая зарядка (Saros 10)", "value": "150", "unit": "мин", "src": "s3" },
+    { "group": "Батарея", "label": "Быстрая зарядка (Saros 10R)", "value": "2,5", "unit": "ч", "src": "s5" },
+    { "group": "Связь", "label": "Голосовое управление (сторонние сервисы)", "value": "Amazon Alexa, Google Home, Apple Siri Shortcuts (10R)", "unit": null, "src": "s4" }
+  ],
+  "compatibility": {
+    "alice":         { "v": "unknown", "src": null, "note": "Яндекс Алиса на официальных страницах не упомянута" },
+    "matter":        { "v": "yes", "src": "s4", "note": "Saros 10R: заявлено. Saros 10: через будущее OTA-обновление (s3)" },
+    "thread":        { "v": "unknown", "src": null, "note": "" },
+    "zigbee":        { "v": "unknown", "src": null, "note": "На официальных страницах не упомянуто" },
+    "homekit":       { "v": "unknown", "src": null, "note": "Apple Home упомянут только в контексте Matter, HomeKit не указан" },
+    "homeAssistant": { "v": "unknown", "src": null, "note": "" },
+    "wifi":          { "v": "yes", "src": "s4", "note": "Для приложения нужен сильный сигнал Wi-Fi; стандарт и диапазон не указаны" }
+  },
+  "inBox": [],
+  "price": null,
+  "priceEstimate": null,
+  "priceSource": null,
+  "priceDate": null,
+  "status": "unknown",
+  "disputes": [
+    {
+      "label": "Сила всасывания, Saros 10R",
+      "values": ["20 000 Па (ru.roborock.com, s5)", "значение не указано (global.roborock.com, s4)", "19 000 Па и 22 000 Па (обзоры и розничные листинги, не официальные)"],
+      "comment": "Российский сайт дает 20 000 Па, глобальный сайт значения не публикует, обзоры и магазины расходятся. Сверить на us.roborock.com и eu-страницах 10R (us-страница в этой сессии не открылась, HTTP 429)."
+    }
+  ],
+  "notes": "Анонс: официальные страницы даты анонса не содержат (announced = null); на global-странице 10R упомянут «As of January 2025», но это сноска о толщине, а не дата запуска. Не найдены в официальных источниках: состав комплекта (inBox), масса, объем пылесборника и бака для чистой воды, емкость батареи Saros 10R, уровень шума Saros 10R в дБ (указано только ≤55 дБ), диапазон Wi-Fi, HomeKit, Яндекс Алиса, Thread, Zigbee. Страница us.roborock.com/products/roborock-saros-10r вернула HTTP 429, поэтому США и ЕС не сверены. Данные Saros 10 сверены по global-странице, на ru-странице Saros 10 не проверены."
+}

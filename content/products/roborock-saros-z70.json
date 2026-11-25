@@ -1,0 +1,63 @@
+{
+  "slug": "roborock-saros-z70",
+  "brand": "roborock",
+  "category": "cleaning-robots",
+  "name": "Roborock Saros Z70",
+  "variants": [],
+  "announced": null,
+  "sources": {
+    "s1": {
+      "url": "https://global.roborock.com/pages/roborock-saros-z70",
+      "title": "Roborock Saros Z70 — официальная страница (global.roborock.com)",
+      "checkedAt": "2026-11-25"
+    },
+    "s2": {
+      "url": "https://ru.roborock.com/pages/roborock-saros-z70",
+      "title": "Roborock Saros Z70 — официальная страница (ru.roborock.com)",
+      "checkedAt": "2026-11-25"
+    }
+  },
+  "facts": [
+    { "text": "Манипулятор OmniGrip складной и имеет пять осей.", "src": "s1" },
+    { "text": "Сила всасывания составляет 22 000 Па, система HyperForce.", "src": "s1" },
+    { "text": "Встроенный датчик веса не дает манипулятору поднимать предметы массой выше 300 г.", "src": "s1" },
+    { "text": "Навигация выполняется системой StarSight Autonomous System 2.0.", "src": "s1" },
+    { "text": "Боковое обнаружение препятствий выполняет технология VertiBeam.", "src": "s1" },
+    { "text": "Размеры робота: 350 × 353 × 79,8 мм.", "src": "s1" },
+    { "text": "Размеры станции самоочистки: 381 × 475 × 488 мм.", "src": "s1" },
+    { "text": "Станция автоматически опорожняет пылесборник на срок до 60 дней.", "src": "s1" },
+    { "text": "Автоматический дозатор вмещает 590 мл моющего средства.", "src": "s1" },
+    { "text": "Голосовое управление сторонними сервисами доступно через Amazon Alexa, Apple Siri и Google Home.", "src": "s1" },
+    { "text": "Поддержка Matter будет доступна через будущее OTA-обновление.", "src": "s1" }
+  ],
+  "specs": [
+    { "group": "Уборка", "label": "Сила всасывания", "value": "22 000", "unit": "Па", "src": "s1" },
+    { "group": "Станция", "label": "Дозатор моющего средства", "value": "590", "unit": "мл", "src": "s1" },
+    { "group": "Навигация", "label": "Система навигации", "value": "StarSight Autonomous System 2.0", "unit": null, "src": "s1" },
+    { "group": "Навигация", "label": "Обход препятствий сбоку", "value": "VertiBeam", "unit": null, "src": "s1" },
+    { "group": "Манипулятор", "label": "Количество осей OmniGrip", "value": "5", "unit": null, "src": "s1" },
+    { "group": "Манипулятор", "label": "Предел массы поднимаемого предмета", "value": "300", "unit": "г", "src": "s1" },
+    { "group": "Габариты", "label": "Робот (Д × Ш × В)", "value": "350 × 353 × 79,8", "unit": "мм", "src": "s1" },
+    { "group": "Станция", "label": "Станция (Д × Ш × В)", "value": "381 × 475 × 488", "unit": "мм", "src": "s1" },
+    { "group": "Станция", "label": "Автоопорожнение пылесборника", "value": "60", "unit": "дней", "src": "s1" },
+    { "group": "Связь", "label": "Голосовое управление (сторонние сервисы)", "value": "Amazon Alexa, Apple Siri, Google Home", "unit": null, "src": "s1" },
+    { "group": "Связь", "label": "Matter", "value": "через будущее OTA-обновление", "unit": null, "src": "s1" }
+  ],
+  "compatibility": {
+    "alice":         { "v": "unknown", "src": null, "note": "Яндекс Алиса на официальной странице не упомянута" },
+    "matter":        { "v": "yes", "src": "s1", "note": "Поддержка появится через будущее OTA-обновление" },
+    "thread":        { "v": "unknown", "src": null, "note": "" },
+    "zigbee":        { "v": "unknown", "src": null, "note": "На официальной странице не упомянуто" },
+    "homekit":       { "v": "unknown", "src": null, "note": "Упомянут только Apple Siri, HomeKit не указан" },
+    "homeAssistant": { "v": "unknown", "src": null, "note": "" },
+    "wifi":          { "v": "unknown", "src": null, "note": "Стандарт и диапазон не указаны" }
+  },
+  "inBox": [],
+  "price": null,
+  "priceEstimate": null,
+  "priceSource": null,
+  "priceDate": null,
+  "status": "unknown",
+  "disputes": [],
+  "notes": "Источники: global.roborock.com и ru.roborock.com, оба совпадают по силе всасывания (22 000 Па), размерам робота и станции, сроку автоопорожнения (60 дней). Не найдены в официальных источниках: дата анонса (announced), состав комплекта (inBox), масса робота, объем пылесборника и чистой воды, емкость батареи, уровень шума, Wi-Fi диапазон, HomeKit, Яндекс Алиса, Thread, Zigbee. Страница us.roborock.com не открылась (HTTP 429), поэтому региональные страницы США и ЕС не сверены. Значения из розничных магазинов и обзоров не использовались."
+}

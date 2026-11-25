@@ -1,0 +1,61 @@
+{
+  "slug": "aqara-camera-hub-g5-pro",
+  "brand": "aqara",
+  "category": "smart-home",
+  "name": "Aqara Camera Hub G5 Pro",
+  "variants": ["CH-C03 (PoE)", "CH-C07 (Wi-Fi)"],
+  "announced": null,
+  "sources": {
+    "s1": { "url": "https://www.aqara.com/en/product/camera-hub-g5-pro-specs/", "title": "Camera Hub G5 Pro — спецификации (официальная страница Aqara)", "checkedAt": "2026-11-25" },
+    "s2": { "url": "https://us.aqara.com/products/camera-hub-g5-pro", "title": "Camera Hub G5 Pro — страница продукта (официальная страница Aqara)", "checkedAt": "2026-11-25" }
+  },
+  "facts": [
+    { "text": "Камера G5 Pro снимает в разрешении 2688 × 1520 (Quad HD).", "src": "s1" },
+    { "text": "Угол обзора 133° по диагонали, диафрагма f/1.0, фокусное расстояние 4,2 мм.", "src": "s1" },
+    { "text": "Встроенный PIR-датчик движения: 100° по горизонтали и 65° по вертикали.", "src": "s1" },
+    { "text": "Встроенный прожектор мощностью 3 Вт, угол луча 120°, цветовая температура 3000 К.", "src": "s1" },
+    { "text": "Устройство поддерживает Zigbee и Thread (IEEE 802.15.4) и Bluetooth с функцией MagicPair.", "src": "s1" },
+    { "text": "Версия CH-C07 (Wi-Fi) работает в диапазоне Wi-Fi 2,4–5 ГГц; версия CH-C03 (PoE) подключается по Ethernet и питается по PoE 48 В, 0,27 А.", "src": "s1" },
+    { "text": "Размеры 70,5 × 70,5 × 89 мм без подставки; рабочая температура от −30 до +50 °C.", "src": "s1" },
+    { "text": "Пробный период облачного хранения — 30 дней с первого подключения к интернету.", "src": "s1" }
+  ],
+  "specs": [
+    { "group": "Общее", "label": "Модель", "value": "CH-C03E / CH-C03D (PoE); CH-C07E / CH-C07D (Wi-Fi)", "unit": "", "src": "s1" },
+    { "group": "Видео", "label": "Разрешение", "value": "2688 × 1520", "unit": "пикс. (Quad HD)", "src": "s1" },
+    { "group": "Видео", "label": "Угол обзора", "value": "133", "unit": "° (по диагонали)", "src": "s1" },
+    { "group": "Видео", "label": "Диафрагма", "value": "f/1.0", "unit": "", "src": "s1" },
+    { "group": "Видео", "label": "Фокусное расстояние", "value": "4,2", "unit": "мм", "src": "s1" },
+    { "group": "Датчики", "label": "PIR-датчик, угол обнаружения", "value": "100 (гор.) / 65 (верт.)", "unit": "°", "src": "s1" },
+    { "group": "Освещение", "label": "Прожектор", "value": "3 Вт, луч 120°, 3000 К", "unit": "", "src": "s1" },
+    { "group": "Связь", "label": "Wi-Fi (версия CH-C07)", "value": "802.11 b/g/n/ac, 2,4–5", "unit": "ГГц", "src": "s1" },
+    { "group": "Связь", "label": "Ethernet (версия CH-C03)", "value": "IEEE 802.3af (PoE)", "unit": "", "src": "s1" },
+    { "group": "Протоколы", "label": "Zigbee и Thread", "value": "IEEE 802.15.4", "unit": "", "src": "s1" },
+    { "group": "Протоколы", "label": "Bluetooth", "value": "с функцией MagicPair", "unit": "", "src": "s1" },
+    { "group": "Питание", "label": "USB-C", "value": "5 / 2", "unit": "В / А", "src": "s1" },
+    { "group": "Питание", "label": "PoE (версия CH-C03)", "value": "48 / 0,27", "unit": "В / А", "src": "s1" },
+    { "group": "Габариты", "label": "Размеры без подставки", "value": "70,5 × 70,5 × 89", "unit": "мм", "src": "s1" },
+    { "group": "Условия", "label": "Рабочая температура", "value": "от −30 до +50", "unit": "°C", "src": "s1" },
+    { "group": "Условия", "label": "Влажность при работе", "value": "0–95", "unit": "% RH, без конденсата", "src": "s1" },
+    { "group": "Облако", "label": "Пробный период облачного хранения", "value": "30", "unit": "дней", "src": "s1" }
+  ],
+  "compatibility": {
+    "alice":         { "v": "unknown", "src": null, "note": "" },
+    "matter":        { "v": "unknown", "src": null, "note": "На официальной странице Matter не указан" },
+    "thread":        { "v": "yes", "src": "s1", "note": "Thread IEEE 802.15.4 в обеих версиях" },
+    "zigbee":        { "v": "yes", "src": "s1", "note": "Zigbee IEEE 802.15.4 в обеих версиях" },
+    "homekit":       { "v": "unknown", "src": null, "note": "На странице только навигационная ссылка Apple Home" },
+    "homeAssistant": { "v": "unknown", "src": null, "note": "" },
+    "wifi":          { "v": "yes", "src": "s1", "note": "Только версия CH-C07 (Wi-Fi); версия CH-C03 (PoE) без Wi-Fi" }
+  },
+  "inBox": [],
+  "price": null,
+  "priceEstimate": null,
+  "priceSource": null,
+  "priceDate": null,
+  "status": "unknown",
+  "disputes": [
+    { "label": "Распознавание лиц", "values": ["заявлено в обзорах Basic-Tutorials и Tom's Guide (сторонние источники)", "в форуме Aqara сотрудник признал ошибку в распознавании лиц (неофициально, в ветке форума)", "официальные страницы Aqara не упоминают функцию"], "comment": "Официально не заявлено, поэтому в facts и specs не внесено. Заявленная точность 98 % и до 5 лиц из форума Aqara не проверена" },
+    { "label": "Масса и IP-степень", "values": ["не указаны на официальной странице спецификаций"], "comment": "Поля не заполнены" }
+  ],
+  "notes": "Распознавание лиц не внесено: ни одна официальная страница Aqara (спецификации и страница продукта) эту функцию не заявляет. Сторонние обзоры и форум Aqara описывают её по-разному, а сотрудник Aqara в форуме упомянул ошибку распознавания, поэтому статус спорный и требует решения владельца. Matter, Алиса, HomeKit, Home Assistant на официальных страницах не указаны — статус unknown. Цена не найдена в официальных источниках."
+}

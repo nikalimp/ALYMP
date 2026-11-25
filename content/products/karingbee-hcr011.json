@@ -1,0 +1,28 @@
+{
+  "slug": "karingbee-hcr011",
+  "brand": "karingbee",
+  "category": "cleaning-robots",
+  "name": "KaringBee HCR011",
+  "variants": [],
+  "announced": null,
+  "sources": {},
+  "facts": [],
+  "specs": [],
+  "compatibility": {
+    "alice":         { "v": "unknown", "src": null, "note": "" },
+    "matter":        { "v": "unknown", "src": null, "note": "" },
+    "thread":        { "v": "unknown", "src": null, "note": "" },
+    "zigbee":        { "v": "unknown", "src": null, "note": "" },
+    "homekit":       { "v": "unknown", "src": null, "note": "" },
+    "homeAssistant": { "v": "unknown", "src": null, "note": "" },
+    "wifi":          { "v": "unknown", "src": null, "note": "" }
+  },
+  "inBox": [],
+  "price": null,
+  "priceEstimate": null,
+  "priceSource": null,
+  "priceDate": null,
+  "status": "unknown",
+  "disputes": [],
+  "notes": "Официальный источник не найден. Поиск по HCR011 и по домену karingbee.com не дал страницы этой модели: на karingbee.com найдены только пылесосы (M3, F203, SZ-A807, ST-510, KB-K-3L), кофемашины и другая бытовая техника; оболочка сайта описывает бренд как производителя домашней техники без оконных роботов. Саму главную страницу karingbee.com открыть не удалось (HTTP 402 при запросе), поэтому меню и каталог проверены только по поисковому фрагменту. Записей в sources нет, facts, specs и inBox пусты. Сторонние листинги, которые поиск вернул по близким номерам (только в notes, не как данные о HCR011): Kadskan HCR-10 (Newegg, 5600 Па, распыление воды, пульт), Havit HCR105 (Global Sources, 3800 Па, бак 50 мл, оптовый минимум 2000 шт.), PuRuikai HCR-02 (руководство на manuals.plus). Это разные модели других брендов, их характеристики к HCR011 не относятся. Чтобы заполнить карточку, нужна ссылка на официальную страницу KaringBee с моделью HCR011 или официальное руководство бренда. Дата анонса, совместимость, цена и наличие не вносились."
+}

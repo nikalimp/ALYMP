@@ -3,18 +3,13 @@
   "repo": "nikalimp/ALYMP",
   "site_dir": ".",
   "targets": {
-    "test": {
-      "url": "https://alymp.nikalimp.ru",
-      "ftp_dir_secret": "FTP_DIR",
-      "indexable": false
-    },
     "prod": {
       "url": "https://alymp.ru",
       "ftp_dir_secret": "FTP_DIR_PROD",
       "indexable": true
     }
   },
-  "url": "https://alymp.nikalimp.ru",
+  "url": "https://alymp.ru",
   "adapter": "ssh-ftp",
   "mode": "auto",
   "content_dir": "content",
@@ -26,7 +21,7 @@
     "days": "1-5"
   },
   "version": 2,
-  "notes": "Тест alymp.nikalimp.ru (закрыт от поисковиков) и прод alymp.ru (открыт сразу после сборки — решение Ника 25.11.2026). Заявки и config.php формы живут только на сервере.",
+  "notes": "Только прод alymp.ru, открыт для индексации. Тестового поддомена нет — решение Ника 25.11.2026. Заявки и config.php формы живут только на сервере.",
   "out_dir": "out",
   "app_path": "",
   "rsync_exclude": "api/config.php api/leads/",

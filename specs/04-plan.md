@@ -7,9 +7,9 @@
 - **Стартер:** NikitOS `.starter/` (`ai-ready-site` 1.0.0): Next.js 16.3, React 19.2, Tailwind 4, статический экспорт в `out/`.
 - **Репозиторий:** `~/Desktop/ALYMP Claude/site/`, GitHub `nikalimp/ALYMP` (публичный). Работа агента — ветки `claude/*` и PR. До этапа 6 PR только со `specs/` сливаются вручную, с этапа 6 — после зелёного `npm run check`.
 - **Хостинг и деплой:** REG.RU, виртуальный хостинг (ISPmanager), сервер 31.31.197.26 — тот же, что у nikalimp.ru. deploy-kit 2.0.0, адаптер `ssh-ftp`: SSH из Actions на REG.RU закрыт, рабочий путь — FTP.
-- **Тест:** `https://alymp.nikalimp.ru` — закрыт от поисковиков, обновляется с каждым PR.
+- **Тестового адреса нет** (решение Ника 25.11.2026): слитый PR с зелёным check выкладывается сразу на прод. Риск — ошибка видна посетителям; защита — `npm run check` и проверка цели deploy-kit (200, 404, sitemap, robots, llms.txt), при сбое — revert-PR.
 - **Прод:** `https://alymp.ru` — открыт для индексации сразу после сборки (решение Ника, /grill Q1). Домен в REG.RU, A-запись уже указывает на 31.31.197.26, оплачен до 24.11.2027.
-- **Паспорт публикации:** `publish.json` с `targets.test` и `targets.prod`.
+- **Паспорт публикации:** `publish.json` только с `targets.prod`; в `deploy.yml` и `pr.yml` нет job `test`.
 
 ### Pre-flight хостинга
 По «Хостинги — что проверено». Пока не зелёное — первую выкладку не делаем.
@@ -20,12 +20,12 @@
 | HTTPS-редирект | ⏳ Только галочкой «Перенаправлять HTTP в HTTPS» в ISPmanager; в `.htaccess` правила по `%{HTTPS}` нет (стартер) | — |
 | `.htaccess` для 301 и 404 | ✅ Apache на REG.RU; `public/.htaccess` из стартера. Нужен 301 `/products/` → `/catalog/` (spec §4.2) | 25.11.2026 |
 | PHP для формы | ⏳ Нужен `lead.php`: запись заявки в файл на хостинге, затем Telegram и почта. Проверить версию PHP и исходящие запросы к api.telegram.org | — |
-| Поддомен `alymp.nikalimp.ru`: A-запись | ❌ После мастера записи всё ещё нет (dig, в том числе у ns1.reg.ru). Добавить A → 31.31.197.26 в DNS nikalimp.ru | 25.11.2026 |
+| Поддомен теста | — не нужен (решение Ника) | 25.11.2026 |
 | Домен `alymp.ru`: A-запись | ✅ 31.31.197.26, NS — reg.ru | 25.11.2026 |
 | SSL `alymp.ru` | ❌ Самоподписанный сертификат; HTTP → HTTPS уже работает. Выпустить Let's Encrypt в ISPmanager | 25.11.2026 |
 | Доступ без пароля | ✅ Секреты в GitHub: FTP_HOST/USER/PASS, FTP_DIR, FTP_DIR_PROD, SSH_*, NOTIFY_*, TELEGRAM_* | 25.11.2026 |
 
-**Что делает Ник (один раз):** `bash ~/Desktop/NikitOS/.claude/toolkit/deploy-kit/setup-site.sh nikalimp/ALYMP alymp.nikalimp.ru ALYMP alymp.ru` — создаёт оба сайта в ISPmanager (индекс `index.html index.php`, Let's Encrypt, редирект HTTPS галочкой, www → без www), A-запись поддомена, заводит секреты и делает пробную выкладку.
+**Ник запустил мастер** `setup-site.sh` 25.11.2026 — создаёт оба сайта в ISPmanager (индекс `index.html index.php`, Let's Encrypt, редирект HTTPS галочкой, www → без www), A-запись поддомена, заводит секреты и делает пробную выкладку.
 
 - Исключения из стандарта — spec §9.
 

@@ -13,7 +13,7 @@ export type OrgType =
   | "Store";
 
 export const site = {
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://alymp.nikalimp.ru", // прод: https://alymp.ru (этап 8)
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://alymp.ru",
   name: "ALYMP",
   legalName: "Алимпиев Никита", // TODO(клиент): отчество для политики ПДн; после ИП — «ИП Алимпиев …»
   // Тип организации в Schema.org — самый точный из подходящих: https://schema.org/LocalBusiness#subtypes

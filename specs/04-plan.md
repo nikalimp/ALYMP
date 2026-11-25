@@ -22,7 +22,7 @@
 | PHP для формы | ⏳ Нужен `lead.php`: запись заявки в файл на хостинге, затем Telegram и почта. Проверить версию PHP и исходящие запросы к api.telegram.org | — |
 | Поддомен теста | — не нужен (решение Ника) | 25.11.2026 |
 | Домен `alymp.ru`: A-запись | ✅ 31.31.197.26, NS — reg.ru | 25.11.2026 |
-| SSL `alymp.ru` | ❌ Самоподписанный сертификат; HTTP → HTTPS уже работает. Выпустить Let's Encrypt в ISPmanager | 25.11.2026 |
+| SSL `alymp.ru` | ✅ Let's Encrypt, curl 200 без ошибок проверки | 25.11.2026 |
 | Доступ без пароля | ✅ Секреты в GitHub: FTP_HOST/USER/PASS, FTP_DIR, FTP_DIR_PROD, SSH_*, NOTIFY_*, TELEGRAM_* | 25.11.2026 |
 
 **Ник запустил мастер** `setup-site.sh` 25.11.2026 — создаёт оба сайта в ISPmanager (индекс `index.html index.php`, Let's Encrypt, редирект HTTPS галочкой, www → без www), A-запись поддомена, заводит секреты и делает пробную выкладку.

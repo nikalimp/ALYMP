@@ -6,8 +6,8 @@ import { JsonLd } from "@/components/json-ld";
 import { graph, orgId } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Контакты: телефон, адрес и часы работы", // бренд добавит шаблон title из layout
-  description: `Как связаться с ${site.name}: телефон, мессенджеры, адрес и часы работы.`,
+  title: "Контакты ALYMP: телефон, Telegram и почта", // бренд добавит шаблон title из layout
+  description: `Как связаться с ${site.name}: телефон, Telegram и почта. Подберём робота или устройство умного дома и подтвердим цену до оплаты.`,
   alternates: { canonical: "/contacts/" },
 };
 

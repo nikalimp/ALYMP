@@ -16,7 +16,7 @@ export type OrgType =
 export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://alymp.ru",
   name: "ALYMP",
-  legalName: "Алимпиев Никита", // TODO(клиент): отчество для политики ПДн; после ИП — «ИП Алимпиев …»
+  legalName: "Алимпиев Никита Евгеньевич", // после ИП — «ИП Алимпиев Никита Евгеньевич»
   // Тип организации в Schema.org — самый точный из подходящих: https://schema.org/LocalBusiness#subtypes
   orgType: "OnlineStore" as OrgType,
   title: "Роботы и умный дом: Roborock, Dreame, Aqara, Unitree — ALYMP", // 40–65 символов (spec §4.5)
@@ -29,10 +29,10 @@ export const site = {
   areaServed: ["RU"],
 
   contacts: {
-    phone: "", // формат +7XXXXXXXXXX; пусто — блок не показывается
-    phoneDisplay: "",
-    email: "",
-    telegram: "", // https://t.me/…
+    phone: "+79090199780",
+    phoneDisplay: "+7 909 019-97-80",
+    email: "nikitaalimpiev@mail.ru", // временная почта — заменить на адрес на alymp.ru
+    telegram: "https://t.me/nikalimp",
     whatsapp: "", // https://wa.me/7XXXXXXXXXX
     address: {
       street: "",
@@ -61,7 +61,7 @@ export const site = {
   },
 
   // Профили бренда на внешних площадках: одинаковые название, адрес и телефон везде
-  sameAs: [] as string[],
+  sameAs: ["https://t.me/nikalimp"] as string[],
   socials: [] as { label: string; href: string }[], // Instagram и Facebook — с «*» в label
   metaNote: "", // «*Meta Platforms Inc. признана экстремистской и запрещена в РФ» — если есть ссылки на Instagram/Facebook
 

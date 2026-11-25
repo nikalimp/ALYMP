@@ -17,7 +17,7 @@
 ## Трек B — документы и сборка
 - [x] 00-brief.md — части A, B, C (черновик)
 - [x] decisions.md, requests.md
-- [ ] 01-research.md — конкуренты, семантика, ≥ 20 GEO-запросов
+- [x] 01-research.md — 5 конкурентов со скриншотами, 23 кластера, 30 GEO-запросов, 50 терминов (черновик, ждёт утверждения)
 - [ ] 02-spec.md
 - [ ] 03-design.md, DESIGN.md, brand.json
 - [ ] 04-plan.md, 05-tasks.md

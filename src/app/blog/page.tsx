@@ -7,8 +7,8 @@ import { JsonLd } from "@/components/json-ld";
 import { graph } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "TODO(клиент): Блог — статьи и ответы на вопросы",
-  description: "TODO(клиент): о чём блог и кому он полезен, 120⁠–⁠160 символов.",
+  title: "Блог ALYMP: гайды по роботам, умному дому и ИИ",
+  description: "Как выбрать робот-пылесос, мойщик окон, умный замок и хаб; как связать устройства с Алисой и Matter; новости ИИ и робототехники.",
   alternates: { canonical: "/blog/" },
   ...(!site.features.blog && { robots: { index: false, follow: true } }),
 };

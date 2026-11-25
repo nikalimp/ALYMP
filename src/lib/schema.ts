@@ -1,6 +1,6 @@
 // JSON-LD по стандарту AI-Ready сайта, §5. Один @graph на страницу, сущности связаны через @id.
 import { site } from "@/content/site";
-import type { Faq, Service } from "@/content/services";
+import type { Faq } from "@/content/types";
 
 export const orgId = `${site.url}/#org`;
 export const websiteId = `${site.url}/#website`;
@@ -15,7 +15,8 @@ export const orgSchema: Record<string, unknown> = {
   legalName: site.legalName,
   url: site.url,
   description: site.description,
-  foundingDate: String(site.foundingYear),
+  ...(site.foundingYear && { foundingDate: String(site.foundingYear) }),
+  logo: `${site.url}/logos/alymp.svg`,
   areaServed: site.areaServed,
   ...(site.sameAs.length && { sameAs: site.sameAs }),
   ...(c.phone && { telephone: c.phone }),
@@ -54,25 +55,6 @@ export function faqSchema(faq: Faq[]) {
   return {
     "@type": "FAQPage",
     mainEntity: faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
-  };
-}
-
-export function serviceSchema(s: Service) {
-  return {
-    "@type": "Service",
-    name: s.title,
-    serviceType: s.h1,
-    description: s.answer,
-    url: `${site.url}/services/${s.slug}/`,
-    provider: { "@id": orgId },
-    areaServed: site.areaServed,
-    offers: s.prices.map((p) => ({
-      "@type": "Offer",
-      name: p.name,
-      description: [p.value, p.note].filter(Boolean).join(". "),
-      priceCurrency: "RUB",
-      ...(p.amount ? { price: String(p.amount) } : {}),
-    })),
   };
 }
 

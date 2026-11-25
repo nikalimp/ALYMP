@@ -1,4 +1,4 @@
-import type { Faq } from "@/content/services";
+import type { Faq } from "@/content/types";
 
 // FAQ на <details>: ответ есть в HTML и виден ботам, раскрытие работает без JavaScript.
 export function FaqList({ items }: { items: Faq[] }) {

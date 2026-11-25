@@ -6,8 +6,8 @@ import { JsonLd } from "@/components/json-ld";
 import { graph, orgId } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Контакты: телефон, адрес и часы работы", // бренд добавит шаблон title из layout
-  description: `Как связаться с ${site.name}: телефон, мессенджеры, адрес и часы работы.`,
+  title: "Контакты ALYMP: телефон, Telegram и почта", // бренд добавит шаблон title из layout
+  description: `Как связаться с ${site.name}: телефон, Telegram и почта. Подберём робота или устройство умного дома и подтвердим цену до оплаты.`,
   alternates: { canonical: "/contacts/" },
 };
 
@@ -38,7 +38,7 @@ export default function Contacts() {
             ))}
           </dl>
           <Button asChild size="lg" className="mt-8"><a href={site.cta.href}>{site.cta.label}</a></Button>
-          <p className="mt-10 text-sm text-muted-foreground">{site.legalName} · ИНН {site.legal.inn} · ОГРН {site.legal.ogrn}</p>
+          <p className="mt-10 text-sm text-muted-foreground">{site.legalName} · {site.legal.status} · ИНН {site.legal.inn}</p>
         </Container>
       </Section>
     </>

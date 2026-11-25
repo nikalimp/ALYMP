@@ -10,28 +10,29 @@ export type OrgType =
   | "LegalService"
   | "EducationalOrganization"
   | "HomeAndConstructionBusiness"
-  | "Store";
+  | "Store"
+  | "OnlineStore";
 
 export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://alymp.ru",
   name: "ALYMP",
-  legalName: "Алимпиев Никита", // TODO(клиент): отчество для политики ПДн; после ИП — «ИП Алимпиев …»
+  legalName: "Алимпиев Никита Евгеньевич", // после ИП — «ИП Алимпиев Никита Евгеньевич»
   // Тип организации в Schema.org — самый точный из подходящих: https://schema.org/LocalBusiness#subtypes
-  orgType: "LocalBusiness" as OrgType,
-  title: "TODO(клиент): Бренд — услуга в городе", // title главной, до 60 символов
-  description: "TODO(клиент): описание компании для поиска и нейросетей, 120⁠–⁠160 символов, с фактами: что, где, для кого, цена или срок.",
+  orgType: "OnlineStore" as OrgType,
+  title: "Роботы и умный дом: Roborock, Dreame, Aqara, Unitree — ALYMP", // 40–65 символов (spec §4.5)
+  description: "15 флагманских роботов и устройств умного дома 2025⁠–⁠2026: Roborock, Dreame, Aqara, Unitree. Официальная гарантия в России, честные сравнения моделей.",
   // Одна фраза о компании для llms.txt и футера
-  tagline: "TODO(клиент): что делаем и для кого",
+  tagline: "Роботы и умный дом нового поколения",
   lang: "ru",
   locale: "ru_RU",
-  foundingYear: 2015, // TODO(клиент)
+  foundingYear: null as number | null, // год регистрации бизнеса — после ИП
   areaServed: ["RU"],
 
   contacts: {
-    phone: "", // формат +7XXXXXXXXXX; пусто — блок не показывается
-    phoneDisplay: "",
-    email: "",
-    telegram: "", // https://t.me/…
+    phone: "+79090199780",
+    phoneDisplay: "+7 909 019-97-80",
+    email: "nikitaalimpiev@mail.ru", // временная почта — заменить на адрес на alymp.ru
+    telegram: "https://t.me/nikalimp",
     whatsapp: "", // https://wa.me/7XXXXXXXXXX
     address: {
       street: "",
@@ -47,8 +48,8 @@ export const site = {
 
   // Главное целевое действие — на него ведут все CTA
   cta: {
-    label: "TODO(клиент): Записаться",
-    href: "https://t.me/TODO", // TODO(клиент): ссылка на мессенджер, форму или tel:
+    label: "Каталог",
+    href: "/#catalog", // после сборки каталога — «Заказать» на лендингах (spec §7)
   },
 
   // Реквизиты для футера и политики ПДн (152-ФЗ)
@@ -60,7 +61,7 @@ export const site = {
   },
 
   // Профили бренда на внешних площадках: одинаковые название, адрес и телефон везде
-  sameAs: [] as string[],
+  sameAs: ["https://t.me/nikalimp"] as string[],
   socials: [] as { label: string; href: string }[], // Instagram и Facebook — с «*» в label
   metaNote: "", // «*Meta Platforms Inc. признана экстремистской и запрещена в РФ» — если есть ссылки на Instagram/Facebook
 
@@ -68,18 +69,29 @@ export const site = {
   person: null as null | { name: string; jobTitle: string; description: string; sameAs: string[] },
 
   metrikaId: 114661158, // номер счётчика Яндекс Метрики; 0 — счётчик не подключается (на боевом домене npm run check этого не пропустит)
-  darkTheme: true, // переключатель темы в шапке
+  darkTheme: false, // база светлая (DESIGN.md); тёмная тема сайта — P1
 
   // Функции включаются и выключаются флагами, а не удалением кода (стандарт §1.9):
   // снятый с сайта блок остаётся в репозитории и возвращается одной строкой.
   features: {
-    blog: true, // блог: пункт меню, /blog/, статьи в sitemap и llms.txt
+    blog: false, // включается с первой статьёй (T47–T49)
+    catalog: false, // каталог и лендинги — блок 3–5
+    compare: false, // сравнения — T36
+    glossary: false, // глоссарий — блок 6
+    news: false, // новости — блок 7
+    cart: false, // корзина и онлайн-оплата — после ИП (P2)
   },
 };
 
+// Пункт меню показывается, когда раздел собран (флаги site.features) — на проде нет ссылок в пустоту
 export const nav = [
-  { href: "/services/", label: "Услуги" },
-  ...(site.features.blog ? [{ href: "/blog/", label: "Блог" }] : []),
-  { href: "/about/", label: "О компании" },
+  ...(site.features.catalog ? [
+    { href: "/catalog/cleaning-robots/", label: "Уборка" },
+    { href: "/catalog/smart-home/", label: "Умный дом" },
+    { href: "/catalog/robots/", label: "Роботы" },
+  ] : []),
+  ...(site.features.compare ? [{ href: "/compare/", label: "Сравнения" }] : []),
+  ...(site.features.blog || site.features.news ? [{ href: site.features.news ? "/news/" : "/blog/", label: "Журнал" }] : []),
+  { href: "/about/", label: "О ALYMP" },
   { href: "/contacts/", label: "Контакты" },
 ];

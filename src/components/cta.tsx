@@ -2,7 +2,7 @@ import { site } from "@/content/site";
 import { Container, Section } from "./container";
 import { Button } from "./ui/button";
 
-export function Cta({ title = "TODO(клиент): заголовок призыва", text = "TODO(клиент): что получит человек после клика" }: { title?: string; text?: string }) {
+export function Cta({ title = "Подберём модель под ваш дом", text = "Менеджер подтвердит цену, наличие и срок поставки. Оплата — после подтверждения." }: { title?: string; text?: string }) {
   return (
     <Section className="border-t">
       <Container className="text-center">

@@ -167,25 +167,29 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       </Section>
 
       {/* 4. Ключевые цифры */}
-      <Section className="pt-0">
-        <Container>
-          <dl className="grid grid-cols-2 gap-px bg-border lg:grid-cols-4">
-            {l.keyNumbers.map((k) => (
-              <div key={k.label} className="flex flex-col bg-background p-6 sm:p-8">
-                <dt className="order-last mt-3 text-sm text-muted-foreground">{k.label}</dt>
-                <dd className="text-[clamp(32px,4vw,52px)] font-semibold leading-none tracking-[-0.03em] tabular">{k.value}</dd>
-              </div>
-            ))}
-          </dl>
-        </Container>
-      </Section>
+      {l.keyNumbers.length > 0 && (
+        <Section className="pt-0">
+          <Container>
+            <dl className="grid grid-cols-2 gap-px bg-border lg:grid-cols-4">
+              {l.keyNumbers.map((k) => (
+                <div key={k.label} className="flex flex-col bg-background p-6 sm:p-8">
+                  <dt className="order-last mt-3 text-sm text-muted-foreground">{k.label}</dt>
+                  <dd className="text-[clamp(32px,4vw,52px)] font-semibold leading-none tracking-[-0.03em] tabular">{k.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </Container>
+        </Section>
+      )}
 
       {/* 3 и 5. Технологии — закреплённая сцена */}
-      <section aria-label="Технологии" className={cn("py-8 lg:py-0", l.hero.dark && "is-dark")}>
-        <Container>
-          <StickyTech steps={l.tech} image={l.hero.image} alt="" credit={l.hero.credit} />
-        </Container>
-      </section>
+      {l.tech.length > 0 && (
+        <section aria-label="Технологии" className={cn("py-8 lg:py-0", l.hero.dark && "is-dark")}>
+          <Container>
+            <StickyTech steps={l.tech} image={l.hero.image} alt="" credit={l.hero.credit} />
+          </Container>
+        </section>
+      )}
 
       {/* 8. Версии */}
       {l.versions && (
@@ -316,22 +320,24 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       </Section>
 
       {/* Источники фактов */}
-      <Section className="py-10">
-        <Container>
-          <p className="text-sm text-muted-foreground">
-            Характеристики — по официальным данным {brand}:{" "}
-            {usedSources.map(([k, s], i) => (
-              <span key={k}>
-                <a href={s.url} target="_blank" rel="noopener nofollow" className="underline underline-offset-4">
-                  {s.title}
-                </a>
-                {i < usedSources.length - 1 ? ", " : ""}
-              </span>
-            ))}
-            . Проверено {usedSources[0]?.[1].checkedAt.split("-").reverse().join(".")}.
-          </p>
-        </Container>
-      </Section>
+      {usedSources.length > 0 && (
+        <Section className="py-10">
+          <Container>
+            <p className="text-sm text-muted-foreground">
+              Характеристики — по официальным данным {brand}:{" "}
+              {usedSources.map(([k, s], i) => (
+                <span key={k}>
+                  <a href={s.url} target="_blank" rel="noopener nofollow" className="underline underline-offset-4">
+                    {s.title}
+                  </a>
+                  {i < usedSources.length - 1 ? ", " : ""}
+                </span>
+              ))}
+              . Проверено {usedSources[0]?.[1].checkedAt.split("-").reverse().join(".")}.
+            </p>
+          </Container>
+        </Section>
+      )}
     </>
   );
 }

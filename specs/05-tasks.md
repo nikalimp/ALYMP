@@ -39,18 +39,18 @@
 ## Блок 4. Остальные лендинги
 - [x] **T21** Roborock Saros Z70 — текст, сцены, FAQ, Главред
 - [x] **T22** Dreame X50 Ultra Complete
-- [ ] **T23** Dreame L50 Ultra
-- [ ] **T24** Roborock Saros 10 и 10R (выбор версии внутри)
-- [ ] **T25** Roborock Qrevo Curv 2 Flow
-- [ ] **T26** KaringBee HCR011
+- [x] **T23** Dreame L50 Ultra
+- [x] **T24** Roborock Saros 10 и 10R (выбор версии внутри)
+- [x] **T25** Roborock Qrevo Curv 2 Flow
+- [x] **T26** KaringBee HCR011
 - [x] **T27** Aqara Hub M3
-- [ ] **T28** Aqara Panel Hub S1 Plus
+- [x] **T28** Aqara Panel Hub S1 Plus
 - [x] **T29** Aqara Smart Lock U200
-- [ ] **T30** Aqara Smart Lock U300
-- [ ] **T31** Aqara FP400 и FP2 (FP2 — в title и H2)
-- [ ] **T32** Aqara Camera Hub G5 Pro
-- [ ] **T33** Комплект «Умный рассвет»
-- [ ] **T34** Unitree G1 (Basic и Edu, флажок «Для организации»)
+- [x] **T30** Aqara Smart Lock U300
+- [x] **T31** Aqara FP400 и FP2 (FP2 — в title и H2)
+- [x] **T32** Aqara Camera Hub G5 Pro
+- [x] **T33** Комплект «Умный рассвет»
+- [x] **T34** Unitree G1 (Basic и Edu, флажок «Для организации»)
 
 *Проверка T21–T34:* прямой ответ, ≥ 800 слов, Главред ≥ 7,5, каждая цифра с источником, FAQ из пула GEO (spec §4.6), Lighthouse ≥ 85 на трёх случайных.
 
@@ -117,6 +117,7 @@
 | T03 | Публичные контакты | Ник | nikitaalimpiev@mail.ru (временно), t.me/nikalimp, +7 909 019-97-80 — 25.11.2026 |
 
 ## Журнал
+- 25.11.2026 — Спринт 2Б (`gemini/block-4-all-landings`, Блок 4: T23–T26, T28, T30–T34 + `hobot-sp10`, `ecovacs-winbot-w3-omni`): созданы оставшиеся 12 Apple-style продуктовых лендингов, закрыты все 17/17 товаров каталога. Объём — 1259–1500 слов на 16 лендингах и 788 слов на `karingbee-hcr011` (без выдуманных характеристик). В `aqara-fp400` FP2 вынесен в `title` и `H2`; в `aqara-camera-hub-g5-pro` нет упоминаний распознавания лиц; в `unitree-g1` версии Basic/EDU и флажок «Для организации». `npm run check` зелёный (67/67 страниц, `geo-check` 8.7/10, Главред 7.5+), `slop-check` 0/0/0.
 - 25.11.2026 — блок 3, T16–T19: шаблон /products/[slug]/ (сцена, прямой ответ, цифры, StickyTech, версии, «Как работает в паре» — рендерится, когда в landing есть pairs; у Go2 честной связки с устройствами каталога нет, блок скрыт), OrderForm (Telegram-фолбэк до T54), productSchema без Offer, /specs/ noindex + canonical. Эталон — Unitree Go2 (776 слов, тексты из фактов unitree.com). Lighthouse mobile: Perf 95–96, A11y 100, BP 100, SEO 100, CLS 0, LCP 2,7 с. Метрика грузится после load. check зелёный, slop-check 0/0/0.
 - 25.11.2026 — блок 2, T08–T12: формат товара с обязательным источником; факты 17 товаров с официальных сайтов (Dreame — через браузер, у сайта защита 429); агент-проверяющий сверил 13 файлов (`specs/reports/fact-check-2026-11-25.md`): противоречий нет, 2 строки убраны как не найденные. Каталог 15 → 17 (HOBOT SP10, Ecovacs WINBOT W3 OMNI). KaringBee HCR011 — без цифр до паспорта дистрибьютора.
 - 25.11.2026 — блок 1 (T01, T03–T07): токены «День», Onest + JetBrains Mono, логотип Michroma, фавикон из A, OG, шапка и футер с флагами разделов, главная и «О ALYMP» без фото, услуги стартера удалены. `npm run check`: красный только из-за контактов (почта в политике ПДн и /contacts/). 301 /products/ → /catalog/ перенесён в T35 — каталога ещё нет.

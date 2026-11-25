@@ -4,6 +4,7 @@ import { preload } from "react-dom";
 import { getLanding, getLandings, categoryLabel } from "@/lib/landings";
 import { getProduct } from "@/lib/products";
 import { brandName } from "@/lib/brands";
+import { linkTerms } from "@/lib/link-terms";
 import { breadcrumbs, faqSchema, graph, productSchema } from "@/lib/schema";
 import { Container, Eyebrow, Section } from "@/components/container";
 import { FaqList } from "@/components/faq";
@@ -49,6 +50,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const b2b = p.brand === "unitree";
   const usedSources = Object.entries(p.sources);
   const readySlugs = new Set(getLandings().map((x) => x.slug));
+  const usedTerms = new Set<string>();
 
   return (
     <>
@@ -166,7 +168,8 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       <Section>
         <Container>
           <p className="max-w-5xl text-[clamp(22px,3vw,38px)] font-medium leading-[1.25] tracking-[-0.02em] text-foreground-2">
-            <span className="text-foreground">{l.answer.split(". ")[0]}.</span> {l.answer.split(". ").slice(1).join(". ")}
+            <span className="text-foreground">{linkTerms(`${l.answer.split(". ")[0]}.`, { used: usedTerms, maxLinks: 3 })}</span>{" "}
+            {linkTerms(l.answer.split(". ").slice(1).join(". "), { used: usedTerms, maxLinks: 5 })}
           </p>
         </Container>
       </Section>
@@ -263,7 +266,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                     {[p.name, ...pair.with.map((w) => getProduct(w)?.name ?? w)].join(" + ")}
                   </p>
                   <h3 className="mt-4 text-xl font-semibold">{pair.title}</h3>
-                  <p className="mt-2 text-foreground-2">{pair.text}</p>
+                  <p className="mt-2 text-foreground-2">{linkTerms(pair.text, { used: usedTerms, maxLinks: 3 })}</p>
                   <p className="mt-4 flex flex-wrap gap-3 text-sm">
                     {pair.with.map((w) =>
                       readySlugs.has(w) ? (

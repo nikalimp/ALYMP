@@ -5,11 +5,13 @@ import { getLandings } from "@/lib/landings";
 import { categories } from "@/content/catalog";
 import { comparisons } from "@/content/comparisons";
 import { brandSlugs } from "@/content/brands";
+import { getGlossaryTerms } from "@/lib/glossary";
 
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getPosts();
+  const terms = getGlossaryTerms();
   return [
     { url: `${site.url}/`, priority: 1 },
     { url: `${site.url}/catalog/`, priority: 0.9 },
@@ -24,6 +26,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...comparisons.map((c) => ({ url: `${site.url}/compare/${c.slug}/`, priority: 0.8 })),
     { url: `${site.url}/brands/`, priority: 0.8 },
     ...brandSlugs.map((b) => ({ url: `${site.url}/brands/${b}/`, priority: 0.8 })),
+    { url: `${site.url}/glossary/`, priority: 0.85 },
+    ...terms.map((t) => ({ url: `${site.url}/glossary/${t.slug}/`, priority: 0.75 })),
     { url: `${site.url}/how-to-order/`, priority: 0.75 },
     { url: `${site.url}/about/`, priority: 0.6 },
     { url: `${site.url}/contacts/`, priority: 0.6 },

@@ -5,6 +5,19 @@ import path from "node:path";
 
 export type Src = { url: string; title: string; checkedAt: string };
 export type Compat = { v: "yes" | "via-hub" | "no" | "unknown"; src: string | null; note?: string };
+export type ProductMedia = {
+  hero: string;
+  card: string;
+  width: number;
+  height: number;
+  cardWidth: number;
+  cardHeight: number;
+  fit: "cover" | "contain";
+  hasAlpha?: boolean;
+  alt: string;
+  credit: string;
+  source: string;
+};
 export type Product = {
   slug: string;
   brand: "roborock" | "dreame" | "aqara" | "unitree" | "karingbee" | "hobot" | "ecovacs";
@@ -24,6 +37,7 @@ export type Product = {
   status: "in_stock" | "preorder" | "unknown";
   disputes: { label: string; values: string[]; comment?: string }[];
   notes?: string;
+  media?: ProductMedia;
 };
 
 const DIR = path.join(process.cwd(), "content/products");

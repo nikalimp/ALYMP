@@ -218,5 +218,18 @@
       "comment": "Поиск по официальным страницам; в спецификацию не внесено, нужно проверить по странице конкретного региона"
     }
   ],
-  "notes": "Состав комплекта не утверждён и требует подтверждения владельцем: выбраны мотор Curtain Driver E1 Track Version (CM-M01) и лента LED Strip T2 5 м (LS-L06D). Официального сайта комплекта «Умный рассвет» у Aqara нет, поэтому комплект собран из отдельных официальных страниц. Вариант с лампочкой LED Bulb T2 не использован: официальная страница спецификаций открывалась без таблицы, данные из поиска не внесены. Альтернатива для мотора — Rod Version (140,5 × 96 × 44 мм, IP20). Цена комплекта не найдена в официальных источниках. Совместимость с Алисой, HomeKit и Home Assistant на официальных страницах не указана. fact-check: removed Состав комплекта (fact) — not found on s2 (https://www.aqara.com/en/product/led-strip-t2/)"
+  "notes": "Состав комплекта не утверждён и требует подтверждения владельцем: выбраны мотор Curtain Driver E1 Track Version (CM-M01) и лента LED Strip T2 5 м (LS-L06D). Официального сайта комплекта «Умный рассвет» у Aqara нет, поэтому комплект собран из отдельных официальных страниц. Вариант с лампочкой LED Bulb T2 не использован: официальная страница спецификаций открывалась без таблицы, данные из поиска не внесены. Альтернатива для мотора — Rod Version (140,5 × 96 × 44 мм, IP20). Цена комплекта не найдена в официальных источниках. Совместимость с Алисой, HomeKit и Home Assistant на официальных страницах не указана. fact-check: removed Состав комплекта (fact) — not found on s2 (https://www.aqara.com/en/product/led-strip-t2/)",
+  "media": {
+    "hero": "/media/products/smart-sunrise-kit/hero.webp",
+    "card": "/media/products/smart-sunrise-kit/card.webp",
+    "width": 629,
+    "height": 960,
+    "cardWidth": 314,
+    "cardHeight": 480,
+    "fit": "contain",
+    "hasAlpha": true,
+    "alt": "Привод штор Aqara Curtain Driver E1 из комплекта Умный рассвет",
+    "credit": "Фото: Aqara",
+    "source": "https://www.aqara.com/en/product/curtain-driver-e1/"
+  }
 }

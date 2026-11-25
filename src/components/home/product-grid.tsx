@@ -17,6 +17,11 @@ export type GridProduct = {
   hasLanding: boolean;
   highlight: string;
   keySpec: string;
+  image?: string;
+  imageAlt?: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  imageFit?: "cover" | "contain";
 };
 
 const TABS = [
@@ -87,6 +92,21 @@ export function ProductGrid({ products }: { products: GridProduct[] }) {
         {filtered.map((p) => (
           <article key={p.slug} className="flex flex-col justify-between bg-card p-6 sm:p-7">
             <div>
+              {p.image && (
+                <Link
+                  href={`/products/${p.slug}/`}
+                  className="mb-5 flex aspect-[16/10] items-center justify-center overflow-hidden bg-muted/60"
+                >
+                  <img
+                    src={p.image}
+                    alt={p.imageAlt ?? p.name}
+                    width={p.imageWidth ?? 640}
+                    height={p.imageHeight ?? 400}
+                    loading="lazy"
+                    className={cn("size-full", p.imageFit === "contain" ? "object-contain p-4" : "object-cover")}
+                  />
+                </Link>
+              )}
               <div className="flex items-center justify-between gap-2">
                 <span className="font-mono text-xs uppercase tracking-[0.06em] text-muted-foreground">
                   {p.brandLabel} · {p.categoryLabel}

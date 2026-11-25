@@ -12,7 +12,7 @@ export type Landing = {
   h1: string;
   tagline: string;
   answer: string;
-  hero: { image?: string; alt: string; width?: number; height?: number; dark?: boolean; credit?: string };
+  hero: { image?: string; alt: string; width?: number; height?: number; dark?: boolean; fit?: "cover" | "contain"; credit?: string; source?: string };
   keyNumbers: { value: string; label: string; src: string }[];
   tech: { eyebrow: string; title: string; titleMuted?: string; text: string; zoom?: number; hud?: string[]; src: string }[];
   versions?: { title: string; lead: string; heads: string[]; rows: { label: string; values: string[] }[]; verdict: string[]; src: string };

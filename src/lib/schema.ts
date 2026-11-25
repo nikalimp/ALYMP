@@ -58,6 +58,20 @@ export function faqSchema(faq: Faq[]) {
   };
 }
 
+export function howToSchema(h: { name: string; description: string; steps: { title: string; text: string }[] }) {
+  return {
+    "@type": "HowTo",
+    name: h.name,
+    description: h.description,
+    step: h.steps.map((s, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: s.title,
+      text: s.text,
+    })),
+  };
+}
+
 export function articleSchema(p: { slug: string; title: string; description: string; date: string; updated?: string }) {
   return {
     "@type": "BlogPosting",

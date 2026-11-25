@@ -38,6 +38,11 @@ export default function CatalogPage() {
       hasLanding: readySlugs.has(p.slug),
       highlight: p.facts[0]?.text ?? "Подробный разбор модели готовится — устройство доступно к заказу по заявке.",
       keySpec,
+      image: p.media?.card,
+      imageAlt: p.media?.alt,
+      imageWidth: p.media?.cardWidth,
+      imageHeight: p.media?.cardHeight,
+      imageFit: p.media?.fit,
     };
   });
 

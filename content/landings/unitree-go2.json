@@ -6,12 +6,14 @@
   "tagline": "Четвероногий робот, который видит комнату целиком.",
   "answer": "Unitree Go2 — четвероногий робот для дома, учёбы и исследований. Он видит пространство вокруг себя 4D-лидаром с обзором 360°, двигается на 12 моторах суставов и весит около 15 кг. Есть две версии: Go2 Air развивает до 2,5 м/с, Go2 Pro — до 3,5 м/с и получает модуль 4G с GPS. В России Go2 поставляется под заказ: менеджер подтвердит цену, версию и срок до оплаты.",
   "hero": {
-    "image": "/media/products/unitree-go2/hero.jpg",
+    "image": "/media/products/unitree-go2/hero.webp",
     "alt": "Робособака Unitree Go2 на тёмном фоне",
     "width": 780,
     "height": 439,
     "dark": true,
-    "credit": "Фото: Unitree Robotics"
+    "credit": "Фото: Unitree Robotics",
+    "fit": "cover",
+    "source": "https://www.unitree.com/go2"
   },
   "keyNumbers": [
     {
@@ -126,17 +128,24 @@
   "pairs": [
     {
       "title": "Прогулка и контроль периметра",
-      "with": ["aqara-camera-hub-g5-pro"],
+      "with": [
+        "aqara-camera-hub-g5-pro"
+      ],
       "text": "Пока Go2 сопровождает вас во дворе частного дома, уличная камера G5 Pro фиксирует обстановку на подъезде к участку и отправляет уведомления в Apple Home."
     },
     {
       "title": "Чистая прихожая после прогулки",
-      "with": ["roborock-saros-z70", "dreame-x50-ultra-complete"],
+      "with": [
+        "roborock-saros-z70",
+        "dreame-x50-ultra-complete"
+      ],
       "text": "Четвероногий робот приносит с прогулки пыль на лапах, а робот-пылесос запускает быструю влажную уборку прихожей сразу после вашего возвращения."
     },
     {
       "title": "Выход без ключей в руках",
-      "with": ["aqara-smart-lock-u200"],
+      "with": [
+        "aqara-smart-lock-u200"
+      ],
       "text": "Когда вы выходите с Go2 на улицу, дверь открывается касанием iPhone или Apple Watch по Apple Home Key — не нужно искать ключи с занятыми руками."
     }
   ],

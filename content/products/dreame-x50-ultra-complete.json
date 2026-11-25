@@ -309,5 +309,18 @@
   "priceDate": "2026-11-25",
   "status": "in_stock",
   "disputes": [],
-  "notes": "Спор «6 см / 4,2 см» снят официальной сноской: 60 мм — две ступени с промежутком > 4 см, 42 мм — одиночный порог. Спор 22 000 / 20 000 Па снят: официально 20 000 Па. Страница собрана через браузер 25.11.2026 (на автоматические запросы сайт отвечает 429)."
+  "notes": "Спор «6 см / 4,2 см» снят официальной сноской: 60 мм — две ступени с промежутком > 4 см, 42 мм — одиночный порог. Спор 22 000 / 20 000 Па снят: официально 20 000 Па. Страница собрана через браузер 25.11.2026 (на автоматические запросы сайт отвечает 429).",
+  "media": {
+    "hero": "/media/products/dreame-x50-ultra-complete/hero.webp",
+    "card": "/media/products/dreame-x50-ultra-complete/card.webp",
+    "width": 646,
+    "height": 960,
+    "cardWidth": 322,
+    "cardHeight": 480,
+    "fit": "contain",
+    "hasAlpha": false,
+    "alt": "Робот-пылесос Dreame X50 Ultra Complete со станцией самоочистки",
+    "credit": "Фото: Dreame",
+    "source": "https://global.dreametech.com/products/dreame-x50-ultra-complete"
+  }
 }

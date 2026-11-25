@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...comparisons.map((c) => ({ url: `${site.url}/compare/${c.slug}/`, priority: 0.8 })),
     { url: `${site.url}/brands/`, priority: 0.8 },
     ...brandSlugs.map((b) => ({ url: `${site.url}/brands/${b}/`, priority: 0.8 })),
+    { url: `${site.url}/how-to-order/`, priority: 0.75 },
     { url: `${site.url}/about/`, priority: 0.6 },
     { url: `${site.url}/contacts/`, priority: 0.6 },
     ...(site.features.blog && posts.length ? [{ url: `${site.url}/blog/`, lastModified: posts.map((p) => p.updated ?? p.date).sort().at(-1), priority: 0.7 }] : []),

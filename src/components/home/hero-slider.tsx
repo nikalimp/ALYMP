@@ -21,6 +21,10 @@ export type HeroSlide = {
   priceDate: string | null;
   status: "in_stock" | "preorder" | "unknown";
   image?: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  imageFit?: "cover" | "contain";
+  imageHasAlpha?: boolean;
 };
 
 const fmt = (n: number) => n.toLocaleString("ru-RU").replace(/\u00A0/g, " ");
@@ -125,8 +129,18 @@ export function HeroSlider({ slides }: { slides: HeroSlide[] }) {
 
           <div className="border bg-card p-6 sm:p-8">
             {s.image ? (
-              <div className="relative mb-6 aspect-[16/10] overflow-hidden bg-background">
-                <img src={s.image} alt={s.name} width={780} height={439} className="size-full object-cover" />
+              <div className="relative mb-6 flex aspect-[16/10] items-center justify-center overflow-hidden bg-background">
+                <img
+                  src={s.image}
+                  alt={s.name}
+                  width={s.imageWidth ?? 780}
+                  height={s.imageHeight ?? 439}
+                  fetchPriority={index === 0 ? "high" : "auto"}
+                  className={cn(
+                    "size-full",
+                    s.imageFit === "contain" && s.imageHasAlpha ? "object-contain p-4" : "object-cover object-center",
+                  )}
+                />
               </div>
             ) : null}
             <p className="font-mono text-xs uppercase tracking-[0.08em] text-brand">Ключевые показатели</p>

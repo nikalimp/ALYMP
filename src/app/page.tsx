@@ -41,7 +41,11 @@ export default function Home() {
         priceSource: p.priceSource,
         priceDate: p.priceDate,
         status: p.status,
-        image: l.hero.image,
+        image: p.media?.hero ?? l.hero.image,
+        imageWidth: p.media?.width ?? l.hero.width,
+        imageHeight: p.media?.height ?? l.hero.height,
+        imageFit: p.media?.fit ?? l.hero.fit,
+        imageHasAlpha: p.media?.hasAlpha,
       },
     ];
   });
@@ -69,6 +73,11 @@ export default function Home() {
       hasLanding: readySlugs.has(p.slug),
       highlight: p.facts[0]?.text ?? "Подробный разбор модели готовится — устройство доступно к заказу по заявке.",
       keySpec,
+      image: p.media?.card,
+      imageAlt: p.media?.alt,
+      imageWidth: p.media?.cardWidth,
+      imageHeight: p.media?.cardHeight,
+      imageFit: p.media?.fit,
     };
   });
 
@@ -87,7 +96,7 @@ export default function Home() {
               Каталог. <span className="text-muted-foreground">17 флагманов.</span>
             </h2>
             <p className="max-w-md text-sm text-foreground-2">
-              У пяти ключевых моделей уже готовы подробные обзоры технологий. Любое из 17 устройств можно добавить в корзину и оформить заявку.
+              У всех 17 моделей готовы подробные обзоры технологий и совместимости. Любое устройство можно добавить в корзину и оформить заявку.
             </p>
           </div>
           <ProductGrid products={gridProducts} />

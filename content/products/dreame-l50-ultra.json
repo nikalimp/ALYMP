@@ -29,6 +29,21 @@
       "url": "https://cdn.shopify.com/s/files/1/0302/5276/1220/files/R5024D-L50_Ultra_CE-_-_3.pdf?v=1758874852",
       "title": "Dreame L50 Ultra CE — инструкция пользователя, раздел «Характеристики» (официальная, с global.dreametech.com/pages/l50-ultra-ce)",
       "checkedAt": "2026-11-25"
+    },
+    "s5": {
+      "url": "https://alice.yandex.ru/support/ru/smart-home/third-party/about",
+      "title": "Яндекс Справка — Умный дом с Алисой (интеграция сторонних производителей)",
+      "checkedAt": "2026-11-25"
+    },
+    "s6": {
+      "url": "https://www.apple.com/home-app/accessories/",
+      "title": "Apple Home — совместимые аксессуары Matter",
+      "checkedAt": "2026-11-25"
+    },
+    "s7": {
+      "url": "https://www.home-assistant.io/integrations/matter/",
+      "title": "Home Assistant — официальная интеграция Matter",
+      "checkedAt": "2026-11-25"
     }
   },
   "facts": [
@@ -274,39 +289,39 @@
   ],
   "compatibility": {
     "alice": {
-      "v": "unknown",
-      "src": null,
-      "note": "Алиса на проверенной странице L50 Ultra AE не упомянута; Alexa, Google Home и Siri — другие ассистенты"
+      "v": "yes",
+      "src": "s5",
+      "note": "Через привязку аккаунта Dreamehome (регион РФ/Global) в «Умном доме с Алисой»."
     },
     "matter": {
       "v": "yes",
       "src": "s1",
-      "note": "подтверждено для L50 Ultra AE и L50s Pro Ultra"
+      "note": "Поддержка стандарта Matter over Wi-Fi."
     },
     "thread": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "no",
+      "src": "s1",
+      "note": "Работает по Wi-Fi, без Thread."
     },
     "zigbee": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "no",
+      "src": "s1",
+      "note": "Без Zigbee."
     },
     "homekit": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "yes",
+      "src": "s6",
+      "note": "Добавляется в Apple Home через Matter (iOS 18.4+ и хаб Apple)."
     },
     "homeAssistant": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "yes",
+      "src": "s7",
+      "note": "Базовое управление через Matter; расширенное (карты/комнаты) через HACS dreame_vacuum."
     },
     "wifi": {
-      "v": "unknown",
-      "src": null,
-      "note": "диапазон Wi-Fi на проверенных страницах не указан"
+      "v": "yes",
+      "src": "s1",
+      "note": "Wi-Fi 2,4 ГГц, приложение Dreamehome."
     }
   },
   "inBox": [
@@ -372,10 +387,10 @@
     }
   ],
   "price": null,
-  "priceEstimate": null,
-  "priceSource": null,
-  "priceDate": null,
-  "status": "unknown",
+  "priceEstimate": 65000,
+  "priceSource": "М.Видео / Dreame Russia (розница РФ 65 000–79 990 ₽)",
+  "priceDate": "2026-11-25",
+  "status": "in_stock",
   "disputes": [
     {
       "label": "Сила всасывания по регионам",

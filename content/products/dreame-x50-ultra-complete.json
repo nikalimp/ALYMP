@@ -9,6 +9,21 @@
       "url": "https://global.dreametech.com/products/dreame-x50-ultra-complete",
       "title": "Dreame X50 Ultra Complete — официальная страница (global)",
       "checkedAt": "2026-11-25"
+    },
+    "s2": {
+      "url": "https://alice.yandex.ru/support/ru/smart-home/third-party/about",
+      "title": "Яндекс Справка — Умный дом с Алисой (интеграция сторонних производителей)",
+      "checkedAt": "2026-11-25"
+    },
+    "s3": {
+      "url": "https://www.apple.com/home-app/accessories/",
+      "title": "Apple Home — совместимые аксессуары Matter",
+      "checkedAt": "2026-11-25"
+    },
+    "s4": {
+      "url": "https://www.home-assistant.io/integrations/matter/",
+      "title": "Home Assistant — официальная интеграция Matter",
+      "checkedAt": "2026-11-25"
     }
   },
   "facts": [
@@ -207,39 +222,39 @@
   ],
   "compatibility": {
     "alice": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "yes",
+      "src": "s2",
+      "note": "Через привязку аккаунта Dreamehome (RU/Global) в «Умном доме с Алисой»."
     },
     "matter": {
       "v": "yes",
       "src": "s1",
-      "note": "сноска на странице — проверить условия"
+      "note": "Поддержка Matter over Wi-Fi."
     },
     "thread": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "no",
+      "src": "s1",
+      "note": "Работает по Wi-Fi, без Thread."
     },
     "zigbee": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "no",
+      "src": "s1",
+      "note": "Без Zigbee."
     },
     "homekit": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "yes",
+      "src": "s3",
+      "note": "Нативное добавление в Apple Home через Matter (iOS 18.4+)."
     },
     "homeAssistant": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "yes",
+      "src": "s4",
+      "note": "Через Matter; расширенные карты и комнаты через HACS dreame_vacuum."
     },
     "wifi": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "yes",
+      "src": "s1",
+      "note": "Wi-Fi 2,4 ГГц, приложение Dreamehome."
     }
   },
   "inBox": [
@@ -289,10 +304,10 @@
     }
   ],
   "price": null,
-  "priceEstimate": null,
-  "priceSource": null,
-  "priceDate": null,
-  "status": "unknown",
+  "priceEstimate": 81000,
+  "priceSource": "М.Видео / Технопарк (розница РФ 81 000–139 900 ₽)",
+  "priceDate": "2026-11-25",
+  "status": "in_stock",
   "disputes": [],
   "notes": "Спор «6 см / 4,2 см» снят официальной сноской: 60 мм — две ступени с промежутком > 4 см, 42 мм — одиночный порог. Спор 22 000 / 20 000 Па снят: официально 20 000 Па. Страница собрана через браузер 25.11.2026 (на автоматические запросы сайт отвечает 429)."
 }

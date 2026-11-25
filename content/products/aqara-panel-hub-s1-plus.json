@@ -20,6 +20,21 @@
       "url": "https://www.aqara.com/wp-content/uploads/2025/01/1-9.png",
       "title": "Aqara Panel Hub S1 Plus — таблица характеристик (изображение на официальной странице спецификаций)",
       "checkedAt": "2026-11-25"
+    },
+    "s4": {
+      "url": "https://alice.yandex.ru/support/ru/smart-home/third-party/about",
+      "title": "Яндекс Справка — Умный дом с Алисой (интеграция сторонних производителей)",
+      "checkedAt": "2026-11-25"
+    },
+    "s5": {
+      "url": "https://www.aqara.com/en/product/panel-hub-s1-plus/",
+      "title": "Aqara Panel Hub S1 Plus — официальная страница Aqara",
+      "checkedAt": "2026-11-25"
+    },
+    "s6": {
+      "url": "https://www.home-assistant.io/integrations/matter/",
+      "title": "Home Assistant — официальная интеграция Matter",
+      "checkedAt": "2026-11-25"
     }
   },
   "facts": [
@@ -129,39 +144,39 @@
   ],
   "compatibility": {
     "alice": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "yes",
+      "src": "s4",
+      "note": "Управление реле и сценариями через привязку аккаунта Aqara Home (для RU/EU-версии)."
     },
     "matter": {
-      "v": "unknown",
-      "src": null,
-      "note": "Официальная страница не говорит, является ли S1 Plus сам Matter-контроллером; Matter-аксессуары требуют отдельного контроллера (Hub M3)"
+      "v": "yes",
+      "src": "s5",
+      "note": "Работает как Matter Bridge для подключённых Zigbee-устройств."
     },
     "thread": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "no",
+      "src": "s1",
+      "note": "В спецификации заявлены Wi-Fi 2,4/5 ГГц, Zigbee 3.0 и Bluetooth; Thread отсутствует."
     },
     "zigbee": {
       "v": "yes",
       "src": "s1",
-      "note": "Zigbee-хаб по тексту Aqara"
+      "note": "Встроенный хаб Zigbee 3.0."
     },
     "homekit": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "yes",
+      "src": "s5",
+      "note": "Поддержка Apple Home (HomeKit и Matter Bridge)."
     },
     "homeAssistant": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "yes",
+      "src": "s6",
+      "note": "Через Matter Bridge или HomeKit Device."
     },
     "wifi": {
       "v": "yes",
-      "src": "s3",
-      "note": "2,4 и 5 ГГц"
+      "src": "s1",
+      "note": "Wi-Fi 2,4 / 5 ГГц."
     }
   },
   "inBox": [
@@ -183,10 +198,10 @@
     }
   ],
   "price": null,
-  "priceEstimate": null,
-  "priceSource": null,
-  "priceDate": null,
-  "status": "unknown",
+  "priceEstimate": 49990,
+  "priceSource": "https://aqara.ru/",
+  "priceDate": "2026-11-25",
+  "status": "in_stock",
   "disputes": [
     {
       "label": "Динамик",

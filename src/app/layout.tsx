@@ -7,7 +7,13 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { CookieBanner } from "@/components/cookie-banner";
 import { JsonLd } from "@/components/json-ld";
+import { CartProvider } from "@/components/cart/cart-context";
+import { CartDrawer } from "@/components/cart/cart-drawer";
 import { graph, orgSchema, personSchema, websiteSchema } from "@/lib/schema";
+import { getProducts } from "@/lib/products";
+import { categoryLabel, getLandings } from "@/lib/landings";
+import { brandName } from "@/lib/brands";
+import type { CatalogItemSummary } from "@/components/search-modal";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -25,6 +31,20 @@ const metrikaScript = (id: number) =>
 const themeScript = `(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark')}catch(e){}})()`;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const landingSlugs = new Set(getLandings().map((l) => l.slug));
+  const catalogSummary: CatalogItemSummary[] = getProducts().map((p) => ({
+    slug: p.slug,
+    name: p.name,
+    brand: p.brand,
+    brandLabel: brandName[p.brand] ?? p.brand,
+    category: p.category,
+    categoryLabel: categoryLabel[p.category],
+    priceEstimate: p.priceEstimate,
+    status: p.status,
+    hasLanding: landingSlugs.has(p.slug),
+    summary: p.facts[0]?.text ?? `${brandName[p.brand] ?? p.brand} · ${categoryLabel[p.category]}`,
+  }));
+
   return (
     <html lang={site.lang} suppressHydrationWarning>
       <head>
@@ -39,10 +59,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <noscript><div><img src={`https://mc.yandex.ru/watch/${site.metrikaId}`} style={{ position: "absolute", left: "-9999px" }} alt="" /></div></noscript>
         )}
         <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-50 focus:rounded-md focus:bg-background focus:px-3 focus:py-2">К содержанию</a>
-        <Header />
-        <main id="main" className="flex-1">{children}</main>
-        <Footer />
-        <CookieBanner />
+        <CartProvider>
+          <Header products={catalogSummary} />
+          <main id="main" className="flex-1">{children}</main>
+          <Footer />
+          <CartDrawer />
+          <CookieBanner />
+        </CartProvider>
       </body>
     </html>
   );

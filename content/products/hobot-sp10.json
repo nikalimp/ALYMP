@@ -177,39 +177,39 @@
   ],
   "compatibility": {
     "alice": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "no",
+      "src": "s1",
+      "note": "Автономный мойщик без Wi-Fi и облачного API; управление по Bluetooth и с пульта ДУ."
     },
     "matter": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "no",
+      "src": "s1",
+      "note": "Без Matter."
     },
     "thread": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "no",
+      "src": "s1",
+      "note": "Без Thread."
     },
     "zigbee": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "no",
+      "src": "s1",
+      "note": "Без Zigbee."
     },
     "homekit": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "no",
+      "src": "s1",
+      "note": "Без Apple HomeKit."
     },
     "homeAssistant": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "no",
+      "src": "s1",
+      "note": "Без интеграции Home Assistant."
     },
     "wifi": {
-      "v": "unknown",
-      "src": null,
-      "note": ""
+      "v": "no",
+      "src": "s1",
+      "note": "Подключение только по Bluetooth (приложение HOBOT LEGEE) и ИК-пульт ДУ."
     }
   },
   "inBox": [
@@ -223,10 +223,10 @@
     }
   ],
   "price": null,
-  "priceEstimate": null,
-  "priceSource": null,
-  "priceDate": null,
-  "status": "unknown",
+  "priceEstimate": 34990,
+  "priceSource": "https://hobot-russia.ru/",
+  "priceDate": "2026-11-25",
+  "status": "in_stock",
   "disputes": [
     {
       "label": "Количество режимов уборки",

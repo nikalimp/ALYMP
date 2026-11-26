@@ -67,6 +67,61 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
     { id: "specs", label: "Характеристики" },
   ];
 
+  const priceHost = (src: string | null) => {
+    if (!src) return null;
+    if (/^https?:\/\//.test(src)) {
+      const host = new URL(src).hostname.replace(/^www\./, "");
+      return <a href={src} target="_blank" rel="noopener nofollow" className="underline underline-offset-4">{host}</a>;
+    }
+    return src;
+  };
+  const ruDate = (d: string | null) => (d ? new Date(`${d}T12:00:00`).toLocaleDateString("ru-RU", { day: "numeric", month: "long", year: "numeric" }).replace(" г.", "") : "");
+
+  const heroText = (
+    <>
+      <nav aria-label="Хлебные крошки" className="text-sm text-foreground-2">
+        {crumbs.slice(0, 2).map((c) => (
+          <span key={c.path}>
+            <a href={c.path} className="hover:text-foreground">{c.name}</a> /{" "}
+          </span>
+        ))}
+        <span>{p.name}</span>
+      </nav>
+      <p className="mt-8 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.08em] text-foreground-2">
+        <i aria-hidden="true" className={cn("size-1.5 rounded-full", p.status === "in_stock" ? "bg-ok" : "bg-warn")} />
+        {statusLabel[p.status]} · {brand}
+      </p>
+      <h1 className="mt-3 text-[clamp(44px,6.4vw,96px)] font-bold leading-[0.92] tracking-[-0.045em]">{l.h1}</h1>
+      <p className="mt-5 max-w-xl text-[clamp(18px,2vw,22px)] text-foreground-2">{l.tagline}</p>
+      <div className="mt-6">
+        {p.priceEstimate ? (
+          <>
+            <b className="font-mono text-2xl font-semibold tracking-tight tabular">от {fmt(p.priceEstimate)} ₽</b>
+            <small className="mt-1 block text-sm text-muted-foreground">
+              Ориентир по данным {priceHost(p.priceSource)} на {ruDate(p.priceDate)}. Точную цену подтвердит менеджер.
+            </small>
+          </>
+        ) : (
+          <b className="text-2xl font-semibold tracking-tight">Цена по запросу</b>
+        )}
+      </div>
+      <div className="mt-7 flex flex-wrap gap-2.5">
+        <a href="#order" className="inline-flex min-h-11 items-center rounded-full bg-primary px-6 font-semibold text-primary-foreground transition-opacity duration-200 hover:opacity-85">Заказать</a>
+        <AddToCartButton item={{ slug: p.slug, name: p.name, brand, priceEstimate: p.priceEstimate, hasLanding: true }} />
+      </div>
+      {l.keyNumbers.length > 0 && (
+        <dl className="mt-10 flex gap-10 border-t pt-6">
+          {l.keyNumbers.slice(0, 2).map((k) => (
+            <div key={k.label} className="flex flex-col">
+              <dt className="order-last mt-2 max-w-40 text-sm text-muted-foreground">{k.label}</dt>
+              <dd className="font-mono text-3xl font-medium tracking-tight tabular sm:text-4xl">{k.value}</dd>
+            </div>
+          ))}
+        </dl>
+      )}
+    </>
+  );
+
   return (
     <>
       <JsonLd
@@ -84,101 +139,29 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         )}
       />
 
-      {/* 1. Первый экран — сцена товара */}
-      <section
-        id="product-hero"
-        className={cn(
-          "relative isolate flex min-h-[min(85svh,820px)] flex-col justify-end overflow-hidden border-b",
-          l.hero.dark && "is-dark",
-        )}
-      >
-        {l.hero.image && (
-          <>
-            <img
-              src={l.hero.image}
-              alt={l.hero.alt}
-              width={l.hero.width ?? 780}
-              height={l.hero.height ?? 439}
-              fetchPriority="high"
-              className={cn(
-                "absolute inset-0 -z-10 size-full",
-                l.hero.fit === "contain"
-                  ? "object-contain object-center p-8 opacity-90 lg:object-right lg:p-16"
-                  : "object-cover object-[60%_40%]",
-              )}
-            />
-            <div
-              aria-hidden="true"
-              className="absolute inset-0 -z-10 bg-[linear-gradient(to_top,var(--background)_4%,color-mix(in_oklch,var(--background)_35%,transparent)_45%,color-mix(in_oklch,var(--background)_55%,transparent)_100%)]"
-            />
-          </>
-        )}
-        <Container className="absolute inset-x-0 top-5">
-          <nav aria-label="Хлебные крошки" className="text-sm text-foreground-2">
-            {crumbs.slice(0, 2).map((c) => (
-              <span key={c.path}>
-                <a href={c.path} className="hover:text-foreground">{c.name}</a> /{" "}
-              </span>
-            ))}
-            <span>{p.name}</span>
-          </nav>
-        </Container>
-        <Container className="grid gap-8 pb-12 pt-24 lg:grid-cols-[1fr_auto] lg:items-end">
-          <div>
-            <p className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.08em] text-foreground-2">
-              <i aria-hidden="true" className={cn("size-1.5 rounded-full", p.status === "in_stock" ? "bg-ok" : "bg-warn")} />
-              {statusLabel[p.status]} · {brand}
-            </p>
-            <h1 className="mt-3 text-[clamp(48px,8.5vw,120px)] font-bold leading-[0.9] tracking-[-0.045em]">{l.h1}</h1>
-            <p className="mt-5 max-w-xl text-[clamp(18px,2vw,22px)] text-foreground-2">{l.tagline}</p>
-            <div className="mt-6 flex flex-wrap items-baseline gap-x-3 gap-y-1">
-              {p.priceEstimate ? (
-                <>
-                  <b className="font-mono text-2xl font-semibold tracking-tight tabular">от {fmt(p.priceEstimate)} ₽</b>
-                  <small className="text-sm text-muted-foreground">
-                    Ориентир по данным {p.priceSource} на {p.priceDate} · точную цену подтвердит менеджер
-                  </small>
-                </>
-              ) : (
-                <b className="text-2xl font-semibold tracking-tight">Цена по запросу</b>
+      {/* 1. Первый экран. Светлое студийное фото — чистые 2 колонки без пелены; тёмное — полноэкранная сцена */}
+      {l.hero.dark ? (
+        <section id="product-hero" className="is-dark relative isolate flex min-h-[min(85svh,820px)] flex-col justify-end overflow-hidden border-b">
+          {l.hero.image && (
+            <>
+              <img src={l.hero.image} alt={l.hero.alt} width={l.hero.width ?? 780} height={l.hero.height ?? 439} fetchPriority="high" className="absolute inset-0 -z-10 size-full object-cover object-[60%_40%]" />
+              <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[linear-gradient(to_top,var(--background)_4%,color-mix(in_oklch,var(--background)_35%,transparent)_45%,color-mix(in_oklch,var(--background)_55%,transparent)_100%)]" />
+            </>
+          )}
+          <Container className="pb-12 pt-24">{heroText}</Container>
+        </section>
+      ) : (
+        <section id="product-hero" className="border-b bg-surface">
+          <Container className="grid items-center gap-8 py-10 lg:min-h-[min(80svh,760px)] lg:grid-cols-2 lg:gap-12 lg:py-14">
+            <div className="order-2 lg:order-1">{heroText}</div>
+            <div className="order-1 flex aspect-[4/3] items-center justify-center lg:order-2 lg:aspect-square">
+              {l.hero.image && (
+                <img src={l.hero.image} alt={l.hero.alt} width={l.hero.width ?? 780} height={l.hero.height ?? 439} fetchPriority="high" className="size-full max-h-[640px] object-contain" />
               )}
             </div>
-            <div className="mt-7 flex flex-wrap gap-2.5">
-              <a
-                href="#order"
-                className="inline-flex min-h-11 items-center rounded-full bg-primary px-6 font-semibold text-primary-foreground transition-opacity duration-200 hover:opacity-85"
-              >
-                Заказать
-              </a>
-              <AddToCartButton
-                item={{
-                  slug: p.slug,
-                  name: p.name,
-                  brand,
-                  priceEstimate: p.priceEstimate,
-                  hasLanding: true,
-                }}
-              />
-              {l.versions && (
-                <a
-                  href="#versions"
-                  className="inline-flex min-h-11 items-center rounded-full border border-border-strong px-6 font-semibold transition-colors duration-200 hover:border-foreground"
-                >
-                  {l.versions.title}
-                </a>
-              )}
-            </div>
-          </div>
-          <dl className="hidden gap-8 sm:flex">
-            {l.keyNumbers.slice(0, 2).map((k) => (
-              <div key={k.label} className="flex flex-col">
-                <dt className="order-last mt-2 max-w-36 text-sm text-muted-foreground">{k.label}</dt>
-                <dd className="font-mono text-4xl font-medium tracking-tight tabular">{k.value}</dd>
-              </div>
-            ))}
-          </dl>
-        </Container>
-      </section>
+          </Container>
+        </section>
+      )}
 
       <ProductSubNav name={p.name} links={subLinks} />
 
@@ -208,7 +191,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             <StickyTech
               steps={l.tech}
               image={l.hero.image}
-              alt=""
+              alt={l.hero.alt ?? p.name}
               credit={l.hero.credit}
               width={l.hero.width}
               height={l.hero.height}

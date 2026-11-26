@@ -8,6 +8,7 @@ export function Footer() {
   const c = site.contacts;
   const links = [
     ...nav,
+    { href: "/selector/", label: "Подбор комплекта" },
     { href: "/how-to-order/", label: "Как заказать" },
     { href: "/compatibility/", label: "Совместимость" },
     { href: "/brands/", label: "Бренды" },

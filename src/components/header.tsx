@@ -15,6 +15,7 @@ const CATEGORY_META = [
 
 const EXTRA_LINKS = [
   { href: "/catalog/", label: "Весь каталог" },
+  { href: "/selector/", label: "Подбор комплекта" },
   { href: "/compatibility/", label: "Совместимость" },
   { href: "/compare/", label: "Сравнения" },
   { href: "/brands/", label: "Бренды" },
@@ -33,7 +34,9 @@ export function Header({ products }: { products: CatalogItemSummary[] }) {
   const [searchOpen, setSearchOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const flagships = products.filter((p) => p.hasLanding);
+  // В меню — 6 главных флагманов (решение Ника 26.11.2026), остальные — по ссылке «Все 17 моделей»
+  const FLAGSHIP_ORDER = ["roborock-saros-z70", "dreame-x50-ultra-complete", "unitree-go2", "unitree-g1", "aqara-hub-m3", "aqara-smart-lock-u300"];
+  const flagships = FLAGSHIP_ORDER.map((slug) => products.find((p) => p.slug === slug)).filter((p): p is CatalogItemSummary => !!p);
 
   useEffect(() => {
     const onDocClick = (e: MouseEvent) => {
@@ -88,7 +91,7 @@ export function Header({ products }: { products: CatalogItemSummary[] }) {
               </button>
 
               {dropdownOpen && (
-                <div className="absolute left-0 top-12 w-[640px] border bg-background p-6">
+                <div className="absolute left-0 top-12 max-h-[75vh] w-[640px] overflow-y-auto border bg-background p-6">
                   <div className="grid grid-cols-2 gap-8">
                     <div>
                       <p className="font-mono text-xs uppercase tracking-[0.08em] text-muted-foreground">Направления</p>
@@ -131,6 +134,9 @@ export function Header({ products }: { products: CatalogItemSummary[] }) {
                           </li>
                         ))}
                       </ul>
+                      <Link href="/catalog/" onClick={() => setDropdownOpen(false)} className="mt-3 block px-3 text-sm font-semibold text-foreground hover:underline underline-offset-4">
+                        Все {products.length} моделей →
+                      </Link>
                     </div>
                   </div>
                 </div>

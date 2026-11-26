@@ -39,7 +39,10 @@ export function llmsTxt() {
 - [Глоссарий технологий (${getGlossaryTerms().length} терминов)](${site.url}/glossary/): Matter, Thread, Zigbee, LiDAR, mmWave, SLAM, DoF, станции самоочистки
 ${p.length ? `- [Блог и гайды (${p.length} статей)](${site.url}/blog/): выбор роботов-пылесосов, мойщиков окон, умных замков и хабов\n` : ""}${n.length ? `- [Новости индустрии (${n.length} заметок)](${site.url}/news/): релизы брендов и разбор для покупателей в России\n` : ""}${home.categories.map((x) => `- ${x.title}: ${x.items.join(", ")}. ${x.text}`).join("\n")}
 
-${getLandings().length ? `## Товары\n${getLandings().map((l) => `- [${l.product.name}](${site.url}/products/${l.slug}/): ${l.tagline} Характеристики: ${site.url}/products/${l.slug}/specs/`).join("\n")}\n\n` : ""}${getGlossaryTerms().length ? `## Глоссарий\n${getGlossaryTerms().map((t) => `- [${t.name}](${site.url}/glossary/${t.slug}/): ${t.shortDecryption}`).join("\n")}\n\n` : ""}## Как заказать (${site.url}/how-to-order/)
+${getLandings().length ? `## Товары\n${getLandings().map((l) => `- [${l.product.name}](${site.url}/products/${l.slug}/): ${l.tagline} Характеристики: ${site.url}/products/${l.slug}/specs/`).join("\n")}\n\n` : ""}${getGlossaryTerms().length ? `## Глоссарий\n${getGlossaryTerms().map((t) => `- [${t.name}](${site.url}/glossary/${t.slug}/): ${t.shortDecryption}`).join("\n")}\n\n` : ""}## Подбор комплекта
+- [Подбор комплекта](${site.url}/selector/): 4 вопроса (площадь, пороги, животные, Алиса или Apple Home) → совместимая связка из моделей каталога с ориентиром суммы.
+
+## Как заказать (${site.url}/how-to-order/)
 ${home.steps.map((s, i) => `${i + 1}. ${s.title}: ${s.text}`).join("\n")}
 ${p.length ? `\n## Статьи\n${p.map((x) => `- [${x.title}](${site.url}/blog/${x.slug}/): ${x.description}`).join("\n")}\n` : ""}${n.length ? `\n## Новости\n${n.map((x) => `- [${x.title}](${site.url}/news/${x.slug}/): ${x.summary}`).join("\n")}\n` : ""}
 ## О компании

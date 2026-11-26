@@ -7,6 +7,9 @@ ErrorDocument 404 /404.html
 
 <IfModule mod_rewrite.c>
 RewriteEngine On
+# www → https://alymp.ru за один шаг (по имени хоста, не по %{HTTPS} — без цикла за nginx)
+RewriteCond %{HTTP_HOST} ^www\.alymp\.ru$ [NC]
+RewriteRule ^(.*)$ https://alymp.ru/$1 [R=301,L]
 # 301 переноса — сюда, по одному правилу на старый адрес (карта из specs/02-spec.md):
 RewriteRule ^products/?$ /catalog/ [R=301,L]
 </IfModule>

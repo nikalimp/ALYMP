@@ -7,7 +7,7 @@ type Pair = { title: string; with: string[]; text: string };
 function Thumb({ p }: { p?: Product }) {
   return (
     <span className="flex size-14 shrink-0 items-center justify-center bg-surface p-1.5 ring-1 ring-border">
-      {p?.media?.card ? <img src={p.media.card} alt="" width={56} height={56} loading="lazy" className="size-full object-contain" /> : <span className="font-mono text-[10px] text-muted-foreground">—</span>}
+      {p?.media?.card ? <img src={p.media.card} alt={p.media.alt ?? p.name} width={56} height={56} loading="lazy" className="size-full object-contain" /> : <span className="font-mono text-[10px] text-muted-foreground">—</span>}
     </span>
   );
 }

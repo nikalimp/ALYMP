@@ -7,6 +7,7 @@ import { FaqList } from "@/components/faq";
 import { JsonLd } from "@/components/json-ld";
 import { AddToCartButton } from "@/components/cart/add-to-cart-button";
 import { brandProfiles, brandSlugs, type BrandProfile } from "@/content/brands";
+import { brandName } from "@/lib/brands";
 import { getProducts } from "@/lib/products";
 import { getLandings } from "@/lib/landings";
 import { brandSchema, breadcrumbs, faqSchema, graph, itemListSchema } from "@/lib/schema";
@@ -33,7 +34,12 @@ export default async function BrandDetailPage({ params }: { params: Promise<{ sl
   const b = brandProfiles[slug];
   if (!b) notFound();
 
-  const products = getProducts().filter((p) => p.brand === slug);
+  const allProducts = getProducts();
+  const products = b.isMediaBrand
+    ? (b.alternativesInCatalog ?? [])
+        .map((s) => allProducts.find((p) => p.slug === s))
+        .filter((x): x is NonNullable<typeof x> => Boolean(x))
+    : allProducts.filter((p) => p.brand === slug);
   const readySlugs = new Set(getLandings().map((l) => l.slug));
 
   const crumbs = [
@@ -51,7 +57,7 @@ export default async function BrandDetailPage({ params }: { params: Promise<{ sl
       <JsonLd
         data={graph(
           brandSchema({ slug: b.slug, name: b.name, description: b.answer, url: b.officialUrl }),
-          itemListSchema(`Устройства ${b.name} в ALYMP`, listItems),
+          listItems.length > 0 && !b.isMediaBrand ? itemListSchema(`Устройства ${b.name} в ALYMP`, listItems) : null,
           faqSchema(b.faq),
           breadcrumbs(crumbs),
         )}
@@ -66,6 +72,14 @@ export default async function BrandDetailPage({ params }: { params: Promise<{ sl
             <Eyebrow>{b.country}{b.founded !== "—" ? ` · Основан в ${b.founded}` : ""}</Eyebrow>
             <h1 className="mt-3 text-[clamp(40px,6vw,84px)] font-bold leading-[0.94] tracking-[-0.04em]">{b.name}</h1>
             <p className="mt-6 max-w-4xl text-xl leading-relaxed text-foreground-2">{b.answer}</p>
+            {b.isMediaBrand && b.availabilityRu && (
+              <div className="mt-6 flex flex-wrap items-center justify-between gap-4 border-l-2 border-brand bg-muted/60 p-4 text-sm">
+                <p className="font-medium text-foreground">Статус в РФ: {b.availabilityRu}</p>
+                <Link href={b.newsLink ?? "/news/"} className="font-semibold text-brand underline underline-offset-4">
+                  Следить за релизами в новостях →
+                </Link>
+              </div>
+            )}
           </div>
         </Container>
       </Section>
@@ -73,8 +87,15 @@ export default async function BrandDetailPage({ params }: { params: Promise<{ sl
       <Section>
         <Container>
           <h2 className="text-[clamp(28px,4vw,48px)] font-bold leading-none tracking-[-0.03em]">
-            Устройства {b.name} в каталоге ({products.length})
+            {b.isMediaBrand
+              ? `Серийные альтернативы в каталоге ALYMP (${products.length})`
+              : `Устройства ${b.name} в каталоге (${products.length})`}
           </h2>
+          {b.isMediaBrand && (
+            <p className="mt-3 max-w-3xl text-foreground-2">
+              Пока {b.name} не продаётся официально в России, в ALYMP под заказ в собственность доступны серийные робототехнические платформы Unitree с подтверждёнными характеристиками.
+            </p>
+          )}
           <div className="mt-8 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
             {products.map((p) => {
               const hasLanding = readySlugs.has(p.slug);
@@ -108,7 +129,7 @@ export default async function BrandDetailPage({ params }: { params: Promise<{ sl
                       )}
                       <AddToCartButton
                         variant={hasLanding ? "outline" : "primary"}
-                        item={{ slug: p.slug, name: p.name, brand: b.name, priceEstimate: p.priceEstimate, hasLanding }}
+                        item={{ slug: p.slug, name: p.name, brand: brandName[p.brand] ?? b.name, priceEstimate: p.priceEstimate, hasLanding }}
                       />
                     </div>
                   </div>

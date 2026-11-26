@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Аудит точек роста ALYMP (alymp.ru) — UI/UX, Маркетинг, Копирайтинг</title>
+  <style>
+    :root {
+      --bg: #fafafa;
+      --surface: #ffffff;
+      --text: #14161a;
+      --muted: #5c6370;
+      --border: #e5e7eb;
+      --accent: #0f172a;
+      --blue: #2563eb;
+      --green: #15803d;
+      --amber: #b45309;
+      --red: #b91c1c;
+      --green-bg: #dcfce7;
+      --amber-bg: #fef3c7;
+      --red-bg: #fee2e2;
+      --blue-bg: #dbeafe;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 40px 20px 80px; }
+    header {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+    .eyebrow {
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    h1 { margin: 8px 0 12px; font-size: clamp(26px, 3.5vw, 38px); letter-spacing: -0.03em; line-height: 1.1; }
+    .lead { margin: 0; color: var(--muted); max-width: 760px; font-size: 16px; }
+    .kpis {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .kpi {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+    }
+    .kpi .val { font-family: ui-monospace, monospace; font-size: 26px; font-weight: 700; }
+    .kpi .lbl { font-size: 13px; color: var(--muted); margin-top: 4px; }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .tab {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+    .tab.active {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .card.hidden { display: none; }
+    .badges { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+    .badge {
+      font-family: ui-monospace, monospace;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .p0 { background: var(--red-bg); color: var(--red); }
+    .p1 { background: var(--amber-bg); color: var(--amber); }
+    .p2 { background: var(--blue-bg); color: var(--blue); }
+    .cat-tag { background: #f3f4f6; color: #374151; }
+    .card h3 { margin: 0; font-size: 18px; letter-spacing: -0.015em; }
+    .card p { margin: 0; font-size: 14px; color: var(--muted); }
+    .box {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px;
+      font-size: 13px;
+    }
+    .box strong { color: var(--text); display: block; margin-bottom: 4px; }
+    .file {
+      font-family: ui-monospace, monospace;
+      font-size: 12px;
+      color: var(--blue);
+      word-break: break-all;
+    }
+    .effect {
+      margin-top: auto;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--green);
+      font-weight: 600;
+    }
+
+    .matrix {
+      margin-top: 32px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      overflow-x: auto;
+    }
+    .matrix h2 { margin: 0 0 14px; font-size: 20px; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border); }
+    th { font-family: ui-monospace, monospace; font-size: 12px; text-transform: uppercase; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="eyebrow">ALYMP · Аудит сайта · 26.11.2026</div>
+      <h1>Точки роста alymp.ru: UI/UX, Маркетинг и Копирайтинг</h1>
+      <p class="lead">
+        Техническая база сайта уже на высоком уровне (136 страниц, slop-check 0/0, geo-check 8.7/10, 16 вырезанных студийных фото).
+        Ниже собраны 12 конкретных точек роста, найденных напрямую в коде и структуре alymp.ru, которые сильнее всего поднимут конверсию, удобство и органический трафик.
+      </p>
+      <div class="kpis">
+        <div class="kpi"><div class="val">136</div><div class="lbl">Страниц в сборке (109 в sitemap)</div></div>
+        <div class="kpi"><div class="val">4.6 / 10</div><div class="lbl">Живой geo-check прода (блок GPTBot/ClaudeBot!)</div></div>
+        <div class="kpi"><div class="val">5</div><div class="lbl">Критических (P0) точек роста</div></div>
+        <div class="kpi"><div class="val">13</div><div class="lbl">Всего предложений с привязкой к коду</div></div>
+      </div>
+    </header>
+
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-filter="all">Все (13)</button>
+      <button class="tab" data-filter="uiux">UI / UX (4)</button>
+      <button class="tab" data-filter="marketing">Маркетинг и конверсия (4)</button>
+      <button class="tab" data-filter="copy">Копирайтинг и SEO/GEO (5)</button>
+      <button class="tab" data-filter="p0">Только P0 (5)</button>
+    </div>
+
+    <div class="grid" id="cards">
+      <!-- UI/UX -->
+      <article class="card" data-cat="uiux" data-prio="p0">
+        <div class="badges"><span class="badge p0">P0 · Срочно</span><span class="badge cat-tag">UI / UX</span></div>
+        <h3>1. Выпадающее меню «Каталог» уходит за экран</h3>
+        <p>В правой колонке dropdown выводятся все 17 товаров с лендингами разом. На экранах ноутбуков (768–900 px по высоте) нижняя часть меню обрезается за пределами окна.</p>
+        <div class="box"><strong>Решение:</strong>Показать 5–6 главных флагманов + ссылку «Все 17 моделей →» и задать `max-h-[75vh] overflow-y-auto`.</div>
+        <div class="file">src/components/header.tsx (строки 36, 91–134)</div>
+        <div class="effect">Эффект: чистая навигация на любых ноутбуках без обрезки</div>
+      </article>
+
+      <article class="card" data-cat="uiux" data-prio="p0">
+        <div class="badges"><span class="badge p0">P0 · Срочно</span><span class="badge cat-tag">UI / UX</span></div>
+        <h3>2. Техническая заглушка KaringBee на главной витрине</h3>
+        <p>У KaringBee HCR011 нет официального фото, поэтому прямо в сетке главной страницы выводится текст «Фото — после паспорта дистрибьютора». Это ломает премиальное ощущение магазина.</p>
+        <div class="box"><strong>Решение:</strong>Убрать KaringBee с главной витрины (оставить 16 чистых белых студийных карточек) или заменить на HOBOT SP10 / WINBOT W3 OMNI.</div>
+        <div class="file">src/app/page.tsx · src/components/showcase.tsx (строка 44)</div>
+        <div class="effect">Эффект: 100% визуально безупречная витрина без «недостроя»</div>
+      </article>
+
+      <article class="card" data-cat="uiux" data-prio="p1">
+        <div class="badges"><span class="badge p1">P1 · Важно</span><span class="badge cat-tag">UI / UX</span></div>
+        <h3>3. Белое фото товара под градиентной пеленой в Product Hero</h3>
+        <p>После вырезки фона белые фото в шапке лендингов перекрываются `opacity-90` и градиентом поверх изображения. На ширине 1024–1280 px крупный H1 наезжает на силуэт товара.</p>
+        <div class="box"><strong>Решение:</strong>Сделать чистую 2-колоночную сцену на светлых товарах (типографика и CTA слева, чистое белое фото справа без пелены и наезда).</div>
+        <div class="file">src/app/products/[slug]/page.tsx (строки 95–133)</div>
+        <div class="effect">Эффект: +качество восприятия на уровне apple.com/mac</div>
+      </article>
+
+      <article class="card" data-cat="uiux" data-prio="p1">
+        <div class="badges"><span class="badge p1">P1 · Важно</span><span class="badge cat-tag">UI / UX</span></div>
+        <h3>4. Быстрые табы категорий и опциональный порядок цены на главной</h3>
+        <p>Покупатель на главной видит 17 товаров подряд без фильтрации по направлениям и без ориентира цены (от 15 990 ₽ до 1 900 000 ₽). Чтобы понять бюджет, нужно открыть карточку.</p>
+        <div class="box"><strong>Решение:</strong>Добавить минималистичный переключатель «Все · Уборка · Умный дом · Роботы» над сеткой и (опционально) тонкую строку цены `от … ₽` под описанием.</div>
+        <div class="file">src/app/page.tsx · src/components/showcase.tsx</div>
+        <div class="effect">Эффект: быстрее путь до нужной категории на 30–40%</div>
+      </article>
+
+      <!-- Маркетинг и конверсия -->
+      <article class="card" data-cat="marketing" data-prio="p0">
+        <div class="badges"><span class="badge p0">P0 · Главная потеря лидов</span><span class="badge cat-tag">Маркетинг / CRO</span></div>
+        <h3>5. Форма заказа не отправляет заявку сама (ручной переход в Telegram)</h3>
+        <p>Сейчас `leadApi = false`: клиент заполняет форму, а потом получает экран «Отправьте этот текст в Telegram». Повторное действие в другом приложении срезает до 40–60% заявок.</p>
+        <div class="box"><strong>Решение:</strong>Закрыть задачу T54 (`public/api/lead.php`): мгновенная отправка в Telegram-бот и на почту с сайта + сохранение резервной копии на хостинге и цель Метрики `lead`.</div>
+        <div class="file">src/components/product/order-form.tsx · src/components/cart/cart-drawer.tsx</div>
+        <div class="effect">Эффект: рост конверсии заявок в 1,5–2 раза</div>
+      </article>
+
+      <article class="card" data-cat="marketing" data-prio="p1">
+        <div class="badges"><span class="badge p1">P1 · Важно</span><span class="badge cat-tag">Маркетинг / CRO</span></div>
+        <h3>6. Спрятаны главные козыри: Сравнения и Совместимость с Алисой</h3>
+        <p>На главной ссылки на `/compare/` и `/compatibility/` стоят мелким текстом `text-sm` в самом низу под 17 карточками. Сомневающийся покупатель их не замечает.</p>
+        <div class="box"><strong>Решение:</strong>Добавить компактную 2-плиточную полосу-навигатор («Совместимость с Алисой и Matter» + «Честные сравнения флагманов») сразу после первых 6 товаров.</div>
+        <div class="file">src/app/page.tsx (строки 49–51)</div>
+        <div class="effect">Эффект: рост глубины просмотра и доверия к экспертизе ALYMP</div>
+      </article>
+
+      <article class="card" data-cat="marketing" data-prio="p1">
+        <div class="badges"><span class="badge p1">P1 · Средний чек</span><span class="badge cat-tag">Маркетинг / CRO</span></div>
+        <h3>7. Интерактивный подборщик комплекта под квартиру (фишка ALYMP)</h3>
+        <p>В концепции ALYMP заложен подбор совместимых устройств, но на сайте пока нет простого квиза на 4 вопроса (площадь, пороги, животные, Алиса/Apple Home) → готовая связка в корзину.</p>
+        <div class="box"><strong>Решение:</strong>Сделать лёгкую клиентскую страницу `/selector/` (без бэкенда, на правилах из JSON товаров) с добавлением всей связки в корзину в 1 клик.</div>
+        <div class="file">Новый раздел: src/app/selector/page.tsx</div>
+        <div class="effect">Эффект: рост среднего чека за счёт продажи связок (робот + хаб + датчики)</div>
+      </article>
+
+      <article class="card" data-cat="marketing" data-prio="p2">
+        <div class="badges"><span class="badge p2">P2 · Рост</span><span class="badge cat-tag">Маркетинг / CRO</span></div>
+        <h3>8. Нет захвата холодного трафика из блога, новостей и глоссария</h3>
+        <p>На сайте уже 67 информационных страниц (50 терминов + 7 гайдов + 10 новостей), которые скоро начнут собирать SEO/GEO-трафик, но у них нет нативного коммерческого CTA в конце текста.</p>
+        <div class="box"><strong>Решение:</strong>Встроить аккуратный блок «Подобрать устройство с этой технологией / Спросить в Telegram» внизу каждой статьи и термина.</div>
+        <div class="file">src/app/blog/[slug]/page.tsx · src/app/glossary/[slug]/page.tsx</div>
+        <div class="effect">Эффект: конвертация информационного трафика в диалоги и заявки</div>
+      </article>
+
+      <!-- Копирайтинг и SEO/GEO -->
+      <article class="card" data-cat="copy" data-prio="p0">
+        <div class="badges"><span class="badge p0">P0 · Блокер GEO</span><span class="badge cat-tag">SEO / GEO (живой прод)</span></div>
+        <h3>0. Хостинг режет GPTBot и ClaudeBot (geo-check 4.6/10)</h3>
+        <p>Живой прогон `geo-check.py https://alymp.ru` показал: сервер возвращает сброс соединения (`0`) ботам GPTBot и ClaudeBot (WAF/антибот хостинга), TTFB главной 1.13 с, а на лендингах найдено 7–10 картинок с пустым alt.</p>
+        <div class="box"><strong>Решение:</strong>1) Отключить блокировку AI-ботов в панели REG.RU / WAF; 2) Починить прямой редирект www → https; 3) Добавить корректные `alt` на миниатюры в компонентах.</div>
+        <div class="file">Панель хостинга REG.RU · src/components/product/scenarios.tsx · public/.htaccess</div>
+        <div class="effect">Эффект: возврат индексации ChatGPT и Claude + рост geo-check с 4.6 до 9.0+</div>
+      </article>
+
+      <article class="card" data-cat="copy" data-prio="p0">
+        <div class="badges"><span class="badge p0">P0 · Аккуратность</span><span class="badge cat-tag">Копирайтинг</span></div>
+        <h3>9. Сырой URL в подписи цены на продуктовых лендингах</h3>
+        <p>Под ценой выводится строка «Ориентир по данным https://aqara.ru/ на 2026-11-25». Технический протокол `https://` и ISO-дата `2026-11-25` режут глаз покупателю премиальной техники.</p>
+        <div class="box"><strong>Решение:</strong>Форматировать источник как чистый домен-ссылку (`aqara.ru`), а дату — по-русски (`25 ноября 2026`).</div>
+        <div class="file">src/app/products/[slug]/page.tsx (строка 139)</div>
+        <div class="effect">Эффект: чистая редакционная типографика без технического шума</div>
+      </article>
+
+      <article class="card" data-cat="copy" data-prio="p1">
+        <div class="badges"><span class="badge p1">P1 · Позиционирование</span><span class="badge cat-tag">Копирайтинг</span></div>
+        <h3>10. H1 главной звучит как каталог, а не как бренд новой эры</h3>
+        <p>Текущий H1 «Роботы и умный дом. 17 флагманов с официальной гарантией в России.» — точный, но сухой. Он не передаёт образ «дом, который работает сам» (как в ДНК ALYMP).</p>
+        <div class="box"><strong>Решение:</strong>Сделать H1 короче и сильнее, например: «Дом, который работает сам. 17 флагманских роботов и систем умного дома с гарантией в России.»</div>
+        <div class="file">src/app/page.tsx (строка 31)</div>
+        <div class="effect">Эффект: сильнее первое впечатление и отстройка от маркетплейсов</div>
+      </article>
+
+      <article class="card" data-cat="copy" data-prio="p2">
+        <div class="badges"><span class="badge p2">P2 · SEO / GEO</span><span class="badge cat-tag">SEO / GEO</span></div>
+        <h3>11. Медийные страницы брендов роботов будущего</h3>
+        <p>В новостях уже отслеживаются Tesla, Boston Dynamics, Figure AI и 1X, но в `/brands/` только 5 брендов каталога. Отдельные страницы лидеров собирают высокий спрос по гуманоидам.</p>
+        <div class="box"><strong>Решение:</strong>Добавить 4–5 профилей мировых лидеров робототехники в `/brands/` с честным статусом доступности в РФ и перелинковкой на доступные Unitree Go2 и G1.</div>
+        <div class="file">src/app/brands/[slug]/page.tsx · src/lib/brands.ts</div>
+        <div class="effect">Эффект: дополнительный органический и GEO-трафик по запросам будущего</div>
+      </article>
+
+      <article class="card" data-cat="copy" data-prio="p2">
+        <div class="badges"><span class="badge p2">P2 · Доверие</span><span class="badge cat-tag">Копирайтинг</span></div>
+        <h3>12. Конкретика сроков гарантии и доставки в РФ</h3>
+        <p>В текстах указано «официальная гарантия в России», но без сроков (12 / 24 / 36 месяцев по брендам) и без ориентира сроков доставки по Москве и регионам.</p>
+        <div class="box"><strong>Решение:</strong>После ответа 3Logic / diHouse проставить точные сроки гарантии и доставки на `/how-to-order/` и в блоке заказа лендингов.</div>
+        <div class="file">src/content/how-to-order.ts · src/app/products/[slug]/page.tsx</div>
+        <div class="effect">Эффект: снимает главный страх покупки дорогой техники онлайн</div>
+      </article>
+    </div>
+
+    <section class="matrix">
+      <h2>Сводная карта приоритетов</h2>
+      <table>
+        <thead>
+          <tr><th>Приоритет</th><th>Улучшение</th><th>Направление</th><th>Сложность</th><th>Влияние</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="badge p0">P0</span></td><td>Серверная отправка заявок (`lead.php` + Telegram-бот)</td><td>Маркетинг / CRO</td><td>Низкая</td><td>Очень высокое</td></tr>
+          <tr><td><span class="badge p0">P0</span></td><td>Исправить высоту dropdown «Каталог» (5–6 флагманов вместо 17)</td><td>UI / UX</td><td>Низкая</td><td>Высокое</td></tr>
+          <tr><td><span class="badge p0">P0</span></td><td>Убрать заглушку KaringBee с главной витрины</td><td>UI / UX</td><td>Низкая</td><td>Высокое</td></tr>
+          <tr><td><span class="badge p0">P0</span></td><td>Красивое форматирование источника цены и русской даты</td><td>Копирайтинг</td><td>Низкая</td><td>Среднее</td></tr>
+          <tr><td><span class="badge p1">P1</span></td><td>Чистый 2-колоночный Product Hero без пелены поверх фото</td><td>UI / UX</td><td>Средняя</td><td>Высокое</td></tr>
+          <tr><td><span class="badge p1">P1</span></td><td>Интерактивный подборщик комплекта (`/selector/`)</td><td>Маркетинг / CRO</td><td>Средняя</td><td>Очень высокое</td></tr>
+          <tr><td><span class="badge p1">P1</span></td><td>Вынести «Сравнения» и «Совместимость» выше на главной</td><td>Маркетинг / CRO</td><td>Низкая</td><td>Высокое</td></tr>
+          <tr><td><span class="badge p2">P2</span></td><td>Нативный CTA-виджет в конце статей блога и глоссария</td><td>Маркетинг / SEO</td><td>Низкая</td><td>Среднее</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const cards = document.querySelectorAll('.card');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const f = tab.dataset.filter;
+        cards.forEach(card => {
+          const match = f === 'all' || card.dataset.cat === f || card.dataset.prio === f;
+          card.classList.toggle('hidden', !match);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

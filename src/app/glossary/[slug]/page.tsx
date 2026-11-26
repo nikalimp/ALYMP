@@ -1,3 +1,4 @@
+import { SelectorCta } from "@/components/selector-cta";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -167,6 +168,7 @@ export default async function GlossaryTermPage({ params }: { params: Promise<{ s
           <FaqList items={t.faq} />
         </Container>
       </Section>
+      <SelectorCta />
     </>
   );
 }

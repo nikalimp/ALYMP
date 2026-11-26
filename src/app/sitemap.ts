@@ -31,6 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${site.url}/glossary/`, priority: 0.85 },
     ...terms.map((t) => ({ url: `${site.url}/glossary/${t.slug}/`, priority: 0.75 })),
     { url: `${site.url}/how-to-order/`, priority: 0.75 },
+    { url: `${site.url}/selector/`, priority: 0.8 },
     { url: `${site.url}/about/`, priority: 0.6 },
     { url: `${site.url}/contacts/`, priority: 0.6 },
     ...(site.features.blog && posts.length ? [{ url: `${site.url}/blog/`, lastModified: posts.map((p) => p.updated ?? p.date).sort().at(-1), priority: 0.7 }] : []),

@@ -7,7 +7,7 @@ import { blogRubrics, formatDate, getPost, getPosts } from "@/lib/posts";
 import { site } from "@/content/site";
 import { Container, Eyebrow, Section } from "@/components/container";
 import { Crumbs } from "@/components/crumbs";
-import { Cta } from "@/components/cta";
+import { SelectorCta } from "@/components/selector-cta";
 import { JsonLd } from "@/components/json-ld";
 import { articleSchema, breadcrumbs, faqSchema, graph } from "@/lib/schema";
 
@@ -86,7 +86,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
           )}
         </Container>
       </Section>
-      <Cta />
+      <SelectorCta />
     </>
   );
 }

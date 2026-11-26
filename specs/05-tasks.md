@@ -84,7 +84,7 @@
 - [x] **T51** `/how-to-order/` — *проверка:* ≥ 250 слов, HowTo + FAQPage, подключено в меню, sitemap и `llms.txt`
 - [ ] **T52** `/about/`, `/contacts/` — *проверка:* AboutPage, ContactPage
 - [ ] **T53** Политика ПДн и согласие под форму заказа и передачу в Telegram — *spec:* §7 · *проверка:* `npm run check` видит обе страницы
-- [ ] **T54** `public/api/lead.php`: запись на хостинге → Telegram → почта; `config.php` вне git — *plan:* §5 · *проверка:* тестовая заявка дошла, запись в `api/leads/`
+- [x] **T54** `public/api/lead.php`: запись на хостинге → Telegram → почта; `config.php` вне git — *plan:* §5 · *проверка:* тестовая заявка дошла, запись в `api/leads/`
 
 ## Блок 9. GEO и SEO
 - [ ] **T55** `llms.txt`, `llms-full.txt`: товары, сравнения, термины, совместимость, новости — *проверка:* geo-check без ошибок
@@ -117,6 +117,7 @@
 | T03 | Публичные контакты | Ник | nikitaalimpiev@mail.ru (временно), t.me/nikalimp, +7 909 019-97-80 — 25.11.2026 |
 
 ## Журнал
+- 26.11.2026 — пакет аудита (PR claude/audit-ux-upgrade): меню каталога — 6 флагманов + «Все 17 моделей», главная без KaringBee и с блоком «Новости / Статьи», новый H1, лендинги — 2 колонки на светлых фото, подпись цены «аqara.ru · 25 ноября 2026», alt у миниатюр, www → https://alymp.ru одним шагом, /selector/ (подбор комплекта), CTA в блоге и глоссарии, T54 lead.php + config.example.php (leadApi=false до config.php на сервере).
 - 25.11.2026 — Спринт 4А (`gemini/block-6-glossary`, Блок 6: T39–T43): собран хаб `/glossary/` (`DefinedTermSet` + `ItemList`), шаблон `/glossary/[slug]/` (`DefinedTerm` + `FAQPage` + `BreadcrumbList`), автоперелинковка `linkTerms` (15/17 лендингов автоматически ссылаются на глоссарий) и все 50 терминов на английских slug (450–606 слов на термин, омонимы Thread/Threads и Matter/Mattermost разведены). `npm run check` зелёный (119/119 страниц, 90 в sitemap, `geo-check` 8.2/10, Главред 7.5+), `slop-check` 0/0/0.
 - 25.11.2026 — Спринт 3 (`gemini/sprint-3-media-and-order`, T15 + T51): собраны официальные пресс-фото для 16 из 17 товаров (исходники в `media/press/<slug>/`, оптимизированные `hero.webp` и `card.webp` в `public/media/products/<slug>/`, суммарный вес бандла картинок 897,7 КБ). Фото подключены в `content/products/*.json`, `content/landings/*.json`, Hero-слайдер, витрину, каталог, категории и продуктовые лендинги. Собрана страница `/how-to-order/` (`HowTo` + `FAQPage`, подключена в навигацию, sitemap и `llms.txt`). `npm run check` зелёный (68/68 страниц, 0 предупреждений, `geo-check` 8.7/10, Главред 7.5+), `slop-check` 0/0/0.
 - 25.11.2026 — Спринт 2Б (`gemini/block-4-all-landings`, Блок 4: T23–T26, T28, T30–T34 + `hobot-sp10`, `ecovacs-winbot-w3-omni`): созданы оставшиеся 12 Apple-style продуктовых лендингов, закрыты все 17/17 товаров каталога. Объём — 1259–1500 слов на 16 лендингах и 788 слов на `karingbee-hcr011` (без выдуманных характеристик). В `aqara-fp400` FP2 вынесен в `title` и `H2`; в `aqara-camera-hub-g5-pro` нет упоминаний распознавания лиц; в `unitree-g1` версии Basic/EDU и флажок «Для организации». `npm run check` зелёный (67/67 страниц, `geo-check` 8.7/10, Главред 7.5+), `slop-check` 0/0/0.

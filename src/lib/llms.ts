@@ -35,7 +35,7 @@ export function llmsTxt() {
 - [Каталог (17 устройств)](${site.url}/catalog/): [Автономная уборка](${site.url}/catalog/cleaning-robots/), [Умный дом Aqara](${site.url}/catalog/smart-home/), [Роботы Unitree](${site.url}/catalog/robots/)
 - [Матрица совместимости](${site.url}/compatibility/): Алиса, Matter, Thread, Zigbee, Apple HomeKit, Home Assistant, Wi-Fi
 - [Сравнения моделей](${site.url}/compare/): 6 прямых пар флагманов по официальным данным
-- [Бренды ALYMP](${site.url}/brands/): Roborock, Dreame, Aqara, Unitree Robotics, KaringBee
+- [Бренды ALYMP](${site.url}/brands/): Roborock, Dreame, Aqara, Unitree Robotics, KaringBee + обзоры мировых лидеров робототехники ([Tesla Optimus](${site.url}/brands/tesla/), [Boston Dynamics](${site.url}/brands/boston-dynamics/), [Figure AI](${site.url}/brands/figure-ai/), [1X Technologies](${site.url}/brands/1x/))
 - [Глоссарий технологий (${getGlossaryTerms().length} терминов)](${site.url}/glossary/): Matter, Thread, Zigbee, LiDAR, mmWave, SLAM, DoF, станции самоочистки
 ${p.length ? `- [Блог и гайды (${p.length} статей)](${site.url}/blog/): выбор роботов-пылесосов, мойщиков окон, умных замков и хабов\n` : ""}${n.length ? `- [Новости индустрии (${n.length} заметок)](${site.url}/news/): релизы брендов и разбор для покупателей в России\n` : ""}${home.categories.map((x) => `- ${x.title}: ${x.items.join(", ")}. ${x.text}`).join("\n")}
 

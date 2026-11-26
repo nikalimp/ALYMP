@@ -7,4 +7,8 @@ export const brandName: Record<string, string> = {
   karingbee: "KaringBee",
   hobot: "HOBOT",
   ecovacs: "Ecovacs",
+  tesla: "Tesla Optimus",
+  "boston-dynamics": "Boston Dynamics",
+  "figure-ai": "Figure AI",
+  "1x": "1X Technologies",
 };

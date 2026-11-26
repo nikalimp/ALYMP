@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { Container, Eyebrow, Section } from "@/components/container";
 import { FaqList } from "@/components/faq";
 import { JsonLd } from "@/components/json-ld";
-import { brandProfiles, brandSlugs } from "@/content/brands";
+import { brandProfiles, brandSlugs, catalogBrandSlugs, mediaBrandSlugs } from "@/content/brands";
 import { getProducts } from "@/lib/products";
 import { faqSchema, graph, itemListSchema } from "@/lib/schema";
 import type { Faq } from "@/content/types";
@@ -26,7 +26,7 @@ const BRANDS_FAQ: Faq[] = [
 
 export const metadata: Metadata = {
   title: "Бренды ALYMP: Roborock, Dreame, Aqara, Unitree",
-  description: "5 ключевых производителей каталога ALYMP: Roborock, Dreame, Aqara, Unitree Robotics и KaringBee. Официальные факты, технологии и устройства в России.",
+  description: "5 производителей каталога ALYMP (Roborock, Dreame, Aqara, Unitree, KaringBee) и 4 мировых лидера робототехники (Tesla, Boston Dynamics, Figure AI, 1X).",
   alternates: { canonical: "/brands/" },
 };
 
@@ -43,10 +43,10 @@ export default function BrandsPage() {
 
       <Section className="border-b pb-12 pt-14">
         <Container>
-          <Eyebrow>Производители · 5 профилей</Eyebrow>
+          <Eyebrow>Производители · {catalogBrandSlugs.length} в каталоге и {mediaBrandSlugs.length} мировых лидера</Eyebrow>
           <h1 className="mt-3 text-[clamp(40px,6vw,84px)] font-bold leading-[0.94] tracking-[-0.04em]">Бренды ALYMP</h1>
           <p className="mt-6 max-w-4xl text-xl leading-relaxed text-foreground-2">
-            В каталоге ALYMP представлены производители, которые задают стандарты в домашней робототехнике и умном доме: Roborock, Dreame, Aqara, Unitree Robotics и KaringBee (а также флагманские мойщики окон Ecovacs и HOBOT). На странице каждого бренда собраны проверенные факты с официальных сайтов, ключевые технологии и список доступных моделей.
+            В каталоге ALYMP представлены производители, которые задают стандарты в домашней робототехнике и умном доме: Roborock, Dreame, Aqara, Unitree Robotics и KaringBee (а также флагманские мойщики окон Ecovacs и HOBOT). Отдельно мы ведём профили мировых лидеров робототехники, которые пока не продаются в России, но определяют будущее отрасли.
           </p>
         </Container>
       </Section>
@@ -54,7 +54,7 @@ export default function BrandsPage() {
       <Section>
         <Container>
           <div className="grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
-            {brandSlugs.map((slug) => {
+            {catalogBrandSlugs.map((slug) => {
               const b = brandProfiles[slug];
               const count = products.filter((p) => p.brand === slug).length;
               return (
@@ -73,6 +73,44 @@ export default function BrandsPage() {
                   <div className="mt-6 border-t pt-4">
                     <Link href={`/brands/${slug}/`} className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand">
                       <span>Страница бренда</span>
+                      <ArrowRight className="size-4" strokeWidth={1.5} aria-hidden="true" />
+                    </Link>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </Container>
+      </Section>
+
+      <Section className="border-t">
+        <Container>
+          <Eyebrow>Обзор индустрии · нет официальных продаж в РФ</Eyebrow>
+          <h2 className="mt-3 text-[clamp(28px,4vw,48px)] font-bold leading-none tracking-[-0.03em]">
+            Мировые лидеры робототехники
+          </h2>
+          <p className="mt-4 max-w-3xl text-foreground-2">
+            Эти компании не поставляют роботов в Россию официально. Мы собираем проверенные технические данные с их официальных сайтов, следим за релизами в новостях и показываем серийные альтернативы, доступные под заказ уже сегодня.
+          </p>
+          <div className="mt-8 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-4">
+            {mediaBrandSlugs.map((slug) => {
+              const b = brandProfiles[slug];
+              return (
+                <article key={slug} className="flex flex-col justify-between bg-card p-6">
+                  <div>
+                    <p className="font-mono text-[11px] uppercase tracking-[0.06em] text-muted-foreground">
+                      {b.country}
+                    </p>
+                    <h3 className="mt-3 text-xl font-bold tracking-[-0.02em]">
+                      <Link href={`/brands/${slug}/`} className="hover:underline underline-offset-4">
+                        {b.name}
+                      </Link>
+                    </h3>
+                    <p className="mt-2.5 text-sm leading-relaxed text-foreground-2">{b.short}</p>
+                  </div>
+                  <div className="mt-6 border-t pt-4">
+                    <Link href={`/brands/${slug}/`} className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand">
+                      <span>Обзор и статус в РФ</span>
                       <ArrowRight className="size-4" strokeWidth={1.5} aria-hidden="true" />
                     </Link>
                   </div>

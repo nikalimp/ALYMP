@@ -1,10 +1,10 @@
 "use client";
 // Форма «Заказать» (spec §7, T18). Чекбокс согласия — отдельный и не отмечен (152-ФЗ, стандарт §8.1).
-// Обработчик /api/lead.php — задача T54. Пока его нет (site.features.leadApi = false), заявка уходит в Telegram с готовым текстом.
+// Обработчик /api/lead.php — стандарт NikitOS (запись в общий leads.jsonl + Telegram + почта).
 import { useEffect, useState } from "react";
 import { site } from "@/content/site";
 
-export function OrderForm({ product, variants, b2b }: { product: string; variants: string[]; b2b: boolean }) {
+export function OrderForm({ product, slug = "", variants, b2b }: { product: string; slug?: string; variants: string[]; b2b: boolean }) {
   const [org, setOrg] = useState(false);
   const [state, setState] = useState<"idle" | "sending" | "sent" | "fallback" | "error">("idle");
   const [text, setText] = useState("");
@@ -31,7 +31,19 @@ export function OrderForm({ product, variants, b2b }: { product: string; variant
     }
     setState("sending");
     try {
-      const r = await fetch("/api/lead.php", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ ...data, product, organization: org, via: "site" }) });
+      const r = await fetch("/api/lead.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...data,
+          product,
+          offer: slug,
+          organization: org,
+          consent: Boolean(f.get("consent")),
+          page: window.location.pathname,
+          via: "site",
+        }),
+      });
       if (!r.ok) throw new Error(String(r.status));
       setState("sent");
       (window as unknown as { ym?: (...a: unknown[]) => void }).ym?.(site.metrikaId, "reachGoal", "lead");
@@ -84,6 +96,7 @@ export function OrderForm({ product, variants, b2b }: { product: string; variant
           <input name="company" autoComplete="organization" className={field} />
         </label>
       )}
+      <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
       <label className="sm:col-span-2">
         <span className="text-sm font-medium">Комментарий</span>
         <textarea name="comment" rows={3} className={field.replace("min-h-11", "min-h-24 py-2.5")} />

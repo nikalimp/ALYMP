@@ -70,7 +70,15 @@ export function CartDrawer({ catalog = [] }: { catalog?: CatalogItemSummary[] })
       const r = await fetch("/api/lead.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, items, estimatedTotal, via: "cart" }),
+        body: JSON.stringify({
+          ...data,
+          items,
+          estimatedTotal,
+          offer: "cart",
+          consent: Boolean(f.get("consent")),
+          page: window.location.pathname,
+          via: "cart",
+        }),
       });
       if (!r.ok) throw new Error(String(r.status));
       setState("sent");
@@ -233,6 +241,7 @@ export function CartDrawer({ catalog = [] }: { catalog?: CatalogItemSummary[] })
               </div>
 
               <form onSubmit={submit} className="mt-6 space-y-4" aria-label="Оформление заявки из корзины">
+                <input type="text" name="website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
                 <label className="block">
                   <span className="text-sm font-medium">Имя</span>
                   <input name="name" required autoComplete="name" className={field} />

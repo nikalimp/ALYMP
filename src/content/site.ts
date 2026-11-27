@@ -80,7 +80,7 @@ export const site = {
     glossary: true, // глоссарий — блок 6 (T39–T43)
     news: true, // новости и автопарсер — T44–T46
     cart: true, // корзина-заявка без онлайн-оплаты (Спринт 1)
-    leadApi: false, // /api/lead.php — T54; пока заявка уходит в Telegram с готовым текстом
+    leadApi: true, // /api/lead.php — общий стандарт NikitOS (leads.jsonl + Telegram + почта)
   },
 };
 

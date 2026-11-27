@@ -322,7 +322,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             </ul>
           </aside>
           <div className="bg-background p-6 sm:p-10">
-            <OrderForm product={p.name} variants={p.variants} b2b={b2b} />
+            <OrderForm product={p.name} slug={p.slug} variants={p.variants} b2b={b2b} />
           </div>
         </Container>
       </Section>

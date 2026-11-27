@@ -1,0 +1,123 @@
+{
+  "factory_version": 2,
+  "project": "alymp.ru",
+  "site": "https://alymp.ru",
+  "root": "../..",
+  "stack": "nextjs-github",
+  "language": "ru",
+  "timezone": "Europe/Moscow",
+  "cadence": "20",
+  "approval": false,
+  "author": "Редакция ALYMP",
+  "voice_mode": "brand",
+  "paths": {
+    "plan": "content/factory/plan.md",
+    "voice": [
+      "content/factory/voice.md"
+    ],
+    "facts": "specs/decisions.md",
+    "brand": "content/factory/brand.json",
+    "journal": "content/factory/plan.md",
+    "reports": "content/factory/reports/{date}-weekly.md",
+    "article": "content/blog/{slug}.md",
+    "media_spec": "content/media/{slug}.json",
+    "media_out": "public/blog/{slug}",
+    "photos": "public",
+    "drafts": "content/factory/drafts/{slug}.md",
+    "strategy": "content/factory/strategy.md",
+    "secrets": "content/factory/.env",
+    "channels_registry": "content/media/channels.json"
+  },
+  "article": {
+    "url": "https://alymp.ru/blog/{slug}/",
+    "image_url": "/blog/{slug}/",
+    "cover_url": "",
+    "frontmatter_required": [
+      "title",
+      "description",
+      "date",
+      "rubric",
+      "author"
+    ],
+    "frontmatter_optional": [
+      "updated"
+    ],
+    "rubrics": {
+      "cleaning": "Уборка",
+      "smart-home": "Умный дом",
+      "robots": "Роботы и ИИ",
+      "guides": "Гайды"
+    },
+    "photo_field": "",
+    "cover_rule": "ИИ-генерация изображений запрещена (DESIGN.md). Для статей используются только официальные пресс-фото брендов или типографическая вёрстка без обложек."
+  },
+  "links": {
+    "blog_prefix": "/blog/",
+    "internal": [
+      "/blog/",
+      "/glossary/",
+      "/products/",
+      "/compare/",
+      "/scenarios/",
+      "/compatibility/",
+      "/brands/",
+      "/catalog/"
+    ],
+    "products_dir": "content/products",
+    "glossary_file": "content/glossary/terms.json"
+  },
+  "rules": {
+    "meta_asterisk": true,
+    "forbidden": [
+      "3Logic",
+      "diHouse",
+      "Robort",
+      "robort.ru",
+      "аренда",
+      "лучший",
+      "уникальный",
+      "инновационный",
+      "революционный",
+      "ИИ-подборщик"
+    ],
+    "emoji": false,
+    "first_person": false,
+    "ai_images": false,
+    "glavred_min": 8.0
+  },
+  "publish": {
+    "how": "Push в репозиторий nikalimp/ALYMP (ветка main): статья в content/blog/<slug>.md с frontmatter (title, description, date, updated, rubric, author) и разделом «## Частые вопросы» → коммит «статья: <заголовок>» → .github/workflows/deploy.yml (npm run check → выкладка на REG.RU alymp.ru).",
+    "verify": "https://alymp.ru/blog/{slug}/",
+    "wait_minutes": 10
+  },
+  "channels": {
+    "runner": "ci",
+    "telegram": null,
+    "telegram_public": null,
+    "max": null,
+    "enabled": false
+  },
+  "notify": "telegram_bot",
+  "analytics": {
+    "metrika": "alymp.ru",
+    "metrika_id": 114661158,
+    "webmaster": "alymp.ru",
+    "gsc": "alymp.ru",
+    "geo_pool": "content/factory/strategy.md"
+  },
+  "schedule": {
+    "daily": "Пн–Пт 11:11 Asia/Bangkok",
+    "weekly": "Пт 11:11 Asia/Bangkok (отчёт), Сб 11:11 (копирайтинг)"
+  },
+  "tasks": {
+    "daily": "Контент-завод ALYMP — публикация",
+    "weekly": "Контент-завод ALYMP — отчёт недели",
+    "write": "Контент-завод ALYMP — копирайтинг недели"
+  },
+  "tilda": {
+    "projectid": "",
+    "feeduid": "",
+    "parts": {},
+    "fields": {}
+  }
+}

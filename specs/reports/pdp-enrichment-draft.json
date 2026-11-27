@@ -1,0 +1,420 @@
+{
+  "roborock-saros-z70": {
+    "inTheBox": {
+      "items": [
+        "Робот-пылесос Roborock Saros Z70 с манипулятором OmniGrip × 1",
+        "Многофункциональная док-станция с баками чистой и грязной воды и установленным мешком для пыли × 1",
+        "Кабель питания × 1",
+        "Вращающиеся салфетки для влажной уборки × 2",
+        "Складная коробка-органайзер для переноса мелких вещей манипулятором × 1",
+        "Руководство пользователя × 1"
+      ],
+      "sourceUrl": "https://global.roborock.com/pages/roborock-saros-z70"
+    },
+    "appInfo": {
+      "appName": "Roborock",
+      "russianUi": "Да, полный русский интерфейс и голосовые пакеты в глобальной/RU версии",
+      "platforms": "iOS, Android",
+      "subscription": "Не требуется — все функции, карты, зоны запрета и настройка OmniGrip бесплатны",
+      "localControl": "Через Matter over Wi-Fi и официальную интеграцию Home Assistant; базовый запуск с кнопки на корпусе",
+      "regionNote": "Для работы без ограничений и привязки к Яндекс Алисе нужна глобальная или российская версия (Global / RU)",
+      "sourceUrl": "https://global.roborock.com/pages/roborock-saros-z70"
+    },
+    "officialVideo": {
+      "youtubeId": "87Q6hE4cKPM",
+      "title": "Roborock Saros Z70 — официальная презентация",
+      "caption": "Работа складной пятиосевой руки OmniGrip, ультратонкого корпуса 7,98 см и станции самоочистки (канал Roborock).",
+      "sourceUrl": "https://www.youtube.com/watch?v=87Q6hE4cKPM"
+    }
+  },
+  "roborock-saros-10": {
+    "inTheBox": {
+      "items": [
+        "Робот-пылесос Roborock Saros 10 / 10R × 1",
+        "Основание док-станции × 1",
+        "Многофункциональная док-станция с предустановленным одноразовым мешком для пыли × 1",
+        "Кабель питания × 1",
+        "Руководство пользователя × 1"
+      ],
+      "sourceUrl": "https://global.roborock.com/pages/roborock-saros-10"
+    },
+    "appInfo": {
+      "appName": "Roborock",
+      "russianUi": "Да, русский интерфейс и голосовые уведомления в версиях Global / RU",
+      "platforms": "iOS, Android",
+      "subscription": "Не требуется — все функции картографии, расписаний и зон бесплатны",
+      "localControl": "Через Matter over Wi-Fi и официальную интеграцию Home Assistant",
+      "regionNote": "Версии Global / RU подключаются к приложению без региональных блокировок и работают с Яндекс Алисой",
+      "sourceUrl": "https://global.roborock.com/pages/roborock-saros-10"
+    },
+    "officialVideo": {
+      "youtubeId": "t6xA5ibQbf0",
+      "title": "Roborock Saros 10 / 10R — официальный обзор серии",
+      "caption": "Ультратонкий корпус 7,98 см и станция самоочистки серии Saros (официальный канал Roborock).",
+      "sourceUrl": "https://www.youtube.com/watch?v=t6xA5ibQbf0"
+    }
+  },
+  "roborock-qrevo-curv-2-flow": {
+    "inTheBox": {
+      "items": [
+        "Робот-пылесос Roborock Qrevo Curv 2 Flow (с установленным роликом и щёткой DuoDivide) × 1",
+        "Многофункциональная док-станция с предустановленным мешком для пыли × 1",
+        "Кабель питания × 1",
+        "Руководство пользователя × 1"
+      ],
+      "sourceUrl": "https://global.roborock.com/pages/roborock-qrevo-curv-2-flow"
+    },
+    "appInfo": {
+      "appName": "Roborock",
+      "russianUi": "Да, русский интерфейс и озвучка в версиях Global / RU",
+      "platforms": "iOS, Android",
+      "subscription": "Не требуется",
+      "localControl": "Через Matter over Wi-Fi и официальную интеграцию Home Assistant",
+      "regionNote": "Глобальная версия работает в России и привязывается к «Умному дому с Алисой»",
+      "sourceUrl": "https://global.roborock.com/pages/roborock-qrevo-curv-2-flow"
+    },
+    "officialVideo": {
+      "youtubeId": "rk1HNKZwpvA",
+      "title": "Roborock Qrevo Curv 2 Flow — официальное видео",
+      "caption": "Работа самопромываемого ролика и станции самоочистки Qrevo Curv 2 Flow (официальный канал Roborock).",
+      "sourceUrl": "https://www.youtube.com/watch?v=rk1HNKZwpvA"
+    }
+  },
+  "dreame-x50-ultra-complete": {
+    "inTheBox": {
+      "items": [
+        "Робот-пылесос Dreame X50 Ultra × 1",
+        "Многофункциональная базовая станция × 1",
+        "Основная щётка (установлена) и боковая щётка (установлена)",
+        "Пылесборник с фильтром (установлен), держатели швабр × 2, швабры × 2, мешки для пыли × 2",
+        "Инструмент для чистки и удлинитель рампы станции",
+        "Расширенный комплект Complete: дополнительная основная щётка, 2 боковые щётки, 3 мешка, 6 пар швабр, моющее средство 1 л, 3 фильтра"
+      ],
+      "sourceUrl": "https://global.dreametech.com/products/dreame-x50-ultra-complete"
+    },
+    "appInfo": {
+      "appName": "Dreamehome",
+      "russianUi": "Да, полный русский интерфейс и русская озвучка",
+      "platforms": "iOS, Android",
+      "subscription": "Не требуется — все функции и карты бесплатны",
+      "localControl": "Через Matter over Wi-Fi (Apple Home iOS 18.4+ и Home Assistant)",
+      "regionNote": "Российская и глобальная версии работают в РФ без VPN и привязываются к Яндекс Алисе",
+      "sourceUrl": "https://global.dreametech.com/products/dreame-x50-ultra-complete"
+    },
+    "officialVideo": {
+      "youtubeId": "BhcecKIUqcA",
+      "title": "Dreame X50 Ultra — официальная презентация",
+      "caption": "Демонстрация выдвижных опор ProLeap для порогов до 6 см и утапливаемого лидара VersaLift (канал Dreame Tech).",
+      "sourceUrl": "https://www.youtube.com/watch?v=BhcecKIUqcA"
+    }
+  },
+  "dreame-l50-ultra": {
+    "inTheBox": {
+      "items": [
+        "Робот-пылесос Dreame L50 Ultra × 1",
+        "Многофункциональная базовая станция × 1",
+        "Основная щётка, защитная решётка, боковая щётка и пылесборник с фильтром (установлены)",
+        "Держатели швабр × 2, швабры × 2, мешки для пыли × 2",
+        "Пандус-удлинитель станции, фильтр блока мойки, модуль автодозатора (установлен)",
+        "Моющее средство для пола AWH7 (200 мл), краткое руководство и инструкция"
+      ],
+      "sourceUrl": "https://global.dreametech.com/products/l50-ultra-ae-black"
+    },
+    "appInfo": {
+      "appName": "Dreamehome",
+      "russianUi": "Да, русский интерфейс и голосовые оповещения",
+      "platforms": "iOS, Android",
+      "subscription": "Не требуется",
+      "localControl": "Через Matter over Wi-Fi (Apple Home iOS 18.4+ и Home Assistant)",
+      "regionNote": "Глобальная и российская версии поддерживают регион Россия и интеграцию с Яндекс Алисой",
+      "sourceUrl": "https://global.dreametech.com/products/l50-ultra-ae-black"
+    },
+    "officialVideo": null
+  },
+  "ecovacs-winbot-w3-omni": {
+    "inTheBox": {
+      "items": [
+        "Робот-мойщик окон Ecovacs WINBOT W3 OMNI × 1",
+        "Переносная многофункциональная станция с аккумулятором и катушкой кабеля × 1",
+        "Фирменное чистящее средство × 1",
+        "Сменные салфетки из микрофибры и руководство пользователя × 1"
+      ],
+      "sourceUrl": "https://www.ecovacs.com/us/winbot-window-cleaning-robot/winbot-w3-omni"
+    },
+    "appInfo": {
+      "appName": "ECOVACS HOME",
+      "russianUi": "Да, поддерживается русский интерфейс",
+      "platforms": "iOS, Android",
+      "subscription": "Не требуется",
+      "localControl": "Запуск и выбор базовых режимов с кнопок на корпусе и станции без смартфона; связь со смартфоном по Bluetooth/Wi-Fi",
+      "regionNote": "Устройство работает автономно от переносной станции и не зависит от облачных сценариев умного дома",
+      "sourceUrl": "https://www.ecovacs.com/us/winbot-window-cleaning-robot/winbot-w3-omni"
+    },
+    "officialVideo": {
+      "youtubeId": "mNsGvTYo724",
+      "title": "Ecovacs WINBOT W3 OMNI — официальная презентация",
+      "caption": "Автономная переносная станция, распыление жидкости и проход вдоль рам (канал ECOVACS ROBOTICS).",
+      "sourceUrl": "https://www.youtube.com/watch?v=mNsGvTYo724"
+    }
+  },
+  "hobot-sp10": {
+    "inTheBox": {
+      "items": [
+        "Робот-мойщик окон HOBOT SP10 × 1",
+        "Пульт дистанционного управления × 1",
+        "Жёсткий кейс для переноски и хранения × 1",
+        "Блок питания, страховочный шнур, сменные салфетки и руководство пользователя"
+      ],
+      "sourceUrl": "https://www.hobot.com.tw/hobot-sp10/"
+    },
+    "appInfo": {
+      "appName": "HOBOT",
+      "russianUi": "Да, приложение и голосовые подсказки поддерживают русский язык",
+      "platforms": "iOS, Android",
+      "subscription": "Не требуется",
+      "localControl": "Полностью локальное управление со штатного пульта ДУ, кнопки на корпусе или по Bluetooth со смартфона",
+      "regionNote": "Не требует облачного аккаунта и регистрации для повседневной работы в России",
+      "sourceUrl": "https://www.hobot.com.tw/hobot-sp10/"
+    },
+    "officialVideo": {
+      "youtubeId": "4P6VJa7aRe0",
+      "title": "HOBOT SP10 iScraper — официальное видео",
+      "caption": "Технология двойного распыления и подвижного скребка iScraper на окнах (официальный канал HobotTek).",
+      "sourceUrl": "https://www.youtube.com/watch?v=4P6VJa7aRe0"
+    }
+  },
+  "karingbee-hcr011": {
+    "inTheBox": null,
+    "appInfo": {
+      "appName": "Управление с пульта ДУ (официальное приложение производителем не подтверждено)",
+      "russianUi": "Нет официальных данных",
+      "platforms": "Пульт дистанционного управления и кнопки корпуса",
+      "subscription": "Не требуется",
+      "localControl": "Автономный запуск кнопкой на корпусе и с пульта ДУ без смартфона и облака",
+      "regionNote": "Детальный паспорт комплектации и ПО уточняется менеджером при заказе",
+      "sourceUrl": "https://alymp.ru/products/karingbee-hcr011/"
+    },
+    "officialVideo": null
+  },
+  "aqara-hub-m3": {
+    "inTheBox": {
+      "items": [
+        "Контроллер Aqara Hub M3 × 1",
+        "Кабель USB-A — USB-C × 1",
+        "Настенный кронштейн × 1",
+        "Комплект винтов и дюбелей × 1",
+        "Руководство пользователя × 1"
+      ],
+      "sourceUrl": "https://www.aqara.com/en/product/hub-m3-specs/"
+    },
+    "appInfo": {
+      "appName": "Aqara Home",
+      "russianUi": "Да, полный русский интерфейс",
+      "platforms": "iOS, Android",
+      "subscription": "Не требуется — локальные сценарии, Zigbee, Thread и Matter бесплатны",
+      "localControl": "Полная локальная автоматизация внутри хаба (Zigbee 3.0, Thread Border Router, Matter Controller и Matter Bridge) без интернета",
+      "regionNote": "Глобальная и российская версии работают в регионе Россия и подключаются к Яндекс Алисе, Apple Home и Home Assistant",
+      "sourceUrl": "https://www.aqara.com/en/product/hub-m3-specs/"
+    },
+    "officialVideo": {
+      "youtubeId": "3V0rXSUIIys",
+      "title": "Aqara Hub M3 — официальный обзор контроллера",
+      "caption": "Мультипротокольный контроллер Matter, Thread Border Router, Zigbee 3.0 и локальные сценарии (канал Aqara).",
+      "sourceUrl": "https://www.youtube.com/watch?v=3V0rXSUIIys"
+    }
+  },
+  "aqara-panel-hub-s1-plus": {
+    "inTheBox": {
+      "items": [
+        "Настенная панель Aqara Panel Hub S1 Plus × 1",
+        "Комплект крепёжных винтов × 2",
+        "Декларация соответствия × 1",
+        "Руководство пользователя × 1"
+      ],
+      "sourceUrl": "https://www.aqara.com/en/product/panel-hub-s1-plus-specs/"
+    },
+    "appInfo": {
+      "appName": "Aqara Home",
+      "russianUi": "Да, русский интерфейс в приложении и на экране панели (версии EU / RU)",
+      "platforms": "iOS, Android (плюс встроенный сенсорный экран 6,9 дюйма)",
+      "subscription": "Не требуется",
+      "localControl": "Два встроенных реле, локальный хаб Zigbee 3.0 и Matter Bridge работают внутри домашней сети",
+      "regionNote": "Европейский формат под стандартный круглый подрозетник с нулевым проводом; совместим с регионом Россия и Алисой",
+      "sourceUrl": "https://www.aqara.com/en/product/panel-hub-s1-plus-specs/"
+    },
+    "officialVideo": {
+      "youtubeId": "zk7GRGvq-N0",
+      "title": "Aqara Panel Hub S1 Plus EU — официальное видео установки",
+      "caption": "Монтаж в стандартный подрозетник и настройка сенсорного экрана 6,9 дюйма (канал Aqara).",
+      "sourceUrl": "https://www.youtube.com/watch?v=zk7GRGvq-N0"
+    }
+  },
+  "aqara-smart-lock-u200": {
+    "inTheBox": {
+      "items": [
+        "Умный замок Aqara Smart Lock U200 × 1",
+        "Беспроводная клавиатура со сканером отпечатка и NFC × 1",
+        "Перезаряжаемый Li-Ion аккумулятор Aqara × 1 и адаптер под батарейки AA × 1",
+        "Батарейки AAA для клавиатуры × 4",
+        "NFC-карта Aqara × 1 и сменная декоративная панель × 1",
+        "Комплект адаптеров под цилиндр, шестигранная отвёртка, кабель USB-C, наклейка 3M, прокладки EVA и инструкция"
+      ],
+      "sourceUrl": "https://www.aqara.com/us/product/smart-lock-u200-specs/"
+    },
+    "appInfo": {
+      "appName": "Aqara Home / Apple «Дом»",
+      "russianUi": "Да, полный русский интерфейс",
+      "platforms": "iOS, Android, Apple Watch (Home Key)",
+      "subscription": "Не требуется",
+      "localControl": "Отпечаток, PIN, NFC, Apple Home Key и Bluetooth LE работают полностью локально; удалённый доступ через Thread Border Router (Hub M3)",
+      "regionNote": "Apple Home Key работает в России локально по NFC без Apple Pay; интеграция с Яндекс Алисой для замков U-серии не поддерживается",
+      "sourceUrl": "https://www.aqara.com/us/product/smart-lock-u200-specs/"
+    },
+    "officialVideo": {
+      "youtubeId": "pvIRTTAWc3s",
+      "title": "Aqara Smart Lock U200 — официальная инструкция по установке",
+      "caption": "Накладной монтаж поверх существующего евроцилиндра без сверления двери (официальный канал Aqara).",
+      "sourceUrl": "https://www.youtube.com/watch?v=pvIRTTAWc3s"
+    }
+  },
+  "aqara-smart-lock-u300": {
+    "inTheBox": {
+      "items": [
+        "Умный замок-ручка Aqara Smart Lock U300 × 1",
+        "Батарейки AA × 4",
+        "Механические ключи × 2",
+        "Монтажная пластина и комплект крепежа × 1",
+        "Схема монтажа и руководство пользователя × 1"
+      ],
+      "sourceUrl": "https://www.aqara.com/en/product/smart-lock-u300-specs/"
+    },
+    "appInfo": {
+      "appName": "Aqara Home / Apple «Дом»",
+      "russianUi": "Да, русский интерфейс",
+      "platforms": "iOS, Android, Apple Watch (Home Key)",
+      "subscription": "Не требуется",
+      "localControl": "Отпечаток на оси ручки, PIN, NFC, Apple Home Key и Bluetooth LE работают локально; сценарии через Matter over Thread",
+      "regionNote": "Работает с Apple Home и Home Assistant (через Thread Border Router); Яндекс Алиса дверные замки U-серии не поддерживает",
+      "sourceUrl": "https://www.aqara.com/en/product/smart-lock-u300-specs/"
+    },
+    "officialVideo": {
+      "youtubeId": "1H-ZKGWvQ04",
+      "title": "Aqara Smart Lock U300 — официальное видео монтажа",
+      "caption": "Установка рычажного умного замка вместо штатной дверной ручки (официальный канал Aqara).",
+      "sourceUrl": "https://www.youtube.com/watch?v=1H-ZKGWvQ04"
+    }
+  },
+  "aqara-fp400": {
+    "inTheBox": {
+      "items": [
+        "Датчик присутствия Aqara Spatial Multi-Sensor FP400 × 1",
+        "Кабель USB-C — USB-C × 1",
+        "Металлическая монтажная пластина × 1",
+        "Клейкая наклейка × 1 и комплект винтов × 1",
+        "Кронштейн (в розничной версии Brand Retail) и руководство пользователя × 1"
+      ],
+      "sourceUrl": "https://www.aqara.com/en/product/spatial-multi-sensor-fp400/"
+    },
+    "appInfo": {
+      "appName": "Aqara Home",
+      "russianUi": "Да, русский интерфейс приложения",
+      "platforms": "iOS, Android",
+      "subscription": "Не требуется — зонирование, обнаружение поз и падений работают без платных тарифов",
+      "localControl": "Локальная работа по Thread (Matter) и Zigbee 3.0 через домашний хаб без обращения в облако",
+      "regionNote": "Тонкая разметка до 30 зон выполняется в Aqara Home, а готовые зоны передаются в Apple Home, Home Assistant и через хаб в Алису",
+      "sourceUrl": "https://www.aqara.com/en/product/spatial-multi-sensor-fp400/"
+    },
+    "officialVideo": {
+      "youtubeId": "MXsVcr0qhC4",
+      "title": "Aqara FP400 — официальная распаковка и обзор",
+      "caption": "Комплектация и ключевые возможности 60 ГГц радара присутствия с Thread и Zigbee (канал Aqara).",
+      "sourceUrl": "https://www.youtube.com/watch?v=MXsVcr0qhC4"
+    }
+  },
+  "aqara-camera-hub-g5-pro": {
+    "inTheBox": {
+      "items": [
+        "Камера-хаб Aqara Camera Hub G5 Pro × 1",
+        "Кабель питания × 1",
+        "Инструмент для открытия задней крышки × 1",
+        "Комплект саморезов и дюбелей для настенного монтажа × 1",
+        "Герметичный комплект для разъёма RJ45 (в версии PoE) × 1",
+        "Руководство пользователя × 1"
+      ],
+      "sourceUrl": "https://www.aqara.com/en/product/camera-hub-g5-pro-specs/"
+    },
+    "appInfo": {
+      "appName": "Aqara Home / Apple «Дом»",
+      "russianUi": "Да, русский интерфейс",
+      "platforms": "iOS, Android",
+      "subscription": "Не обязательна — локальная запись на встроенную память eMMC, RTSP/NAS и локальный ИИ объектов бесплатны; HomeKit Secure Video требует iCloud+",
+      "localControl": "Локальная запись eMMC и RTSP, встроенный Zigbee-хаб, Thread Border Router и Matter Bridge",
+      "regionNote": "Работает в России на глобальном регионе; для уличного монтажа при температуре до −30 °C рекомендована версия PoE",
+      "sourceUrl": "https://www.aqara.com/en/product/camera-hub-g5-pro-specs/"
+    },
+    "officialVideo": {
+      "youtubeId": "VhXLJ2svZwo",
+      "title": "Aqara Camera Hub G5 Pro — официальная презентация",
+      "caption": "Цветная ночная съёмка, корпус IP65, PoE/Wi-Fi и встроенный Matter-контроллер (канал Aqara).",
+      "sourceUrl": "https://www.youtube.com/watch?v=VhXLJ2svZwo"
+    }
+  },
+  "smart-sunrise-kit": {
+    "inTheBox": {
+      "items": [
+        "Привод штор Aqara Curtain Driver E1 (версия Track или Rod) × 1",
+        "Кабель зарядки USB-C — USB-A и крепёжные элементы для карниза из комплекта E1",
+        "Светодиодная лента Aqara LED Strip T2 × 1",
+        "Контроллер, адаптер питания и крепёжные клипсы LED Strip T2",
+        "Руководства пользователя для обоих устройств"
+      ],
+      "sourceUrl": "https://www.aqara.com/us/product/curtain-driver-e1-track-version/specs/"
+    },
+    "appInfo": {
+      "appName": "Aqara Home",
+      "russianUi": "Да, полный русский интерфейс",
+      "platforms": "iOS, Android",
+      "subscription": "Не требуется",
+      "localControl": "При подключении к Aqara Hub M3 расписание утреннего рассвета и управление шторами исполняются локально без интернета",
+      "regionNote": "Для автоматизаций и интеграции с Яндекс Алисой и Apple Home требуется хаб Zigbee/Thread (например, Aqara Hub M3)",
+      "sourceUrl": "https://www.aqara.com/en/product/led-strip-t2/"
+    },
+    "officialVideo": null
+  },
+  "unitree-go2": {
+    "inTheBox": null,
+    "appInfo": {
+      "appName": "Unitree Go",
+      "russianUi": "Английский и китайский интерфейс",
+      "platforms": "iOS, Android (плюс SDK / ROS2 в версии EDU)",
+      "subscription": "Не требуется для базового управления и телеметрии",
+      "localControl": "Прямое управление по Wi-Fi 6, Bluetooth 5.2 и с аппаратного пульта в локальной зоне видимости (в Pro дополнительно 4G + GPS)",
+      "regionNote": "Самостоятельная робототехническая платформа; официальная комплектация зависит от версии (Air / Pro) и подтверждается менеджером до оплаты",
+      "sourceUrl": "https://www.unitree.com/go2"
+    },
+    "officialVideo": {
+      "youtubeId": "6zPvT0ig1VM",
+      "title": "Unitree Go2 — официальная презентация",
+      "caption": "Демонстрация 4D LiDAR 360° × 96°, 12 моторов суставов и динамического движения (канал Unitree Robotics).",
+      "sourceUrl": "https://www.youtube.com/watch?v=6zPvT0ig1VM"
+    }
+  },
+  "unitree-g1": {
+    "inTheBox": null,
+    "appInfo": {
+      "appName": "Unitree Explore / SDK (ROS2 в версии EDU)",
+      "russianUi": "Английский и китайский интерфейс",
+      "platforms": "iOS, Android, Linux (ROS2 / Python / C++ SDK в версии EDU)",
+      "subscription": "Не требуется",
+      "localControl": "Прямое управление по Wi-Fi 6 и Bluetooth 5.2; в версии G1 EDU открыт локальный SDK для вторичной разработки",
+      "regionNote": "Поставляется под заказ в собственность для частных покупателей и организаций; состав поставки версии Basic/EDU подтверждается до оплаты",
+      "sourceUrl": "https://www.unitree.com/g1"
+    },
+    "officialVideo": {
+      "youtubeId": "29xLWhqME2Q",
+      "title": "Unitree G1 — официальное видео гуманоида",
+      "caption": "Демонстрация баланса, приводов и динамики серийного гуманоида Unitree G1 (канал Unitree Robotics).",
+      "sourceUrl": "https://www.youtube.com/watch?v=29xLWhqME2Q"
+    }
+  }
+}

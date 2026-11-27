@@ -5,6 +5,9 @@ import { Container, Eyebrow, Section } from "@/components/container";
 import { JsonLd } from "@/components/json-ld";
 import { comparisons } from "@/content/comparisons";
 import { graph, itemListSchema } from "@/lib/schema";
+import { getProducts } from "@/lib/products";
+import { brandName } from "@/lib/brands";
+import { CompareTool, type CompareProduct } from "@/components/compare/compare-tool";
 
 export const metadata: Metadata = {
   title: "Сравнения роботов и умного дома — ALYMP",
@@ -14,6 +17,17 @@ export const metadata: Metadata = {
 
 export default function CompareHubPage() {
   const list = comparisons.map((c) => ({ name: c.h1, url: `/compare/${c.slug}/` }));
+  const toolProducts: CompareProduct[] = getProducts().map((p) => ({
+    slug: p.slug,
+    name: p.name,
+    brand: brandName[p.brand] ?? p.brand,
+    category: p.category,
+    image: p.media?.card,
+    price: p.priceEstimate,
+    status: p.status,
+    compat: Object.fromEntries(Object.entries(p.compatibility).map(([k, v]) => [k, v.v])),
+    specs: p.specs.map((s) => ({ label: s.label, value: [s.value, s.unit].filter(Boolean).join("\u00A0") })),
+  }));
 
   return (
     <>
@@ -28,6 +42,16 @@ export default function CompareHubPage() {
           <p className="mt-6 max-w-4xl text-xl leading-relaxed text-foreground-2">
             Мы сравниваем соседние флагманы каталога ALYMP по официальным спецификациям брендов: реальной проходимости порогов, высоте корпуса, протоколам умного дома и ориентиру цены в России. На каждой странице — прямой вердикт в первых строках и сводная таблица без выдуманных баллов.
           </p>
+        </Container>
+      </Section>
+
+      <Section id="compare-tool" className="border-b">
+        <Container>
+          <h2 className="text-[clamp(32px,4vw,52px)] font-bold leading-none tracking-[-0.03em]">Сравните любые модели</h2>
+          <p className="mt-4 max-w-2xl text-lg text-foreground-2">Выберите две или три модели из 17 — характеристики, совместимость и ориентир цены по официальным данным.</p>
+          <div className="mt-10">
+            <CompareTool products={toolProducts} initial={["roborock-saros-z70", "dreame-x50-ultra-complete"]} />
+          </div>
         </Container>
       </Section>
 

@@ -55,7 +55,7 @@ export function VersionSwitch({ v, product, isVariants }: { v: Versions; product
         ))}
       </dl>
 
-      <div className="mt-8 overflow-x-auto">
+      <div className="relative mt-8 overflow-x-auto">
         <table className="w-full min-w-[520px] border-collapse text-left" aria-describedby={`${id}-lead`}>
           <caption id={`${id}-lead`} className="sr-only">{v.lead}</caption>
           <thead>

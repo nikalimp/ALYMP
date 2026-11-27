@@ -3,12 +3,27 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Minus, Plus, ShoppingBag, Trash2, X } from "lucide-react";
 import { useCart } from "./cart-context";
+import type { CatalogItemSummary } from "../search-modal";
 import { site } from "@/content/site";
 
 const fmt = (n: number) => n.toLocaleString("ru-RU").replace(/\u00A0/g, " ");
 
-export function CartDrawer() {
-  const { items, isOpen, closeCart, setQty, removeItem, clear, estimatedTotal, hasUnpriced } = useCart();
+// Кросс-селл «Хорошо дополняют заказ» — 1–2 товара, которых нет в корзине (решение Ника 27.11.2026)
+const SUGGEST: { slug: string; note: string; when: (slugs: Set<string>, brands: Set<string>, cats: Set<string>) => boolean }[] = [
+  { slug: "aqara-hub-m3", note: "Нужен для Matter и сценариев с Алисой", when: (s, b) => b.has("Aqara") && !s.has("aqara-hub-m3") },
+  { slug: "aqara-fp400", note: "Запуск уборки, когда никого нет дома", when: (s, _b, c) => c.has("cleaning-robots") },
+  { slug: "hobot-sp10", note: "Чистые окна без усилий", when: (s, _b, c) => c.has("cleaning-robots") },
+];
+
+export function CartDrawer({ catalog = [] }: { catalog?: CatalogItemSummary[] }) {
+  const { items, isOpen, closeCart, setQty, removeItem, clear, estimatedTotal, hasUnpriced, addItem } = useCart();
+  const inCart = new Set(items.map((i) => i.slug));
+  const cats = new Set(items.map((i) => catalog.find((c) => c.slug === i.slug)?.category).filter(Boolean) as string[]);
+  const brands = new Set(items.map((i) => i.brand));
+  const suggestions = SUGGEST.filter((x) => !inCart.has(x.slug) && x.when(inCart, brands, cats))
+    .map((x) => ({ ...x, p: catalog.find((c) => c.slug === x.slug) }))
+    .filter((x): x is typeof x & { p: CatalogItemSummary } => !!x.p)
+    .slice(0, 2);
   const [state, setState] = useState<"idle" | "sending" | "sent" | "fallback" | "error">("idle");
   const [orderText, setOrderText] = useState("");
 
@@ -184,6 +199,30 @@ export function CartDrawer() {
                   </li>
                 ))}
               </ul>
+
+              {suggestions.length > 0 && (
+                <section aria-labelledby="cart-xsell" className="mt-5">
+                  <h3 id="cart-xsell" className="font-mono text-xs uppercase tracking-[0.08em] text-muted-foreground">Хорошо дополняют заказ</h3>
+                  <ul className="mt-2 divide-y border-y">
+                    {suggestions.map(({ slug, note, p }) => (
+                      <li key={slug} className="flex items-center justify-between gap-3 py-3">
+                        <div className="min-w-0">
+                          <Link href={`/products/${slug}/`} onClick={closeCart} className="block truncate text-sm font-semibold hover:underline underline-offset-4">{p.name}</Link>
+                          <p className="text-xs text-foreground-2">{note}{p.priceEstimate ? ` · от ${fmt(p.priceEstimate)} ₽` : ""}</p>
+                        </div>
+                        <button
+                          type="button"
+                          onClick={() => addItem({ slug, name: p.name, brand: p.brandLabel, priceEstimate: p.priceEstimate, hasLanding: p.hasLanding })}
+                          aria-label={`Добавить ${p.name} в корзину`}
+                          className="inline-flex size-9 shrink-0 cursor-pointer items-center justify-center rounded-full border border-border-strong hover:border-foreground"
+                        >
+                          <Plus className="size-4" strokeWidth={1.5} />
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              )}
 
               <div className="mt-5 flex items-baseline justify-between gap-4 bg-muted p-4">
                 <span className="text-sm text-foreground-2">Ориентировочно</span>

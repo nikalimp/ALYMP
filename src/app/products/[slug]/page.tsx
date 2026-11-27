@@ -15,7 +15,13 @@ import { KeyBento } from "@/components/product/key-bento";
 import { VersionSwitch } from "@/components/product/version-switch";
 import { Scenarios } from "@/components/product/scenarios";
 import { CompatBadges } from "@/components/product/compat-badges";
-import { ShieldCheck, Clock, Wallet } from "lucide-react";
+import { TrustLine } from "@/components/product/trust-line";
+import { ClearanceWidget } from "@/components/product/clearance-widget";
+import { InTheBox } from "@/components/product/in-the-box";
+import { AppInfoCard } from "@/components/product/app-info";
+import { VideoFacade } from "@/components/product/video-facade";
+import { getClearance } from "@/lib/clearance";
+import { Clock, Wallet } from "lucide-react";
 import { OrderForm } from "@/components/product/order-form";
 import { AddToCartButton } from "@/components/cart/add-to-cart-button";
 import { cn } from "@/lib/utils";
@@ -57,6 +63,8 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   const usedSources = Object.entries(p.sources);
   const readySlugs = new Set(getLandings().map((x) => x.slug));
   const usedTerms = new Set<string>();
+  const clearance = getClearance(p);
+  const box = p.inTheBox ?? p.inBox;
   // Переключатель версий подставляет выбор в форму и корзину, когда колонки таблицы — это версии товара
   const isVariants = !!l.versions && p.variants.length === l.versions.heads.length && p.variants.length > 1;
   const subLinks = [
@@ -109,6 +117,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         <a href="#order" className="inline-flex min-h-11 items-center rounded-full bg-primary px-6 font-semibold text-primary-foreground transition-opacity duration-200 hover:opacity-85">Заказать</a>
         <AddToCartButton item={{ slug: p.slug, name: p.name, brand, priceEstimate: p.priceEstimate, hasLanding: true }} />
       </div>
+      <TrustLine status={p.status} className="mt-4" />
       {l.keyNumbers.length > 0 && (
         <dl className="mt-10 flex gap-10 border-t pt-6">
           {l.keyNumbers.slice(0, 2).map((k) => (
@@ -214,6 +223,37 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         </Section>
       )}
 
+      {/* Пороги и зазор под мебелью — для роботов-пылесосов с официальными цифрами */}
+      {clearance.length > 0 && (
+        <Section id="clearance" className="scroll-mt-28 border-t">
+          <Container>
+            <h2 className="text-[clamp(32px,4vw,52px)] font-bold leading-none tracking-[-0.03em]">Пройдёт ли {p.name} у вас дома</h2>
+            <p className="mt-4 max-w-2xl text-lg text-foreground-2">Задайте высоту порога и зазор под диваном — сравним с паспортными цифрами модели.</p>
+            <div className="mt-10"><ClearanceWidget name={p.name} configs={clearance} /></div>
+          </Container>
+        </Section>
+      )}
+
+      {/* Что в коробке */}
+      {box.length > 0 && (
+        <Section id="in-the-box" className="scroll-mt-28 pt-0">
+          <Container>
+            <h2 className="text-[clamp(32px,4vw,52px)] font-bold leading-none tracking-[-0.03em]">Что в коробке</h2>
+            <div className="mt-10"><InTheBox items={box} /></div>
+          </Container>
+        </Section>
+      )}
+
+      {/* Видео производителя и приложение — когда данные есть в карточке товара */}
+      {(p.officialVideo || p.appInfo) && (
+        <Section className="pt-0">
+          <Container className="grid gap-6">
+            {p.officialVideo && <VideoFacade id={p.officialVideo.youtubeId} title={p.officialVideo.title} poster={p.officialVideo.poster} />}
+            {p.appInfo && <AppInfoCard app={p.appInfo} />}
+          </Container>
+        </Section>
+      )}
+
       {/* 6. Как работает в паре — сценарии «событие → реакция» */}
       {l.pairs.length > 0 && (
         <Section id="pairs" className="scroll-mt-28 pt-0">
@@ -275,8 +315,8 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             <p className="mt-6 font-mono text-xl font-medium tabular">
               {p.priceEstimate ? `от ${fmt(p.priceEstimate)} ₽` : "Цена по запросу"}
             </p>
+            <TrustLine status={p.status} className="mt-4 flex-col" />
             <ul className="mt-6 space-y-3 text-[15px] text-foreground-2">
-              <li className="flex gap-3"><ShieldCheck className="mt-0.5 size-5 shrink-0" strokeWidth={1.5} aria-hidden="true" />Официальная гарантия в России</li>
               <li className="flex gap-3"><Clock className="mt-0.5 size-5 shrink-0" strokeWidth={1.5} aria-hidden="true" />Менеджер подтвердит цену, наличие и срок поставки</li>
               <li className="flex gap-3"><Wallet className="mt-0.5 size-5 shrink-0" strokeWidth={1.5} aria-hidden="true" />Оплата — только после подтверждения заказа</li>
             </ul>

@@ -38,6 +38,10 @@ export type Product = {
   disputes: { label: string; values: string[]; comment?: string }[];
   notes?: string;
   media?: ProductMedia;
+  // Необязательные поля (готовит Gemini): блоки на лендинге появляются сами, когда поле заполнено
+  inTheBox?: { text: string; qty?: number; src?: string }[];
+  appInfo?: { name: string; ios?: string; android?: string; ruNotes?: string[]; src?: string };
+  officialVideo?: { youtubeId: string; title: string; poster?: string; src?: string };
 };
 
 const DIR = path.join(process.cwd(), "content/products");

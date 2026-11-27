@@ -64,7 +64,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Header products={catalogSummary} />
           <main id="main" className="flex-1">{children}</main>
           <Footer />
-          <CartDrawer />
+          <CartDrawer catalog={catalogSummary} />
           <CookieBanner />
         </CartProvider>
       </body>

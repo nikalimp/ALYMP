@@ -61,7 +61,24 @@
       "/scenarios/",
       "/compatibility/",
       "/brands/",
-      "/catalog/"
+      "/catalog/",
+      "/selector/"
+    ],
+    "services": {
+      "source": "content/products",
+      "glob": "*.json",
+      "prefix": "/products/"
+    },
+    "service_extra": [
+      "/catalog/",
+      "/catalog/cleaning-robots/",
+      "/catalog/smart-home/",
+      "/catalog/robots/",
+      "/selector/",
+      "/scenarios/",
+      "/compare/",
+      "/compatibility/",
+      "/how-to-order/"
     ],
     "products_dir": "content/products",
     "glossary_file": "content/glossary/terms.json"

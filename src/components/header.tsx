@@ -16,6 +16,7 @@ const CATEGORY_META = [
 const EXTRA_LINKS = [
   { href: "/catalog/", label: "Весь каталог" },
   { href: "/selector/", label: "Подбор комплекта" },
+  { href: "/scenarios/", label: "Сценарии" },
   { href: "/compatibility/", label: "Совместимость" },
   { href: "/compare/", label: "Сравнения" },
   { href: "/brands/", label: "Бренды" },

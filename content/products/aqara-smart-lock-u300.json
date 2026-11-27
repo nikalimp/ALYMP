@@ -268,5 +268,49 @@
     "alt": "Умный замок-ручка Aqara Smart Lock U300",
     "credit": "Фото: Aqara",
     "source": "https://aqara.ru/product/%d1%83%d0%bc%d0%bd%d1%8b%d0%b9-%d0%b7%d0%b0%d0%bc%d0%be%d0%ba-u300-aqara-smart-lock-u300/"
+  },
+  "inTheBox": [
+    {
+      "text": "Умный замок-ручка Aqara Smart Lock U300",
+      "qty": 1,
+      "src": "https://www.aqara.com/en/product/smart-lock-u300-specs/"
+    },
+    {
+      "text": "Батарейки AA",
+      "qty": 4,
+      "src": "https://www.aqara.com/en/product/smart-lock-u300-specs/"
+    },
+    {
+      "text": "Механические ключи",
+      "qty": 2,
+      "src": "https://www.aqara.com/en/product/smart-lock-u300-specs/"
+    },
+    {
+      "text": "Монтажная пластина и комплект крепежа",
+      "qty": 1,
+      "src": "https://www.aqara.com/en/product/smart-lock-u300-specs/"
+    },
+    {
+      "text": "Схема монтажа и руководство пользователя",
+      "qty": 1,
+      "src": "https://www.aqara.com/en/product/smart-lock-u300-specs/"
+    }
+  ],
+  "appInfo": {
+    "name": "Aqara Home / Apple «Дом»",
+    "ruNotes": [
+      "Интерфейс и языки: Да, русский интерфейс",
+      "Платформы: iOS, Android, Apple Watch (Home Key)",
+      "Подписка: Не требуется",
+      "Локальная работа: Отпечаток на оси ручки, PIN, NFC, Apple Home Key и Bluetooth LE работают локально; сценарии через Matter over Thread",
+      "Работа в РФ: Работает с Apple Home и Home Assistant (через Thread Border Router); Яндекс Алиса дверные замки U-серии не поддерживает"
+    ],
+    "src": "https://www.aqara.com/en/product/smart-lock-u300-specs/"
+  },
+  "officialVideo": {
+    "youtubeId": "1H-ZKGWvQ04",
+    "title": "Aqara Smart Lock U300 — официальное видео монтажа",
+    "poster": "/media/products/aqara-smart-lock-u300/hero.webp",
+    "src": "https://www.youtube.com/watch?v=1H-ZKGWvQ04"
   }
 }

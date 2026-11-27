@@ -264,5 +264,49 @@
     "alt": "Робот-пылесос Roborock Saros 10 в чёрном корпусе",
     "credit": "Фото: Roborock",
     "source": "https://global.roborock.com/pages/roborock-saros-10"
+  },
+  "inTheBox": [
+    {
+      "text": "Робот-пылесос Roborock Saros 10 / 10R",
+      "qty": 1,
+      "src": "https://global.roborock.com/pages/roborock-saros-10"
+    },
+    {
+      "text": "Основание док-станции",
+      "qty": 1,
+      "src": "https://global.roborock.com/pages/roborock-saros-10"
+    },
+    {
+      "text": "Многофункциональная док-станция с предустановленным одноразовым мешком для пыли",
+      "qty": 1,
+      "src": "https://global.roborock.com/pages/roborock-saros-10"
+    },
+    {
+      "text": "Кабель питания",
+      "qty": 1,
+      "src": "https://global.roborock.com/pages/roborock-saros-10"
+    },
+    {
+      "text": "Руководство пользователя",
+      "qty": 1,
+      "src": "https://global.roborock.com/pages/roborock-saros-10"
+    }
+  ],
+  "appInfo": {
+    "name": "Roborock",
+    "ruNotes": [
+      "Интерфейс и языки: Да, русский интерфейс и голосовые уведомления в версиях Global / RU",
+      "Платформы: iOS, Android",
+      "Подписка: Не требуется — все функции картографии, расписаний и зон бесплатны",
+      "Локальная работа: Через Matter over Wi-Fi и официальную интеграцию Home Assistant",
+      "Работа в РФ: Версии Global / RU подключаются к приложению без региональных блокировок и работают с Яндекс Алисой"
+    ],
+    "src": "https://global.roborock.com/pages/roborock-saros-10"
+  },
+  "officialVideo": {
+    "youtubeId": "t6xA5ibQbf0",
+    "title": "Roborock Saros 10 / 10R — официальный обзор серии",
+    "poster": "/media/products/roborock-saros-10/hero.webp",
+    "src": "https://www.youtube.com/watch?v=t6xA5ibQbf0"
   }
 }

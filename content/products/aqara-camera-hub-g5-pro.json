@@ -259,5 +259,54 @@
     "alt": "Камера-хаб Aqara Camera Hub G5 Pro",
     "credit": "Фото: Aqara",
     "source": "https://aqara.ru/product/%d0%ba%d0%b0%d0%bc%d0%b5%d1%80%d0%b0-%d1%85%d0%b0%d0%b1-aqara-g5-pro-aqara-camera-hub-g5-pro-poe-wi-fi/"
+  },
+  "inTheBox": [
+    {
+      "text": "Камера-хаб Aqara Camera Hub G5 Pro",
+      "qty": 1,
+      "src": "https://www.aqara.com/en/product/camera-hub-g5-pro-specs/"
+    },
+    {
+      "text": "Кабель питания",
+      "qty": 1,
+      "src": "https://www.aqara.com/en/product/camera-hub-g5-pro-specs/"
+    },
+    {
+      "text": "Инструмент для открытия задней крышки",
+      "qty": 1,
+      "src": "https://www.aqara.com/en/product/camera-hub-g5-pro-specs/"
+    },
+    {
+      "text": "Комплект саморезов и дюбелей для настенного монтажа",
+      "qty": 1,
+      "src": "https://www.aqara.com/en/product/camera-hub-g5-pro-specs/"
+    },
+    {
+      "text": "Герметичный комплект для разъёма RJ45 (в версии PoE)",
+      "qty": 1,
+      "src": "https://www.aqara.com/en/product/camera-hub-g5-pro-specs/"
+    },
+    {
+      "text": "Руководство пользователя",
+      "qty": 1,
+      "src": "https://www.aqara.com/en/product/camera-hub-g5-pro-specs/"
+    }
+  ],
+  "appInfo": {
+    "name": "Aqara Home / Apple «Дом»",
+    "ruNotes": [
+      "Интерфейс и языки: Да, русский интерфейс",
+      "Платформы: iOS, Android",
+      "Подписка: Не обязательна — локальная запись на встроенную память eMMC, RTSP/NAS и локальный ИИ объектов бесплатны; HomeKit Secure Video требует iCloud+",
+      "Локальная работа: Локальная запись eMMC и RTSP, встроенный Zigbee-хаб, Thread Border Router и Matter Bridge",
+      "Работа в РФ: Работает в России на глобальном регионе; для уличного монтажа при температуре до −30 °C рекомендована версия PoE"
+    ],
+    "src": "https://www.aqara.com/en/product/camera-hub-g5-pro-specs/"
+  },
+  "officialVideo": {
+    "youtubeId": "VhXLJ2svZwo",
+    "title": "Aqara Camera Hub G5 Pro — официальная презентация",
+    "poster": "/media/products/aqara-camera-hub-g5-pro/hero.webp",
+    "src": "https://www.youtube.com/watch?v=VhXLJ2svZwo"
   }
 }

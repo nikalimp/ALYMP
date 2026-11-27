@@ -224,5 +224,49 @@
     "alt": "Контроллер умного дома Aqara Hub M3",
     "credit": "Фото: Aqara",
     "source": "https://aqara.ru/product/%d1%86%d0%b5%d0%bd%d1%82%d1%80-%d1%83%d0%bc%d0%bd%d0%be%d0%b3%d0%be-%d0%b4%d0%be%d0%bc%d0%b0-aqara-matter-hub-m3/"
+  },
+  "inTheBox": [
+    {
+      "text": "Контроллер Aqara Hub M3",
+      "qty": 1,
+      "src": "https://www.aqara.com/en/product/hub-m3-specs/"
+    },
+    {
+      "text": "Кабель USB-A — USB-C",
+      "qty": 1,
+      "src": "https://www.aqara.com/en/product/hub-m3-specs/"
+    },
+    {
+      "text": "Настенный кронштейн",
+      "qty": 1,
+      "src": "https://www.aqara.com/en/product/hub-m3-specs/"
+    },
+    {
+      "text": "Комплект винтов и дюбелей",
+      "qty": 1,
+      "src": "https://www.aqara.com/en/product/hub-m3-specs/"
+    },
+    {
+      "text": "Руководство пользователя",
+      "qty": 1,
+      "src": "https://www.aqara.com/en/product/hub-m3-specs/"
+    }
+  ],
+  "appInfo": {
+    "name": "Aqara Home",
+    "ruNotes": [
+      "Интерфейс и языки: Да, полный русский интерфейс",
+      "Платформы: iOS, Android",
+      "Подписка: Не требуется — локальные сценарии, Zigbee, Thread и Matter бесплатны",
+      "Локальная работа: Полная локальная автоматизация внутри хаба (Zigbee 3.0, Thread Border Router, Matter Controller и Matter Bridge) без интернета",
+      "Работа в РФ: Глобальная и российская версии работают в регионе Россия и подключаются к Яндекс Алисе, Apple Home и Home Assistant"
+    ],
+    "src": "https://www.aqara.com/en/product/hub-m3-specs/"
+  },
+  "officialVideo": {
+    "youtubeId": "3V0rXSUIIys",
+    "title": "Aqara Hub M3 — официальный обзор контроллера",
+    "poster": "/media/products/aqara-hub-m3/hero.webp",
+    "src": "https://www.youtube.com/watch?v=3V0rXSUIIys"
   }
 }

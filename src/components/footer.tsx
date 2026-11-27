@@ -9,6 +9,7 @@ export function Footer() {
   const links = [
     ...nav,
     { href: "/selector/", label: "Подбор комплекта" },
+    { href: "/scenarios/", label: "Сценарии" },
     { href: "/how-to-order/", label: "Как заказать" },
     { href: "/compatibility/", label: "Совместимость" },
     { href: "/brands/", label: "Бренды" },

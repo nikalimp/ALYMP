@@ -261,5 +261,22 @@
     "alt": "Робособака Unitree Go2 на тёмном фоне",
     "credit": "Фото: Unitree Robotics",
     "source": "https://www.unitree.com/go2"
+  },
+  "appInfo": {
+    "name": "Unitree Go",
+    "ruNotes": [
+      "Интерфейс и языки: Английский и китайский интерфейс",
+      "Платформы: iOS, Android (плюс SDK / ROS2 в версии EDU)",
+      "Подписка: Не требуется для базового управления и телеметрии",
+      "Локальная работа: Прямое управление по Wi-Fi 6, Bluetooth 5.2 и с аппаратного пульта в локальной зоне видимости (в Pro дополнительно 4G + GPS)",
+      "Работа в РФ: Самостоятельная робототехническая платформа; официальная комплектация зависит от версии (Air / Pro) и подтверждается менеджером до оплаты"
+    ],
+    "src": "https://www.unitree.com/go2"
+  },
+  "officialVideo": {
+    "youtubeId": "6zPvT0ig1VM",
+    "title": "Unitree Go2 — официальная презентация",
+    "poster": "/media/products/unitree-go2/hero.webp",
+    "src": "https://www.youtube.com/watch?v=6zPvT0ig1VM"
   }
 }

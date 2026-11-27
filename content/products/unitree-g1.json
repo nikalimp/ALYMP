@@ -275,5 +275,22 @@
     "alt": "Робот-гуманоид Unitree G1",
     "credit": "Фото: Unitree Robotics",
     "source": "https://www.unitree.com/g1"
+  },
+  "appInfo": {
+    "name": "Unitree Explore / SDK (ROS2 в версии EDU)",
+    "ruNotes": [
+      "Интерфейс и языки: Английский и китайский интерфейс",
+      "Платформы: iOS, Android, Linux (ROS2 / Python / C++ SDK в версии EDU)",
+      "Подписка: Не требуется",
+      "Локальная работа: Прямое управление по Wi-Fi 6 и Bluetooth 5.2; в версии G1 EDU открыт локальный SDK для вторичной разработки",
+      "Работа в РФ: Поставляется под заказ в собственность для частных покупателей и организаций; состав поставки версии Basic/EDU подтверждается до оплаты"
+    ],
+    "src": "https://www.unitree.com/g1"
+  },
+  "officialVideo": {
+    "youtubeId": "29xLWhqME2Q",
+    "title": "Unitree G1 — официальное видео гуманоида",
+    "poster": "/media/products/unitree-g1/hero.webp",
+    "src": "https://www.youtube.com/watch?v=29xLWhqME2Q"
   }
 }

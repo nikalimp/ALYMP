@@ -312,5 +312,44 @@
     "alt": "Робот-мойщик окон Ecovacs WINBOT W3 OMNI со станцией",
     "credit": "Фото: Ecovacs",
     "source": "https://www.ecovacs.com/us/winbot-window-cleaning-robot/winbot-w3-omni"
+  },
+  "inTheBox": [
+    {
+      "text": "Робот-мойщик окон Ecovacs WINBOT W3 OMNI",
+      "qty": 1,
+      "src": "https://www.ecovacs.com/us/winbot-window-cleaning-robot/winbot-w3-omni"
+    },
+    {
+      "text": "Переносная многофункциональная станция с аккумулятором и катушкой кабеля",
+      "qty": 1,
+      "src": "https://www.ecovacs.com/us/winbot-window-cleaning-robot/winbot-w3-omni"
+    },
+    {
+      "text": "Фирменное чистящее средство",
+      "qty": 1,
+      "src": "https://www.ecovacs.com/us/winbot-window-cleaning-robot/winbot-w3-omni"
+    },
+    {
+      "text": "Сменные салфетки из микрофибры и руководство пользователя",
+      "qty": 1,
+      "src": "https://www.ecovacs.com/us/winbot-window-cleaning-robot/winbot-w3-omni"
+    }
+  ],
+  "appInfo": {
+    "name": "ECOVACS HOME",
+    "ruNotes": [
+      "Интерфейс и языки: Да, поддерживается русский интерфейс",
+      "Платформы: iOS, Android",
+      "Подписка: Не требуется",
+      "Локальная работа: Запуск и выбор базовых режимов с кнопок на корпусе и станции без смартфона; связь со смартфоном по Bluetooth/Wi-Fi",
+      "Работа в РФ: Устройство работает автономно от переносной станции и не зависит от облачных сценариев умного дома"
+    ],
+    "src": "https://www.ecovacs.com/us/winbot-window-cleaning-robot/winbot-w3-omni"
+  },
+  "officialVideo": {
+    "youtubeId": "mNsGvTYo724",
+    "title": "Ecovacs WINBOT W3 OMNI — официальная презентация",
+    "poster": "/media/products/ecovacs-winbot-w3-omni/hero.webp",
+    "src": "https://www.youtube.com/watch?v=mNsGvTYo724"
   }
 }

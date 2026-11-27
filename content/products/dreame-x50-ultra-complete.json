@@ -322,5 +322,51 @@
     "alt": "Робот-пылесос Dreame X50 Ultra Complete со станцией самоочистки",
     "credit": "Фото: Dreame",
     "source": "https://global.dreametech.com/products/dreame-x50-ultra-complete"
+  },
+  "inTheBox": [
+    {
+      "text": "Робот-пылесос Dreame X50 Ultra",
+      "qty": 1,
+      "src": "https://global.dreametech.com/products/dreame-x50-ultra-complete"
+    },
+    {
+      "text": "Многофункциональная базовая станция",
+      "qty": 1,
+      "src": "https://global.dreametech.com/products/dreame-x50-ultra-complete"
+    },
+    {
+      "text": "Основная щётка (установлена) и боковая щётка (установлена)",
+      "src": "https://global.dreametech.com/products/dreame-x50-ultra-complete"
+    },
+    {
+      "text": "Пылесборник с фильтром (установлен), держатели швабр × 2, швабры × 2, мешки для пыли",
+      "qty": 2,
+      "src": "https://global.dreametech.com/products/dreame-x50-ultra-complete"
+    },
+    {
+      "text": "Инструмент для чистки и удлинитель рампы станции",
+      "src": "https://global.dreametech.com/products/dreame-x50-ultra-complete"
+    },
+    {
+      "text": "Расширенный комплект Complete: дополнительная основная щётка, 2 боковые щётки, 3 мешка, 6 пар швабр, моющее средство 1 л, 3 фильтра",
+      "src": "https://global.dreametech.com/products/dreame-x50-ultra-complete"
+    }
+  ],
+  "appInfo": {
+    "name": "Dreamehome",
+    "ruNotes": [
+      "Интерфейс и языки: Да, полный русский интерфейс и русская озвучка",
+      "Платформы: iOS, Android",
+      "Подписка: Не требуется — все функции и карты бесплатны",
+      "Локальная работа: Через Matter over Wi-Fi (Apple Home iOS 18.4+ и Home Assistant)",
+      "Работа в РФ: Российская и глобальная версии работают в РФ без VPN и привязываются к Яндекс Алисе"
+    ],
+    "src": "https://global.dreametech.com/products/dreame-x50-ultra-complete"
+  },
+  "officialVideo": {
+    "youtubeId": "BhcecKIUqcA",
+    "title": "Dreame X50 Ultra — официальная презентация",
+    "poster": "/media/products/dreame-x50-ultra-complete/hero.webp",
+    "src": "https://www.youtube.com/watch?v=BhcecKIUqcA"
   }
 }

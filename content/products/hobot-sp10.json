@@ -250,5 +250,43 @@
     "alt": "Робот-мойщик окон HOBOT SP10",
     "credit": "Фото: HOBOT",
     "source": "https://www.hobot.com.tw/hobot-sp10/"
+  },
+  "inTheBox": [
+    {
+      "text": "Робот-мойщик окон HOBOT SP10",
+      "qty": 1,
+      "src": "https://www.hobot.com.tw/hobot-sp10/"
+    },
+    {
+      "text": "Пульт дистанционного управления",
+      "qty": 1,
+      "src": "https://www.hobot.com.tw/hobot-sp10/"
+    },
+    {
+      "text": "Жёсткий кейс для переноски и хранения",
+      "qty": 1,
+      "src": "https://www.hobot.com.tw/hobot-sp10/"
+    },
+    {
+      "text": "Блок питания, страховочный шнур, сменные салфетки и руководство пользователя",
+      "src": "https://www.hobot.com.tw/hobot-sp10/"
+    }
+  ],
+  "appInfo": {
+    "name": "HOBOT",
+    "ruNotes": [
+      "Интерфейс и языки: Да, приложение и голосовые подсказки поддерживают русский язык",
+      "Платформы: iOS, Android",
+      "Подписка: Не требуется",
+      "Локальная работа: Полностью локальное управление со штатного пульта ДУ, кнопки на корпусе или по Bluetooth со смартфона",
+      "Работа в РФ: Не требует облачного аккаунта и регистрации для повседневной работы в России"
+    ],
+    "src": "https://www.hobot.com.tw/hobot-sp10/"
+  },
+  "officialVideo": {
+    "youtubeId": "4P6VJa7aRe0",
+    "title": "HOBOT SP10 iScraper — официальное видео",
+    "poster": "/media/products/hobot-sp10/hero.webp",
+    "src": "https://www.youtube.com/watch?v=4P6VJa7aRe0"
   }
 }

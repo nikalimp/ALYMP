@@ -209,5 +209,44 @@
     "alt": "Робот-пылесос Roborock Qrevo Curv 2 Flow со станцией",
     "credit": "Фото: Roborock",
     "source": "https://global.roborock.com/pages/roborock-qrevo-curv-2-flow"
+  },
+  "inTheBox": [
+    {
+      "text": "Робот-пылесос Roborock Qrevo Curv 2 Flow (с установленным роликом и щёткой DuoDivide)",
+      "qty": 1,
+      "src": "https://global.roborock.com/pages/roborock-qrevo-curv-2-flow"
+    },
+    {
+      "text": "Многофункциональная док-станция с предустановленным мешком для пыли",
+      "qty": 1,
+      "src": "https://global.roborock.com/pages/roborock-qrevo-curv-2-flow"
+    },
+    {
+      "text": "Кабель питания",
+      "qty": 1,
+      "src": "https://global.roborock.com/pages/roborock-qrevo-curv-2-flow"
+    },
+    {
+      "text": "Руководство пользователя",
+      "qty": 1,
+      "src": "https://global.roborock.com/pages/roborock-qrevo-curv-2-flow"
+    }
+  ],
+  "appInfo": {
+    "name": "Roborock",
+    "ruNotes": [
+      "Интерфейс и языки: Да, русский интерфейс и озвучка в версиях Global / RU",
+      "Платформы: iOS, Android",
+      "Подписка: Не требуется",
+      "Локальная работа: Через Matter over Wi-Fi и официальную интеграцию Home Assistant",
+      "Работа в РФ: Глобальная версия работает в России и привязывается к «Умному дому с Алисой»"
+    ],
+    "src": "https://global.roborock.com/pages/roborock-qrevo-curv-2-flow"
+  },
+  "officialVideo": {
+    "youtubeId": "rk1HNKZwpvA",
+    "title": "Roborock Qrevo Curv 2 Flow — официальное видео",
+    "poster": "/media/products/roborock-qrevo-curv-2-flow/hero.webp",
+    "src": "https://www.youtube.com/watch?v=rk1HNKZwpvA"
   }
 }

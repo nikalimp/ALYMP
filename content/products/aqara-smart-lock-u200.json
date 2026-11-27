@@ -191,5 +191,53 @@
     "alt": "Умный замок Aqara Smart Lock U200 с клавиатурой",
     "credit": "Фото: Aqara",
     "source": "https://aqara.ru/product/aqara-smart-lock-u200/"
+  },
+  "inTheBox": [
+    {
+      "text": "Умный замок Aqara Smart Lock U200",
+      "qty": 1,
+      "src": "https://www.aqara.com/us/product/smart-lock-u200-specs/"
+    },
+    {
+      "text": "Беспроводная клавиатура со сканером отпечатка и NFC",
+      "qty": 1,
+      "src": "https://www.aqara.com/us/product/smart-lock-u200-specs/"
+    },
+    {
+      "text": "Перезаряжаемый Li-Ion аккумулятор Aqara × 1 и адаптер под батарейки AA",
+      "qty": 1,
+      "src": "https://www.aqara.com/us/product/smart-lock-u200-specs/"
+    },
+    {
+      "text": "Батарейки AAA для клавиатуры",
+      "qty": 4,
+      "src": "https://www.aqara.com/us/product/smart-lock-u200-specs/"
+    },
+    {
+      "text": "NFC-карта Aqara × 1 и сменная декоративная панель",
+      "qty": 1,
+      "src": "https://www.aqara.com/us/product/smart-lock-u200-specs/"
+    },
+    {
+      "text": "Комплект адаптеров под цилиндр, шестигранная отвёртка, кабель USB-C, наклейка 3M, прокладки EVA и инструкция",
+      "src": "https://www.aqara.com/us/product/smart-lock-u200-specs/"
+    }
+  ],
+  "appInfo": {
+    "name": "Aqara Home / Apple «Дом»",
+    "ruNotes": [
+      "Интерфейс и языки: Да, полный русский интерфейс",
+      "Платформы: iOS, Android, Apple Watch (Home Key)",
+      "Подписка: Не требуется",
+      "Локальная работа: Отпечаток, PIN, NFC, Apple Home Key и Bluetooth LE работают полностью локально; удалённый доступ через Thread Border Router (Hub M3)",
+      "Работа в РФ: Apple Home Key работает в России локально по NFC без Apple Pay; интеграция с Яндекс Алисой для замков U-серии не поддерживается"
+    ],
+    "src": "https://www.aqara.com/us/product/smart-lock-u200-specs/"
+  },
+  "officialVideo": {
+    "youtubeId": "pvIRTTAWc3s",
+    "title": "Aqara Smart Lock U200 — официальная инструкция по установке",
+    "poster": "/media/products/aqara-smart-lock-u200/hero.webp",
+    "src": "https://www.youtube.com/watch?v=pvIRTTAWc3s"
   }
 }

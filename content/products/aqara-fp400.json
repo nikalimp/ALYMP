@@ -318,5 +318,49 @@
     "alt": "Радар присутствия Aqara Spatial Multi-Sensor FP400",
     "credit": "Фото: Aqara",
     "source": "https://www.aqara.com/en/product/spatial-multi-sensor-fp400/"
+  },
+  "inTheBox": [
+    {
+      "text": "Датчик присутствия Aqara Spatial Multi-Sensor FP400",
+      "qty": 1,
+      "src": "https://www.aqara.com/en/product/spatial-multi-sensor-fp400/"
+    },
+    {
+      "text": "Кабель USB-C — USB-C",
+      "qty": 1,
+      "src": "https://www.aqara.com/en/product/spatial-multi-sensor-fp400/"
+    },
+    {
+      "text": "Металлическая монтажная пластина",
+      "qty": 1,
+      "src": "https://www.aqara.com/en/product/spatial-multi-sensor-fp400/"
+    },
+    {
+      "text": "Клейкая наклейка × 1 и комплект винтов",
+      "qty": 1,
+      "src": "https://www.aqara.com/en/product/spatial-multi-sensor-fp400/"
+    },
+    {
+      "text": "Кронштейн (в розничной версии Brand Retail) и руководство пользователя",
+      "qty": 1,
+      "src": "https://www.aqara.com/en/product/spatial-multi-sensor-fp400/"
+    }
+  ],
+  "appInfo": {
+    "name": "Aqara Home",
+    "ruNotes": [
+      "Интерфейс и языки: Да, русский интерфейс приложения",
+      "Платформы: iOS, Android",
+      "Подписка: Не требуется — зонирование, обнаружение поз и падений работают без платных тарифов",
+      "Локальная работа: Локальная работа по Thread (Matter) и Zigbee 3.0 через домашний хаб без обращения в облако",
+      "Работа в РФ: Тонкая разметка до 30 зон выполняется в Aqara Home, а готовые зоны передаются в Apple Home, Home Assistant и через хаб в Алису"
+    ],
+    "src": "https://www.aqara.com/en/product/spatial-multi-sensor-fp400/"
+  },
+  "officialVideo": {
+    "youtubeId": "MXsVcr0qhC4",
+    "title": "Aqara FP400 — официальная распаковка и обзор",
+    "poster": "/media/products/aqara-fp400/hero.webp",
+    "src": "https://www.youtube.com/watch?v=MXsVcr0qhC4"
   }
 }

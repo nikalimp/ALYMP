@@ -231,5 +231,40 @@
     "alt": "Привод штор Aqara Curtain Driver E1 из комплекта Умный рассвет",
     "credit": "Фото: Aqara",
     "source": "https://www.aqara.com/en/product/curtain-driver-e1/"
+  },
+  "inTheBox": [
+    {
+      "text": "Привод штор Aqara Curtain Driver E1 (версия Track или Rod)",
+      "qty": 1,
+      "src": "https://www.aqara.com/us/product/curtain-driver-e1-track-version/specs/"
+    },
+    {
+      "text": "Кабель зарядки USB-C — USB-A и крепёжные элементы для карниза из комплекта E1",
+      "src": "https://www.aqara.com/us/product/curtain-driver-e1-track-version/specs/"
+    },
+    {
+      "text": "Светодиодная лента Aqara LED Strip T2",
+      "qty": 1,
+      "src": "https://www.aqara.com/us/product/curtain-driver-e1-track-version/specs/"
+    },
+    {
+      "text": "Контроллер, адаптер питания и крепёжные клипсы LED Strip T2",
+      "src": "https://www.aqara.com/us/product/curtain-driver-e1-track-version/specs/"
+    },
+    {
+      "text": "Руководства пользователя для обоих устройств",
+      "src": "https://www.aqara.com/us/product/curtain-driver-e1-track-version/specs/"
+    }
+  ],
+  "appInfo": {
+    "name": "Aqara Home",
+    "ruNotes": [
+      "Интерфейс и языки: Да, полный русский интерфейс",
+      "Платформы: iOS, Android",
+      "Подписка: Не требуется",
+      "Локальная работа: При подключении к Aqara Hub M3 расписание утреннего рассвета и управление шторами исполняются локально без интернета",
+      "Работа в РФ: Для автоматизаций и интеграции с Яндекс Алисой и Apple Home требуется хаб Zigbee/Thread (например, Aqara Hub M3)"
+    ],
+    "src": "https://www.aqara.com/en/product/led-strip-t2/"
   }
 }

@@ -5,6 +5,7 @@ import { getPosts } from "./posts";
 import { getLandings } from "./landings";
 import { getGlossaryTerms } from "./glossary";
 import { getNews } from "./news";
+import { getScenarios } from "./scenarios";
 
 // Простой текст для нейросетей: неразрывные пробелы типографа заменяем обычными
 const plain = (s: string) => s.replace(/ /g, " ").replace(/⁠/g, "");
@@ -39,8 +40,10 @@ export function llmsTxt() {
 - [Глоссарий технологий (${getGlossaryTerms().length} терминов)](${site.url}/glossary/): Matter, Thread, Zigbee, LiDAR, mmWave, SLAM, DoF, станции самоочистки
 ${p.length ? `- [Блог и гайды (${p.length} статей)](${site.url}/blog/): выбор роботов-пылесосов, мойщиков окон, умных замков и хабов\n` : ""}${n.length ? `- [Новости индустрии (${n.length} заметок)](${site.url}/news/): релизы брендов и разбор для покупателей в России\n` : ""}${home.categories.map((x) => `- ${x.title}: ${x.items.join(", ")}. ${x.text}`).join("\n")}
 
-${getLandings().length ? `## Товары\n${getLandings().map((l) => `- [${l.product.name}](${site.url}/products/${l.slug}/): ${l.tagline} Характеристики: ${site.url}/products/${l.slug}/specs/`).join("\n")}\n\n` : ""}${getGlossaryTerms().length ? `## Глоссарий\n${getGlossaryTerms().map((t) => `- [${t.name}](${site.url}/glossary/${t.slug}/): ${t.shortDecryption}`).join("\n")}\n\n` : ""}## Подбор комплекта
+${getLandings().length ? `## Товары\n${getLandings().map((l) => `- [${l.product.name}](${site.url}/products/${l.slug}/): ${l.tagline} Характеристики: ${site.url}/products/${l.slug}/specs/`).join("\n")}\n\n` : ""}${getGlossaryTerms().length ? `## Глоссарий\n${getGlossaryTerms().map((t) => `- [${t.name}](${site.url}/glossary/${t.slug}/): ${t.shortDecryption}`).join("\n")}\n\n` : ""}## Подбор комплекта и сценарии
 - [Подбор комплекта](${site.url}/selector/): 4 вопроса (площадь, пороги, животные, Алиса или Apple Home) → совместимая связка из моделей каталога с ориентиром суммы.
+- [Сценарии умного дома (${getScenarios().length} готовых связок)](${site.url}/scenarios/):
+${getScenarios().map((s) => `  - [${s.title}](${site.url}/scenarios/${s.slug}/): ${s.summary}`).join("\n")}
 
 ## Как заказать (${site.url}/how-to-order/)
 ${home.steps.map((s, i) => `${i + 1}. ${s.title}: ${s.text}`).join("\n")}

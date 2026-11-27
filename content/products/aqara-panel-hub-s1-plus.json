@@ -232,5 +232,44 @@
     "alt": "Настенная сенсорная панель Aqara Panel Hub S1 Plus",
     "credit": "Фото: Aqara",
     "source": "https://aqara.ru/product/hub-s1-plus-eu/"
+  },
+  "inTheBox": [
+    {
+      "text": "Настенная панель Aqara Panel Hub S1 Plus",
+      "qty": 1,
+      "src": "https://www.aqara.com/en/product/panel-hub-s1-plus-specs/"
+    },
+    {
+      "text": "Комплект крепёжных винтов",
+      "qty": 2,
+      "src": "https://www.aqara.com/en/product/panel-hub-s1-plus-specs/"
+    },
+    {
+      "text": "Декларация соответствия",
+      "qty": 1,
+      "src": "https://www.aqara.com/en/product/panel-hub-s1-plus-specs/"
+    },
+    {
+      "text": "Руководство пользователя",
+      "qty": 1,
+      "src": "https://www.aqara.com/en/product/panel-hub-s1-plus-specs/"
+    }
+  ],
+  "appInfo": {
+    "name": "Aqara Home",
+    "ruNotes": [
+      "Интерфейс и языки: Да, русский интерфейс в приложении и на экране панели (версии EU / RU)",
+      "Платформы: iOS, Android (плюс встроенный сенсорный экран 6,9 дюйма)",
+      "Подписка: Не требуется",
+      "Локальная работа: Два встроенных реле, локальный хаб Zigbee 3.0 и Matter Bridge работают внутри домашней сети",
+      "Работа в РФ: Европейский формат под стандартный круглый подрозетник с нулевым проводом; совместим с регионом Россия и Алисой"
+    ],
+    "src": "https://www.aqara.com/en/product/panel-hub-s1-plus-specs/"
+  },
+  "officialVideo": {
+    "youtubeId": "zk7GRGvq-N0",
+    "title": "Aqara Panel Hub S1 Plus EU — официальное видео установки",
+    "poster": "/media/products/aqara-panel-hub-s1-plus/hero.webp",
+    "src": "https://www.youtube.com/watch?v=zk7GRGvq-N0"
   }
 }

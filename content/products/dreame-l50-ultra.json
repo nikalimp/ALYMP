@@ -415,5 +415,45 @@
     "alt": "Робот-пылесос Dreame L50 Ultra со станцией самоочистки",
     "credit": "Фото: Dreame",
     "source": "https://global.dreametech.com/products/l50-ultra-ae-black"
+  },
+  "inTheBox": [
+    {
+      "text": "Робот-пылесос Dreame L50 Ultra",
+      "qty": 1,
+      "src": "https://global.dreametech.com/products/l50-ultra-ae-black"
+    },
+    {
+      "text": "Многофункциональная базовая станция",
+      "qty": 1,
+      "src": "https://global.dreametech.com/products/l50-ultra-ae-black"
+    },
+    {
+      "text": "Основная щётка, защитная решётка, боковая щётка и пылесборник с фильтром (установлены)",
+      "src": "https://global.dreametech.com/products/l50-ultra-ae-black"
+    },
+    {
+      "text": "Держатели швабр × 2, швабры × 2, мешки для пыли",
+      "qty": 2,
+      "src": "https://global.dreametech.com/products/l50-ultra-ae-black"
+    },
+    {
+      "text": "Пандус-удлинитель станции, фильтр блока мойки, модуль автодозатора (установлен)",
+      "src": "https://global.dreametech.com/products/l50-ultra-ae-black"
+    },
+    {
+      "text": "Моющее средство для пола AWH7 (200 мл), краткое руководство и инструкция",
+      "src": "https://global.dreametech.com/products/l50-ultra-ae-black"
+    }
+  ],
+  "appInfo": {
+    "name": "Dreamehome",
+    "ruNotes": [
+      "Интерфейс и языки: Да, русский интерфейс и голосовые оповещения",
+      "Платформы: iOS, Android",
+      "Подписка: Не требуется",
+      "Локальная работа: Через Matter over Wi-Fi (Apple Home iOS 18.4+ и Home Assistant)",
+      "Работа в РФ: Глобальная и российская версии поддерживают регион Россия и интеграцию с Яндекс Алисой"
+    ],
+    "src": "https://global.dreametech.com/products/l50-ultra-ae-black"
   }
 }

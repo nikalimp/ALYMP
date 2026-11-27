@@ -214,5 +214,54 @@
     "alt": "Робот-пылесос Roborock Saros Z70 с док-станцией",
     "credit": "Фото: Roborock",
     "source": "https://global.roborock.com/pages/roborock-saros-z70"
+  },
+  "inTheBox": [
+    {
+      "text": "Робот-пылесос Roborock Saros Z70 с манипулятором OmniGrip",
+      "qty": 1,
+      "src": "https://global.roborock.com/pages/roborock-saros-z70"
+    },
+    {
+      "text": "Многофункциональная док-станция с баками чистой и грязной воды и установленным мешком для пыли",
+      "qty": 1,
+      "src": "https://global.roborock.com/pages/roborock-saros-z70"
+    },
+    {
+      "text": "Кабель питания",
+      "qty": 1,
+      "src": "https://global.roborock.com/pages/roborock-saros-z70"
+    },
+    {
+      "text": "Вращающиеся салфетки для влажной уборки",
+      "qty": 2,
+      "src": "https://global.roborock.com/pages/roborock-saros-z70"
+    },
+    {
+      "text": "Складная коробка-органайзер для переноса мелких вещей манипулятором",
+      "qty": 1,
+      "src": "https://global.roborock.com/pages/roborock-saros-z70"
+    },
+    {
+      "text": "Руководство пользователя",
+      "qty": 1,
+      "src": "https://global.roborock.com/pages/roborock-saros-z70"
+    }
+  ],
+  "appInfo": {
+    "name": "Roborock",
+    "ruNotes": [
+      "Интерфейс и языки: Да, полный русский интерфейс и голосовые пакеты в глобальной/RU версии",
+      "Платформы: iOS, Android",
+      "Подписка: Не требуется — все функции, карты, зоны запрета и настройка OmniGrip бесплатны",
+      "Локальная работа: Через Matter over Wi-Fi и официальную интеграцию Home Assistant; базовый запуск с кнопки на корпусе",
+      "Работа в РФ: Для работы без ограничений и привязки к Яндекс Алисе нужна глобальная или российская версия (Global / RU)"
+    ],
+    "src": "https://global.roborock.com/pages/roborock-saros-z70"
+  },
+  "officialVideo": {
+    "youtubeId": "87Q6hE4cKPM",
+    "title": "Roborock Saros Z70 — официальная презентация",
+    "poster": "/media/products/roborock-saros-z70/hero.webp",
+    "src": "https://www.youtube.com/watch?v=87Q6hE4cKPM"
   }
 }
